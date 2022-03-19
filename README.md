@@ -32,11 +32,11 @@ Insert certificate here when completed
 - AOP(Aspect Oriented Programming)
 	- Application wide services, example Logging
 	- Examples later, example in transaction
-- Using JDBC helper classes reduces, code neede a lot
+- Using JDBC helper classes reduces, code needed a lot
 - Spring "projects" are additional modules
 
 # Section 3: Setting Up Your Development Environment
 
-# What I Learned
 - [Download spring](https://www.luv2code.com/downloadspring)
 - Remember to add jar files to Java Build Path
+
