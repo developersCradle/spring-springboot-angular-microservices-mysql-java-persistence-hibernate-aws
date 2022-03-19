@@ -21,7 +21,7 @@ Insert certificate here when completed
 
 # Section 2: Spring Overview
 
-- Eearlyversion EJB(EnterPrise JavaBeans) were complex and bad to develop
+- Early version EJB(EnterPrise JavaBeans) were complex and bad to develop
 	 - Poor Performance of Entity Beans
 	 - EHB was popular once, now not so
 	 - Now its fine, but with bad reputation
