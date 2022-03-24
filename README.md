@@ -12,10 +12,11 @@ Insert certificate here when completed
 
 ## Progress/Curriculum
 
-- [x] [Section 01]() - Course Introduction
-- [X] [Section 02]() - Spring Overview
-- [ ] [Section 03]() - Setting Up Your Development Environment
-- [ ] [Section 4]() - Spring Inversion of Control - XML Configuration
+- [x] [Section 01](#) - Course Introduction
+- [X] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Spring Overview
+- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Setting Up Your Development Environment
+- [ ] [Section 4](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%204) - Spring Inversion of Control - XML Configuration
+- [ ] [Section 5](#) Spring Dependency Injection - XML Configuration
 
 
 
@@ -29,7 +30,7 @@ Insert certificate here when completed
 - [Spring 5 release notes](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-5-FAQ)
 - [Spring 5 FAQ](https://github.com/spring-projects/spring-framework/wiki/What%27s-New-in-Spring-Framework-5.x)
 - Why Spring? Simplifies JAVAEE development
-- AOP(Aspect Oriented Programming)
+- AOP(Aspect OrieWnted Programming)
 	- Application wide services, example Logging
 	- Examples later, example in transaction
 - Using JDBC helper classes reduces, code needed a lot
