@@ -16,28 +16,7 @@ Insert certificate here when completed
 - [X] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Spring Overview
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Setting Up Your Development Environment
 - [ ] [Section 4](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%204) - Spring Inversion of Control - XML Configuration
-- [ ] [Section 5](#) Spring Dependency Injection - XML Configuration
+- [ ] [Section 5](#) - Spring Dependency Injection - XML Configuration
 
 
-
-# Section 2: Spring Overview
-
-- Early version EJB(EnterPrise JavaBeans) were complex and bad to develop
-	 - Poor Performance of Entity Beans
-	 - EHB was popular once, now not so
-	 - Now its fine, but with bad reputation
-- Spring 5 min require Java 8
-- [Spring 5 release notes](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-5-FAQ)
-- [Spring 5 FAQ](https://github.com/spring-projects/spring-framework/wiki/What%27s-New-in-Spring-Framework-5.x)
-- Why Spring? Simplifies JAVAEE development
-- AOP(Aspect OrieWnted Programming)
-	- Application wide services, example Logging
-	- Examples later, example in transaction
-- Using JDBC helper classes reduces, code needed a lot
-- Spring "projects" are additional modules
-
-# Section 3: Setting Up Your Development Environment
-
-- [Download spring](https://www.luv2code.com/downloadspring)
-- Remember to add jar files to Java Build Path
-
+Jäin setter injection

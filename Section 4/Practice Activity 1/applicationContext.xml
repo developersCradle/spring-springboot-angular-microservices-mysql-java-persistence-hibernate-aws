@@ -6,17 +6,12 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
-
- 	<bean id="myfortune"
-    	class="com.springdemo.HappyFortuneService">
-    </bean>
+	
+    <!-- Define your beans here -->
     
- 	<!-- Define your beans here -->
-    <bean id="myCoach" class="com.springdemo.TrackCoach">
-	    <!--  constructor injection -->
-	    <constructor-arg ref="myfortune"/>
-    </bean>
+ 	<bean id="myGolfCoach"
+ 		class="com.luv2code.springdemo.GolfCoach">	 		
+ 	</bean>
     
 </beans>
 
