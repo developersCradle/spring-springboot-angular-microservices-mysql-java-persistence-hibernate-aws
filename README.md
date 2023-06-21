@@ -1,22 +1,33 @@
-## Spring & Hibernate for Beginners (includes Spring Boot) 
+## [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners
 
 ![SpringBoot](pic.jpg)
 
-All course material from JSpring & Hibernate for Beginners (includes Spring Boot) by Chad Darby
+All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by Chad Darby.
 
-Every section contains my own notes
+Every section contains my own notes.
 
 [The Course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/)   
+[Content Maker](https://luv2code.com/)
 
 Insert certificate here when completed
+
+Since course got updated, order here got messed up.
+
+
+## Progress/Curriculum new
+
+- [x] [Section 01](#) - Section 1: NEW - Spring Boot 3 Quick Start
+- [X] [Section 02](#) - Section 2: NEW - Spring Boot 3 - Inversion of Control and Dependency Injection
+
+
+
+## old(legacy) course Curriculum, figure out what to do with these
 
 ## Progress/Curriculum
 
 - [x] [Section 01](#) - Course Introduction
-- [X] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Spring Overview
-- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Setting Up Your Development Environment
-- [ ] [Section 4](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%204) - Spring Inversion of Control - XML Configuration
+- [X] [Section 02](#) - Spring Overview
+- [ ] [Section 03](#) - Setting Up Your Development Environment
+- [ ] [Section 4](#) - Spring Inversion of Control - XML Configuration
 - [ ] [Section 5](#) - Spring Dependency Injection - XML Configuration
 
-
-Jäin setter injection
