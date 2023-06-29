@@ -43,3 +43,19 @@
 - 1. **Spring Boot** uses and configures these components **under it**, for easy to use
 
 - You can use **any** IDE for Spring Boot apps!
+
+- When building Java applications, you need JAR files
+    - You can do this by hand, but in **recommended** let build tool take care of this. Like maven
+    - [Additional info](https://softwareengineering.stackexchange.com/questions/340223/should-you-include-libraries-and-code-unrelated-files-in-your-git-project-and-up)
+
+<img src="MavenSummary.JPG" alt="alt text" width="400"/>
+
+- Maven takes care of `.jar` files, summary here. External **.JAR** files like Spring, Hibernate which Spring boot uses
+
+<img src="caution.JPG" alt="alt text" width="400"/>
+
+
+<img src="springBootDencies.JPG" alt="alt text" width="400"/>
+ 
+- 1. We want to add decencies to our **Spring Boot** project.
+- 2. **Spring Web** is for full stack web project
