@@ -59,3 +59,39 @@
  
 - 1. We want to add decencies to our **Spring Boot** project.
 - 2. **Spring Web** is for full stack web project
+
+- After importing into your favorite **IDE** as Maven project. You can run as **Java application!** Not with server since, it's included in bundles
+
+
+<img src="embeddedServerInSpringBoot.JPG" alt="alt text" width="600"/>
+ 
+ - 1. As you can see Embedded server is included and running
+
+ - Default starting place `http://localhost:8080/`
+
+
+
+- We can make basic app, by telling with such annotations
+
+<img src="RESTcontrollerMapping.JPG" alt="alt text" width="600"/>
+
+<img src="GoalsOfSpring.JPG" alt="alt text" width="600"/>
+
+- 1. Much simple work with POJO:s than [EJB](https://www.javatpoint.com/what-is-ejb). EJB is like **COM** object
+     - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object)
+     - [POJO2](https://www.baeldung.com/java-pojo-class)
+- 2. Loose coublibling with depency injection
+- 3. In old days JavaEE needed to write lot of code
+
+
+- Core components of SpringBoot
+
+<img src="coreComponentsStringBoot.JPG" alt="alt text" width="600"/>
+
+ - **SpEL** spring configuration language
+
+ <img src="coreComponentsStringBoot2.JPG" alt="alt text" width="600"/>
+
+<img src="coreComponentsStringBoot3.JPG" alt="alt text" width="600"/>
+
+- 1. ORM **Object Relation Mapping**. Popular one and important!
