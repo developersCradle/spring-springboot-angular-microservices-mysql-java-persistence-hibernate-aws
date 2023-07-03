@@ -195,3 +195,69 @@ All thing which needs get started with Spring Boot
 <img src="mavenSpringPom.JPG" alt="alt text" width="500"/>
    
  - 1. ``spring-boot-starter-web`` is collection of decencies, for easy import on maven.
+
+ 
+
+ <img src="springBootMavenPlugin.JPG" alt="alt text" width="500"/>
+
+ - 1. Plugin used for packaging and for running spring application
+    - with `./mvnw package` and `./mvnw spring-boot:run`
+- 2. If Maven is locally installed, you can use following `mvn package` or `mvn spring-boot:run`
+
+<img src="applicationPropertySpring.JPG" alt="alt text" width="500"/>
+
+- Default Spring Boot will load config data from `application.propertyes`
+- 1. You can add own config data to this file
+- 2. Or make own **custom** properties!
+
+<img src="usingApplicationProperties.JPG" alt="alt text" width="500"/>
+
+- Using own **custom** properties using injection
+    - 1. `@Value("${coach.name}")` and injecting into variable `coachName;`
+- Static content is stored in static folder
+    - Such as HTML file, CSS, Images etc.....
+
+<img src="warning.JPG" alt="alt text" width="500"/>
+
+- **Thymeleaf** is by far the most popular template engine 
+
+<img src="templates.JPG" alt="alt text" width="500"/>
+
+- Setting Spring Boot app is **HARD!**
+    - 1. One dependency what is needed is Spring Boot Starters
+
+<img src="SpringStarters.JPG" alt="alt text" width="500"/>
+
+- Old days/normally you would need to add many imports to maven
+    - Example Spring MVC app, needed imports
+
+<img src="springMVC.JPG" alt="alt text" width="300"/>
+
+- Using **starter web**, contains all needed
+
+```
+
+<dependency>
+    <groupId>org.springframerwork.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+```
+
+<img src="springWeb.JPG" alt="alt text" width="600"/>
+
+- As you can see Apache Tomcat is inside package
+
+- Spring Initializr adds needed dependencies to your **POM.xml**
+
+- There is many spring-boot-starter pacakges [List](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using.build-systems.starters)
+
+- To look what is inside for example `spring-boot-starter-web`, you can use **Dependency Hierarchy** viewer
+
+<img src="whatIsInisidePomDependency.JPG" alt="alt text" width="700"/>
+
+- 1. In Eclipse you can see there is example **tomcat server** 
+
+- Same inside **IntelliJ**
+
+<img src="SameInIntelliJ.JPG" alt="alt text" width="500"/>

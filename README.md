@@ -22,6 +22,7 @@ Since course got updated, order here got messed up, updating this from time to t
 - [ ] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Section 2: NEW - Spring Boot 3 - Inversion of Control and Dependency Injection
 
 
+- Todo read/skim thought spring documentation when finished this course
 
 ## old(legacy) course Curriculum, figure out what to do with these
 
