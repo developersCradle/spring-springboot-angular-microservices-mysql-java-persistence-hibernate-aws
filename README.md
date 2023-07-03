@@ -13,13 +13,13 @@ Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-Since course got updated, order here got messed up.
+Since course got updated, order here got messed up, updating this from time to time.
 
 
 ## Progress/Curriculum new
 
-- [x] [Section 01](#) - Section 1: NEW - Spring Boot 3 Quick Start
-- [X] [Section 02](#) - Section 2: NEW - Spring Boot 3 - Inversion of Control and Dependency Injection
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%201) - Section 1: NEW - Spring Boot 3 Quick Start
+- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Section 2: NEW - Spring Boot 3 - Inversion of Control and Dependency Injection
 
 
 

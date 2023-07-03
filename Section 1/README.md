@@ -1,5 +1,5 @@
 # Section 1: NEW - Spring Boot 3 Quick Start
-
+All thing which needs get started with Spring Boot
 # What I Learned
 
 - Need to install JDK 17 or **higher**, **Spring Boot 3**
@@ -75,23 +75,95 @@
 
 <img src="RESTcontrollerMapping.JPG" alt="alt text" width="600"/>
 
-<img src="GoalsOfSpring.JPG" alt="alt text" width="600"/>
+<img src="GoalsOfSpring.JPG" alt="alt text" width="500"/>
 
 - 1. Much simple work with POJO:s than [EJB](https://www.javatpoint.com/what-is-ejb). EJB is like **COM** object
      - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object)
      - [POJO2](https://www.baeldung.com/java-pojo-class)
-- 2. Loose coublibling with depency injection
-- 3. In old days JavaEE needed to write lot of code
+- 2. Loose coupling with dependency injection
+- 3. In old days JavaEE needed to write a lot of code
 
 
 - Core components of SpringBoot
 
-<img src="coreComponentsStringBoot.JPG" alt="alt text" width="600"/>
+<img src="coreComponentsStringBoot.JPG" alt="alt text" width="400" height="400"/>
 
  - **SpEL** spring configuration language
 
- <img src="coreComponentsStringBoot2.JPG" alt="alt text" width="600"/>
+ <img src="coreComponentsStringBoot2.JPG" alt="alt text" width="500"/>
 
-<img src="coreComponentsStringBoot3.JPG" alt="alt text" width="600"/>
+<img src="coreComponentsStringBoot3.JPG" alt="alt text" width="500"/>
 
 - 1. ORM **Object Relation Mapping**. Popular one and important!
+
+<img src="coreComponentsStringBoot4.JPG" alt="alt text" width="500"/>
+
+- Integration test supported
+
+- Spring projects
+    - are just Spring **modules**
+
+<img src="springProjects.JPG" alt="alt text" width="500"/>
+
+- List of different projects  [Spring Projects](https://spring.io/projects)
+
+<img src="mavenSolve.JPG" alt="alt text" width="500"/>
+
+- This can be also beneficial, if you don't want to push external library to your repository. You can let **Maven** do the work!
+
+<img src="mavenInAction.JPG" alt="alt text" width="500"/>
+
+- Maven downloads our JAR files from internet
+    - 1. Remote repository is in internet
+
+<img src="howMavenWorks.JPG" alt="alt text" width="500"/>
+
+- How Maven works
+    - 1. Maven will read config file 
+    - 2. Check local repo
+    - 3. If no in local repo, get it from internet remote(remote)
+    - 4. Saves it to local repository
+    - 5. Build and run application
+
+- When building and running app
+    - Maven takes care class and build path for you
+
+- Maven project structure, standard
+    - 0. POM project configuration file
+    - 1. Java source code
+    - 2. Property files, config file ... etc
+    - 3. **webapp**, is css, web-config files
+    - 4. Test files comes here
+    - 5. Compiled codes come here, artifacts what maven will compile
+
+- Why is important to have directory structure
+
+<img src="whyMavenImportant.JPG" alt="alt text" width="500"/>
+
+- Maven projects are portable, Eclipse, IntelliJ, NetBeans etc
+
+- As summary why using Maven
+
+<img src="SummaryUsingMaven.JPG" alt="alt text" width="400"/>
+
+- Additionally, when new developer joins team, personnel can get easily into project whit out worrying about project config details
+
+<img src="pomFileFileStructure.JPG" alt="alt text" width="500"/>
+
+- **Project meta data** Data about your project.
+- **Dependencies** Data list of projects which are depending on our project.
+- **Plug ins** Addition custom task. Junit, logging
+
+- This structure reflected to **POM.xml**
+
+<img src="pomFileFileStructureReflected.JPG" alt="alt text" width="600"/>
+
+- 2. Dependencies get added here, example Junit
+
+<img src="projectCoordinates.JPG" alt="alt text" width="600"/>
+
+- Project Coordinates -> Like UID
+
+<img src="projectCoordinatesExample.JPG" alt="alt text" width="600"/>
+
+- 1. Should use reverse domain naming convention
