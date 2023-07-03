@@ -1,5 +1,6 @@
 # Section 1: NEW - Spring Boot 3 Quick Start
 All thing which needs get started with Spring Boot
+
 # What I Learned
 
 - Need to install JDK 17 or **higher**, **Spring Boot 3**
@@ -167,3 +168,30 @@ All thing which needs get started with Spring Boot
 <img src="projectCoordinatesExample.JPG" alt="alt text" width="600"/>
 
 - 1. Should use reverse domain naming convention
+- 2. Version number, **SNAPSHOT** mean product is still under development
+
+- To add dependency we need add following
+
+<img src="addingDepency.JPG" alt="alt text" width="500"/>
+
+- When adding dependency we need, **Group ID**, **Artifact ID**, but version is optional
+    - It's good to input such information
+    - For **DevOps** this is important, that you can say it have been tested and proven to work with following versions of decencies. Acronym **GAV**
+
+<img src="depencyCoordinates.JPG" alt="alt text" width="500"/>
+
+- Finding coordinates to input to POM
+    - Option 2, is far the eazyest
+
+<img src="findDepencyCoordinates.JPG" alt="alt text" width="500"/>
+
+- Maven Wrapper files, helps run and download correct versions of maven.  
+
+
+<img src="mavenFrapperFiles.JPG" alt="alt text" width="500"/>
+
+- If Maven is all ready installed, no need for wrapper files.
+
+<img src="mavenSpringPom.JPG" alt="alt text" width="500"/>
+   
+ - 1. ``spring-boot-starter-web`` is collection of decencies, for easy import on maven.
