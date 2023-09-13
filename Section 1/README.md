@@ -82,10 +82,10 @@ All thing which needs get started with Spring Boot
      - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object)
      - [POJO2](https://www.baeldung.com/java-pojo-class)
 - 2. Loose coupling with dependency injection
-- 3. In old days JavaEE needed to write a lot of code
+- 3. In old days Java EE needed to write a lot of code
 
 
-- Core components of SpringBoot
+- Core components of Spring Boot
 
 <img src="coreComponentsStringBoot.JPG" alt="alt text" width="400" height="400"/>
 
@@ -106,7 +106,7 @@ All thing which needs get started with Spring Boot
 
 <img src="springProjects.JPG" alt="alt text" width="500"/>
 
-- List of different projects  [Spring Projects](https://spring.io/projects)
+- List of different projects [Spring Projects](https://spring.io/projects)
 
 <img src="mavenSolve.JPG" alt="alt text" width="500"/>
 
@@ -132,8 +132,8 @@ All thing which needs get started with Spring Boot
 - Maven project structure, standard
     - 0. POM project configuration file
     - 1. Java source code
-    - 2. Property files, config file ... etc
-    - 3. **webapp**, is css, web-config files
+    - 2. Property files, config file ... etc.
+    - 3. **webapp**, is CSS, web-config files
     - 4. Test files comes here
     - 5. Compiled codes come here, artifacts what maven will compile
 
@@ -196,8 +196,6 @@ All thing which needs get started with Spring Boot
    
  - 1. ``spring-boot-starter-web`` is collection of decencies, for easy import on maven.
 
- 
-
  <img src="springBootMavenPlugin.JPG" alt="alt text" width="500"/>
 
  - 1. Plugin used for packaging and for running spring application
@@ -256,8 +254,63 @@ All thing which needs get started with Spring Boot
 
 <img src="whatIsInisidePomDependency.JPG" alt="alt text" width="700"/>
 
-- 1. In Eclipse you can see there is example **tomcat server** 
+- 1. In Eclipse, you can see there is example **tomcat server** 
 
 - Same inside **IntelliJ**
 
 <img src="SameInIntelliJ.JPG" alt="alt text" width="500"/>
+
+- Starter parent comes default from spring boot
+
+```
+	
+    <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+```
+
+- Benefits using starter parents  
+
+<img src="usingSpringBootStartParent.PNG" alt="alt text" width="500"/>
+
+- To use spring boot starter is easy
+
+<img src="SpringBootStarterParent.PNG" alt="alt text" width="500"/>
+
+- The main takeaways for using `starter-parent`
+    - And great guy below!
+
+<img src="benefits.PNG" alt="alt text" width="500"/>
+
+<img src="SpringBootDevTools.PNG" alt="alt text" width="500"/>
+
+- To use Spring Boot Dev Tools, use such
+
+- If intelliJ IDEA needs automatically needs automatic build watch video 19. **TODO**
+
+- **TODO** tee samanalaiset muista Spring Bootin osista
+
+### Spring Boot Actuators
+
+- Actuator exposes metrics and data of application, such as health data
+
+Spring boot Actuators:
+
+<img src="SpringBootActuator.PNG" alt="alt text" width="500"/>
+
+- Adding this to **POM**
+
+```
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
+```
+
+- 1:20 jäin
