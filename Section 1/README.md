@@ -18,7 +18,7 @@ All thing which needs get started with Spring Boot
 - **Spring Boot** uses **Spring** behind scenes
     - **Spring** and **Spring boot** are two different things! 
 
-- Spring boot gives **Spring Initializr** for easy configruation
+- Spring boot gives **Spring Initializr** for easy configuration
     - [SpringInitalizr](https://start.spring.io/)
 
 <img src="SpringInit.JPG" alt="alt text" width="500"/>
@@ -83,7 +83,6 @@ All thing which needs get started with Spring Boot
      - [POJO2](https://www.baeldung.com/java-pojo-class)
 - 2. Loose coupling with dependency injection
 - 3. In old days Java EE needed to write a lot of code
-
 
 - Core components of Spring Boot
 
@@ -151,7 +150,7 @@ All thing which needs get started with Spring Boot
 
 <img src="pomFileFileStructure.JPG" alt="alt text" width="500"/>
 
-- **Project meta data** Data about your project.
+- **Project metadata** Data about your project.
 - **Dependencies** Data list of projects which are depending on our project.
 - **Plug ins** Addition custom task. Junit, logging
 
@@ -313,4 +312,38 @@ Spring boot Actuators:
 
 ```
 
-- 1:20 jäin
+<img src="SpringBootActuator.PNG" alt="alt text" width="500"/>
+
+- Health endpoints 
+
+<img src="healthEndpoint.JPG" alt="alt text" width="500"/>
+
+- We can make our own custom health status
+
+<img src="exposingEndsPoints.JPG" alt="alt text" width="500"/>
+
+- We can modify exposing our endpoint to public
+
+- Info `/info` endpoint in empty by default
+
+<img src="infoEndpoint.JPG" alt="alt text" width="500"/>
+
+1. Example of info
+
+- There are some examples
+    - `/auditevents` for **Audit events** for application
+     - `/beans` List all the beans registered for Spring Application
+     - `/mapping`List all @RequestMapping paths
+
+- There is many Actuator Endpoints [ListOfActuators](www.luv2code.com/actuator-endpoints)
+
+<img src="exposingEndsPoints.JPG" alt="alt text" width="500"/>
+
+- Exposing all endpoints, keep in mind this is security also **concern**
+ 
+- Get all Bean used in application `http://localhost:8080/actuator/beans`
+    - This will expose, example following JSON
+
+<img src="jsonExposed.JPG" alt="alt text" width="500"/>
+ 
+ - This is also **security** concern!
