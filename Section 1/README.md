@@ -203,8 +203,8 @@ All thing which needs get started with Spring Boot
 <img src="applicationPropertySpring.JPG" alt="alt text" width="500"/>
 
 - Default Spring Boot will load config data from `application.propertyes`
-- 1. You can add own config data to this file
-- 2. Or make own **custom** properties!
+1. You can add own config data to this file
+2. Or make own **custom** properties!
 
 <img src="usingApplicationProperties.JPG" alt="alt text" width="500"/>
 
@@ -424,4 +424,49 @@ spring.securty.user.passworld=SomeRandomPassord
 
 > Disabled endpoints are removed entirely from the application context. If you want to change only the technologies over which an endpoint is exposed, use the **include** and **exclude** properties instead.
 
-- jäin 5:00
+- Adding security package asking username before accessing certain endpoints
+
+- We can remove them using following
+
+```
+#Exclude individual endpoints with a comma-delimited list
+#management.endpoints.web.exposure.exclude=health,info
+```
+
+<br>
+
+<img src="runningFromTheCommandLine.JPG" alt="alt text" width="500"/>
+
+- Spring Boot apps are self-contained
+
+- There is two man ways to start running Spring Boot application from command line
+    - **Option 1** `java -jar`
+    - **Option 2** Use Spring Boot Maven plugin `mvnw spring-boot:run`
+
+<img src="Option1.JPG" alt="alt text" width="500"/>
+
+1. No need IDE or Server installed, all included in **.Jar**
+
+<img src="Option2.JPG" alt="alt text" width="500"/>
+
+1. Maven comes with package we can run Maven plugin. In **Windows**
+2. Maven comes with package we can run Maven plugin. In **Linux / Mac**
+
+- If maven all ready **installed** you just run it normally
+
+<img src="mavenInstalled.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="Option2part2.JPG" alt="alt text" width="500"/>
+
+<br>
+
+- We can package our Spring Boot application using `spring-boot-maven-plugin`
+
+<img src="Option2part3.JPG" alt="alt text" width="500"/>
+
+1. Using command to Build Project `mvn package` [Building Project in vanilla Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#build-the-project)
+2. Running application using Maven Plugin
+3. We can pack application to **Jar** or **War**
+4. If **Maven** all ready installed we can run it little differently
