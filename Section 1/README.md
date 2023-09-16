@@ -347,3 +347,59 @@ Spring boot Actuators:
 <img src="jsonExposed.JPG" alt="alt text" width="500"/>
  
  - This is also **security** concern!
+
+ ### Actuator in action
+
+ - Configuring in **POM**
+ 
+```
+management.endpoints.web.exposure.include=health, info
+management.endpoints.env.enabled=true
+management.info.env.enabled=true
+```
+- As you can see two Actuators were exposed to public. **Health** and **Info**
+
+<img src="exposingActuatorsInAction.JPG" alt="alt text" width="500"/>
+
+- Exposing some info by following configuration
+
+- Health endpoint in action
+
+<img src="healthActuator.JPG" alt="alt text" width="500"/>
+
+
+```
+management.info.env.enabled=true
+
+#Customizing info endpoint
+info.app.name=My Supser Cool App
+info.app.description=A super duper fun app!
+info.app.version=1.0.0.0
+info.reppu.tasku=Banaani on repussa!
+```
+
+- This info page can be configured what ever you put there `info.reppu.`. Example
+
+<img src="configuratonOfInfo.JPG" alt="alt text" width="500"/>
+
+- Plugin for Chrome [PrettyPlugInPlugIn](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?utm_source=ext_app_menu)
+
+- Exposing all /actuators using wildcard
+
+- Use wildcard "*" to expose all endpoints
+- You can expose individuals endpoints with a comma-delimited list
+
+```
+2023-09-16T12:40:50.046+03:00  INFO 10044 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+```
+
+- **Thereaddump** is good for analyzing performance and bottlenecks in application `http://localhost:8080/actuator/threaddump`
+
+- **mapping** `/mapping` for exposing used mapping in app
+
+<img src="security.JPG" alt="alt text" width="500"/>
+
+- Using security Spring Boot
+
+<img src="securedEndpointUsage.JPG" alt="alt text" width="500"/>
+
