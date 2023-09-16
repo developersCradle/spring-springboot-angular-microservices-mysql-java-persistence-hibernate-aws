@@ -7,7 +7,7 @@ All thing which needs get started with Spring Boot
 
 <img src="problem.JPG" alt="alt text" width="500"/>
 
-- 1. Normally setting up **Spring** is difficult, need to think many things first
+1. Normally setting up **Spring** is difficult, need to think many things first
     - Here, **Spring Boot** comes in to play, it makes thing pre-configured all ready. 
 
 <img src="solution.JPG" alt="alt text" width="500"/>
@@ -23,12 +23,12 @@ All thing which needs get started with Spring Boot
 
 <img src="SpringInit.JPG" alt="alt text" width="500"/>
 
-- 1. Will be using Eclipse
+1. Will be using Eclipse
 
 <img src="EmbeddedServer.JPG" alt="alt text" width="500"/>
 
-- 1. Not like with **JSP** application where your **.jar** needs to be run with separate server application, like **tomcat**
-- 2. Server is provided whit in **.jar** file with your code
+1. Not like with **JSP** application where your **.jar** needs to be run with separate server application, like **tomcat**
+2. Server is provided whit in **.jar** file with your code
 
 - This make it easy to just run in command line `java -jar mycoolapp.jar` **MAGIC!**
     - What about deploying app like in normal way? No worries, **Spring boot** can deploy **.war** also
@@ -36,12 +36,12 @@ All thing which needs get started with Spring Boot
 
 <img src="war.JPG" alt="alt text" width="500"/>
 
-- 1. One server installed in company
-- 2. This one server runs many applications like in the past
+1. One server installed in company
+2. This one server runs many applications like in the past
 
 <img src="springConfiguration.JPG" alt="alt text" width="400"/>
 
-- 1. **Spring Boot** uses and configures these components **under it**, for easy to use
+1. **Spring Boot** uses and configures these components **under it**, for easy to use
 
 - You can use **any** IDE for Spring Boot apps!
 
@@ -55,22 +55,20 @@ All thing which needs get started with Spring Boot
 
 <img src="caution.JPG" alt="alt text" width="400"/>
 
+<br>
 
 <img src="springBootDencies.JPG" alt="alt text" width="400"/>
  
-- 1. We want to add decencies to our **Spring Boot** project.
-- 2. **Spring Web** is for full stack web project
+1. We want to add decencies to our **Spring Boot** project.
+2. **Spring Web** is for full stack web project
 
 - After importing into your favorite **IDE** as Maven project. You can run as **Java application!** Not with server since, it's included in bundles
 
-
 <img src="embeddedServerInSpringBoot.JPG" alt="alt text" width="600"/>
  
- - 1. As you can see Embedded server is included and running
+1. As you can see Embedded server is included and running
 
- - Default starting place `http://localhost:8080/`
-
-
+- Default starting place `http://localhost:8080/`
 
 - We can make basic app, by telling with such annotations
 
@@ -81,20 +79,22 @@ All thing which needs get started with Spring Boot
 - 1. Much simple work with POJO:s than [EJB](https://www.javatpoint.com/what-is-ejb). EJB is like **COM** object
      - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object)
      - [POJO2](https://www.baeldung.com/java-pojo-class)
-- 2. Loose coupling with dependency injection
-- 3. In old days Java EE needed to write a lot of code
+2. Loose coupling with dependency injection
+3. In old days Java EE needed to write a lot of code
 
 - Core components of Spring Boot
 
 <img src="coreComponentsStringBoot.JPG" alt="alt text" width="400" height="400"/>
 
- - **SpEL** spring configuration language
+- **SpEL** spring configuration language
 
  <img src="coreComponentsStringBoot2.JPG" alt="alt text" width="500"/>
 
+<br>
+
 <img src="coreComponentsStringBoot3.JPG" alt="alt text" width="500"/>
 
-- 1. ORM **Object Relation Mapping**. Popular one and important!
+1. ORM **Object Relation Mapping**. Popular one and important!
 
 <img src="coreComponentsStringBoot4.JPG" alt="alt text" width="500"/>
 
@@ -114,27 +114,27 @@ All thing which needs get started with Spring Boot
 <img src="mavenInAction.JPG" alt="alt text" width="500"/>
 
 - Maven downloads our JAR files from internet
-    - 1. Remote repository is in internet
+    1. Remote repository is in internet
 
 <img src="howMavenWorks.JPG" alt="alt text" width="500"/>
 
 - How Maven works
-    - 1. Maven will read config file 
-    - 2. Check local repo
-    - 3. If no in local repo, get it from internet remote(remote)
-    - 4. Saves it to local repository
-    - 5. Build and run application
+    1. Maven will read config file 
+    2. Check local repo
+    3. If no in local repo, get it from internet remote(remote)
+    4. Saves it to local repository
+    5. Build and run application
 
 - When building and running app
     - Maven takes care class and build path for you
 
 - Maven project structure, standard
-    - 0. POM project configuration file
-    - 1. Java source code
-    - 2. Property files, config file ... etc.
-    - 3. **webapp**, is CSS, web-config files
-    - 4. Test files comes here
-    - 5. Compiled codes come here, artifacts what maven will compile
+    0. POM project configuration file
+    1. Java source code
+    2. Property files, config file ... etc.
+    3. **webapp**, is CSS, web-config files
+    4. Test files comes here
+    5. Compiled codes come here, artifacts what maven will compile
 
 - Why is important to have directory structure
 
@@ -158,7 +158,7 @@ All thing which needs get started with Spring Boot
 
 <img src="pomFileFileStructureReflected.JPG" alt="alt text" width="600"/>
 
-- 2. Dependencies get added here, example Junit
+2. Dependencies get added here, example Junit
 
 <img src="projectCoordinates.JPG" alt="alt text" width="600"/>
 
@@ -166,8 +166,8 @@ All thing which needs get started with Spring Boot
 
 <img src="projectCoordinatesExample.JPG" alt="alt text" width="600"/>
 
-- 1. Should use reverse domain naming convention
-- 2. Version number, **SNAPSHOT** mean product is still under development
+1. Should use reverse domain naming convention
+2. Version number, **SNAPSHOT** mean product is still under development
 
 - To add dependency we need add following
 
@@ -180,12 +180,11 @@ All thing which needs get started with Spring Boot
 <img src="depencyCoordinates.JPG" alt="alt text" width="500"/>
 
 - Finding coordinates to input to POM
-    - Option 2, is far the eazyest
+    - Option 2, is far the easyest
 
 <img src="findDepencyCoordinates.JPG" alt="alt text" width="500"/>
 
 - Maven Wrapper files, helps run and download correct versions of maven.  
-
 
 <img src="mavenFrapperFiles.JPG" alt="alt text" width="500"/>
 
@@ -193,13 +192,13 @@ All thing which needs get started with Spring Boot
 
 <img src="mavenSpringPom.JPG" alt="alt text" width="500"/>
    
- - 1. ``spring-boot-starter-web`` is collection of decencies, for easy import on maven.
+1. ``spring-boot-starter-web`` is collection of decencies, for easy import on maven.
 
- <img src="springBootMavenPlugin.JPG" alt="alt text" width="500"/>
+<img src="springBootMavenPlugin.JPG" alt="alt text" width="500"/>
 
- - 1. Plugin used for packaging and for running spring application
+1. Plugin used for packaging and for running spring application
     - with `./mvnw package` and `./mvnw spring-boot:run`
-- 2. If Maven is locally installed, you can use following `mvn package` or `mvn spring-boot:run`
+2. If Maven is locally installed, you can use following `mvn package` or `mvn spring-boot:run`
 
 <img src="applicationPropertySpring.JPG" alt="alt text" width="500"/>
 
@@ -210,7 +209,7 @@ All thing which needs get started with Spring Boot
 <img src="usingApplicationProperties.JPG" alt="alt text" width="500"/>
 
 - Using own **custom** properties using injection
-    - 1. `@Value("${coach.name}")` and injecting into variable `coachName;`
+    1. `@Value("${coach.name}")` and injecting into variable `coachName;`
 - Static content is stored in static folder
     - Such as HTML file, CSS, Images etc.....
 
@@ -221,7 +220,7 @@ All thing which needs get started with Spring Boot
 <img src="templates.JPG" alt="alt text" width="500"/>
 
 - Setting Spring Boot app is **HARD!**
-    - 1. One dependency what is needed is Spring Boot Starters
+    1. One dependency what is needed is Spring Boot Starters
 
 <img src="SpringStarters.JPG" alt="alt text" width="500"/>
 
@@ -253,7 +252,7 @@ All thing which needs get started with Spring Boot
 
 <img src="whatIsInisidePomDependency.JPG" alt="alt text" width="700"/>
 
-- 1. In Eclipse, you can see there is example **tomcat server** 
+1. In Eclipse, you can see there is example **tomcat server** 
 
 - Same inside **IntelliJ**
 
@@ -400,6 +399,29 @@ info.reppu.tasku=Banaani on repussa!
 <img src="security.JPG" alt="alt text" width="500"/>
 
 - Using security Spring Boot
+    - Default password can be found in console
 
 <img src="securedEndpointUsage.JPG" alt="alt text" width="500"/>
 
+- You can override default password
+
+```
+spring.security.user.name=SomeName
+spring.securty.user.passworld=SomeRandomPassord
+```
+
+- Example using generated password! Can be seen in log
+
+<img src="springSecurtyPassword.JPG" alt="alt text" width="500"/>
+
+- We can **include** and **exclude** endpoints
+
+<img src="excludingEndPoints.JPG" alt="alt text" width="500"/>
+
+<br>
+
+- Link to [include and exclude](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/production-ready-endpoints.html#production-ready-endpoints-enabling-endpoints)
+
+> Disabled endpoints are removed entirely from the application context. If you want to change only the technologies over which an endpoint is exposed, use the **include** and **exclude** properties instead.
+
+- jäin 5:00
