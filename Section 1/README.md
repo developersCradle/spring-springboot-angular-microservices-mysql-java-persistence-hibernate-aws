@@ -118,7 +118,8 @@ All thing which needs get started with Spring Boot
 
 <img src="howMavenWorks.JPG" alt="alt text" width="500"/>
 
-- How Maven works
+How Maven works:
+
 1. Maven will read config file 
 2. Check local repo
 3. If no in local repo, get it from internet remote(remote)
@@ -128,8 +129,8 @@ All thing which needs get started with Spring Boot
 - When building and running app
     - Maven takes care class and build path for you
 
-- Maven project structure, standard
-    0. POM project configuration file
+- Maven project structure, standard //Todo korjaa tähän kohdat ja jäin tähän poist .i numeroinnit
+0. POM project configuration file
     1. Java source code
     2. Property files, config file ... etc.
     3. **webapp**, is CSS, web-config files
