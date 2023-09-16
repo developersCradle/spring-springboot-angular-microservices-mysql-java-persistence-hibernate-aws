@@ -119,11 +119,11 @@ All thing which needs get started with Spring Boot
 <img src="howMavenWorks.JPG" alt="alt text" width="500"/>
 
 - How Maven works
-    1. Maven will read config file 
-    2. Check local repo
-    3. If no in local repo, get it from internet remote(remote)
-    4. Saves it to local repository
-    5. Build and run application
+1. Maven will read config file 
+2. Check local repo
+3. If no in local repo, get it from internet remote(remote)
+4. Saves it to local repository
+5. Build and run application
 
 - When building and running app
     - Maven takes care class and build path for you
