@@ -247,7 +247,7 @@ How Maven works:
 
 - Spring Initializr adds needed dependencies to your **POM.xml**
 
-- There is many spring-boot-starter pacakges [List](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using.build-systems.starters)
+- There is many spring-boot-starter packages [List](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using.build-systems.starters)
 
 - To look what is inside for example `spring-boot-starter-web`, you can use **Dependency Hierarchy** viewer
 
@@ -471,3 +471,52 @@ spring.securty.user.passworld=SomeRandomPassord
 2. Running application using Maven Plugin
 3. We can pack application to **Jar** or **War**
 4. If **Maven** all ready installed we can run it little differently
+
+<img src="examplePackakingSoftware.JPG" alt="alt text" width="500"/>
+
+1. Example using `mvn package` building software
+
+<img src="reminderWhenUsingMaven.JPG" alt="alt text" width="500"/>
+
+- Running our app from command line with **.jar** `java -jar mycoolapp-0.0.1-SNAPSHOT.jar`
+
+- Running with using maven plugin `./mvnw spring-boot:run`
+
+- We can use of configuration file. It's called property file in Spring Boot
+    - You can have no hard coded values here
+
+<img src="applicationPropertyesSolution.JPG" alt="alt text" width="500"/>
+
+1. You can define ANY custom properties in this file with `@value`
+
+<img src="defineCustom1.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="defineCustom2.JPG" alt="alt text" width="500"/>
+
+1. We are injecting value **from properties** file into **field** 
+
+- Defining in `application.properties` 
+
+```
+
+coach.name=Mickey Mouse
+team.name=The Mouse Club
+
+```
+
+- In Java Rest Controller 
+
+```
+
+	@GetMapping("/teaminfo")
+	public String getTeamInfo() {
+		return "Coach: " + coachName + ", Team name: " + teamName;
+	}
+
+```
+
+- Spring Boot has 1000+ properties!! [List of Properties](luv2code.com/spring-boot-props)
+
+<img src="propertyesGroupping.JPG" alt="alt text" width="500"/>
