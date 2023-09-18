@@ -519,4 +519,33 @@ team.name=The Mouse Club
 
 - Spring Boot has 1000+ properties!! [List of Properties](luv2code.com/spring-boot-props)
 
+- Eight main ways to categorize properties
+
 <img src="propertyesGroupping.JPG" alt="alt text" width="500"/>
+
+1. We can put different log levels for difference **package.level**
+2. We can output logs into files
+
+<img src="WebPropertyes.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="actuatorPropertyes.JPG" alt="alt text" width="500"/>
+
+
+### Security Properties
+
+```
+#Default user name
+spring.security.user.name=admin
+
+#Password of for default user
+spring.security.user.password=topsecret
+
+```
+
+<img src="dataPropertyes.JPG" alt="alt text" width="500"/>
+
+- As you can see embedded servers start at `7070`
+
+<img src="exampleEmbededPort.JPG" alt="alt text" width="500"/>
