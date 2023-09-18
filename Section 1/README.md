@@ -134,11 +134,11 @@ How Maven works:
 <img src="standardDirectoryStructure.JPG" alt="alt text" width="500"/>
 
 0. POM project configuration file
-    1. Java source code
-    2. Property files, config file ... etc.
-    3. **webapp**, is CSS, web-config files
-    4. Test files comes here
-    5. Compiled codes come here, artifacts what maven will compile
+1. Java source code
+2. Property files, config file ... etc.
+3. **webapp**, is CSS, web-config files
+4. Test files comes here
+5. Compiled codes come here, artifacts what maven will compile
 
 - Why is important to have directory structure
 
@@ -179,12 +179,12 @@ How Maven works:
 
 - When adding dependency we need, **Group ID**, **Artifact ID**, but version is optional
     - It's good to input such information
-    - For **DevOps** this is important, that you can say it have been tested and proven to work with following versions of decencies. Acronym **GAV**
+    - For **DevOps** this is important, that you can say it have been tested and proven to work with following versions of dependencies. Acronym **GAV**
 
 <img src="depencyCoordinates.JPG" alt="alt text" width="500"/>
 
 - Finding coordinates to input to POM
-    - Option 2, is far the easyest
+    - Option 2, is far the easiest
 
 <img src="findDepencyCoordinates.JPG" alt="alt text" width="500"/>
 
@@ -224,7 +224,7 @@ How Maven works:
 <img src="templates.JPG" alt="alt text" width="500"/>
 
 - Setting Spring Boot app is **HARD!**
-    1. One dependency what is needed is Spring Boot Starters
+1. One dependency what is needed is Spring Boot Starters
 
 <img src="SpringStarters.JPG" alt="alt text" width="500"/>
 
@@ -285,14 +285,14 @@ How Maven works:
 
 - The main takeaways for using `starter-parent`
     - And great guy below!
-
 <img src="benefits.PNG" alt="alt text" width="500"/>
 
 <img src="SpringBootDevTools.PNG" alt="alt text" width="500"/>
 
 - To use Spring Boot Dev Tools, use such
 
-- If intelliJ IDEA needs automatically needs automatic build watch video 19. **TODO**
+- If intelliJ IDEA needs automatically automatic build watch
+    - Please watch video 19. Automatic building with devtools in intellij IDEA
 
 - **TODO** tee samanalaiset muista Spring Bootin osista
 
@@ -398,7 +398,7 @@ info.reppu.tasku=Banaani on repussa!
 
 - **Thereaddump** is good for analyzing performance and bottlenecks in application `http://localhost:8080/actuator/threaddump`
 
-- **mapping** `/mapping` for exposing used mapping in app
+- **Mapping** `/mapping` for exposing used mapping in app
 
 <img src="security.JPG" alt="alt text" width="500"/>
 
