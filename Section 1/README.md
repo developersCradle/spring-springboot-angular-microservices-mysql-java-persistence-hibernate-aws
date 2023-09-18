@@ -76,7 +76,7 @@ All thing which needs get started with Spring Boot
 
 <img src="GoalsOfSpring.JPG" alt="alt text" width="500"/>
 
-- 1. Much simple work with POJO:s than [EJB](https://www.javatpoint.com/what-is-ejb). EJB is like **COM** object
+1. Much simple work with POJO:s than [EJB](https://www.javatpoint.com/what-is-ejb). EJB is like **COM** object
      - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object)
      - [POJO2](https://www.baeldung.com/java-pojo-class)
 2. Loose coupling with dependency injection
@@ -129,7 +129,10 @@ How Maven works:
 - When building and running app
     - Maven takes care class and build path for you
 
-- Maven project structure, standard //Todo korjaa tähän kohdat ja jäin tähän poist .i numeroinnit
+- Maven project structure, standard 
+
+<img src="standardDirectoryStructure.JPG" alt="alt text" width="500"/>
+
 0. POM project configuration file
     1. Java source code
     2. Property files, config file ... etc.
