@@ -27,6 +27,45 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 - There are two main responsibilities for **Spring Container**
 
 - There are **three** main ways to configure Spring Container
-    1. XML configuration file **(LEGACY)!** ❌
-    2. Java Annotations **(Modern)** ✔️
-    3. Java Source Code **(Modern)** ✔️
+1. XML configuration file **(LEGACY)!** ❌
+2. Java Annotations **(Modern)** ✔️
+3. Java Source Code **(Modern)** ✔️
+
+> **Dependency Injection**
+> The dependency inversion principle.
+> 
+> The Client delegates to another object
+> the responsibility of providing its 
+> dependencies.
+
+<img src="carFactory.jpg" alt="alt text" width="500"/>
+
+1. Car Object is wanted
+2. In background **Car Factory** needs to build and return Car Object
+    - Decency injection idea is to give us **full/complete** object. Do what you need to do, use helper classes/services/components
+
+<img src="demoOfInjection.jpg" alt="alt text" width="500"/>
+
+1. We want to **inject** the coach into **DemoController**
+
+
+### Injection Types
+
+- There is many injection types in **Spring**
+- We will use two most recommended ones
+1. **Constructor Injection**
+2. **Setter Injection**
+
+<img src="injectionTypes.jpg" alt="alt text" width="500"/>
+
+- While **Constructor Injection** is preferred one
+
+1. If decencies are not provided this is OK to use
+
+<img src="autoWired.jpg" alt="alt text" width="500"/>
+
+<br>
+
+<img src="autoWiredExample.jpg" alt="alt text" width="500"/>
+
+1. Spring scans classes with `@Components`
