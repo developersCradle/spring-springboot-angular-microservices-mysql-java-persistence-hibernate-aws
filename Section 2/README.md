@@ -69,3 +69,31 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 <img src="autoWiredExample.jpg" alt="alt text" width="500"/>
 
 1. Spring scans classes with `@Components`
+
+- To demonstrate this we are going to do this
+
+<img src="exampleApplication.jpg" alt="alt text" width="500"/>
+
+<br>
+
+<img src="step1DefineDepency.jpg" alt="alt text" width="600"/>
+
+- `@Compenent` marks class as a Spring Bean
+
+#### Step 1: @Component annotation
+
+>**@Component** marks the class as a Spring Bean
+> A Spring Bean is just a regular Java class that is managed by Spring
+> @Component also makes the bean available for dependency injection
+
+<br>
+
+<img src="step2CreateDemo.jpg" alt="alt text" width="600"/>
+
+<br>
+
+<img src="step3CreateConstructor.jpg" alt="alt text" width="600"/>
+
+<br>
+
+<img src="step4GetMapping.jpg" alt="alt text" width="600"/>
