@@ -74,6 +74,9 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 <img src="exampleApplication.jpg" alt="alt text" width="500"/>
 
+1. When we visit `/dailyworkout` in our browser
+2. `DemoController` calls `getDailyWorkout()`
+
 <br>
 
 <img src="step1DefineDepency.jpg" alt="alt text" width="600"/>
@@ -97,3 +100,10 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 <br>
 
 <img src="step4GetMapping.jpg" alt="alt text" width="600"/>
+
+<hr>
+
+<img src="springCoreExample.jpg" alt="alt text" width="600"/>
+
+- Spring Core example uses following settings
+
