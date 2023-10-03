@@ -107,3 +107,37 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 - Spring Core example uses following settings
 
+- Example using how `@Component` is registered as Bean in **Spring Boot**
+
+<img src="beansCrickedCoachExample.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="SpringFramerWorkDynamic.JPG" alt="alt text" width="600"/>
+
+- IDE can be little behind, since dynamic nature of **Spring Framework**
+
+<img src="howSpringProcessesYourApplication.JPG" alt="alt text" width="600"/>
+
+1. Spring Injects behind happens the scenes
+    - There is more than this. **HARD** to see when using smaller project 
+
+
+### Spring Scanning
+
+<img src="scanning.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="SpringBootApplication.JPG" alt="alt text" width="600"/>
+
+- Enables following
+
+- Some most popular annotations are following:
+
+<img src="SpringAnnotations.JPG" alt="alt text" width="600"/>
+
+<br>
+
+- `SpringApplication.run(SpringcoredemoApplication.class, args);` bootstraps your Spring Boot application
+
