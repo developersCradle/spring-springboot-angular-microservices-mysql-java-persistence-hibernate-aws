@@ -122,7 +122,6 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 1. Spring Injects behind happens the scenes
     - There is more than this. **HARD** to see when using smaller project 
 
-
 ### Spring Scanning
 
 <img src="scanning.JPG" alt="alt text" width="600"/>
@@ -131,7 +130,7 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 <img src="SpringBootApplication.JPG" alt="alt text" width="600"/>
 
-- Enables following
+- `SpringApplication.run(SpringcoredemoApplication.class, args);` bootstraps your Spring Boot application
 
 - Some most popular annotations are following:
 
@@ -139,5 +138,25 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 <br>
 
-- `SpringApplication.run(SpringcoredemoApplication.class, args);` bootstraps your Spring Boot application
+### Component Scanning
 
+- **By default**, Spring Boot starts component scanning 
+    - From same package as your main Spring Boot application
+
+### MEANING
+
+- Scanning start at **SpringBootDemoApplication** level and goes below
+
+<img src="componentScanningDrivingHome.JPG" alt="alt text" width="600"/>
+
+<br>
+
+- This is **very important**
+
+<img src="commonPitfall.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="tellingScanningPacakges.JPG" alt="alt text" width="600"/>
+
+1. Telling explicitly to scan these packages!
