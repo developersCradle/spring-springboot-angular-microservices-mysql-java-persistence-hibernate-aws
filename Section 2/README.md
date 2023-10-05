@@ -173,7 +173,7 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 <img src="applicationFailedToStartPackageScanning.JPG" alt="alt text" width="600"/>
 
-- We will doing such autowiring example 
+- We will do such autowiring in this example 
 
 <img src="autowiringExample.JPG" alt="alt text" width="600"/>
 
@@ -187,5 +187,47 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 <br>
 
-<img src="howSpringProcessesYourApplication.JPG" alt="alt text" width="600"/>
+<img src="howSpringProcessesYourApplication.JPG" alt="alt text" width="700"/>
 
+1. Behind scenes spring will create instance of **CricketCoach()** and setted with **SETTER INJECTION**
+
+<img src="howSpringProcessesYourApplicationStep2.JPG" alt="alt text" width="700"/>
+
+1. We can use `@Autowired` and give any method name to handle dependency injection
+
+## Which Injection Type should use?
+
+- **Constructor Injection**
+    - When have required dependencies
+    - Recommended by **spring.io**
+- **Setter Injection**
+    - When have optional dependencies
+    - If dependency is not provided
+
+- Making **Setter Injection** example
+
+```
+	@Autowired
+	public void setCoach(Coach theCoach)
+	{
+		myCoach = theCoach;
+	}
+	
+	
+```
+
+- And same, but with `@autowire` annotation and **its works**
+
+```
+	@Autowired
+	public void doSomeStuff(Coach theCoach)
+	{
+		myCoach = theCoach;
+	}
+```
+
+- ✔️ Spring Injection recommended by **Spring.io**
+	- Constructor Injection: Required Dependencies ✔️
+	- Setter Injection: Optional Dependencies ✔️
+- ❌ **NOT** recommended by Spring Injection by **Spring.io**
+	- Field Injection ❌
