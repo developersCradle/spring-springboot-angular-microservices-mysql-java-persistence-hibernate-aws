@@ -160,3 +160,32 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 <img src="tellingScanningPacakges.JPG" alt="alt text" width="600"/>
 
 1. Telling explicitly to scan these packages!
+
+<img src="scanningPackages.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="applicationFailedToStartPackageScanning.JPG" alt="alt text" width="600"/>
+
+- We need to tell **Spring Boot** how to find these packages
+
+## Setter injection when using setters injecting component
+
+<img src="applicationFailedToStartPackageScanning.JPG" alt="alt text" width="600"/>
+
+- We will doing such autowiring example 
+
+<img src="autowiringExample.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="step1.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="step2.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="howSpringProcessesYourApplication.JPG" alt="alt text" width="600"/>
+
