@@ -264,7 +264,7 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 - This will be resulting in following error
 
-<img src="error.jpg" alt="alt text" width="700"/>
+<img src="error.JPG" alt="alt text" width="700"/>
 
 - Spring don't know which coach it should give back!
 
@@ -335,5 +335,35 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 # Lazy Initialization 
 
+- When Spring starts, all beans are initialized and make them available
+
 <img src="LazyInitializationExmaple.JPG" alt="alt text" width="600"/>
 
+- When made such, we could see such log
+
+```
+
+In contructor: BaseballCoach
+In contructor: CricketCoach
+In contructor: TennisCoach
+In contructor: TrackCoach
+
+```
+
+<img src="lazyInitialization.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="flowOfLazyInitialization.JPG" alt="alt text" width="600"/>
+
+1. **Bean** will be initialized only if its needed 
+2. We will inject cricket coach
+3. We are **not** injecting **TrackCoach** it is not initialized
+
+- If we are lazy to set `@Lazy` to each class, we could use **Global Configuration Property**
+
+<img src="lazyInitializationInOurExample.JPG" alt="alt text" width="600"/>
+
+1. Such global configuration will be used to make all **Beans** lazy
+
+jäin 3:30
