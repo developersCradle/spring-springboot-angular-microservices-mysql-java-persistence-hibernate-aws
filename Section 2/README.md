@@ -364,6 +364,30 @@ In contructor: TrackCoach
 
 <img src="lazyInitializationInOurExample.JPG" alt="alt text" width="600"/>
 
-1. Such global configuration will be used to make all **Beans** lazy
+1. Such global configuration will be used to make all **Beans** lazy → `spring.main.lazy-initialization=true`
+## Advantage of lazy initialization ✔️
 
-jäin 3:30
+1. ✔️ Only creating objects when needed
+2. ✔️ May help with faster **start up time** if you have **large number** of **Beans**
+
+## Disadvantages ❌
+
+1. ❌ If you have **web related components** like `@RestController`. Not created until requested
+2. ❌ May not discovered configuration issues until too late 
+3. ❌ When creating **beans** consumes a lot of memory 
+
+- Lazy initialization is **disabled** by default
+
+- You should profile your application before configuring lazy initialization.
+
+<img src="lazyInCode.JPG" alt="alt text" width="600"/>
+
+1. As you can see the bean which was initialized because it was marked as `@Lazy` and weren't used 
+
+# Bean Scopes
+
+- Scope is lifecycle of **bean**
+	- How long it lives?
+	- How many instances is created?
+	- How is bean shared?
+- **DEFAULT scope** is **SINGLETON**
