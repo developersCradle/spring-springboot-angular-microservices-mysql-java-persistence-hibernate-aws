@@ -219,11 +219,13 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 - And same, but with `@autowire` annotation and **its works**
 
 ```
+
 	@Autowired
 	public void doSomeStuff(Coach theCoach)
 	{
 		myCoach = theCoach;
 	}
+
 ```
 
 - ✔️ Spring Injection recommended by **Spring.io**
@@ -231,3 +233,107 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 	- Setter Injection: Optional Dependencies ✔️
 - ❌ **NOT** recommended by Spring Injection by **Spring.io**
 	- Field Injection ❌
+
+## Field Injection
+
+- Used in old days with **Spring projects**
+	- This made code more hard to **unit test**
+	- Some legacy project use **Field Injection**
+
+> Injecting dependencies by setting field values on your class directly (even private fields)
+> accomplished by using **Java Reflection**
+
+<img src="step2FieldInjection.JPG" alt="alt text" width="700"/>
+
+1. Since we are using **field injection** we don't need to use constructors and setter in **injection**
+2. In other hand this will make 
+
+<hr>
+
+### Autowiring
+
+<img src="autoWiring.jpg" alt="alt text" width="700"/>
+
+<br>
+
+<img src="multipleTypes.JPG" alt="alt text" width="700"/>
+
+1. Which one **autowiring** should implement 
+
+<img src="whichOneSpringWillPick.JPG" alt="alt text" width="700"/>
+
+- This will be resulting in following error
+
+<img src="error.jpg" alt="alt text" width="700"/>
+
+- Spring don't know which coach it should give back!
+
+# Qualifiers
+
+### To fix this
+
+- One of solution is to be specific which **CricketCoach** you should be using
+
+<img src="solutionBeSpesific.JPG" alt="alt text" width="700"/>
+
+## For Setter Injection
+
+- You can use Setter injection and use `@Qualifier` annotation
+
+<img src="setterInjection.JPG" alt="alt text" width="700"/>
+
+<br>
+
+<img src="failedToStart.JPG" alt="alt text" width="700"/>
+
+- As you can see, since its constructor injection whiteout being specific, we are experiencing problem where Spring boot does not know which class it should inject 
+
+<br>
+
+```
+	@Autowired
+	public DemoController(Coach theCoach) 
+	{
+		myCoach = theCoach;
+	}
+	
+```
+
+- Remember `@Component` marks Java class as **Bean**
+
+- To fix this we add `@Qualifier`
+
+<img src="fixThisProblem.JPG" alt="alt text" width="700"/>
+
+<br>
+
+<img src="resolvingIssue.JPG" alt="alt text" width="700"/>
+
+<br>
+
+<img src="alternativeSolution.JPG" alt="alt text" width="700"/>
+
+<br>
+
+# Primary
+
+<img src="usingPrimary.JPG" alt="alt text" width="700"/>
+
+- Just need to use `@Primary` to tell **Spring Boot** to return specified primary coach
+
+<img src="resolvedWithPrimary.JPG" alt="alt text" width="600"/>
+
+- We just use primary `@Primary`
+	- Problem with primary that you can have only one of such annotation
+
+- If you mix `@Primary` and `@Qualifier`.
+	- Qualifier has higher priority
+
+<img src="whichOneToUse.JPG" alt="alt text" width="500"/>
+
+1. In General should prefer `@Quailifier`
+
+# Lazy Initialization 
+
+<img src="LazyInitializationExmaple.JPG" alt="alt text" width="600"/>
+
