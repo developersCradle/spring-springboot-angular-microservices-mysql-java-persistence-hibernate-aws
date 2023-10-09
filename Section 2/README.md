@@ -460,3 +460,11 @@ public void doMyStartupStuff(){
 - `@Bean` kertaa BEAN
 
 <img src="realWordScenarioBean.JPG" alt="alt text" width="600"/>
+
+1. Real world scenario bean
+
+- User case to use Beans with third party class, like from AWS
+
+<img src="usingThirdPartyBeansCase.JPG" alt="alt text" width="600"/>
+
+- Todo heikki kertaa BEAN konsepti  

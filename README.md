@@ -18,7 +18,7 @@ Insert certificate here when completed
 ## Progress/Curriculum new
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%201) - Section 1: NEW - Spring Boot 3 Quick Start
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Section 2: NEW - Spring Core
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Section 2: NEW - Spring Core
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Section 3: NEW - Hibernate/JPA CRUD 
 - [ ] [Section 04](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%204) - Section 4: NEW - REST CRUD APIs
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%205) - Section 5: NEW - REST API Security 
@@ -44,3 +44,118 @@ Insert certificate here when completed
 - [ ] [Section 4](#) - Spring Inversion of Control - XML Configuration
 - [ ] [Section 5](#) - Spring Dependency Injection - XML Configuration
 
+
+
+- TODO task heikki When every is finished
+
+```
+COUNTRY SERVICE
+
+ 
+
+Implement a microservice which provides a list of countries and, in addition, provides more detailed information per country.
+
+ 
+
+Requirements:
+
+ 
+
+1. Use spring-boot
+
+https://start.spring.io/
+
+https://spring.io/guides/gs/spring-boot/
+
+ 
+
+2. Use maven
+
+https://spring.io/guides/gs/maven/  
+
+https://www.baeldung.com/maven
+
+ 
+
+3. Use best practices and microservice approach
+
+ 
+
+4. Implement the following REST API with spring-boot:
+
+ 
+
+GET /countries/
+
+ 
+
+response:
+
+          {
+
+                   "countries": [
+
+                             {
+
+                                       "name": "Finland",
+
+                                       "country_code": "FI"
+
+                             },
+
+                             ...
+
+                   ]
+
+          }
+
+ 
+
+GET /countries/{name}
+
+ 
+
+response:
+
+          {
+
+                   "name": "Finland",
+
+                   "country_code": "FI",
+
+                   "capital": "Helsinki",
+
+                   "population": 5491817,
+
+                   "flag_file_url": "<url to the flag file>"
+
+          }
+
+ 
+
+5. Country service must fetch the relevant information for countries from some other service
+
+- You could use for example the following service: https://countriesnow.space/
+
+ 
+
+6. Test the implementation as well as it's needed from your perspective
+
+ 
+
+7. All the implementations must be runnable locally with our own computer. Write needed instructions to README.md file.
+
+ 
+
+8. Publish all sources code and relevant files in github or similar service and send the link to the repo so that the implementation can be reviewed.
+
+ 
+
+You get bonus points if:
+
+- you use and understand reactor (https://www.baeldung.com/reactor-core)
+
+- you create a separate wep application which utilizes the created REST API and shows the relevant country information in a browser
+
+ 
+```
