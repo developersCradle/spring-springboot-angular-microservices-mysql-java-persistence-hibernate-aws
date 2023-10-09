@@ -391,3 +391,72 @@ In contructor: TrackCoach
 	- How many instances is created?
 	- How is bean shared?
 - **DEFAULT scope** is **SINGLETON**
+
+- Singleton in context of Spring Boot
+	- Only one instance is created by default
+	- Cached in memory
+	- All dependencies are referencing to the same bean 
+
+<img src="usingSpringBeansSingleton.JPG" alt="alt text" width="600"/>
+
+1. Both are pointing to same instance, therefore they can be called **SINGLETON**
+
+- We can configure scopes
+
+```
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+```
+
+<img src="someBeanScopes.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="checkingScopeDemoExample.JPG" alt="alt text" width="600"/>
+
+- Example of checking scope
+
+<img src="singletonBeanInIde.JPG" alt="alt text" width="600"/>
+
+- Remember we are handling singleton here!
+
+<img src="scope_prototype.JPG" alt="alt text" width="600"/>
+
+1.  Now with each injection bean will point to **own** instance
+
+# Bean Lifecycle
+
+<img src="beanLifeCycle.JPG" alt="alt text" width="600"/>
+
+1. We can write own custom initialization methods
+2. Call to our custom destroy 
+
+- These custom socket methods can be used for setting up things' or cleaning up when things are done
+	1. db, sockets, files, etc. or calling custom business logic methods when things are done.
+
+- To set `init()` configuration we can use `@PostConstruct` like such
+
+```
+
+@Compoment
+public class CricketCoach implements Coach {
+	public CricketCoach(){
+		//Logic
+	}
+}
+
+@PostConsturct //Own code here, once bean is construted
+public void doMyStartupStuff(){
+		//Logic
+	}
+
+```
+
+- Destroy hook `@PostConstruct and @PreDestroy`
+
+<img src="intiMethod.JPG" alt="alt text" width="600"/>
+
+1. As you can see `@PostConstruct` is called after constructor
+
+- `@Bean` kertaa BEAN
+
+<img src="realWordScenarioBean.JPG" alt="alt text" width="600"/>
