@@ -59,7 +59,7 @@ NEW - Hibernate/JPA CRUD
 
 int theId = 1;
 Student myStudent = entityManager.find(Student.calss, theId);
-
+ 
 ```
 
 - This is basically what we need to retrieve **Object** from database.
@@ -76,3 +76,94 @@ Student myStudent = entityManager.find(Student.calss, theId);
 
 <img src="JPA_JDBC.JPG" alt="alt text" width="600"/>
     
+- MySQL is being used here.
+- [WorkBench](https://dev.mysql.com/downloads/workbench/)
+- [MySQL](https://dev.mysql.com/downloads/mysql/)
+
+- Creating user SQL
+
+```
+-- Drop user first if they exist
+DROP USER if exists 'springstudent'@'%' ;
+
+-- Now create user with prop privileges
+CREATE USER 'springstudent'@'%' IDENTIFIED BY 'springstudent';
+
+GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'%';
+```
+
+ - Student tracker SQL
+
+```
+CREATE DATABASE  IF NOT EXISTS `student_tracker`;
+USE `student_tracker`;
+
+--
+-- Table structure for table `student`
+--
+
+DROP TABLE IF EXISTS `student`;
+
+CREATE TABLE `student` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name`varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+```
+
+<img src="SpringBootDefaultsetting.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="applicationProperryWillBeUsed.JPG" alt="alt text" width="600"/>
+
+1. We will be using following configurations, **db** which we created previously
+2. Datasource URL
+
+<img src="creatingSpringBootAppConsole.JPG" alt="alt text" width="600"/>
+
+1. **CommandLineRunner** is **Spring Boot** hook to run after **Spring Boot** have been loaded
+2. We can add DAO code later on 
+
+- For now, we can use following to illustrate `CommandLineRunner`
+
+```
+	//Executed after Spring Beans have been loaded
+	@Bean 
+	public CommandLineRunner commandLineRunner(String[] args)
+	{
+		return runner -> {
+			System.out.println("Hello World");
+		};
+	}
+```
+
+<img src="settingUpJdbc.JPG" alt="alt text" width="600"/>
+
+1. This connects our local MySql to our JDBC
+
+<img src="logsForConnecting.JPG" alt="alt text" width="600"/>
+
+1. We can see that our JDBC drivers successfully logged in to Database
+
+<img src="ourCodeAfterBeans.JPG" alt="alt text" width="600"/>
+
+1. We can see our CondeLineRunner is working, executed after bean have been loaded
+
+
+# JPA development
+
+1. Annotate Java Class
+2. Make Java Code to perform database operation
+
+<img src="entity.JPG" alt="alt text" width="600"/>
+
+<br>
+
+- Entity class should have:
+
+<img src="entityclass.JPG" alt="alt text" width="600"/>
+
+2:00
