@@ -120,7 +120,7 @@ CREATE TABLE `student` (
 <img src="applicationProperryWillBeUsed.JPG" alt="alt text" width="600"/>
 
 1. We will be using following configurations, **db** which we created previously
-2. Datasource URL
+2. Data source URL
 
 <img src="creatingSpringBootAppConsole.JPG" alt="alt text" width="600"/>
 
@@ -164,6 +164,214 @@ CREATE TABLE `student` (
 
 - Entity class should have:
 
-<img src="entityclass.JPG" alt="alt text" width="600"/>
+<img src="entityClass.JPG" alt="alt text" width="600"/>
 
-2:00
+
+## Java annotations
+
+1. Maps class to database table
+2. Map fields to database columns
+
+<img src="mappingStep1.JPG" alt="alt text" width="600"/>
+
+1. We are mapping entity maps to database table
+
+
+<img src="mappingColumns.JPG" alt="alt text" width="600"/>
+
+1. We are using `@Column` to map column to database column
+
+- Notice also Java class naming and database naming are different.
+
+<img src="usingColumnAnnotation.JPG" alt="alt text" width="600"/>
+
+1. `@Column` is optional, but **recommended**. When you will refactor your code your column names could get messed up!
+
+- The same applies to `@Table` annotation
+
+```
+CREATE TABLE student (
+    id int NOT NULL AUTO_INCREMENT,
+    first_name varchar(45) DEFAULT NULL,
+    last_name varchar(45) DEFAULT NULL,
+    email varchar(45) DEFAULT NULL,
+    PRIMARY KEY (id)
+)
+```
+
+- Same in Java annotations
+
+<img src="JPAclass.JPG" alt="alt text" width="600"/>
+
+- In JPA world we need to specify **primary key**
+
+1. We are telling that we let database manage this `Id` field.
+
+## Different ID generation strategies
+
+<img src="IDgeneratingStrategyes.JPG" alt="alt text" width="600"/>
+
+1. `GenrationType.IDENTITY` is most recommended, it should cover most of the cases
+
+
+- If you didn't find wanted Generating logic for your need. You can **MAKE** your own **CUSTOM** strategy.
+    - Make implementation of `org.hibernate.id.IdentifierGenerator`
+    - Override the method: `public Serializable genrate(...)`
+
+
+- Example of Entity where we map Java class to Database Table
+```
+package com.luv2code.cruddemo.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="student") // Mapping to table
+public class Student {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // I let MYSQL handle id generation
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="last_name")
+	private String lastName;
+	
+	@Column(name="email")
+	private String email;
+
+	
+	public Student() {
+	}
+
+
+	public Student(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+
+	
+	
+}
+```
+
+- It's common to have **D**ata **A**ccess **O**bject(**DAO**)
+
+<img src="DAO.JPG" alt="alt text" width="600"/>
+
+1. **DAO** is between App and Database. This is like helper class
+
+<img src="daoOperators.JPG" alt="alt text" width="600"/>
+
+- It's good to plan operations for **DAO**. In our example we are going to use such.
+
+<img src="DAOwithJPAmanager.JPG" alt="alt text" width="600"/>
+
+- **DAO** communicates with **Entity Manager**, which in return communicates with **our database**
+1. We will have JPA Entity Manager with our **DAO**
+2. Main component for **saving/getting** entities
+
+<img src="JPAentityManager.JPG" alt="alt text" width="600"/>
+
+<hr>
+
+<img src="1.JPG" alt="alt text" width="600"/>
+
+1. Student is our JPA Entity class which we did mapping!
+2. Saves given Student
+
+<img src="2.JPG" alt="alt text" width="600"/>
+
+1. **StudentDAO** implementation from interface, which we created in step 1.
+2. We are using **EntityManager** to inject into our **DAO** implementation
+3. Remember in our architectural approach **EntityManger** is communication between our **DAO** and **database**
+4. We are using our **EntityManager** to save our Student **DAO**
+
+<img src="transactional.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="2transActional.JPG" alt="alt text" width="600"/>
+
+1. We want to tell this action is **Transactional**. This annotation is form Spring Framework
+
+- [Transactional](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html)
+
+<br>
+
+<img src="repository.JPG" alt="alt text" width="600"/>
+
+1. This is subcomponent. It is for **DAO**
+
+- There is reason why we would apply `@Repository` for our **DAO**
+
+<img src="whyApplyRepositoryForDAO.JPG" alt="alt text" width="600"/>
+
+<br>
+
+- Using `@Repository` in our implementation
+
+<img src="2repository.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="3.JPG" alt="alt text" width="600"/>
+
+1. Executed after Beans have been **loaded**
+
+- kertaa toi viimeinen slaidi
