@@ -13,13 +13,10 @@ public class CruddemoApplication {
 	}
 	
 	
-	//Executed after Spring Beans have been loaded
-	@Bean 
+	@Bean
 	public CommandLineRunner commandLineRunner(String[] args)
 	{
-		return runner -> {
-			System.out.println("Hello World");
-		};
+		return runner -> System.out.println("Hello World");
 	}
 
 }

@@ -374,4 +374,3 @@ public class Student {
 
 1. Executed after Beans have been **loaded**
 
-- kertaa toi viimeinen slaidi
