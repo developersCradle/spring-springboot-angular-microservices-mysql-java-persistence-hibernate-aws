@@ -374,3 +374,87 @@ public class Student {
 
 1. Executed after Beans have been **loaded**
 
+- Following will save Student to db 
+
+```
+private Object createStudent(StudentDAO studentDAO) {
+		
+		System.out.println("Creating new student object ...");
+		Student tempStudent = new Student( "Paul", "Doe", "Paul@luv2code.com");
+		
+		
+		System.out.println("Saving the student");
+		studentDAO.save(tempStudent);
+		
+		System.out.println("Saved student. Generated id: " + tempStudent.getId());
+		
+		
+		
+		return null;
+	}
+```
+
+- You can see **Paul** gets saved into database
+
+<img src="saveingToDb.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="someDatabaseTables.JPG" alt="alt text" width="600"/>
+
+- Saving multiple **Students**
+
+```
+	private void createMultipleStudent(StudentDAO studentDAO) {
+		
+		System.out.println("Creating 3 student objects...");
+		Student tempStudent1 = new Student( "John", "Doe", "Paul@luv2code.com");
+		Student tempStudent2 = new Student( "Mary", "Public", "Paul@luv2code.com");
+		Student tempStudent3 = new Student( "Bonita", "Applebum", "Paul@luv2code.com");
+		
+		System.out.println("Saving the student ...");
+		studentDAO.save(tempStudent1);
+		studentDAO.save(tempStudent2);
+		studentDAO.save(tempStudent3);
+	}
+
+```
+
+<img src="autoIncrementAtWork.JPG" alt="alt text" width="600"/>
+
+<br>
+
+- **SQL** command of for changing old table
+
+```
+ALTER TABLE student_tracker.student auto_increment=3000
+```
+
+<br>
+
+- Alter works! **id** starts from 3000
+<img src="AlterTableWorkingWithDifferentAutoIncrent.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="entityFind.JPG" alt="alt text" width="600"/>
+
+- Looking object based on **Id**
+
+- Setting auto increment to default `truncate student_tracker.student;`
+
+# Retrieving a Java Object With JPA
+
+<img src="retrieveingJavaObjectWithJPA2.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="entityFind.JPG" alt="alt text" width="600"/>
+
+- If not find return **null**
+
+<br>
+
+- Since this is retrieving object. This Does not need `@Transactional`, since its query
+
+# Querying Objects
