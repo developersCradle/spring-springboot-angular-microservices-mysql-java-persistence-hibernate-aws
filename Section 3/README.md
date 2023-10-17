@@ -458,3 +458,21 @@ ALTER TABLE student_tracker.student auto_increment=3000
 - Since this is retrieving object. This Does not need `@Transactional`, since its query
 
 # Querying Objects
+
+<br>
+
+<img src="jpqlLanguage.JPG" alt="alt text" width="600"/>
+
+1. Remember **(s)**, since objects are queried thought **entity manager**. Query Language is used to retrieve multiple objects
+
+2. You are using same operations like in SQL
+
+3. **JPQL** is based on **entity names** and **entity fields** rather than **table name** and **table fields** like in **SQL**
+
+<img src="retrieveingAllStudents.JPG" alt="alt text" width="600"/>
+
+1. This is names in **Entity** not database tables. All **JPQL syntax** is based on **Entity Names** and **Entity Fields**
+
+<img src="retrievingStudentsWithName.JPG" alt="alt text" width="600"/>
+ja toi edellinen
+2:20
