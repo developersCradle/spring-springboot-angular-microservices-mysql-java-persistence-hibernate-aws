@@ -1,5 +1,7 @@
 package com.luv2code.cruddemo;
 
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,11 +24,25 @@ public class CruddemoApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO)
 	{
 		return runner -> {
-			createMultipleStudent(studentDAO);
+//			createMultipleStudent(studentDAO);
 //			readStudent(studentDAO);
+			
+			queryForStudents(studentDAO);
 		};
 	}
 	
+
+	private void queryForStudents(StudentDAO studentDAO) {
+
+		List<Student> theStudents = studentDAO.findAll();
+	
+		for (Student tempStudent : theStudents) {
+			
+			System.out.println(tempStudent);
+		}
+	
+	}
+
 
 	private void readStudent(StudentDAO studentDAO) {
 		

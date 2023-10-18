@@ -1,10 +1,13 @@
 package com.luv2code.cruddemo.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.luv2code.cruddemo.entity.Student;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
 
 // Adds support for component scanning and Translates JDBC exceptions
@@ -32,6 +35,26 @@ public class StudentDAOImpl implements StudentDAO {
 	@Override
 	public Student findById(Integer id) {
 		return entityManager.find(Student.class, id);
+	}
+
+
+
+	@Override
+	public List<Student> findAll() {
+		//Create query
+		
+		TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student", Student.class);
+		//Return query results
+		return theQuery.getResultList();
+	}
+
+
+
+	@Override
+	public List<Student> findByLastName(String theLastName) {
+//		TypeQuery<Student> theQuery = entityManager.cr 2:00
+		
+		return null;
 	}
 
 }

@@ -474,5 +474,31 @@ ALTER TABLE student_tracker.student auto_increment=3000
 1. This is names in **Entity** not database tables. All **JPQL syntax** is based on **Entity Names** and **Entity Fields**
 
 <img src="retrievingStudentsWithName.JPG" alt="alt text" width="600"/>
-ja toi edellinen
-2:20
+
+<br>
+
+- You can use **OR** also.
+
+<img src="retrievingStudentsOr.JPG" alt="alt text" width="600"/>
+
+- Using **LIKE** Ends in `luv2code.com`
+
+<img src="retrievingStudentsLike.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="jpqlNamedParameters.JPG" alt="alt text" width="600"/>
+
+1. **JPQL Named Parameter** are prefixed with a colon `:`
+
+- We can **ORDER BY** in SQL also
+```
+	@Override
+	public List<Student> findAll() {
+		//Create query
+		
+		TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student ORDER BY lastName", Student.class);
+		//Return query results
+		return theQuery.getResultList();
+	}
+```
