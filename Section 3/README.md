@@ -433,6 +433,7 @@ ALTER TABLE student_tracker.student auto_increment=3000
 <br>
 
 - Alter works! **id** starts from 3000
+
 <img src="AlterTableWorkingWithDifferentAutoIncrent.JPG" alt="alt text" width="600"/>
 
 <br>
@@ -492,6 +493,7 @@ ALTER TABLE student_tracker.student auto_increment=3000
 1. **JPQL Named Parameter** are prefixed with a colon `:`
 
 - We can **ORDER BY** in SQL also
+
 ```
 	@Override
 	public List<Student> findAll() {
@@ -502,3 +504,39 @@ ALTER TABLE student_tracker.student auto_increment=3000
 		return theQuery.getResultList();
 	}
 ```
+
+<img src="typedQuery.JPG" alt="alt text" width="600"/>
+
+- After semicolons come place filler
+
+- We can use **typed query** with **parameters**
+
+```
+
+TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student WHERE lastName =: theData", Student.class);
+		
+theQuery.setParameter("theData", theLastName);
+return theQuery.getResultList();
+
+```
+
+<img src="typedQueryFindLastNameWorking.JPG" alt="alt text" width="600"/>
+
+# Updating an Object 
+
+## Updating a Student
+
+```
+Student theStudent = entityManager.find(Student.class, 1); //Wiht primary key of 1
+
+//chage first name to "dave"
+theStudent.setFirstName("dave");
+
+entityManager.merge(theStudent); // Updating the entity, with MERGE!
+```
+- **entityManager.merge** making use of merge 
+
+
+## Updating Multiple Objects
+
+<img src="updateForAllStudents.JPG" alt="alt text" width="600"/>

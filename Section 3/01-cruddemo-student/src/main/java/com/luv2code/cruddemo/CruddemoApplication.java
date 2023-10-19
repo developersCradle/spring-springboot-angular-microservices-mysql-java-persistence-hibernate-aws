@@ -1,5 +1,6 @@
 package com.luv2code.cruddemo;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
@@ -26,11 +27,23 @@ public class CruddemoApplication {
 		return runner -> {
 //			createMultipleStudent(studentDAO);
 //			readStudent(studentDAO);
+//			queryForStudents(studentDAO);
 			
-			queryForStudents(studentDAO);
+			queryForStudentsByLastName(studentDAO);
 		};
 	}
 	
+
+	private void queryForStudentsByLastName(StudentDAO studentDAO) {
+		
+		List<Student> theStudents = studentDAO.findByLastName("Doe");
+
+		System.out.println("queryForStudentsByLastName alkaa");
+		for (Student tempStudent : theStudents ) {
+			System.out.println(tempStudent);
+		}
+	}
+
 
 	private void queryForStudents(StudentDAO studentDAO) {
 
