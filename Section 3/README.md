@@ -536,7 +536,34 @@ entityManager.merge(theStudent); // Updating the entity, with MERGE!
 ```
 - **entityManager.merge** making use of merge 
 
-
 ## Updating Multiple Objects
 
 <img src="updateForAllStudents.JPG" alt="alt text" width="600"/>
+
+1. Field of the entity
+
+
+<img src="updatingPatient.JPG" alt="alt text" width="600"/>
+
+1. We can use `@Transactional` since we rare performing updating old pation
+
+# Delete student 
+
+<img src="deleteStudent.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="DeleteBasedOnCondition.JPG" alt="alt text" width="600"/>
+
+1. Updating is generic term. **Here** we are modifying the database
+	- This is not match operations to **JPSQL**
+	- This can be used to perform **Update**, **Delete** or **what ever**
+
+2. Returned how many rows been in affected
+
+- Deleting All Students
+
+```
+int numRowsDelted = entityManager.createQuery("DELETE FROM Stduent")
+.executeUpdate();
+```
