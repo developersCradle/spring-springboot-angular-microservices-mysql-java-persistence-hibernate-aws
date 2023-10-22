@@ -19,7 +19,7 @@ Insert certificate here when completed
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%201) - Section 1: NEW - Spring Boot 3 Quick Start
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Section 2: NEW - Spring Core
-- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Section 3: NEW - Hibernate/JPA CRUD 
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Section 3: NEW - Hibernate/JPA CRUD 
 - [ ] [Section 04](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%204) - Section 4: NEW - REST CRUD APIs
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%205) - Section 5: NEW - REST API Security 
 - [ ] [Section 06](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%206) - Section 6: NEW - Spring MVC

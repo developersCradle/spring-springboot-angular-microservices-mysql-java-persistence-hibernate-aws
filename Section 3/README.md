@@ -547,7 +547,7 @@ entityManager.merge(theStudent); // Updating the entity, with MERGE!
 
 1. We can use `@Transactional` since we rare performing updating old pation
 
-# Delete student 
+# Delete student and student(s) 
 
 <img src="deleteStudent.JPG" alt="alt text" width="600"/>
 
@@ -563,7 +563,55 @@ entityManager.merge(theStudent); // Updating the entity, with MERGE!
 
 - Deleting All Students
 
+### Interface 
+
 ```
-int numRowsDelted = entityManager.createQuery("DELETE FROM Stduent")
+int deleteAll(Integer studentId);
+//Its better to use Interger to able get null and errors in same message
+```
+
+```
+int numRowsDelted = entityManager.createQuery("DELETE FROM Student")
 .executeUpdate();
 ```
+
+<img src="creatingDatabaseOnFly.JPG" alt="alt text" width="600"/>
+
+1. We can create **SQL** with Java and hibernate 
+
+
+- We can add such into file: `applicaaion.properties`
+`spring.jpa.hibernate.ddl-auto=create`
+
+- When starting your application JPA/Hibernate will **Drop** and **Create** tables, based on JPA/Hibernate annotations in Java Code
+
+<img src="creatingTablesInJPAnnotation.JPG" alt="alt text" width="600"/>
+
+2. Such will be created based on annotation provided by **1.**
+
+- Different values for configurations
+
+<img src="configuringApplicationTableCreation.JPG" alt="alt text" width="600"/>
+
+1. When all database tables are dropped all data will be lost. This is convenient when **Unit testing**
+
+### Create configuration
+
+<img src="createConfiguration.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="updateConfiguration.JPG" alt="alt text" width="600"/>
+
+- Careful using this for basic projects
+
+<img src="warning.JPG" alt="alt text" width="600"/>
+
+### What you should do 
+
+<img src="recommendation.JPG" alt="alt text" width="600"/>
+
+2. We don't recommend this
+
+1. We recommend these scripts. Furthermore, we recommend like **Flyway**
+

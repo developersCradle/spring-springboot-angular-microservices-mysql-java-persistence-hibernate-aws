@@ -21,7 +21,8 @@ public interface StudentDAO {
 
 	void delete(Integer studentId);
 	
-	void deleteAll(Integer studentId);
+	int deleteAll();
 	
 	//Its better to use Interger to able get null and errors in same message
+
 }

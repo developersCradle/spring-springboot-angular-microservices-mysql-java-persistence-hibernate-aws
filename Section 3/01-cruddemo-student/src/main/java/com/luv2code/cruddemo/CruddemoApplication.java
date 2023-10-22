@@ -3,6 +3,8 @@ package com.luv2code.cruddemo;
 import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.annotations.SQLDeleteAll;
+import org.hibernate.internal.build.AllowSysOut;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,19 +27,26 @@ public class CruddemoApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO)
 	{
 		return runner -> {
-//			createMultipleStudent(studentDAO);
+			createMultipleStudent(studentDAO);
 //			readStudent(studentDAO);
 //			queryForStudents(studentDAO);
 //			queryForStudentsByLastName(studentDAO);
 //			updateStuden(studentDAO);
-			deleteStudent(studentDAO);
+//			deleteStudent(studentDAO);
+//			deleteAllStudent(studentDAO);
 		};
 	}
 	
 
-	private void deleteStudent(StudentDAO studentDAO) {
-
+	private void deleteAllStudent(StudentDAO studentDAO) {
+		System.out.println();
+		int numRowsDeleted = studentDAO.deleteAll();
+		System.out.println("Deleted row count" + numRowsDeleted);
 		
+	}
+
+
+	private void deleteStudent(StudentDAO studentDAO) {
 		Integer studentID = 3;
 		
 		System.out.println("Deleting studet id: " + studentID);

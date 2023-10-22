@@ -81,17 +81,15 @@ public class StudentDAOImpl implements StudentDAO {
 		
 	}
 
-
-
 	@Override
 	@Transactional
-	public int deleteAll(Integer studentId) { // Jäin tähän
+	public int deleteAll() {
 		
-		int numRowsDelted = entityManager.createNamedQuery("DELTE FROM Student").executeUpdate();
+		int numRowsDeleted = entityManager.createQuery("DELETE FROM Student").executeUpdate();
 		
-		return numRowsDelted;
+		return numRowsDeleted;
 	}
-
+	
 }
 
 
