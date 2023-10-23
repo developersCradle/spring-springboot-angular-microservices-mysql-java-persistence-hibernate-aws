@@ -77,3 +77,41 @@ NEW - REST CRUD APIs
 - We can query this **URL** with many ways
 
 <img src="webBrowserVsPostman.JPG" alt="alt text" width="500"/>
+
+
+- RestController in Java
+
+```
+
+package com.luv2code.
+demo.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/test")
+public class DemoRestController {
+
+	
+	@GetMapping("/hello")
+	public String sayHello() {
+		return "Hello World";
+	}
+}
+
+```
+
+<img src="restControllerWorkign.JPG" alt="alt text" width="600"/>
+
+### Spring Boot REST POJO 
+
+<img src="javaJsonDataBinding.JPG" alt="alt text" width="600"/>
+
+1. Other terms used 
+
+- **Jackson Project** is used behind the scenes
+- Jackson takes care data binding between JSON and Java POJO
+
+2:00
