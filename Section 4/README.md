@@ -41,3 +41,39 @@ NEW - REST CRUD APIs
 <img src="jsonArrays.JPG" alt="alt text" width="500"/>
 
 <br>
+
+<img src="restOverHTTPVerbs.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="HTTPrequestMessage.JPG" alt="alt text" width="500"/>
+
+- **Message body:**
+  Message of content will be inside message body as **JSON**. If adding is happening.
+
+<img src="HTTPresponse.JPG" alt="alt text" width="500"/>
+
+- **MIME** Content Type, media type of the payload.
+
+<img src="mimeContentType.JPG" alt="alt text" width="500"/>
+
+- For getting dummy JSON files
+
+- [Fake Online REST API for Testing and Prototyping](http://jsonplaceholder.typicode.com/)
+
+- Performing postman **GET** to dummy website
+
+- `http://jsonplaceholder.typicode.com/users`
+
+<img src="postmanGet.JPG" alt="alt text" width="500"/>
+
+
+### Rest client with REST Controller
+
+<img src="restController.JPG" alt="alt text" width="500"/>
+
+1. Annotation for class adds support for **REST**
+
+- We can query this **URL** with many ways
+
+<img src="webBrowserVsPostman.JPG" alt="alt text" width="500"/>
