@@ -114,4 +114,25 @@ public class DemoRestController {
 - **Jackson Project** is used behind the scenes
 - Jackson takes care data binding between JSON and Java POJO
 
-2:00
+<img src="JacksonDatabinding.JPG" alt="alt text" width="600"/>
+
+1. We define getters/setters for **conversion** to **POJO** → **JSON** and other way around. Jackson can help this one out!
+
+- Jackson calls `setXXX` method when setting up **POJO**
+
+<img src="JSONtoJavaPOJO.JPG" alt="alt text" width="600"/>
+
+1. Name from JSON, is used to call set in **POJO**
+2. Jackson calls setter methods
+
+<img src="POJOtoJSON.JPG" alt="alt text" width="600"/>
+
+1. Getter methods are called
+
+<img src="springAndJacksonSupport.JPG" alt="alt text" width="600"/>
+
+<br>
+
+<img src="willBeWritingSuchRestService.JPG" alt="alt text" width="600"/>
+
+- 2:00
