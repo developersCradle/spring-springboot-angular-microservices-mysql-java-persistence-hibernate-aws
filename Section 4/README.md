@@ -78,7 +78,6 @@ NEW - REST CRUD APIs
 
 <img src="webBrowserVsPostman.JPG" alt="alt text" width="500"/>
 
-
 - **RestController** in Java
 
 ```
@@ -154,3 +153,30 @@ public class DemoRestController {
 
 1. `@PathVariables` **binds** to **method parameter** from incoming URL variable. Needs to be same name!
 2. Gets since student and **Jackson** converts this one to JSON!
+
+- We can use `@PostConstruct` for initializing data for bean. Is **processed** after bean have been loaded
+
+```
+	@PostConstruct
+	public void loadData()
+	{
+		theStudents = new ArrayList<>();
+		
+		theStudents.add(new Student("Poornima", "Patel"));
+		theStudents.add(new Student("Mario", "Rossi"));
+		theStudents.add(new Student("Mary", "Smith"));
+		
+	}
+```
+
+<img src="pathVariableWorking.JPG" alt="alt text" width="600"/>
+
+### Spring Boot REST Exception Handling
+
+<img src="sendingBackException.JPG" alt="alt text" width="500"/>
+
+1. We want to send back exception inside response as JSON
+
+<img src="processForMakingThis.JPG" alt="alt text" width="500"/>
+
+1:30
