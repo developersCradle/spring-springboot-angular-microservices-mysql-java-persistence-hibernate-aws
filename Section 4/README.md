@@ -79,7 +79,7 @@ NEW - REST CRUD APIs
 <img src="webBrowserVsPostman.JPG" alt="alt text" width="500"/>
 
 
-- RestController in Java
+- **RestController** in Java
 
 ```
 
@@ -112,6 +112,7 @@ public class DemoRestController {
 1. Other terms used 
 
 - **Jackson Project** is used behind the scenes
+
 - Jackson takes care data binding between JSON and Java POJO
 
 <img src="JacksonDatabinding.JPG" alt="alt text" width="600"/>
@@ -135,4 +136,21 @@ public class DemoRestController {
 
 <img src="willBeWritingSuchRestService.JPG" alt="alt text" width="600"/>
 
-- 2:00
+- We will pass `<List>Students`
+
+<img src="creatingRestClient.JPG" alt="alt text" width="600"/>
+
+1. List will be automatically converted to **JSON array**
+
+<img src="restControllerWorkingWithJackson.JPG" alt="alt text" width="600"/>
+
+### Spring Boot REST - Path Variables
+
+<img src="pathVariable.JPG" alt="alt text" width="600"/>
+
+1. For parametrizing path variable. Will be in **URL**
+
+<img src="addingRequestMapping.JPG" alt="alt text" width="600"/>
+
+1. `@PathVariables` **binds** to **method parameter** from incoming URL variable. Needs to be same name!
+2. Gets since student and **Jackson** converts this one to JSON!
