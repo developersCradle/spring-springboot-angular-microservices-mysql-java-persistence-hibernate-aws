@@ -179,4 +179,126 @@ public class DemoRestController {
 
 <img src="processForMakingThis.JPG" alt="alt text" width="500"/>
 
-1:30
+1. We are making JAVA(POJO) for custom error response
+
+2. We are making our own custom exception
+
+<img src="step3.JPG" alt="alt text" width="500"/>
+
+4. Step for whose taking care of exception and returning exception back to client
+
+<img src="step4.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="addingStep4.JPG" alt="alt text" width="500"/>
+
+1. We are making our own POJO class
+
+- To catch exception we write
+
+<img src="catchingExceptions.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="exceptionHandlingWorking.JPG" alt="alt text" width="500"/>
+
+- After implementing our exception handling exception mechanism we did not cover all edge cases. The error we countered such error message 
+
+`2023-10-29T13:23:44.486+02:00  WARN 3852 --- [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "sdasdasds"]`
+
+- **Bad Request**. To fix this we can do one of two things:
+	- Make **generic exception handler**, catch all exception
+	- Or cover all **edge cases**
+
+
+- Example writing Exception Handler for per **RestController** 
+
+```
+	// Catch all exception
+	@ExceptionHandler
+	public ResponseEntity<StudentErrorResponse> handlerException(Exception exc) {
+		
+		StudentErrorResponse error = new StudentErrorResponse();
+		
+		error.setStatus(HttpStatus.BAD_REQUEST.value());
+		error.setMessage(exc.getMessage());
+		error.setTimeStamp(System.currentTimeMillis());
+	
+		return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+
+	}
+```
+
+<img src="jsonExceptionReturned.JPG" alt="alt text" width="500"/>
+
+###  Spring Boot REST Global Exception Handling
+
+<br>
+
+- We can write **global** exception handlers, and they are kinda recommended.
+
+<img src="globalExceptionHandler.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="SpringControllerAdvice.JPG" alt="alt text" width="500"/>
+
+- We can `@ControllerAdvice` annotation
+
+<img src="globarExceptionHandling.JPG" alt="alt text" width="500"/>
+
+1. Here we will handle all global exception in this controller `@ControllerAdvice`
+- We don't need to make exception handling REST specific. This can be used from **global controller** advice handler.
+
+- We want following mechanism. **Full CRUD**
+	- Get a list of employees (GET)
+	- Get a single employee by id (GET)
+	- Add a new employee (POST)
+	- Update an employee (PUT)
+	- Delete an employee (DELETE)
+
+<img src="namingRestInterface.JPG" alt="alt text" width="500"/>
+
+1. Since name "employee" is often present, we will use such naming
+
+
+### REST ANTI-PATTERNS
+
+<img src="antiPattern.JPG" alt="alt text" width="500"/>
+
+- Use HTTP verbs for REST API names 
+
+- SQL Script for database setting for CRUD application
+
+```
+CREATE DATABASE  IF NOT EXISTS `employee_directory`;
+USE `employee_directory`;
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+
+CREATE TABLE `employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+--
+-- Data for table `employee`
+--
+
+INSERT INTO `employee` VALUES 
+	(1,'Leslie','Andrews','leslie@luv2code.com'),
+	(2,'Emma','Baumgarten','emma@luv2code.com'),
+	(3,'Avani','Gupta','avani@luv2code.com'),
+	(4,'Yuri','Petrov','yuri@luv2code.com'),
+	(5,'Juan','Vega','juan@luv2code.com');
+
+
+```

@@ -34,6 +34,8 @@ Insert certificate here when completed
 
 - Todo read/skim thought spring documentation when finished this course
 
+- Todo tsekkaa typot
+
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
 ## Progress/Curriculum
