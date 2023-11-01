@@ -299,6 +299,15 @@ INSERT INTO `employee` VALUES
 	(3,'Avani','Gupta','avani@luv2code.com'),
 	(4,'Yuri','Petrov','yuri@luv2code.com'),
 	(5,'Juan','Vega','juan@luv2code.com');
-
-
 ```
+
+- We are adding `Employee Service`
+
+<img src="weAreAddingServiceLayer.JPG" alt="alt text" width="500"/>
+
+<br>
+
+<img src="serviceLayer.JPG" alt="alt text" width="500"/>
+
+- Todo perehdy Facade Pattern
+-jäin 0:30
