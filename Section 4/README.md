@@ -361,6 +361,22 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 }
 
-
-
 ```
+
+### Best practices using service layer
+
+<img src="serviceLayerBestPractives.JPG" alt="alt text" width="500"/>
+
+1. Transactions are refactored to service layer
+
+<img src="performingMerge.JPG" alt="alt text" width="500"/>
+
+1. `.merge` operation performs update or modifying depending on ID.
+	- If not equal to 0, perform update other perform insert
+2. In case of update its important return updated object.
+
+- We want `@Transactional` refactored to **service layer**
+
+
+
+<img src="delettingDao.JPG" alt="alt text" width="500"/>
