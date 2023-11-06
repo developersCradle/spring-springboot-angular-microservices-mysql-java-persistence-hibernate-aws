@@ -312,6 +312,8 @@ INSERT INTO `employee` VALUES
 
 <br>
 
+- [Facade](https://en.wikipedia.org/wiki/Facade_pattern) 
+
 <img src="integratingMultipleDataSource.JPG" alt="alt text" width="500"/>
 
 1. Pulling data from multiple sources
@@ -371,12 +373,154 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 <img src="performingMerge.JPG" alt="alt text" width="500"/>
 
-1. `.merge` operation performs update or modifying depending on ID.
+1. `.merge` operation performs **update** or **modifying** depending on ID.
 	- If not equal to 0, perform update other perform insert
 2. In case of update its important return updated object.
 
 - We want `@Transactional` refactored to **service layer**
 
-
-
 <img src="delettingDao.JPG" alt="alt text" width="500"/>
+
+
+<br>
+
+- Delete in code
+
+```
+	//DELETE mapping
+	@DeleteMapping("/employees/{employeeId}")
+	public String deleteEmployee(@PathVariable int employeeId) {
+		Employee tempEmployee = employeeService.findById(employeeId);
+	
+		if (tempEmployee == null) {
+			throw new RuntimeException("Employee id not found - " + employeeId);
+		}
+		
+		employeeService.deleteById(employeeId);
+		
+		return "Deleted employee id - " + employeeId;
+		
+	}
+```
+
+<br>
+
+<img src="sendingJSONtoSpringRestController.JPG"  alt="alt text" width="500"/>
+
+1. For processing JSON data, setting HTTP request header is needed
+
+<img src="settinngHeaderInPostMan.JPG"  alt="alt text" width="500"/>
+
+- Adding via POST
+
+```
+@PostMapping("/employees")
+	public Employee addEmployee(@RequestBody Employee theEmployee)
+	{
+		// If id is in JSON .. we set id to 0. This forces
+		theEmployee.setId(0);
+		
+		Employee dbEmployee = employeeService.save(theEmployee);
+		
+		return dbEmployee;
+	}
+```
+
+<img src="problemWhitoutDAO.JPG"  alt="alt text" width="500"/>
+
+1.  We created interface and implementation for **Employee**
+3. Do we create again for Customer, Student, Product Book
+
+<img src="sameWillBe.JPG"  alt="alt text" width="500"/>
+
+1. Such implementation will be around the same only these specified types would change.
+
+- Create **DAO** for me, input 
+
+<img src="inputting.JPG"  alt="alt text" width="500"/>
+
+- Spring Data JPA provides **The interface JpaRepository**  
+
+1. We will just input **Entity** and **Primary Key**
+	- Spring will provide following methods
+	- **SOLUTION** Spring Data **JPA**
+
+<img src="SpringDataJPAsolution.JPG"  alt="alt text" width="500"/>
+
+<br>
+
+<img src="extendsReposotory.JPG"  alt="alt text" width="500"/>
+
+- You just extends **JpaRepository<Employee, Integer>** 
+
+- [JPARepository](www.luv2code.com/jpa-repository-javadoc)
+
+<img src="JPAminimizedBoilerplate.JPG"  alt="alt text" width="500"/>
+
+1. Old way
+2. New way
+
+- JPA data spring advanced features
+
+<img src="JPAadvancedFeatures.JPG"  alt="alt text" width="500"/>
+
+- [Advanced repositories](www.luv2code.com/spring-data-jpa-defining-custom-queries)
+
+<br>
+
+- Using **Optional** in Java 
+
+<img src="optionalnJava.JPG"  alt="alt text" width="500"/>
+
+```
+@Transactional
+	@Override
+	public Employee findById(int theId) {
+		
+		Optional<Employee> findById = employeeRepository.findById(theId);
+		Employee theEmployee = null;
+		
+		if (findById.isPresent()) {
+			theEmployee = findById.get();
+		}
+		else {
+			throw new RuntimeException("Did not find employ id - " + theId);
+		}
+		
+		return theEmployee;
+	}
+```
+
+- [Optional](www.luv2code.com/java-optional-tutorial)
+
+### Spring Data REST
+
+<img src="Spring Data REST.JPG"  alt="alt text" width="500"/>
+
+- [Spring Data REST](https://spring.io/projects/spring-data-rest)
+
+<img src="Spring Data REST 2.JPG"  alt="alt text" width="500"/>
+
+<br>
+
+<img src="restEndPoint.JPG"  alt="alt text" width="500"/>
+
+1. Will automatically makes such REST endpoint
+
+- Just need to add Spring Data REST to your Maven POM file. **That's t it**
+
+<img src="restEndPoint.JPG"  alt="alt text" width="500"/>
+
+<br>
+
+<img src="pomFileJa.JPG"  alt="alt text" width="500"/>
+
+## Three Things needed
+
+1. Your entity: **Employee**
+2. JpaRepository: **EmployeeRepository extends JpaRepository** 
+3. Maven POM dependency for: **spring-boot-starter-data-rest**
+
+<img src="ApplicationArchitecture.JPG"  alt="alt text" width="600"/>
+
+- 5:50 jäin

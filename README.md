@@ -31,10 +31,11 @@ Insert certificate here when completed
 - [ ] [Section 12](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%212) - Section 12: Appendix
 - [ ] [Section 13](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%213) - Section 13: Bonus
 
-
 - Todo read/skim thought spring documentation when finished this course
 
 - Todo tsekkaa typot
+
+- Todo perehdy Optional
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
