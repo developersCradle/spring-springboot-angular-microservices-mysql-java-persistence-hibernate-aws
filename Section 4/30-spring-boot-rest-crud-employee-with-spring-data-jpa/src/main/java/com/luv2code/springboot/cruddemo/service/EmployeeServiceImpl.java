@@ -14,7 +14,6 @@ import com.luv2code.springboot.cruddemo.entity.Employee;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-	
 	private EmployeeRepository employeeRepository;
 	
 	@Autowired
@@ -30,16 +29,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return findAll.toList();
 	}
 
-//	@Override
-//	public List<Employee> findAll() {
-//		return employeeRepository.findAll();
-//	}
-
 	
 	@Transactional
 	@Override
 	public Employee findById(int theId) {
-		
 		Optional<Employee> findById = employeeRepository.findById(theId);
 		Employee theEmployee = null;
 		

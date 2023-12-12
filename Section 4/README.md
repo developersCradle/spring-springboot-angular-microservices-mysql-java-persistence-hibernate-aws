@@ -417,8 +417,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 @PostMapping("/employees")
 	public Employee addEmployee(@RequestBody Employee theEmployee)
 	{
-		// If id is in JSON .. we set id to 0. This forces
-		theEmployee.setId(0);
+		//If id is in JSON .. we set id to 0.  This force save in new item, instead of update
+		//theEmployee.setId(0);
 		
 		Employee dbEmployee = employeeService.save(theEmployee);
 		
@@ -506,10 +506,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 <img src="restEndPoint.JPG"  alt="alt text" width="500"/>
 
 1. Will automatically makes such REST endpoint
+	- this will create REST API `/employees`
 
-- Just need to add Spring Data REST to your Maven POM file. **That's t it**
+- Just need to add Spring Data REST to your **Maven POM** file. **That's t it**
 
 <img src="restEndPoint.JPG"  alt="alt text" width="500"/>
+
+- Just import **dependency** and Spring Data REST will scan project for **Repository** and expose these automatically
 
 <br>
 
@@ -523,4 +526,62 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 <img src="ApplicationArchitecture.JPG"  alt="alt text" width="600"/>
 
-- 5:50 jäin
+- Spring Data REST endpoints is **HATEOAS** compliant
+
+- `https://spring.io/projects/spring-hateoas`
+
+- Think **HATEOAS** is additional metadata coming back from **REST API** 
+
+<img src="hateoas.PNG"  alt="alt text" width="600"/>
+
+1. Result data is returned.
+2. Links to data which is returned.
+
+<img src="hateoas2.PNG"  alt="alt text" width="600"/>
+
+- HATEOAS uses of **HAL**
+
+- JSON also uses [HAL](https://en.wikipedia.org/wiki/Hypertext_Application_Language)
+
+- As you can see we can implement following REST API:s whiteout writing any boiler code. With HATEOAS meta-data
+
+<img src="HATEOASwithREST.PNG"  alt="alt text" width="600"/>
+
+<br>
+
+
+
+1. Spring Data REST create endpoints for simple cases, but English is VERY complex! Does not work very well!
+	- Instead of `/employees` we want to use `/members`
+
+- We can just use `path` annotation
+
+<img src="pathAnnotation.PNG"  alt="alt text" width="600"/>
+
+<br>
+
+- Spring Data REST comes along with support for pagination
+
+<img src="paginationComingWithSpringRESTdata.PNG"  alt="alt text" width="600"/>
+
+- Some Spring Data REST Configurations
+	- For more plz visit [SpringBootProps](www.luv2code.com/spring-boot-props)
+
+```
+spring.data.rest.base-path=/magic-api
+spring.data.rest.default-page-size=50
+```
+
+<img src="sorting.PNG"  alt="alt text" width="600"/>
+
+<br>
+
+- Annotation in action below
+
+<img src="annotationWorking.PNG"  alt="alt text" width="600"/>
+
+<br>
+
+<img src="pagesAreZeroBased.PNG"  alt="alt text" width="600"/>
+
+1. Remember when navigating inside **HATEOAS**, numbers are **zero-based**

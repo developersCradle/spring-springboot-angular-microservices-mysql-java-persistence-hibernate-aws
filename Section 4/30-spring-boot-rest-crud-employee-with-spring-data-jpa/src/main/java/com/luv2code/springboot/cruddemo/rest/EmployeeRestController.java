@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.luv2code.springboot.cruddemo.entity.Employee;
 import com.luv2code.springboot.cruddemo.service.EmployeeService;
 
-
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
@@ -49,7 +48,7 @@ public class EmployeeRestController {
 	@PostMapping("/employees")
 	public Employee addEmployee(@RequestBody Employee theEmployee)
 	{
-		// If id is in JSON .. we set id to 0. This forces
+		// If id is in JSON .. we set id to 0.  This force save in new item, instead of update
 		theEmployee.setId(0);
 		
 		Employee dbEmployee = employeeService.save(theEmployee);
@@ -75,7 +74,7 @@ public class EmployeeRestController {
 		}
 		
 		employeeService.deleteById(employeeId);
-		
+
 		return "Deleted employee id - " + employeeId;
 		
 	}

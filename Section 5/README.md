@@ -2,4 +2,6 @@
 
 NEW - REST API Security
 
+This section only covers most common Spring Security tasks.
+
 # What I Learned
