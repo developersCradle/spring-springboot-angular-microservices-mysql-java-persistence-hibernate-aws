@@ -102,7 +102,9 @@ public class DemoRestController {
 
 ```
 
-<img src="restControllerWorkign.JPG" alt="alt text" width="600"/>
+- As you can see both get requests return same answer in `1.` and `2.`
+
+<img src="restControllerWorkign.JPG" alt="alt text" width="500"/>
 
 ### Spring Boot REST POJO 
 
@@ -253,7 +255,7 @@ public class DemoRestController {
 
 - We want following mechanism. **Full CRUD**
 	- Get a list of employees (GET)
-	- Get a single employee by id (GET)
+	- Get a single employee by ID (GET)
 	- Add a new employee (POST)
 	- Update an employee (PUT)
 	- Delete an employee (DELETE)
@@ -439,7 +441,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 <img src="inputting.JPG"  alt="alt text" width="500"/>
 
-- Spring Data JPA provides **The interface JpaRepository**  
+- Spring Data JPA provides **The interface JpaRepository**
 
 1. We will just input **Entity** and **Primary Key**
 	- Spring will provide following methods

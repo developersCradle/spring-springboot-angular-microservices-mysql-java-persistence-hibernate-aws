@@ -69,3 +69,63 @@ spring.security.user.password=tiger
 <img src="addingUsers.JPG"  alt="alt text" width="500"/> 
 
 - We are going save Users in memory
+
+- Example using **InMemoryUserManager**
+
+```
+@Configuration
+public class DemoSecurityConfig {
+
+		@Bean
+		public InMemoryUserDetailsManager userDetailsManager() { //In memory authentication
+			
+			UserDetails john = User.builder()
+					.username("john")
+					.password("{noop}test123") //Noop means plain text
+					.roles("EMPLOYEE")
+					.build();
+			
+			UserDetails mary = User.builder()
+					.username("mary")
+					.password("{noop}test123") //Noop means plain text
+					.roles("EMPLOYEE", "MANAGER")
+					.build();
+			
+			UserDetails susan = User.builder()
+					.username("susan")
+					.password("{noop}test123") //Noop means plain text
+					.roles("EMPLOYEE", "MANAGER", "ADMIN")
+					.build();
+			
+			return new InMemoryUserDetailsManager(john, mary, susan); 
+		}
+}
+```
+
+<img src="inPostMan.JPG"  alt="alt text" width="500"/> 
+
+1. In postman user and password is inputted into such.
+2. Whiteout credentials we are having `401 Unauthorized`
+3. By default Spring uses `Basic Auth`
+
+- We can restrict endpoints based on ROLES, we will do such
+
+<img src="example.PNG"  alt="alt text" width="500"/> 
+
+- We can specify restrict access by `requestMatchers(add path here).hasRole(add role here)`
+	- We can specify also for other HTTP verbs
+
+- Example using "EMPLOYEE" role
+
+<img src="exampleForRole.PNG"  alt="alt text" width="500"/> 
+
+1. `**` is **wild card** and we can use it to refer all rest paths
+
+<img src="csrf.PNG"  alt="alt text" width="500"/> 
+
+- When to use CSRF Protection
+
+<img src="whenToUseCSRF.PNG"  alt="alt text" width="500"/> 
+
+1. Recommended generally
+2. Non-browsers usually disabled
