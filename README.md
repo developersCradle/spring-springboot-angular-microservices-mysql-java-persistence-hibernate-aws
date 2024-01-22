@@ -35,6 +35,8 @@ Insert certificate here when completed
 
 - Todo tsekkaa typot
 
+- Tee angular crypt softa angularilla
+
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
 ## Progress/Curriculum

@@ -129,3 +129,246 @@ public class DemoSecurityConfig {
 
 1. Recommended generally
 2. Non-browsers usually disabled
+
+
+- Makingrules in code
+
+```
+
+@Configuration
+public class DemoSecurityConfig {
+
+		@Bean
+		public InMemoryUserDetailsManager userDetailsManager() { //In memory authentication
+			
+			UserDetails john = User.builder()
+					.username("john")
+					.password("{noop}test123") //Noop means plain text
+					.roles("EMPLOYEE")
+					.build();
+			
+			UserDetails mary = User.builder()
+					.username("mary")
+					.password("{noop}test123") //Noop means plain text
+					.roles("EMPLOYEE", "MANAGER")
+					.build();
+			
+			UserDetails susan = User.builder()
+					.username("susan")
+					.password("{noop}test123") //Noop means plain text
+					.roles("EMPLOYEE", "MANAGER", "ADMIN")
+					.build();
+			
+			return new InMemoryUserDetailsManager(john, mary, susan); 
+		}
+		
+		@Bean
+		public SecurityFilterChain filterChain(HttpSecurity http) throws Exception  {
+			
+			
+			//Setting up rules
+			http.authorizeHttpRequests( configurer ->
+			configurer
+				.requestMatchers(HttpMethod.GET, "api/employees").hasRole("EMPLOYEE")
+				.requestMatchers(HttpMethod.GET, "api/employees/**").hasRole("EMPLOYEE")
+				.requestMatchers(HttpMethod.POST, "api/employees").hasRole("MANAGER")
+				.requestMatchers(HttpMethod.PUT, "api/employees").hasRole("MANAGER")
+				.requestMatchers(HttpMethod.DELETE, "api/employees/**").hasRole("ADMIN")
+				
+			);
+			
+			// use HTTP Basic authentication
+			http.httpBasic(Customizer.withDefaults());
+			
+			//Disable SRRF for REST in general
+			http.csrf(csrf -> csrf.disable());
+			
+			
+			
+			
+			return http.build();
+
+		}
+}
+
+```
+
+- You have option to customize the table schemas
+	- This is **Useful** if you have custom tables
+		- This means you have to write own JDBC, JPA/Hibernate code **by** yourself
+- **BUT**, you decide to use Spring Securit **predefined** table schema. No need to write any extra JDBC, JPA/Hibernate code 
+
+<img src="defaultSecuritySchemaPNG"  alt="alt text" width="500"/> 
+
+1. Default tables and columns need to be present.
+2. Authorities think as "roles".
+
+<img src="updatingSpringSecurityWithJDBC.PNG"  alt="alt text" width="500"/> 
+
+1. Datasource is coming automatically from **Spring Boot**
+2. No need to hard code users into the Manager 
+
+- noop` ment that passwords are saved in plaintext
+
+- We will use such SQL for initialization
+
+```
+
+USE `employee_directory`;
+
+DROP TABLE IF EXISTS `authorities`;
+DROP TABLE IF EXISTS `users`;
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `enabled` tinyint NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Inserting data for table `users`
+--
+
+INSERT INTO `users` 
+VALUES 
+('john','{noop}test123',1),
+('mary','{noop}test123',1),
+('susan','{noop}test123',1);
+
+
+--
+-- Table structure for table `authorities`
+--
+
+CREATE TABLE `authorities` (
+  `username` varchar(50) NOT NULL,
+  `authority` varchar(50) NOT NULL,
+  UNIQUE KEY `authorities_idx_1` (`username`,`authority`),
+  CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Inserting data for table `authorities`
+--
+
+INSERT INTO `authorities` 
+VALUES 
+('john','ROLE_EMPLOYEE'),
+('mary','ROLE_EMPLOYEE'),
+('mary','ROLE_MANAGER'),
+('susan','ROLE_EMPLOYEE'),
+('susan','ROLE_MANAGER'),
+('susan','ROLE_ADMIN');
+
+```
+
+- Design tables are a good way to visually inspect what is going on in Database
+
+<img src="diagram.PNG"  alt="alt text" width="500"/> 
+
+- This can be done **MySQL Workbench** 
+	- **Database**
+		- **Reverse engineer...**
+
+<img src="passwordStorage.PNG"  alt="alt text" width="500"/>
+
+- Plaintext password are OK for prototypes, **not** for production / or real-time applications
+
+- Spring Security recommends using the popular **bcrypt** algorithm
+
+- **Bcrypt** 
+	- One-way encrypted hashing
+	- Adds random salt to the passwords
+	- Includes support to brute force attacks
+	- [Why](www.luv2code.com/why-bcrypt)
+	- [Bcrypt analysis](www.luv2code.com/bcrypt-wiki-page)
+	- **This is one should be read by all** [Bcrypt analysis](www.luv2code.com/password-hashing-best-practices)
+
+- There are two ways to get **Bcrypt** password 
+1. Use website to encrypt
+2. write some Java code to perform the encryption
+
+- [Website for generating](www.luv2code.com/generate-bcrypt-password)
+
+- For same password you will get different password hash 
+
+<img src="usingBcrypt.PNG"  alt="alt text" width="500"/>
+
+1. Using **Bcrypt** when configuring **UserDetailManager**
+2. Columns must be at least **68 chars** wide
+
+- When changing encryption database table needs to be also considered 
+
+<img src="logInProgress.PNG"  alt="alt text" width="500"/>
+
+1. User enters password in plaintext
+2. **NOTE** When server return password, it is not **DECRYPTED**
+
+- Creating table for encrypted password
+
+```
+	USE `employee_directory`;
+
+DROP TABLE IF EXISTS `authorities`;
+DROP TABLE IF EXISTS `users`;
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` char(68) NOT NULL,
+  `enabled` tinyint NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Inserting data for table `users`
+--
+-- NOTE: The passwords are encrypted using BCrypt
+--
+-- A generation tool is avail at: https://www.luv2code.com/generate-bcrypt-password
+--
+-- Default passwords here are: fun123
+--
+
+INSERT INTO `users` 
+VALUES 
+('john','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
+('mary','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
+('susan','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
+
+
+--
+-- Table structure for table `authorities`
+--
+
+CREATE TABLE `authorities` (
+  `username` varchar(50) NOT NULL,
+  `authority` varchar(50) NOT NULL,
+  UNIQUE KEY `authorities4_idx_1` (`username`,`authority`),
+  CONSTRAINT `authorities4_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Inserting data for table `authorities`
+--
+
+INSERT INTO `authorities` 
+VALUES 
+('john','ROLE_EMPLOYEE'),
+('mary','ROLE_EMPLOYEE'),
+('mary','ROLE_MANAGER'),
+('susan','ROLE_EMPLOYEE'),
+('susan','ROLE_MANAGER'),
+('susan','ROLE_ADMIN');
+	
+```
+
+- `` `password` char(68) NOT NULL, `` as you can see, we are using 68 for **bcrypt**
