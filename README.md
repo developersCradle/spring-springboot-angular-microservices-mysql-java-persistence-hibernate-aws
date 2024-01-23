@@ -11,6 +11,7 @@ If the content sparked :fire: your interest, please consider buying the course a
 [The Course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/)   
 [Content Maker](https://luv2code.com/)
 [](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners/blob/main/11-appendix/course-links.md)
+
 Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
@@ -21,7 +22,7 @@ Insert certificate here when completed
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%202) - Section 2: NEW - Spring Core
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%203) - Section 3: NEW - Hibernate/JPA CRUD 
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%204) - Section 4: NEW - REST CRUD APIs
-- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%205) - Section 5: NEW - REST API Security 
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%205) - Section 5: NEW - REST API Security 
 - [ ] [Section 06](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%206) - Section 6: NEW - Spring MVC
 - [ ] [Section 07](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%207) - Section 7: NEW - Spring MVC CRUD
 - [ ] [Section 08](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%208) - Section 8: NEW - Spring MVC Security
@@ -37,7 +38,7 @@ Insert certificate here when completed
 - Todo tsekkaa typot
 - Tee Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial
 - Tee angular crypt softa angularilla
-- Todo make Chapters when concept is being changed, done this when reviewing
+- Todo make Chapters/headings when reviewing
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
