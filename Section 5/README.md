@@ -372,3 +372,19 @@ VALUES
 ```
 
 - `` `password` char(68) NOT NULL, `` as you can see, we are using 68 for **bcrypt**
+
+- If we have custom tables for security, example like this in below.
+
+<img src="exampleCustom.PNG"  alt="alt text" width="600"/> 
+
+- We need to write our JDBC connection
+
+<img src="configuringCustomSchema.PNG"  alt="alt text" width="400"/>
+
+- Telling custom tables, with **SQL**. We could use any table, we just tell how to access it
+
+<img src="tellingSringJDBCtoConfigureToCentainTables.PNG"  alt="alt text" width="400"/>
+
+- If there is some problem with logging or in general, when no error is occurring
+	- It's recommended to enable logging, in this case `logging.level.org.springframework.security=DEBUG` 
+

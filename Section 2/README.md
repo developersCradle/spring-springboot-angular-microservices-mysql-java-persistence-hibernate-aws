@@ -449,6 +449,7 @@ public void doMyStartupStuff(){
 		//Logic
 	}
 
+
 ```
 
 - Destroy hook `@PostConstruct and @PreDestroy`
@@ -456,8 +457,6 @@ public void doMyStartupStuff(){
 <img src="intiMethod.JPG" alt="alt text" width="600"/>
 
 1. As you can see `@PostConstruct` is called after constructor
-
-- `@Bean` kertaa BEAN
 
 <img src="realWordScenarioBean.JPG" alt="alt text" width="600"/>
 
@@ -467,4 +466,58 @@ public void doMyStartupStuff(){
 
 <img src="usingThirdPartyBeansCase.JPG" alt="alt text" width="600"/>
 
-- Todo heikki kertaa BEAN konsepti  
+- Definition of bean 
+
+> In Spring, the objects that form the backbone of your application and that are managed by the Spring **IoC** container are called beans. A bean is an object  that is instantiated, assembled, and otherwise managed  by a Spring IoC container.
+
+
+### Additional links
+
+- [Bean Review](https://www.youtube.com/watch?v=CWEQ-1vff1o)
+
+- **Spring Bean** is just class which is just like Java class which has been instanced ( `Person someJavaClass = new Person()` ) with **some metadata**.
+
+- Object can retrieve its dependencies from an **IoC container**. All we need to do is to provide the **container with appropriate configuration metadata.**
+
+- Some main meta information which can be associated with **Spring Bean**
+
+<img src="springBean.JPG" alt="alt text" width="400"/>
+
+<br>
+
+<img src="notTodo.jpg" alt="alt text" width="500"/>
+
+1. Creating Services in such way is **NOT** recommended
+	- When writing tests, for `PostController` this will be cumbersome 
+	- When seeing **`new`** **ALERT SHOULD BE RAISED!!!❌❌❌❌**
+
+- When using `@Component`, you are saying to spring to put into **ApplicationContext**. This can be picked by Spring Container later if needed
+	- Now, if there is class that being used in other classes/services. Spring can **@Autowire** this automatically with help of **Construct Injection** into to the needed class/service 
+- There is specialized `@Component` annotations, but all are using `@Component` in the end of the day. For naming some, `@RestController`, `@Service`. `@Configuration` also is `@Component` under the hood. Also, `@SpringBootApplication` have `@Coponent` under the hood. So, main Spring class will have possibility to put `@Bean` into to startup. Example below
+
+```
+@SpringBootApplication
+public class CruddemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CruddemoApplication.class, args);
+	}
+
+
+	@Bean
+	CommandLineRunner commandLineRunner(){
+		return args -> {
+			System.out.println("Staring at startup");
+		};
+	}
+
+}
+
+```
+- We could use this **commandLineRunner** to bootstrap our application with data
+	- Here we can see that **method** is being registered as **Bean** for later use
+
+- We can create **Bean** from **methods call**
+	- Example Lambda expression from class that is used often and class itself is not  
+		- Tells method returns **Spring Bean** and should be managed by **Spring Container**
+		- These are usually declared `@Configuration` class

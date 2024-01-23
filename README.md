@@ -10,7 +10,7 @@ If the content sparked :fire: your interest, please consider buying the course a
 
 [The Course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/)   
 [Content Maker](https://luv2code.com/)
-
+[](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners/blob/main/11-appendix/course-links.md)
 Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
@@ -31,11 +31,13 @@ Insert certificate here when completed
 - [ ] [Section 12](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%212) - Section 12: Appendix
 - [ ] [Section 13](https://github.com/developersCradle/spring-springboot-hibernate-for-Beginners/tree/main/Section%213) - Section 13: Bonus
 
+<hr>
+
 - Todo read/skim thought spring documentation when finished this course
-
 - Todo tsekkaa typot
-
+- Tee Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial
 - Tee angular crypt softa angularilla
+- Todo make Chapters when concept is being changed, done this when reviewing
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
