@@ -36,3 +36,45 @@ NEW - Spring MVC
 - Spring will access `theDate` from Spring model and use it
 
 - [Thymeleaf](www.thymeleaf.org)
+
+- Example making use of **Thymeleaf**
+## helloworld.html
+
+- **Thymeleaf** uses `${theDate}` to be pick attribute form the model
+
+```
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Thymes Demo</title>
+  </head>
+
+  <body>
+  
+   		<p th:text="'Time on the server is ' + ${theDate}"> /p>
+  
+  </body>
+
+</html>
+```
+
+### DemoController.java
+
+```
+
+@Controller
+public class DemoController {
+	
+	@GetMapping("/hello")
+	public String sayHello(Model model) {
+
+		model.addAttribute("theDate", new java.util.Date()); //Addint to model, for later to be processed 
+		
+		return "helloworld";//Spring will automatically look for "helloworld.html" template
+		
+	}
+}
+
+```
