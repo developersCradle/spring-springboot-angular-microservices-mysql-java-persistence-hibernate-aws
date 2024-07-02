@@ -201,3 +201,136 @@ public class DemoController {
   - This one delegates requests to other object in the system.
 
 - **Business logic** is usually inside Controller.
+
+<img src="model.PNG"  alt="alt text" width="500"/>
+
+- Model contains the data.
+
+<img src="view.PNG"  alt="alt text" width="500"/>
+
+1. Most common **View template** is **Thymeleaf**.
+
+<img src="moreViewTemplates.PNG"  alt="alt text" width="500"/>
+
+- There is more **View Templates**. [Other view templates](www.luv2code.com/spring-mvc-views)
+
+# 166. Spring Boot - Hello World Form and Model Overview
+
+<img src="demoApplicationFlow.PNG"  alt="alt text" width="500"/>
+
+1. Two mappings. Other for showing Form and other for processing form.
+
+<img src="mappingForHTMLinExample.PNG"  alt="alt text" width="500"/>
+
+- Mapping to html page from controller.
+
+# 167. Spring Boot - Hello World Form and Model - Coding - Part 1
+
+# helloworld-form.html
+
+```
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World - Input Form</title>
+  </head>
+
+  <body>
+  	<form action="@{/processForm}" method="GET">
+		  
+		  <input type="text" name="studentName"
+		  placeholder="What's your name?" />
+		  
+		  <input type="submit" />
+		  
+	  </form>
+  </body>
+
+</html>
+```
+
+# 168. Spring Boot - Hello World Form and Model - Coding - Part 2
+
+- Reading from **HTML form field**.
+
+<img src="readingFromForm.PNG"  alt="alt text" width="500"/>
+
+- Example processing page
+
+```
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Thymeleaf Demo</title>
+</head>
+
+<body>
+
+	Hello World of Spring!
+
+	<br><br>
+
+	Student name: <span th:text="${param.studentName}" />
+
+	<br><br>
+
+	The message: <span th:text="${message}" />
+
+</body>
+
+</html>
+```
+
+<img src="readingFromFormExample.PNG"  alt="alt text" width="500"/>
+
+1. Reading form data with **Spring MVC**!
+
+
+# 169. Spring Boot - Adding Data to Spring MVC Model - Overview
+
+<img src="SpringModel.PNG"  alt="alt text" width="500"/>
+
+1. You can but any into **model**. 
+
+<img src="flexible.PNG"  alt="alt text" width="500"/>
+
+1. Spring is flexible with parameters, you can add **parameters** to **Spring controller methods** when needed.
+2. Saving fields to **model**.
+
+<img src="accessingModel.PNG"  alt="alt text" width="500"/>
+
+1. We can access model in a template by type the **name of attribute** which was palaced there before.
+
+
+# 170. Spring Boot - Adding Data to Spring MVC Model - Coding - Part 1
+
+- Example reading from form data and saving to data.
+
+```
+    @RequestMapping("/processFormVersionTwo")
+    public String letsShoutDude(HttpServletRequest request, Model model) {
+
+        // read the request parameter from the HTML form
+        String theName = request.getParameter("studentName");
+
+        // convert the data to all caps
+        theName = theName.toUpperCase();
+
+        // create the message
+        String result = "Yo! " + theName;
+
+        // add message to the model
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
+```
+
+# 171. Spring Boot - Adding Data to Spring MVC Model - Coding - Part 2
+
+- Reading form the model `	The message: <span th:text="${message}" />`.
+
+# 172. Spring Boot - Spring MVC Binding Request Params - Overview

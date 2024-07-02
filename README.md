@@ -23,11 +23,11 @@ Insert certificate here when completed
 
 ## Progress/Curriculum new
 
-- [x] [Section 01](#) - Section 1: NEW - Spring Boot 3 Quick Start
-- [x] [Section 02](#) - Section 2: NEW - Spring Core
-- [x] [Section 03](#) - Section 3: NEW - Hibernate/JPA CRUD 
-- [x] [Section 04](#) - Section 4: NEW - REST CRUD APIs
-- [x] [Section 05](#) - Section 5: NEW - REST API Security 
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201) - Section 1: NEW - Spring Boot 3 Quick Start
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202) - Section 2: NEW - Spring Core
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%203) - Section 3: NEW - Hibernate/JPA CRUD 
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%204) - Section 4: NEW - REST CRUD APIs
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%205) - Section 5: NEW - REST API Security 
 - [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%206) - Section 6: NEW - Spring MVC
 - [ ] [Section 07](#) - Section 7: NEW - Spring MVC CRUD
 - [ ] [Section 08](#) - Section 8: NEW - Spring MVC Security
@@ -42,14 +42,13 @@ Insert certificate here when completed
 - TODO refactor paths and projects inside eclipse.
 - TODO tsekkaa typot.
 - TODO Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
-- TODO angular crypt softa angularilla.
-
 - TODO make Chapters/headings when reviewing
 
 ### Additional stuff
 
 - [ ] Read/skim thought Spring documentation when finished this course.
 - [ ] Make unix clock in Thymeleaf.
+- [ ] Make crypt program in Angular.
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
@@ -138,11 +137,12 @@ Insert certificate here when completed
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele**. With my own notes as extra.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
-
 [The course at udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/)   
 
 [Home page of maker](https://www.youtube.com/c/ColtSteeleCode)   
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -161,7 +161,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <hr>
 
-- TODO Course got updated, transfer your answers here with updated content!.
+- TODO Course got updated, transfer your answers here with updated content!
 
 
 
