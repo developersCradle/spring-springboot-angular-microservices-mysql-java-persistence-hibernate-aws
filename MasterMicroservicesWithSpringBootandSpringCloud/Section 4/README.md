@@ -82,3 +82,53 @@
 <img src="configurationStored.PNG" alt="some" width="700"/>
 
 1. **Spring Cloud Config Server** in GIT. Can be used to hold configurations in place.
+
+<img src="dynamicScaleUpAndDown.PNG" alt="Jpa Course here" width="700"/>
+
+<br>
+ 
+<img src="ribbon.PNG" alt="Jpa Course here" width="700"/>
+
+1. Microservice **CurrencyCalculationService** is talking to **CurrencyExchangeService**. 
+2. There is multiple **CurrencyExchangeService** services. We want these are dynamically loaded automatically.
+
+- All microservices need to be registered to **Eureka**.
+
+- **Eureka** naming service will return **Services** when asked. These URL are returned.
+
+<img src="visibilityAndMonitoring.PNG" alt="some" width="700"/>
+
+- We don't want to implement different solutions to every microservice  **Logging, analytics ... etc**. We are using Gateways for this.
+
+<img src="faultTolerance.PNG" alt="some" width="700"/>
+
+- **Hystrix** will provide default response when service is down.
+
+# 72. Step 00 - 04 - Advantages of Microservices Architectures
+
+- Microservices ables you adapt new technologies & process adaptions more easily.
+
+<img src="adaptions.PNG" alt="some" width="700"/>
+
+1. These microservices can be easily written in different languages.
+
+### Dynamic scaling
+
+- We can bring up services when needed.
+    - Dynamic Scaling.
+    - Faster Release Cycles.
+
+# 73. Step 00 - 05 - Microservice Components - Standardizing Ports and URL
+
+- Microservices with multiple **ports** and **URL** its important have standardized documentation.
+
+<img src="rightPortsDocumentation.PNG" alt="some" width="400"/>
+
+<br>
+
+<img src="urlDocumentation.PNG" alt="some" width="700"/>
+
+
+# 74. How to Stay UpTo Date With Technology Changes
+
+- Study hard.
