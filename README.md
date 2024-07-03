@@ -72,6 +72,7 @@ If the content sparked :fire: your interest, please consider buying the course a
 
 [The course at udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/)   
 [Content maker](https://www.in28minutes.com/)
+[Latest GIT](https://github.com/in28minutes/spring-microservices-v3)
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -84,19 +85,15 @@ Insert certificate here when completed
 
 ## Progress/Curriculum new
 
-- [ ] [Section 01](#) - Introduction
-- [ ] [Section 02](#) - Introduction To Web Services
+- [x] [Section 01](#) - Introduction ✅
+- [x] [Section 02](#) - Introduction To Web Services ✅
 - [ ] [Section 03](#) - Restful Web Services with Spring Boot - V2
-- [ ] [Section 04](#) -
+- [ ] [Section 04](#) - Quick Introduction to Microservices
 - [ ] [Section 05](#) -
 - [ ] [Section 06](#) - 
 - [ ] [Section 07](#) - 
 - [ ] [Section 08](#) -
 - [ ] [Section 09](#) -  
-
-<hr>
-
-- TODO start this when time and transfer local progress here.
 
 ## Java Persistence: Hibernate and JPA Fundamentals 
 

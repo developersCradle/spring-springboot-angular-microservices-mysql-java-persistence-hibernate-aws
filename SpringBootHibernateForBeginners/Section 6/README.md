@@ -334,3 +334,31 @@ public class DemoController {
 - Reading form the model `	The message: <span th:text="${message}" />`.
 
 # 172. Spring Boot - Spring MVC Binding Request Params - Overview
+
+<img src="bindingOtherWay.PNG"  alt="alt text" width="500"/>
+
+- Other way to bind incoming param in Spring. Is using **@RequestParam**.
+
+- Example of this being used.
+
+```
+    @RequestMapping("/processFormVersionThree")
+    public String processFormVersionThree(@RequestParam("studentName") String theName, Model model) {
+
+    	// convert the data to all caps
+        theName = theName.toUpperCase();
+
+        // create the message
+        String result = "Hey My Friend from v3! " + theName;
+
+        // add message to the model
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
+```
+
+# 174. Spring Boot - GetMapping and PostMapping - Overview
+
+
+
