@@ -14,11 +14,11 @@
   
 > Small autonomous services that works together.
 
- <img src="microservices.PNG" alt="Jpa Course here" width="700"/>
+ <img src="microservices.PNG" alt="some course here" width="500"/>
 
  <br>
 
- <img src="microservicesDefinations.PNG" alt="Jpa Course here" width="700"/>
+ <img src="microservicesDefinations.PNG" alt="Jpa Course here" width="500"/>
 
 1. These are deployable by **REST**.
 2. Theses are small and deployable units.
@@ -42,7 +42,7 @@
 
 ### Bounded Context
 
-<img src="boundedContext.PNG" alt="some" width="700"/>
+<img src="boundedContext.PNG" alt="some" width="600"/>
 
 1. When there is lot of **microservices**, how you spot **where to draw line** between microservices.
     - You may not have right **business logic** to understand separation.
@@ -50,13 +50,13 @@
 
 ### Configuration Management
 
-<img src="configurationManagement.PNG" alt="some" width="700"/>
+<img src="configurationManagement.PNG" alt="some" width="500"/>
 
 - These have much of configurations to manage. All the servers and deployments.
 
 ### Dynamic scale up and scale down
 
-<img src="microservicesScalingUpAndDown.PNG" alt="some" width="700"/>
+<img src="microservicesScalingUpAndDown.PNG" alt="some" width="500"/>
 
 1. When needed, need to bring **Microservice2** up or down based on need and with dynamic load balancing load between these one.
 
@@ -83,7 +83,7 @@
 
 1. **Spring Cloud Config Server** in GIT. Can be used to hold configurations in place.
 
-<img src="dynamicScaleUpAndDown.PNG" alt="Jpa Course here" width="700"/>
+<img src="dynamicScaleUpAndDown.PNG" alt="Jpa Course here" width="500"/>
 
 <br>
  
@@ -92,15 +92,15 @@
 1. Microservice **CurrencyCalculationService** is talking to **CurrencyExchangeService**. 
 2. There is multiple **CurrencyExchangeService** services. We want these are dynamically loaded automatically.
 
-- All microservices need to be registered to **Eureka**.
+- All microservices need to be registered to **Eureka** naming server.
 
 - **Eureka** naming service will return **Services** when asked. These URL are returned.
 
-<img src="visibilityAndMonitoring.PNG" alt="some" width="700"/>
+<img src="visibilityAndMonitoring.PNG" alt="some" width="500"/>
 
 - We don't want to implement different solutions to every microservice  **Logging, analytics ... etc**. We are using Gateways for this.
 
-<img src="faultTolerance.PNG" alt="some" width="700"/>
+<img src="faultTolerance.PNG" alt="some" width="500"/>
 
 - **Hystrix** will provide default response when service is down.
 
@@ -108,15 +108,14 @@
 
 - Microservices ables you adapt new technologies & process adaptions more easily.
 
-<img src="adaptions.PNG" alt="some" width="700"/>
+<img src="adaptions.PNG" alt="some" width="500"/>
 
 1. These microservices can be easily written in different languages.
 
-### Dynamic scaling
-
-- We can bring up services when needed.
+- Dynamic scaling allows that we can bring up services when needed.
     - Dynamic Scaling.
-    - Faster Release Cycles.
+
+- Faster Release Cycles.
 
 # 73. Step 00 - 05 - Microservice Components - Standardizing Ports and URL
 

@@ -8,9 +8,9 @@ Contains my own notes with some course material to enforce learning experience.
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
-[The course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/)   
-[Content maker](https://luv2code.com/)
-[](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners/blob/main/11-appendix/course-links.md)
+[The course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/). 
+[Content maker](https://luv2code.com/).
+[Git repo](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners/blob/main/11-appendix/course-links.md).
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -91,9 +91,21 @@ Insert certificate here when completed
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%204) - Quick Introduction to Microservices ✅
 - [ ] [Section 05](#) - Microservices with Spring Cloud - V1
 - [ ] [Section 06](#) - Microservices with Spring Cloud - V2
-- [ ] [Section 07](#) - 
-- [ ] [Section 08](#) -
-- [ ] [Section 09](#) -  
+- [ ] [Section 07](#) - Docker with Microservices using Spring Boot and Spring Cloud - V2
+- [ ] [Section 08](#) - Kubernetes with Microservices using Docker, Spring Boot and Spring Cloud - V2
+- [ ] [Section 09](#) -
+- [ ] [Section 09](#) -
+- [ ] [Section 10](#) -  
+- [ ] [Section 11](#) -  
+- [ ] [Section 12](#) -  
+- [ ] [Section 13](#) -  
+- [ ] [Section 14](#) -  
+- [ ] [Section 15](#) - Appendix - Introduction to JPA in 10 Steps - V2
+
+### Additional stuff
+
+- [ ] Read [Pro GIT book](https://git-scm.com/book/en/v2).
+
 
 ## Java Persistence: Hibernate and JPA Fundamentals 
 
@@ -134,7 +146,7 @@ Insert certificate here when completed
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele**. With my own notes as extra.
 
-[The course at udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/)   
+[The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/)   
 
 [Home page of maker](https://www.youtube.com/c/ColtSteeleCode)   
 
