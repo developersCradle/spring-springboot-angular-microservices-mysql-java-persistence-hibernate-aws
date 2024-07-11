@@ -1,12 +1,12 @@
 # Section 4:  Quick Introduction to Microservices
 
- Quick Introduction to Microservices
+ Quick Introduction to Microservices.
 
 # What I Learned
 
 # 68. Section Introduction - Microservices with Spring Cloud
 
- - Git [Microservices](https://github.com/in28minutes/spring-microservices-v3/tree/main/03.microservices)
+ - Git [Microservices](https://github.com/in28minutes/spring-microservices-v3/tree/main/03.microservices).
 
  # 69. Step 00 - 01 - Introduction to Microservices
 
@@ -14,11 +14,11 @@
   
 > Small autonomous services that works together.
 
- <img src="microservices.PNG" alt="some course here" width="500"/>
+ <img src="microservices.PNG" alt="some course here" width="400"/>
 
  <br>
 
- <img src="microservicesDefinations.PNG" alt="Jpa Course here" width="500"/>
+ <img src="microservicesDefinations.PNG" alt="Jpa Course here" width="400"/>
 
 1. These are deployable by **REST**.
 2. Theses are small and deployable units.
@@ -65,7 +65,7 @@
 <img src="boundedContext.PNG" alt="some" width="700"/>
 
 1. If there is bug in this **microservice**, how to identify this one.
-    - We need centralized clock.
+    - We need centralized log.
     - We need monitoring around microservices.
 
 ### PACK OF CARDS
