@@ -58,7 +58,7 @@
 
 <img src="microservicesScalingUpAndDown.PNG" alt="some" width="500"/>
 
-1. When needed, need to bring **Microservice2** up or down based on need and with dynamic load balancing load between these one.
+1.  When there is need to bring **Microservice2** **up** or **down** based on needs. With dynamic load balancing load between these instances of this microservice.
 
 ### Visibility
 

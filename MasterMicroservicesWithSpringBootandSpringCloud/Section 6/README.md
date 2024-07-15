@@ -314,7 +314,7 @@ String port = environment.getProperty("local.server.port");
 
 # 153. Step 13 - Configure JPA and Initialized Data - V2
 
-<img src="naming.PNG" alt="Course here" width="700"/>
+<img src="naming.PNG" alt="Course here" width="600"/>
 
 1. In **databases** underscores are use to!
 2. In Java we tend to use **Camel case**.
@@ -362,7 +362,183 @@ spring.jpa.defer-datasource-initialization=true
 - Spring DATA will convect these into SQL notation behind scenes. 
 
 ```
+
 public interface CurrencyExchangeRepository extends JpaRepository<CurrencyExchange, Long> {
 	CurrencyExchange findByFromAndTo(String from, String to);
 }
+
 ```
+
+- And our Rest Controller. `String port = environment.getProperty("local.server.port");` pics **port** from our configurations. 
+
+```
+
+@RestController
+public class CurrencyExchangeController {
+	
+	@Autowired
+	private CurrencyExchangeRepository repository;
+
+	@Autowired
+	private Environment environment;
+	
+	@GetMapping("/currency-conversion/from/{from}/to/{to}")
+	public CurrencyExchange retrieveExhangeValue(
+			@PathVariable String from,
+			@PathVariable String to) {
+		
+		String port = environment.getProperty("local.server.port");
+		CurrencyExchange currencyExchange = repository.findByFromAndTo(from, to);
+		currencyExchange.setEnvironment(port);
+		
+		if (currencyExchange == null) {
+			throw new RuntimeException("Unable to Find data for " + from + " to " + to );
+		}
+		
+		return currencyExchange;
+		
+	}
+}
+```
+
+# 156. How to take care of yourselves
+
+- Sleep & eat & walk.
+
+# 157. Step 15 - Setting up Currency Conversion Microservice - V2
+
+- We setting up ``currency-conversion` service.
+
+# 158. URL and Response Structure for Currency Conversion Service
+
+
+
+### URL 
+
+```
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+```
+### Response Structure
+
+```
+{
+  "id": 10001,
+  "from": "USD",
+  "to": "INR",
+  "conversionMultiple": 65.00,
+  "quantity": 10,
+  "totalCalculatedAmount": 650.00,
+  "environment": "8000 instance-id"
+}
+```
+
+# 159. Step 16 - Creating a service for currency conversion - V2
+
+- We create controller.
+
+```
+	@GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversion calculateCurrencyConversion(
+			@PathVariable String from,
+			@PathVariable String to,
+			@PathVariable BigDecimal quantity
+			) {
+		
+		return new CurrencyConversion(10001L, from, to, quantity, BigDecimal.ONE, BigDecimal.ONE, "");
+		}
+```
+
+# 160. Step 17 - Invoking Currency Exchange from Currency Conversion Microservice - V2
+
+<img src="callingMicroserviceFromOtherMicroservice.PNG" alt="Course here" width="400"/>
+
+1. Calling other **microservice** from other **microservice**.
+
+- To make **simple** REST api call, we need configure much attributes. This is using **RestTemplate** to make REST calls.
+
+- More tedious example below.
+	- 
+```
+@GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversion calculateCurrencyConversion(
+			@PathVariable String from,
+			@PathVariable String to,
+			@PathVariable BigDecimal quantity
+			) {
+		
+		HashMap<String, String> uriVariables = new HashMap<>();
+		uriVariables.put("from", from);
+		uriVariables.put("to", to);
+		
+		System.out.println("currency-conversion");
+		
+		// .getForEntity() we want get entity back
+		// CurrencyConversion.class to what class we want to our class to convert
+		// for mapping both JSON and Mapped class needs to be in same order.
+		ResponseEntity<CurrencyConversion> responseEntity = new RestTemplate().getForEntity
+		("http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversion.class, uriVariables);
+		
+		CurrencyConversion currencyConversion = responseEntity.getBody();
+		
+		
+```
+
+# 161. Step 18 - Using Feign REST Client for Service Invocation - V2
+
+- To make **less code when** calling, we can use **Feign** from **Spring Cloud**.
+
+- To talk other class we need create **Proxy interface**.
+	- This interface `@FeignClient(name = "currency-exchange", url = "localhost:8000")`
+		- **name** is name of service inside the property file.
+		- **url** is the base URL.
+
+- To use such, we need annotate main **SpringApp** with `@EnableFeignClients` and import following from cloud.
+```
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+</dependency>
+```
+
+
+```
+// name is usually service name
+// url should be local url
+
+@FeignClient(name = "currency-exchange", url = "localhost:8000")
+public interface CurrencyExchangeProxy {
+
+	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	public CurrencyConversion retrieveExchangeValue(
+			@PathVariable String from,
+			@PathVariable String to);
+}
+```
+
+- and following implementation will be used:
+	- Now, we just call `CurrencyConversion currencyConversion = proxy.retrieveExchangeValue(from, to);` proxy services.
+
+```
+	@GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversion calculateCurrencyConversionFeign(
+			@PathVariable String from,
+			@PathVariable String to,
+			@PathVariable BigDecimal quantity
+			) {
+				
+		CurrencyConversion currencyConversion = proxy.retrieveExchangeValue(from, to);
+		
+		return new CurrencyConversion(currencyConversion.getId(), 
+				from, to, quantity, 
+				currencyConversion.getConversionMultiple(), 
+				quantity.multiply(currencyConversion.getConversionMultiple()), 
+				currencyConversion.getEnvironment() + " " + "feign"); // coming from feign
+		
+	}
+```
+
+# 162. Step 19 - Understand Naming Server and Setting up Eureka Naming Server - V2
+
+<img src="serviceNamingRegistery.PNG" alt="Course here" width="700"/>
+
+1. All the **Microservices** needs to register to **Naming Server** or **Service Registry**

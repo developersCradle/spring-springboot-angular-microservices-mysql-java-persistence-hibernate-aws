@@ -269,7 +269,7 @@ public class CourseJdbcRepository {
 
 ```
 
-- To make it other way. We would **map** whole **table** to an Java bean called **Entity**. When **JPA** Entity manager get hold of this, it knows where to map whiteout writing **SQL** relationship.
+- To make it other way. We would **map** whole **table** to an Java bean called **Entity**. When **JPA** Entity manager get hold of this, it knows where to map this **Entity** without needing of **SQL** written relationship.
 
 - This needs to `@Entity` maps from database **Table** and `@Column(name="name")` these matcher for table name. They are not needed this case, they match with database table.
 

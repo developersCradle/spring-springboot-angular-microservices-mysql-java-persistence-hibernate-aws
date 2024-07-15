@@ -18,14 +18,15 @@ public class CurrencyExchangeController {
 	@Autowired
 	private Environment environment;
 	
-	@GetMapping("/currency-conversion/from/{from}/to/{to}")
+	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchange retrieveExhangeValue(
 			@PathVariable String from,
 			@PathVariable String to) {
 		
 		String port = environment.getProperty("local.server.port");
 		CurrencyExchange currencyExchange = repository.findByFromAndTo(from, to);
-
+		currencyExchange.setEnvironment(port);
+		
 		if (currencyExchange == null) {
 			throw new RuntimeException("Unable to Find data for " + from + " to " + to );
 		}

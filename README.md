@@ -103,7 +103,7 @@ Insert certificate here when completed
 - [ ] [Section 11](#) -  
 - [ ] [Section 12](#) -  
 - [ ] [Section 13](#) -  
-- [ ] [Section 14](#) -  
+- [ ] [Section 14](#) - Section 14: Appendix - Introduction To Gradle  
 - [x] [Section 15](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2015) - Appendix - Introduction to JPA in 10 Steps - V2 ✅
 
 ### Additional stuff
