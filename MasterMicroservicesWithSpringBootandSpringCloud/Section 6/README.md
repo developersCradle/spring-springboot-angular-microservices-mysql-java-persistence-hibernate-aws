@@ -51,7 +51,7 @@ Microservices with Spring Cloud - V2
 
 # 139. Step 03 - Enhance limits service - Get configuration from application props - V2
 
-- Rather than passing configuraration values in code, we can create configuration, which handles these process. Example of old way below
+- Rather than passing configuration values in code, we can create configuration, which handles these process. Example of old way below
 
 ```
 @GetMapping("/limits")
@@ -131,6 +131,7 @@ limits-service-maximum=998
 
  <img src="pickedByMicroservice.PNG" alt="Course here" width="600"/>
 
+1. As you can see this is picked up form git config 
 # 140. Step 04 - Setting up Spring Cloud Config Server - V2
 
 - **Config Server** from **Spring initializer**.
@@ -515,7 +516,7 @@ public interface CurrencyExchangeProxy {
 }
 ```
 
-- and following implementation will be used:
+- And following implementation will be used:
 	- Now, we just call `CurrencyConversion currencyConversion = proxy.retrieveExchangeValue(from, to);` proxy services.
 
 ```
@@ -539,6 +540,26 @@ public interface CurrencyExchangeProxy {
 
 # 162. Step 19 - Understand Naming Server and Setting up Eureka Naming Server - V2
 
-<img src="serviceNamingRegistery.PNG" alt="Course here" width="700"/>
+<img src="serviceNamingRegistery.PNG" alt="Course here" width="600"/>
 
-1. All the **Microservices** needs to register to **Naming Server** or **Service Registry**
+1. All the **Microservices** needs to register to **Naming Server** or **Service Registry**.
+When 
+**Currency Conversion Microservice** wants to talk to**Currency Exchange Microservice**. It would ask for its address, it will ask from **Naming Server** or **Service Registery** this one.
+
+<img src="loadBalasing.PNG" alt="Course here" width="600"/>
+
+1. **Currency Conversion Microservice** asks **Naming Server**, which are **active instances** of the **Currency Exchange Instances** and gets these instances with load balances between them.
+
+- We will be using **Eureka Server**. Add `@EnableEurekaServer` annotation to Spring class.
+
+```
+@EnableEurekaServer
+@SpringBootApplication
+public class NamingServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(NamingServerApplication.class, args);
+	}
+
+}
+```

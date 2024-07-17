@@ -25,12 +25,12 @@ Insert certificate here when completed
 
 ## Progress/Curriculum new
 
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201) - Section 1: NEW - Spring Boot 3 Quick Start
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202) - Section 2: NEW - Spring Core
-- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%203) - Section 3: NEW - Hibernate/JPA CRUD 
-- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%204) - Section 4: NEW - REST CRUD APIs
-- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%205) - Section 5: NEW - REST API Security 
-- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%206) - Section 6: NEW - Spring MVC
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201#section-1-new---spring-boot-3-quick-start) - Section 1: NEW - Spring Boot 3 Quick Start
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202#section-2-new---spring-boot-3---inversion-of-control-and-dependency-injection) - Section 2: NEW - Spring Core
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%203#section-3-new---hibernatejpa-crud) - Section 3: NEW - Hibernate/JPA CRUD 
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%204#section-4-new---rest-crud-apis) - Section 4: NEW - REST CRUD APIs
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%205#section-5-new---rest-api-security) - Section 5: NEW - REST API Security 
+- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%206#section-6-new---spring-mvc) - Section 6: NEW - Spring MVC
 - [ ] [Section 07](#) - Section 7: NEW - Spring MVC CRUD
 - [ ] [Section 08](#) - Section 8: NEW - Spring MVC Security
 - [ ] [Section 09](#) - Section 9: NEW - JPA / Hibernate Advanced Mappings
@@ -41,10 +41,10 @@ Insert certificate here when completed
 
 <hr>
 
-- TODO refactor paths and projects inside eclipse.
-- TODO tsekkaa typot.
+- TODO Refactor paths and projects inside eclipse.
+- TODO Check typos.
 - TODO Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
-- TODO make Chapters/headings when reviewing
+- TODO Make Chapters/headings when reviewing
 
 ### Additional stuff
 
@@ -89,12 +89,12 @@ Insert certificate here when completed
 
 ## Progress/Curriculum new
 
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%201) - Introduction ✅
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%202) - Introduction To Web Services ✅
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%201#section-1-introduction) - Introduction ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%202#section-2-introduction-to-web-services) - Introduction To Web Services ✅
 - [ ] [Section 03](#) - Restful Web Services with Spring Boot - V2
-- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%204) - Quick Introduction to Microservices ✅
-- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%205) - Microservices with Spring Cloud - V1
-- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%206) - Microservices with Spring Cloud - V2
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%204#section-4--quick-introduction-to-microservices) - Quick Introduction to Microservices ✅
+- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%205#section-5-microservices-with-spring-cloud---v1) - Microservices with Spring Cloud - V1
+- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%206#section-6-microservices-with-spring-cloud---v2) - Microservices with Spring Cloud - V2
 - [ ] [Section 07](#) - Docker with Microservices using Spring Boot and Spring Cloud - V2
 - [ ] [Section 08](#) - Kubernetes with Microservices using Docker, Spring Boot and Spring Cloud - V2
 - [ ] [Section 09](#) -
@@ -103,8 +103,8 @@ Insert certificate here when completed
 - [ ] [Section 11](#) -  
 - [ ] [Section 12](#) -  
 - [ ] [Section 13](#) -  
-- [ ] [Section 14](#) - Section 14: Appendix - Introduction To Gradle  
-- [x] [Section 15](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2015) - Appendix - Introduction to JPA in 10 Steps - V2 ✅
+- [ ] [Section 14](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2014#section-14-appendix---introduction-to-gradle) - Section 14: Appendix - Introduction To Gradle  
+- [x] [Section 15](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2015#section-15-appendix---introduction-to-jpa-in-10-steps---v2) - Appendix - Introduction to JPA in 10 Steps - V2 ✅
 
 ### Additional stuff
 
