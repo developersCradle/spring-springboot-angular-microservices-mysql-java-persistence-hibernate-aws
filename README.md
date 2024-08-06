@@ -43,13 +43,14 @@ Insert certificate here when completed
 
 - TODO Refactor paths and projects inside eclipse.
 - TODO Check typos.
+- TODO Make folder 00 based.
 - TODO Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
-- TODO Make Chapters/headings when reviewing
+- TODO Make Chapters/headings when reviewing.
 
 ### Additional stuff
 
 - [ ] Read/skim thought Spring documentation when finished this course.
-- [ ] Make unix clock in Thymeleaf.
+- [ ] Make unix clock in Thymeleaf or in Angular.
 - [ ] Make crypt program in Angular.
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
@@ -94,7 +95,7 @@ Insert certificate here when completed
 - [ ] [Section 03](#) - Restful Web Services with Spring Boot - V2
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%204#section-4--quick-introduction-to-microservices) - Quick Introduction to Microservices ✅
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%205#section-5-microservices-with-spring-cloud---v1) - Microservices with Spring Cloud - V1
-- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%206#section-6-microservices-with-spring-cloud---v2) - Microservices with Spring Cloud - V2
+- [x] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%206#section-6-microservices-with-spring-cloud---v2) - Microservices with Spring Cloud - V2 ✅
 - [ ] [Section 07](#) - Docker with Microservices using Spring Boot and Spring Cloud - V2
 - [ ] [Section 08](#) - Kubernetes with Microservices using Docker, Spring Boot and Spring Cloud - V2
 - [ ] [Section 09](#) -
@@ -102,9 +103,10 @@ Insert certificate here when completed
 - [ ] [Section 10](#) -  
 - [ ] [Section 11](#) -  
 - [ ] [Section 12](#) -  
-- [ ] [Section 13](#) -  
-- [ ] [Section 14](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2014#section-14-appendix---introduction-to-gradle) - Section 14: Appendix - Introduction To Gradle  
+- [ ] [Section 13](#) - Appendix - Introduction to Functional Programming in 30 Minutes 
+- [ ] [Section 14](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2014#section-14-appendix---introduction-to-gradle) - Appendix - Introduction To Gradle  
 - [x] [Section 15](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2015#section-15-appendix---introduction-to-jpa-in-10-steps---v2) - Appendix - Introduction to JPA in 10 Steps - V2 ✅
+- [ ] [Section 16](#) - Appendix - Introduction to Functional Programming in 30 Minutes 
 
 ### Additional stuff
 

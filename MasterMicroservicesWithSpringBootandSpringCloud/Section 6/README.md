@@ -60,11 +60,10 @@ Microservices with Spring Cloud - V2
 	}
 ```
 
-- We can auto inject/or map the **configuration values** using `@ConfigurationProperties("limits-service")`. Where input is **service name**. Workign example below:
-
-
+- We can auto inject/or map the **configuration values** using `@ConfigurationProperties("limits-service")`. Where input is **service name**. Working example below:
 
 # Java files
+
 ```
 package com.in28minutes.microservices.limit_service.controller;
 
@@ -542,9 +541,7 @@ public interface CurrencyExchangeProxy {
 
 <img src="serviceNamingRegistery.PNG" alt="Course here" width="600"/>
 
-1. All the **Microservices** needs to register to **Naming Server** or **Service Registry**.
-When 
-**Currency Conversion Microservice** wants to talk to**Currency Exchange Microservice**. It would ask for its address, it will ask from **Naming Server** or **Service Registery** this one.
+1. All the **Microservices** needs to register to **Naming Server** or **Service Registry**. When **Currency Conversion Microservice** wants to talk to**Currency Exchange Microservice**. It would ask for its address, it will ask from **Naming Server** or **Service Registry** this one.
 
 <img src="loadBalasing.PNG" alt="Course here" width="600"/>
 
@@ -563,3 +560,330 @@ public class NamingServerApplication {
 
 }
 ```
+
+# properties file for this one
+
+```
+spring.application.name=naming-server
+server.port=8761
+
+# Recommended by eureka server
+
+# we don't want this specific server to register with itself
+eureka.client.register-with-eureka=false
+# we don't want this specific server to register with itself
+eureka.client.fetch-registry=false
+
+
+spring.config.import=optional:configserve
+```
+
+# 163. Debugging Problems with Eureka - V2
+
+ - ✅
+
+# 164. Step 20 - Connect Currency Conversion & Currency Exchange Microservices - V2
+
+- Registering 
+
+- To register microservices with **Eureka** is to add following into the microservices.
+
+```
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+``` 
+
+- Adding default `eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka` for default Eureka zone.
+
+
+# 165. All Work and No Play Make Adam and Eve Dull Kids
+
+ - ✅
+
+ # 166. Course Update - Github Repositories
+
+ - ✅
+
+# 167. Step 21 - QuickStart by Importing Microservices
+
+ - ✅
+
+# 168. Step 22 - Load Balancing with Eureka, Feign & Spring Cloud LoadBalancer - V2
+
+<img src="loadBalancing.PNG" alt="Course here" width="600"/>
+
+1. We will make load balance between **Currency Exchange** instances.
+
+- Making `FeignClient` using Eureka and load balancing. Is to comment out port and registering service in POM.
+
+```
+
+// name is usually service name
+// url should be local url
+
+//@FeignClient(name = "currency-exchange", url = "localhost:8000")
+@FeignClient(name = "currency-exchange") // This talks to Eureka, if no port is defined and client is registered in POM
+public interface CurrencyExchangeProxy {
+
+	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	public CurrencyConversion retrieveExchangeValue(
+			@PathVariable String from,
+			@PathVariable String to);
+}
+
+```
+
+-  **Client-side load balancing** is done thought `FeignClient`.
+
+<img src="loadBalancerInEureka.PNG" alt="Course here" width="600"/>
+
+1. You can have **Load balancing** inside **Spring cloud Eureka package**.
+	- Newer version uses **Spring Cloud Load Balancer**, older version used **Ribbon** for load balancing.
+
+
+# 169. Course Update: New Dependency for Spring Cloud API Gateway
+
+ - ✅
+
+# 170. Step 22 - Setting up Spring Cloud API Gateway
+
+-  Normally there would be 100 of different microservices.
+
+- **Zuul** was before, this was transitioned since it dirent provide reactive programming support.
+
+- We will be using following **POM**.
+
+```
+<artifactId>spring-cloud-starter-gateway</artifactId>
+```
+
+- Configurations for gateway.
+
+```
+spring.application.name=api-gateway
+server.port=8765
+
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
+```
+- In this solution we registered **API gateway** with **eureka** naming server.
+
+# 171. URLs for next Lecture
+
+ - ✅
+
+# 172. Step 23 - Enabling Discovery Locator with Eureka for Spring Cloud Gateway
+
+- We want **Gateway** to talk with **Eureka** naming server.
+
+- When **Gateway** is up, we can just call the naming server whiteout port.
+
+- Now we can query microservices trough gateway.
+
+```
+
+URL thought gateway
+http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+```
+
+- Gateway configuration `spring.cloud.gateway.discovery.locator.enabled=true`.
+
+# 173. Debugging Problems with Spring Cloud Gateway - V2
+
+ - ✅
+
+# 174. Step 24 - Exploring Routes with Spring Cloud Gateway
+
+- Custom routes needs configuration file. We need to disable some old discovery service configurations ones.
+
+```
+# We want our own custom routes, so we comments these out
+
+#spring.cloud.gateway.discovery.locator.enabled=true
+#spring.cloud.gateway.discovery.locator.lowerCaseServiceId=true
+```
+
+- To get route, we need to use **route builder**.
+
+- We want to reduce long routes, we can use such
+	- From `http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR`.
+	- To `http://localhost:8765/currency-exchange/from/USD/to/INR`.
+
+- This is typically how **routes** are defined in **Spring**.
+
+```
+@Configuration
+public class ApiGatewayConfiguration {
+
+	// to get route, we need to use route builder
+	@Bean
+	public RouteLocator gateRouter(RouteLocatorBuilder builder) {
+		return builder.routes()
+				.route(p -> p
+						.path("/get")
+						.filters(f -> f
+								.addRequestHeader("MyHeader", "MyURI")
+								.addRequestParameter("Param", "MyValue"))
+						.uri("http://httpbin.org:80"))
+				.route(p -> p.path("/currency-exchange/**")
+						.uri("lb://currency-exchange"))
+				.route(p -> p.path("/currency-conversion/**")
+						.uri("lb://currency-conversion"))
+				.route(p -> p.path("/currency-conversion-feign/**")
+						.uri("lb://currency-conversion"))
+				.route(p -> p.path("/currency-conversion-new/**") // We can write new URL and redirect them
+						.filters(f -> f.rewritePath(
+								"/currency-conversion-new/(?<segment>.*)",  
+								"/currency-conversion-feign/${segment}"))
+						.uri("lb://currency-conversion"))
+				.build();
+	}
+}
+```
+
+- We can add **Headers** and **Parameter** additional to our redirect.
+
+```
+.filters(f -> f
+	.addRequestHeader("MyHeader", "MyURI")
+	.addRequestParameter("Param", "MyValue")
+.uri("http://httpbin.org:80"))
+```
+
+- `/currency-exchange/**`.
+	- Anything followed regular expression`**`.
+
+# 175. Step 25 - Implementing Spring Cloud Gateway Logging Filter
+
+- Api gateway can add global filters. Example we greater here logger.
+
+```
+
+@Component
+public class LoggingFilter  implements GlobalFilter{
+	
+	private Logger logger = LoggerFactory.getLogger(LoggingFilter.class);
+	
+	@Override
+	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+		logger.info("Path of the request received -> {}",
+				exchange.getRequest().getPath());
+		return chain.filter(exchange);
+	}
+}
+
+```
+
+<img src="springCloud.PNG" alt="Course here" width="600"/>
+
+1. **Spring Cloud Gateway** is good.
+2. You can **match** based on different criteria, not just based on **routes**.
+3. This is based on **Spring WebFlux**, **reactive approach**.
+
+# 176. Step 26 - Getting started with Circuit Breaker - Resilience4j
+
+<img src="circuitBreaker.PNG" alt="Course here" width="600"/>
+
+1. If there is one **Microservices** down, how it will be affecting other microservices.
+2. **Q1**. What is default behavior if service is down.
+3. **Q2**. **Circuit Breaker** for default behavior if, there is problem.  
+4. **Q3**. If there is **temporary failure**, can we retry the request.
+	- If tried multiple times, we can return default answer back.
+5. **Q4**. Do we want implement **rate limiting**.
+6. In **Spring boot** solution is **Resilience4j**.
+	- Old recommended was **Netflix Hystrix**.
+		- After **Java 8** and **Reactive programming** coming more popular, [resilience4j](https://resilience4j.readme.io/docs/getting-started).
+
+- **NOTE:** Resilience4j 2 requires Java 17.
+
+- Using everything from **Resilience4j 2**.
+	- These are **must** and recommended.
+
+- And with Spring Boot 3
+
+```
+<dependency>
+    <groupId>io.github.resilience4j</groupId>
+    <artifactId>resilience4j-spring-boot3</artifactId>
+    <version>{resilience4j-spring-boot3-version}</version>
+</dependency>
+```
+
+```
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+```
+
+# 177. DO NOT SKIP: Update to Step 28 and Step 29 - Change in Configuration
+
+- We need configure the microservice.
+
+```
+#NEW
+resilience4j.retry.instances.sample-api.maxAttempts=5 
+#OLD
+#resilience4j.retry.instances.sample-api.maxRetryAttempts=5
+```
+
+# 178. Step 27 - Playing with Resilience4j - Retry and Fallback Methods
+
+We are implementing failing endpoint with `Resilience4j`.
+
+```
+
+@RestController
+public class CircuitBreakerController {
+	
+	
+	private Logger logger = LoggerFactory.getLogger(CircuitBreakerController.class);
+	
+	@GetMapping("/sample-api")
+	@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")
+	public String sampleApi() {
+		logger.info("Sample Api call received");
+		ResponseEntity<String> forEntity = new RestTemplate().getForEntity("http://8080/some-ummy-url", String.class);
+		
+		
+		return forEntity.getBody();
+	}
+	
+	public String hardcodedResponse(Exception ex)
+	{
+		return "fallback-response";
+	}
+}
+
+```
+
+- This is done wit retry and fallback method as following
+	- `@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")`.
+
+- We can also configure **fallback method** `fallbackMethod = "hardcodedResponse"`
+
+- We can return different answers for different type of exceptions.
+	- This one is most generic or default.
+
+<img src="fallBackMethod.PNG" alt="Course here" width="600"/>
+
+1. You can see there is 5 tries and then there is fallback method.
+
+- We can configure `1 second` before after every re try and have also **Exponential Back Off**.
+	- Many cloud and API:s are using **ExponentialBackOff**.
+
+
+# 179. Step 28 - Playing with Circuit Breaker Features of Resilience4j
+
+- To see power of **Circuit Breaker** we need send many request for API.
+
+- One options is  to use `watch` in **Windows**.
+
+<img src="watchInWindows.PNG" alt="Course here" width="400"/>

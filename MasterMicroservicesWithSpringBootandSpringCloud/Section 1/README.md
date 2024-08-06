@@ -12,16 +12,16 @@ Introduction
 
 # 2. DO NOT SKIP: Success Stories of Other Learners
 
-✅
+- ✅.
 
 # 3. Introduction to the Course & Course Guide
 
-✅
+- ✅.
 
 # 4. A surprise! New Course Updates
 
-✅
+- ✅.
 
 # 5. DO NOT SKIP: Join in28minutes Learning Community
 
-✅
+- ✅.
