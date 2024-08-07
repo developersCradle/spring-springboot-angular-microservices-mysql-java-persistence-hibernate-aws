@@ -39,7 +39,7 @@ Microservices with Spring Cloud - V2
  - When creating **Microservices** for Spring Cloud.
     - Name the project whiteout any whitespace:s.
 
-- We are using config server for microservice. This needs to be configured in .properties `spring.config.import=optional:configserver:http://localhost:8888`
+- We are using config server for microservice. This needs to be configured in .properties `spring.config.import=optional:configserver:http://localhost:8888`.
 
 # 137. CODE BACKUP FILES and STEP BY STEP CHANGES : For Reference
 
@@ -51,7 +51,7 @@ Microservices with Spring Cloud - V2
 
 # 139. Step 03 - Enhance limits service - Get configuration from application props - V2
 
-- Rather than passing configuration values in code, we can create configuration, which handles these process. Example of old way below
+- Rather than passing configuration values in code, we can create configuration, which handles these process. Example of old way below.
 
 ```
 @GetMapping("/limits")
@@ -60,7 +60,7 @@ Microservices with Spring Cloud - V2
 	}
 ```
 
-- We can auto inject/or map the **configuration values** using `@ConfigurationProperties("limits-service")`. Where input is **service name**. Working example below:
+- We can auto inject/or map the **configuration values** using `@ConfigurationProperties("limits-service")`. Where input is **service name**. Working example below.
 
 # Java files
 
@@ -166,12 +166,11 @@ public class SpringCloudConfigServerApplication {
 
 ```
 
-
 - We need to save configure folder where our Git Repo is in.
 
  <img src="windowsProperties.PNG" alt="Course here" width="600"/>
 
-- Below my example fo mine configuration
+- Below my example fo mine configuration.
 
 ## application.properties
 
@@ -864,21 +863,20 @@ public class CircuitBreakerController {
 
 ```
 
-- This is done wit retry and fallback method as following
+- This is done wit retry and fallback method as following.
 	- `@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")`.
 
-- We can also configure **fallback method** `fallbackMethod = "hardcodedResponse"`
+- We can also configure **fallback method** `fallbackMethod = "hardcodedResponse"`.
 
 - We can return different answers for different type of exceptions.
 	- This one is most generic or default.
 
-<img src="fallBackMethod.PNG" alt="Course here" width="600"/>
+<img src="fallBackMethod.PNG" alt="Course here" width="800"/>
 
 1. You can see there is 5 tries and then there is fallback method.
 
 - We can configure `1 second` before after every re try and have also **Exponential Back Off**.
 	- Many cloud and API:s are using **ExponentialBackOff**.
-
 
 # 179. Step 28 - Playing with Circuit Breaker Features of Resilience4j
 
@@ -886,4 +884,94 @@ public class CircuitBreakerController {
 
 - One options is  to use `watch` in **Windows**.
 
-<img src="watchInWindows.PNG" alt="Course here" width="400"/>
+<img src="watchInWindows.PNG" alt="Course here" width="600"/>
+
+-  You can snd multiple queries, trough **Postman** [Link to PostMan](https://www.geeksforgeeks.org/how-to-send-multiple-requests-at-same-time-in-postman/).
+
+- In this example, we are implementing it one **endpoint**.
+
+
+- We define **Circuit Breaker** like such `@CircuitBreaker(name = "default", fallbackMethod = "hardcodedResponse")`.
+
+```
+
+package com.in28minutes.microservices.currency_exchange_service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
+
+@RestController
+public class CircuitBreakerController {
+	
+	
+	private Logger logger = LoggerFactory.getLogger(CircuitBreakerController.class);
+	
+	@GetMapping("/sample-api")
+//	@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")
+	@CircuitBreaker(name = "default", fallbackMethod = "hardcodedResponse")
+	public String sampleApi() {
+		logger.info("Sample Api call received");
+		ResponseEntity<String> forEntity = new RestTemplate().getForEntity("http://8080/some-ummy-url", String.class);
+		
+		
+		return forEntity.getBody();
+	}
+	
+	public String hardcodedResponse(Exception ex)
+	{
+		return "fallback-response";
+	}
+}
+
+```
+
+- **Circuit Breaker** will return **fallBack** method after some times in re-try in short period of time.
+
+- [Circuit Breaker Docks](https://resilience4j.readme.io/docs/circuitbreaker).
+
+- **Circuit Breaker** will control the queries, with different statues
+	- CLOSED, OPEN and HALF_OPEN and two special states DISABLED and FORCED_OPEN.
+	- **CLOSED** state it will always call depended microservice.
+	- **OPEN** will return automatically returns **Fallback method**.
+	- **HALF_OPEN** return percentage of requests.
+- **Circuit Breaker** will control between with these statuses.
+
+
+# 180. Step 29 - Exploring Rate Limiting and BulkHead Features of Resilience4j - V2
+
+- **Rate Limiting**, when you want certain amount of calls per some seconds. 
+
+-  Making **Rate Limiting** `@RateLimiter(name = "default")`.
+
+- And configuring these ones.
+
+```
+
+resilience4j.ratelimiter.instance.default.limitForPerioid=2
+resilience4j.ratelimiter.instance.default.limitRefreshPerioid=10s
+
+```
+
+> **Rate limit** is superficially similar to a bulkhead (concurrency limit), but is in fact quite different. **Bulkhead limits** the number of executions happening concurrently at any point in time. Rate limit limits the number of executions in a time window of some length, without considering concurrency.
+
+```
+@Bulkhead(name="sample-api")
+//10s => 10000 calls to the sample api
+```
+
+```
+resilience4j.bulkhead.instances.default.maxConcurrentCalls=10
+resilience4j.bulkhead.instances.sample-api.maxConcurrentCalls=10
+
+```
+
+# 181. How to be Productive - 3 Tips
+
+- ✅

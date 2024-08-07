@@ -1,6 +1,6 @@
 # Section 07: Docker with Microservices using Spring Boot and Spring Cloud - V2
 
- Docker with Microservices using Spring Boot and Spring Cloud - V2
+ Docker with Microservices using Spring Boot and Spring Cloud - V2.
 
 # What I Learned
 
