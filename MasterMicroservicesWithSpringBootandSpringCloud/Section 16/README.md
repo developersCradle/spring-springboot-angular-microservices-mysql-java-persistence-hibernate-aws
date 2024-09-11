@@ -2,6 +2,8 @@
 
 Appendix - Introduction to Functional Programming in 30 Minutes 
 
+# What I Learned
+
 # 306. Step 00 - Introduction to Functional Programming - Overview
 
 <img src="functionalProgramming.PNG" alt="Course here" width="600"/>

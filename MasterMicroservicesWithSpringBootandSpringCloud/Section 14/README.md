@@ -2,6 +2,8 @@
 
 Section 14: Appendix - Introduction To Gradle  
 
+# What I Learned
+
 # 287. Gradle Step 01 - Getting Started with Gradle
 
 <img src="gradle.PNG" alt="Course here" width="600"/>

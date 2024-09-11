@@ -2,6 +2,8 @@
 
 Introduction JPA.
 
+# What I Learned
+
 # 293. Step 01 - Getting Started with JPA and Hibernate - Goals
 
 - Plan here.
