@@ -1,3 +1,8 @@
+
+- For these courses one should configure **GIT** for handle projects.
+    - `git config --global http.postBuffer 524288000`.
+    - `git config --global core.longpaths true`.
+    
 ## [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners
 
 ![Spring boot beginners](SpringBootBeginnerCourse.jpg)
@@ -210,4 +215,41 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 
+# Cloud Native course series.
 
+- This course series will have following courses. 
+
+<img src="cloudSeries.PNG"  alt="alt text" width="500"/>
+
+1. About **Docker**.
+
+## Docker Masterclass For Java Spring Boot Developers.
+
+![Docker Masterclass For Java Spring Boot Developers](dockerMasterClass.PNG)
+
+All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj**. With my own notes.
+
+Contains my own notes with some course material to enforce learning experience.
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
+[The course at Udemy](https://www.udemy.com/course/docker-java/).
+
+[Content maker](https://www.vinsguru.com/).
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+Insert certificate here when completed
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+## Progress/Curriculum
+
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - 
+- [ ] [Section 03](#) - 
+- [ ] [Section 04](#) - 
+- [ ] [Section 05](#) - 
