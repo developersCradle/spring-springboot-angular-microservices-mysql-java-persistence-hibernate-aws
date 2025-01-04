@@ -3,7 +3,7 @@
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
     
-## [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners
+## [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners.
 
 ![Spring boot beginners](SpringBootBeginnerCourse.jpg)
 
@@ -28,7 +28,7 @@ Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum
+## Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201#section-1-new---spring-boot-3-quick-start) - Section 1: NEW - Spring Boot 3 Quick Start.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202#section-2-new---spring-boot-3---inversion-of-control-and-dependency-injection) - Section 2: NEW - Spring Core.
@@ -52,7 +52,7 @@ Insert certificate here when completed
 - TODO Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
 - TODO Make Chapters/headings when reviewing.
 
-### Additional stuff
+### Additional stuff.
 
 - [ ] Read/skim thought Spring documentation when finished this course.
 - [ ] Make unix clock in Thymeleaf or in Angular.
@@ -60,7 +60,7 @@ Insert certificate here when completed
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
-## Progress/Curriculum
+## Progress/Curriculum.
 
 - [x] [Section 01](#) - Course Introduction
 - [X] [Section 02](#) - Spring Overview
@@ -68,7 +68,7 @@ Insert certificate here when completed
 - [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration
 
-## Master Microservices with Spring Boot and Spring Cloud
+## Master Microservices with Spring Boot and Spring Cloud.
 
 ![Master microservices](MasterMicroservices.JPG)
 
@@ -93,7 +93,7 @@ Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum new
+## Progress/Curriculum new.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%201#section-1-introduction) - Introduction ✅.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%202#section-2-introduction-to-web-services) - Introduction To Web Services ✅.
@@ -112,16 +112,13 @@ Insert certificate here when completed
 - [x] [Section 15](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2015#section-15-appendix---introduction-to-jpa-in-10-steps---v2) - Appendix - Introduction to JPA in 10 Steps - V2 ✅.
 - [ ] [Section 16](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2016#section-16-appendix---introduction-to-functional-programming-in-30-minutes) - Appendix - Introduction to Functional Programming in 30 Minutes.
 
-### Additional stuff
+### Additional stuff.
 
 - [ ] Read [Pro GIT book](https://git-scm.com/book/en/v2).
 - [ ] Move Spring V1 into appendix folder, since it depreciated.
     - Also numbering got changed.
 
-
-
-
-## Microservices Architecture - The Complete Guide
+## Microservices Architecture - The Complete Guide.
 
 ![Microservices Architecture - The Complete Guide](microserviceArchitecture.PNG)
 
@@ -144,11 +141,11 @@ Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum
+## Progress/Curriculum.
 
 - [ ] [Section 01](#) - Welcome.
 
-## Java Persistence: Hibernate and JPA Fundamentals 
+## Java Persistence: Hibernate and JPA Fundamentals.
 
 <img src="JpaCourse.jpg" alt="Jpa Course here" width="700"/>
 
@@ -168,7 +165,7 @@ Insert certificate here when completed
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 
-## Progress/Curriculum
+## Progress/Curriculum.
 
 - [ ] [Section 01](#) - About this Course
 - [ ] [Section 02](#) - Understanding object/relational persistence
@@ -181,7 +178,7 @@ Insert certificate here when completed
 
 - TODO start this when time and transfer local progress here.
 
-## The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert
+## The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert.
 
 <img src="ultimateSql.PNG" alt="Jpa Course here" width="700"/>
 
@@ -204,24 +201,25 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 
-## Progress/Curriculum
+## Progress/Curriculum.
 
-- [x] [All Done](#) - All Done!
+- [x] [All Done](#) - All Done! ✅.
 
 <hr>
 
 - TODO Course got updated, transfer your answers here with updated content!
 
-
-
-
 # Cloud Native course series.
 
-- This course series will have following courses. 
+- This course series will have the following courses. 
 
 <img src="cloudSeries.PNG"  alt="alt text" width="500"/>
 
-1. About **Docker**.
+1. About **Docker**. [Course](https://www.udemy.com/course/docker-java/)
+2. About **Kubernetes**. [Course](https://www.udemy.com/course/kubernetes-cloud-native/)
+3. About **Helm**.
+4. About **Service Mesh**. 
+
 
 ## Docker Masterclass For Java Spring Boot Developers.
 
@@ -248,8 +246,8 @@ Insert certificate here when completed
 
 ## Progress/Curriculum
 
-- [ ] [Section 01](#) - Introduction.
-- [ ] [Section 02](#) - 
-- [ ] [Section 03](#) - 
-- [ ] [Section 04](#) - 
-- [ ] [Section 05](#) - 
+- [x] [Section 01](#) - Introduction ✅.
+- [x] [Section 02](#) - Need For Docker ✅.
+- [x] [Section 03](#) - Resource ✅.
+- [ ] [Section 04](#) - Docker Crash Course.
+- [ ] [Section 05](#) - Docker Compose.
