@@ -1,4 +1,4 @@
-# Section 3: Resource.
+# Section 03: Resource.
 
 Resource section.
 
