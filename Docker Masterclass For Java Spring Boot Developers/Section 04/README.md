@@ -215,5 +215,302 @@ Docker crash course.
 
 # 28. Volume Mapping - Read Only Mode.
 
-- Same, but with read only.
-    - So, if host files are deleted. Won't deleted container files.
+- Same, but with **read only**.
+    - So, if host files are deleted. Won't delete container files.
+- `docker run -it -v C:\Docker\Volume\Data:/data:ro ubuntu`
+    - With argument **:ro** in the end.
+
+# 29. Network - Theory.
+
+<img src="dockerNetwork.PNG"  alt="alt text" width="500"/>
+
+- Docker container can talk to each others.
+
+<img src="dockerNetwork2.PNG"  alt="alt text" width="500"/>
+
+1. Docker will place container in default network called **bridge network**.
+    - Container can talk to each others.   
+        - Problem comes with when there is no **name server**.
+            - These can talk to each other only if these containers know each others IP-address.
+        
+<img src="dockerNetworkDrivers.PNG"  alt="alt text" width="500"/>
+
+1. For **Docker** default is **Bridge**.  
+2. **None** disables all network.
+3. **Overlay** is option for **K8**.
+
+# 30. Network - Demo.
+
+- We will demonstrate here, that bridge network does not have **DNS** name server.
+
+- We are going to use this **Docker** image `docker pull vinsdocker/util`.
+
+- Then we launch the **disto** with ping tools `docker run -it vinsdocker/util`.
+    - We cannot ping `ping nginx`, since name nginx is not known inside container.
+
+- We can use **Docker command** for figuring out the **IP** address of the container `docker inspect nginx`.
+
+```
+[
+    {
+        "Id": "35c720c04b053d27e2a4ff458db89f7c8074f7b3156ec8e931f31cb96a9b3ec0",
+        "Created": "2025-01-10T10:46:00.573396381Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-01-10T10:46:01.646982197Z",
+            "FinishedAt": "2025-01-10T10:46:24.695510913Z"
+        },
+        "Image": "sha256:42e917aaa1b5bb40dd0f6f7f4f857490ac7747d7ef73b391c774a41a8b994f15",
+        "ResolvConfPath": "/var/lib/docker/containers/35c720c04b053d27e2a4ff458db89f7c8074f7b3156ec8e931f31cb96a9b3ec0/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/35c720c04b053d27e2a4ff458db89f7c8074f7b3156ec8e931f31cb96a9b3ec0/hostname",
+        "HostsPath": "/var/lib/docker/containers/35c720c04b053d27e2a4ff458db89f7c8074f7b3156ec8e931f31cb96a9b3ec0/hosts",
+        "LogPath": "/var/lib/docker/containers/35c720c04b053d27e2a4ff458db89f7c8074f7b3156ec8e931f31cb96a9b3ec0/35c720c04b053d27e2a4ff458db89f7c8074f7b3156ec8e931f31cb96a9b3ec0-json.log",
+        "Name": "/nginx",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                30,
+                120
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "35c720c04b05",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.27.3",
+                "NJS_VERSION=0.8.7",
+                "NJS_RELEASE=1~bookworm",
+                "PKG_RELEASE=1~bookworm",
+                "DYNPKG_RELEASE=1~bookworm"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "",
+                    "DriverOpts": null,
+                    "NetworkID": "62ef60e184fbf77601b915981ba6abfdd2075bcb936c3a1e65ac7e01f029cecf",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]
+```
+- So with the **bridge network**, we need to figure out **IP-address** manually.
+
+
+# 31. [Quick Note] - Nginx in Docker Network.
+
+- ✅.
+
+# 32. Network - Custom Bridge Demo.
+
+- We will build **custom bridge network**.
+
+- Network can be created using **network** command, like such with name of dummy `docker network create dummy`.
+
+- Looking networks `docker network ls`.
+
+- Launching container with network`docker run --name=nginx --network=dummy nginx`.
+    - Launching **tool** under same network `docker run -it --network=dummy vinsdocker/util`.
+
+- Now when container is inside **same network**, can ping only using **name only**. 
+    - `ping nginx` or `curl nginx`.
+
+# 33. DockerFile - Intro.
+
+<img src="dockerCommand.PNG"  alt="alt text" width="500"/>
+
+1. Simple commands to create **Dockerfile**.
+2. **Base Image**, you always need some kind **base image**.
+    - **Top of this**, you will be adding your stuff.
+3. **ADD** and **COPY** are more or less the same.
+    - With **ADD** you can use URL.
+4. Used to **RUN** commands during image build process.
+5. Everything will be worked on, in this folder.
+    - So after `WORKDIR` command, following `ADD` command will add file from **local** file project and place it inside the docker image, under `/a/b/c`.
+        - We don't usually use **root directory**.
+6.  Process or command to be started at end of the build process.
+
+# 34. Building Hello World Image.
+
+- **Command** for building docker image `docker build -t my-hello-world .`
+    - last one, from current directory.
+- Our simple **Dockerfile**.
+```
+FROM ubuntu
+
+WORKDIR /vins/welcome
+
+# Adding txt file form project folder to inside docker file.
+ADD welcomeMessage.txt welcomeMessage.txt
+
+# Output of txt file.
+CMD cat welcomeMessage.txt
+```
