@@ -502,7 +502,9 @@ Docker crash course.
 
 - **Command** for building docker image `docker build -t my-hello-world .`
     - last one, from current directory.
+
 - Our simple **Dockerfile**.
+
 ```
 FROM ubuntu
 
@@ -514,3 +516,35 @@ ADD welcomeMessage.txt welcomeMessage.txt
 # Output of txt file.
 CMD cat welcomeMessage.txt
 ```
+
+# 35. Exploring Our Image.
+
+<img src="workDirWorking.PNG"  alt="alt text" width="500"/>
+
+- `docker run -it my-hello-world bash`
+    - Stops execution and gives bash.
+- `docker run my-hello-world`
+
+- You can override **docker file commands** with argument!
+    - `docker run my-hello-world date`
+        - This gives **Date** and not defaults behavior of container image.
+
+# 36. Building Image With ENTRYPOINT.
+
+- Difference between `ENTRYPOINT` and `CMD` in docker file.
+
+```
+FROM ubuntu
+
+WORKDIR /vins/welcome
+
+# Adding txt file form project folder to inside docker file.
+ADD welcomeMessage.txt welcomeMessage.txt
+
+# Output of txt file.
+ENTRYPOINT cat welcomeMessage.txt
+```
+- **but**, if you use `ENTRYPOINT` this won't work! Executes container image normally.
+    - `docker run my-hello-world-entry date`.
+
+# 37. Installing Java Manually in Ubuntu Container.

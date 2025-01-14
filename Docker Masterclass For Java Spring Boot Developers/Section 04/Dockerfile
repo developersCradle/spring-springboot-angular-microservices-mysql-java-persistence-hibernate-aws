@@ -6,4 +6,4 @@ WORKDIR /vins/welcome
 ADD welcomeMessage.txt welcomeMessage.txt
 
 # Output of txt file.
-CMD cat welcomeMessage.txt
+ENTRYPOINT cat welcomeMessage.txt
