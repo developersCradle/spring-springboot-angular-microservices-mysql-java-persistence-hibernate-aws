@@ -531,7 +531,7 @@ CMD cat welcomeMessage.txt
 
 # 36. Building Image With ENTRYPOINT.
 
-- Difference between `ENTRYPOINT` and `CMD` in docker file.
+> Difference between `ENTRYPOINT` and `CMD` in docker file.
 
 ```
 FROM ubuntu
@@ -548,3 +548,128 @@ ENTRYPOINT cat welcomeMessage.txt
     - `docker run my-hello-world-entry date`.
 
 # 37. Installing Java Manually in Ubuntu Container.
+
+- We are installing Java 17 in Ubuntu container.
+
+- To identify what process base is being used inside container `uname -m`.
+    - This will tell what you're going to use.
+
+- Dockerfile with **Java23** installed inside Ubuntu container.
+
+```
+FROM ubuntu
+
+WORKDIR java
+
+RUN apt-get update
+
+# Downloading curl
+RUN apt-get install curl
+
+# Downloading JDK
+RUN curl https://download.java.net/java/GA/jdk23.0.1/c28985cbf10d4e648e4004050f8781aa/11/GPL/openjdk-23.0.1_linux-x64_bin.tar.gz --output java23.tar.gz
+
+# Unizpping
+tar -xvzf java23.tar.gz
+rm java23.tar.gz
+
+# In linux we will bind to env varible.
+# export PATH=$PATH:/jdk-23.0.1/bin
+
+ENV PATH $PATH:/java/jdk-23.0.1/bin
+```
+
+- In a Dockerfile, the `ENV` instruction is used to set environment variables inside the container.
+
+- We are building our new Docker file `docker build -t my-java-23 .`.
+
+# 38. Building Java Base Image - Part 1.
+
+- Creating image of our Ubuntu container.
+
+```
+FROM ubuntu
+
+WORKDIR java
+
+RUN apt-get update
+
+# Downloading curl
+RUN apt-get install curl -y
+# -y for inputting yes, when asking in setup
+
+# Downloading JDK
+RUN curl https://download.java.net/java/GA/jdk23.0.1/c28985cbf10d4e648e4004050f8781aa/11/GPL/openjdk-23.0.1_linux-x64_bin.tar.gz --output java23.tar.gz
+
+# Unizpping
+tar -xvzf java23.tar.gz
+rm java23.tar.gz
+
+# In linux we will bind to env varible.
+# export PATH=$PATH:/jdk-23.0.1/bin
+
+ENV PATH $PATH:/java/jdk-23.0.1/bin
+```
+
+- Building our new image with Ubuntu and Java JDK installed `docker build -t my-java-23 .`.
+
+# 39. Building Java Base Image - Part 2 - With ADD Command.
+
+- We can achieve this using same `ADD` command. It will indirectly download package.
+
+```
+
+FROM ubuntu
+
+WORKDIR java
+
+# Downloading JDK
+ADD https://download.java.net/java/GA/jdk23.0.1/c28985cbf10d4e648e4004050f8781aa/11/GPL/openjdk-23.0.1_linux-x64_bin.tar.gz java23.tar.gz
+
+# Unizpping
+RUN tar -xvzf java23.tar.gz
+RUN rm java23.tar.gz
+
+# In linux we will bind to env varible.
+# export PATH=$PATH:/jdk-23.0.1/bin
+
+ENV PATH $PATH:/java/jdk-23.0.1/bin
+
+``` 
+
+# 40. NONE Images.
+
+- Using `ADD` can bring less size benefit when making docker image.
+    - Comparing to the manual installing all the `curl` tools for example.
+
+- If we assign same name for image, the older one will get replaced by `None` tag.
+
+<img src="none.PNG"  alt="alt text" width="500"/>
+
+1. We are making same image, but with extra stuff. Old image gets named as **None**, where new one gets the name.
+
+<img src="copy.PNG"  alt="alt text" width="500"/>
+
+1. Copying whole folder content into another folder.
+2. Copies all `.txt` ending files to the `text` folder and `/` if not created, docker will create the folder.
+
+# 42. Passing Environment Variable.
+
+- We are creating Table Java class.
+
+```
+public class Table {
+
+    public static void main(String[] args) {
+        String input = System.getenv("input");
+        System.out.println("Received Input : " + input);
+
+        if (null == input) return;
+
+        int value = Integer.parseInt(input);
+        for (int i = 1; i <= value; i++) {
+            System.out.printf("%d * %d = %d\n", i, value, (i * value));
+        }
+    }
+}
+```
