@@ -648,6 +648,8 @@ ENV PATH $PATH:/java/jdk-23.0.1/bin
 
 1. We are making same image, but with extra stuff. Old image gets named as **None**, where new one gets the name.
 
+# 41. [Quick Note] - COPY Usage.
+
 <img src="copy.PNG"  alt="alt text" width="500"/>
 
 1. Copying whole folder content into another folder.
@@ -658,9 +660,10 @@ ENV PATH $PATH:/java/jdk-23.0.1/bin
 - We are creating Table Java class.
 
 ```
-public class Table {
+public class Table
+{
+	public static void main(String[] args) {
 
-    public static void main(String[] args) {
         String input = System.getenv("input");
         System.out.println("Received Input : " + input);
 
@@ -669,7 +672,102 @@ public class Table {
         int value = Integer.parseInt(input);
         for (int i = 1; i <= value; i++) {
             System.out.printf("%d * %d = %d\n", i, value, (i * value));
-        }
-    }
+			}
+	}
 }
 ```
+
+- And docker file of Table.
+
+```
+# Base image has Java, which we have made allready.
+FROM my-java-23
+
+WORKDIR /users/vinoth/table
+
+COPY Table.java Table.java
+
+# Run command and after this, execute table.
+CMD javac Table.java && java Table
+```
+
+- Building our image form top of another one. `docker build -t my-table .`.
+
+- Executing will result in `null`.
+
+```
+C:\Users\ScoopiDoo\Desktop\git projektit\spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws\Docker Masterclass For Java Spring Boot Developers\Section 04>docker run my-table
+Received Input : null
+```
+
+- With `-e input=3` tells pass the environment variable.
+    - Example execution `docker run -e input=3 my-table`.
+
+```
+C:\Users\ScoopiDoo\Desktop\git projektit\spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws\Docker Masterclass For Java Spring Boot Developers\Section 04>docker run -e input=3 my-table
+Received Input : 3
+1 * 3 = 3
+2 * 3 = 6
+3 * 3 = 9
+```
+
+# 43. Exec vs Shell Form.
+
+<img src="shellAndExecForm.PNG"  alt="alt text" width="500"/>
+
+1. Process to be executed is `Shell Form`.
+2. Process to be executed is `Exec Form`.
+
+- Example of `ps` command inside docker file.
+
+```
+FROM ubuntu
+
+CMD ps
+
+```
+
+- `docker build -t test` running following command.
+
+<img src="childProcess.PNG"  alt="alt text" width="500"/>
+
+1. This will be executed as child process.
+    - **Shell** will be executing what command you are giving it. This is **Shell Form**.
+
+- This will be the **Exec form**.
+
+```
+FROM ubuntu
+
+
+# Exec form
+CMD ["ps"]
+
+```
+
+<img src="execForm.PNG"  alt="alt text" width="500"/>
+
+1. Only one process. `ps` is run one as one process.
+
+- TODO luo tämä uudestaan.
+
+# 44. How Docker Builds Image - Theory.
+
+<img src="dockerImageBuildProcess.PNG"  alt="alt text" width="500"/>
+
+1. When we make **change** in docker file, we create branch. When this gets **merged** into the main **branch**. It creates another hash.
+
+<img src="buildingDockerImageProcess.PNG"  alt="alt text" width="500"/>
+
+1. Docker will build from bottom to up the image. These commands are applied layer by layer.
+2. After every added layer, the **hash** will be different.
+
+- Docker image is list of **layers** or **hashes**.
+
+<img src="howDockerBuildImages.PNG"  alt="alt text" width="500"/>
+
+1. When **rebuilding** the image or **changing** the image, docker sees these layers, which are not changed and will not try to build **again** these! 
+2. Instead, it will only **build** these one which are changed!
+
+
+Jäin 4:10
