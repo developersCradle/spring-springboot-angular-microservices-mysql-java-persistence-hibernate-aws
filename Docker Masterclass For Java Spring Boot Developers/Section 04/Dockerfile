@@ -1,8 +1,11 @@
 FROM ubuntu
 
+WORKDIR /a/b/c
 
-# Exec form
-#CMD ["ps"]
-CMD echo $PATH
+RUN mkdir hello
 
+RUN apt-get update
 
+RUN apt-get install curl -y
+
+COPY file.txt file.txt

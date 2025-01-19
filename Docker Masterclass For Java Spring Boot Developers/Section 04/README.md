@@ -768,6 +768,102 @@ CMD ["ps"]
 
 1. When **rebuilding** the image or **changing** the image, docker sees these layers, which are not changed and will not try to build **again** these! 
 2. Instead, it will only **build** these one which are changed!
+3. The file got changed.
+
+<img src="howDockerBuildImages2.PNG"  alt="alt text" width="500"/>
+
+1. So, we could arrange the `docker file` as such, where the frequent changed line would be at bottom. It would not affect the building process time.
+
+- We could figure out where, the most frequent layer of changed could be!
 
 
-Jäin 4:10
+# How Docker Builds Image - Demo.
+
+- Our docker image.
+
+```
+FROM ubuntu
+
+WORKDIR /a/b/c
+
+RUN mkdir hello
+
+COPY file.txt file.txt
+
+RUN apt-get update
+
+RUN apt-get install curl -y
+
+```
+
+- And our file.txt file.
+
+```
+test1 v1
+```
+
+- Build this image `docker build -t test1 .`. As you can see this **takes time**.
+
+<img src="cached.PNG"  alt="alt text" width="600"/>
+
+1. This building of the image is cached!
+
+<img src="ubuntuCached.PNG"  alt="alt text" width="600"/>
+
+1. So here you can see from `docker images` that **ubuntu** image is in our **already built imaged list**, so when re-creating some other images this is retrieved for **faster** build process.
+
+- With **Not** right way of arranging of docker file order!
+
+- The docker file.
+
+```
+
+FROM ubuntu
+
+WORKDIR /a/b/c
+
+RUN mkdir hello
+
+COPY file.txt file.txt
+
+RUN apt-get update
+
+RUN apt-get install curl -y
+
+
+```
+
+- And the result of such.
+
+<img src="wrongWayOfArranging.PNG"  alt="alt text" width="600"/>
+
+1. Therese gets always built when `.txt` is changed!
+
+- With **Optimization** of docker file order!
+
+- The docker file.
+
+```
+
+FROM ubuntu
+
+WORKDIR /a/b/c
+
+RUN mkdir hello
+
+RUN apt-get update
+
+RUN apt-get install curl -y
+
+COPY file.txt file.txt
+
+```
+
+- And the result of such.
+
+<img src="rightWayOfArranging.PNG"  alt="alt text" width="500"/>
+
+1. In this right one, all of these are **Cached**, so it becomes much faster!
+
+
+# 46. Docker Push / DockerHub.
