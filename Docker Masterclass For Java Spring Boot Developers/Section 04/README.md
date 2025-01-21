@@ -776,7 +776,6 @@ CMD ["ps"]
 
 - We could figure out where, the most frequent layer of changed could be!
 
-
 # How Docker Builds Image - Demo.
 
 - Our docker image.
@@ -857,6 +856,7 @@ RUN apt-get install curl -y
 
 COPY file.txt file.txt
 
+
 ```
 
 - And the result of such.
@@ -865,5 +865,52 @@ COPY file.txt file.txt
 
 1. In this right one, all of these are **Cached**, so it becomes much faster!
 
-
 # 46. Docker Push / DockerHub.
+
+- [Docker hub](https://hub.docker.com/).
+
+- We can also **push**, docker images to AWS.
+
+<img src="dockerPush.PNG"  alt="alt text" width="500"/>
+
+1. We don't own this image. So we need to create this image.
+
+- Chancing name for docker image `docker tag my-table vinsdocker/my-table`.
+
+<img src="imagesIsBeingCloned.PNG"  alt="alt text" width="500"/>
+
+1. Image is cloned, only name is changed. See the **hash** is the same.
+
+- Save logins for **docker**. `docker login`.
+
+- Other way is to use **build** process with extra stuff, such as `docker build -t vinsdocker/my-table:v4 .`.
+    - Then push it to your account `docker push vinsdocker/my-table`.
+        - Just replace this with your own account.
+
+# 47. Summary.
+
+<img src="DockerSummary.PNG"  alt="alt text" width="500"/>
+
+- Main docker terminologies.
+
+<img src="dockerTerminologiesSummary.PNG"  alt="alt text" width="500"/>
+
+1. Running version of **image** is **container**.
+
+<img src="DockerSummaryCommands.PNG"  alt="alt text" width="500"/>
+
+1. Naming format of docker images. 
+
+<img src="DockerSummaryCommandsSecond.PNG"  alt="alt text" width="400"/>
+
+1. **Remember** docker start **pull** latest image form repository 
+
+<img src="DockerSummaryCommandsThird.PNG"  alt="alt text" width="500"/>
+
+1. We can build with two ways. 
+
+```
+docker build -t vinsdocker/util:v3.5
+docker tag util vinsdocker/util:3.6
+```
+
