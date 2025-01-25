@@ -1,0 +1,9 @@
+version : "3.0" # Spesification, which the Docker Copose will be following.
+services: # Lisf of Applications! 
+  web-app: # Apllication! Name of the application.
+    image: nginx # Configurations for the the Applcitions! Image is the what image you will be using.
+    ports: # List of ports.
+    - "80:80" # - (dash) will be List! Better to use Stiring for better parising.
+    volumes:
+      - ./data:/usr/share/nginx/html # This Path will be pointing to the nginx html.
+      # We want to map data foloder to the ngnix index folder.
