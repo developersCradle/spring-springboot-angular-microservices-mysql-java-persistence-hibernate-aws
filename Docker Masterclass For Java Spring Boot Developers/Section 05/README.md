@@ -87,3 +87,104 @@ services: # Lisf of Applications!
 - Start normally `docker-compose up -d`.
 
 # 54. Network.
+
+- `command: "curl http://web-app"` # We just want to call other service, we need to use service name, not the image name.
+
+- We can use `depends_on` to make application to wait for another one.
+
+```
+depends_on: # Other service, needs to start first.
+      - web-app
+
+```
+
+- Working **.yaml**.
+
+```
+version : "3.0" 
+services: 
+  web-app: # One application!
+    image: nginx
+    ports: 
+    - "80:80"
+  util: # Second application!
+    image: vinsdocker/util
+    depends_on: # Other service, needs to start first.
+      - web-app
+    command: "curl http://web-app" # We just wan't to call other service, we need to use service name, not the image name.
+    
+```
+
+- This **Compose** file, will place applications inside **one** **network**, it will work.
+
+- By **default**, containers can talk to each other without of any **port mapping**.
+    - The port mapping only for **browser support** or for external access.
+
+# 55. Container Environment Variable Via Docker Compose.
+
+- Run env variables `docker run ubuntu env`.
+    - Setting while running `docker run -e INPUT=55 ubuntu env`
+        - Where `INPUT` is the user made variable.
+
+- You can put following to docker-compose file for **environment** variables.
+
+```
+environment:
+    - app.name=product-service 
+    - service.url=url.google.com 
+    - input=56
+```
+
+<img src="envVariablesOnUserDefined.PNG"  alt="alt text" width="500"/>
+
+1. As you can see the following configuration will provide startup variables to the image.
+
+- Full **docker-compose** file.
+
+```
+version : "3.0" 
+services: 
+  ubuntu:
+    image: ubuntu
+    command: "env"
+    environment:
+    - app.name=product-service 
+    - service.url=url.google.com 
+    - input=56
+```
+
+# 56. Env File.
+
+- You can do this also to the **file** and even mix these.
+
+```
+version : "3.0" 
+services: 
+  ubuntu:
+    image: ubuntu
+    command: "env"
+    env_file:
+      - app.env
+    environment:
+    - app.name=product-service 
+    - service.url=url.google.com 
+    - input=56
+```
+
+# 57. Variable Substitution In Compose File.
+
+- We can also substitute variables versions inside **compose file**.
+
+- Example below:
+
+```
+
+version : "3.0" 
+services: 
+  web-app:
+    image: nginx:${TAG:-latest}
+    ports:
+    - "80:80"
+    
+```
+

@@ -1,0 +1,10 @@
+version : "3.0" 
+services: 
+  web-app: # One application!
+    image: nginx
+  util: # Second application!
+    image: vinsdocker/util
+    depends_on: # Other service, needs to start first.
+      - web-app
+    command: "curl http://web-app" # We just wan't to call other service, we need to use service name, not the image name.
+    
