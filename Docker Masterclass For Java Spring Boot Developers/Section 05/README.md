@@ -188,3 +188,98 @@ services:
     
 ```
 
+- We can pass the **TAG** in command line or the can use docker `export` command!
+
+# 58. MongoDB / Mongo Express - Part 1.
+
+- Find some docker image.
+
+- [MongoDbImage](https://hub.docker.com/_/mongo-express).
+
+
+- We wrote following **docker compose**, will be using the `mongo-express`
+
+```
+
+version: "3.0"
+services:
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  express:
+    image: mongo-express
+    depends_on:
+    - mongo  # name is the service name, not the image name.
+    ports:
+    - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      ME_CONFIG_MONGODB_SERVER: mongo
+
+```
+
+# 59. MongoDB / Mongo Express - Part 2.
+
+- You can inspect compose system `docker-compose ps`.
+
+- Getting logs of **docker-compose** file `docker-compose logs`.
+  - You can debug using **docker logs**.
+
+- Sometimes `depends_on` is not fully trustable.
+  - `restart: always` we could add for convince.
+
+```
+version: "3.0"
+services:
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  express:
+    image: mongo-express
+    restart: always
+    depends_on:
+    - mongo  # name is the service name, not the image name.
+    ports:
+    - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      ME_CONFIG_MONGODB_SERVER: mongo
+```
+
+# 60. MongoDB Persistence.
+
+- We can map our container to our folder in local with **volumes**.
+  - We won't lose our data.
+
+```
+
+version: "3.0"
+services:
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./data:/data/db
+  express:
+    image: mongo-express
+    restart: always
+    depends_on:
+    - mongo  # name is the service name, not the image name.
+    ports:
+    - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      ME_CONFIG_MONGODB_SERVER: mongo
+  
+  ```
