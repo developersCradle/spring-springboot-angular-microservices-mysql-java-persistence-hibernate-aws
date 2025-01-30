@@ -250,8 +250,46 @@ Insert certificate here when completed
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2002#section-02-need-for-docker) - Need For Docker ✅.
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2003#section-03-resource) - Resource ✅.
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2004#section-04-docker-crash-course) - Docker Crash Course. ✅.
-- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose 
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose ✅.
 - [ ] [Section 06](#) 
 - [ ] [Section 07](#) 
 - [ ] [Section 08](#) 
 
+### Additional stuff.
+
+- [ ] Do the last chapter exercise from Section 05.
+
+
+
+
+## Kubernetes Masterclass For Beginners [Hands-On].
+
+
+<img src="kubernetes.PNG"  alt="kubernetes course" width="500"/>
+
+All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj**. With my own notes.
+
+Contains my own notes with some course material to enforce learning experience.
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
+[The course at Udemy](https://www.udemy.com/course/kubernetes-cloud-native/).
+
+[Content maker](https://www.vinsguru.com/).
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+Insert certificate here when completed
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+## Progress/Curriculum
+
+- [ ] [Section 01](#) - Introduction.
+
+### Additional stuff.
+
+- [ ] Some task.

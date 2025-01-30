@@ -283,3 +283,80 @@ services:
       ME_CONFIG_MONGODB_SERVER: mongo
   
   ```
+
+# 61. MongoDB Initialize DB With Script.
+
+  - For staring with one **set** of initialization.
+    - We can do this with the script.
+
+  - [getSiblingDB](https://www.mongodb.com/docs/manual/reference/method/db.getSiblingDB/).
+    - Something like `USE Database`.
+
+  
+- Docker compose using, the **initialization** script.
+
+```
+version: "3.0"
+services:
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+  express:
+    image: mongo-express
+    restart: always
+    depends_on:
+    - mongo  # name is the service name, not the image name.
+    ports:
+    - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      ME_CONFIG_MONGODB_SERVER: mongo
+  ```
+
+- **init.js**
+  - You need to put initialization script in specified folder. This is specified in docker image documentation.
+
+```
+db = db.getSiblingDB('product-service');
+
+db.createCollection('products');
+
+db.products.insertMany(
+        [
+            {
+                "name" : "Admin User",
+                "price" : "4000"
+            }
+        ],
+        [
+            {
+                "name": "Test User",
+                "price" : "3000"
+            }
+        ]
+)
+```
+
+# 62. Building Custom Mongo With Data.
+
+- One way to initialize with data.
+
+```
+FROM mongo
+
+COPY data/init.js /docker-entrypoint-initdb.d/init.js
+
+# docker build -t vinsdocker/mongo .
+# docker run vinsdocker/mongo
+```
+
+
+# 63. [Assignment] - Postgres / Adminer.
+
+
+- We will use **postgres**. [Docker Image](https://hub.docker.com/_/postgres)
