@@ -244,7 +244,7 @@ Insert certificate here when completed
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum
+## Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2001#section-01-introduction) - Introduction ✅.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2002#section-02-need-for-docker) - Need For Docker ✅.
@@ -253,17 +253,13 @@ Insert certificate here when completed
 - [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose ✅.
 - [ ] [Section 06](#) 
 - [ ] [Section 07](#) 
-- [ ] [Section 08](#) 
+- [ ] [Section 08](#)
 
 ### Additional stuff.
 
 - [ ] Do the last chapter exercise from Section 05.
 
-
-
-
 ## Kubernetes Masterclass For Beginners [Hands-On].
-
 
 <img src="kubernetes.PNG"  alt="kubernetes course" width="500"/>
 
@@ -277,6 +273,8 @@ If the content sparked :fire: your interest, please consider buying the course a
 
 [Content maker](https://www.vinsguru.com/).
 
+[Latest GIT ](https://github.com/vinsguru/kubernetes-course).
+
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
 ?trk=public_profile_see-credential 
@@ -288,8 +286,11 @@ Insert certificate here when completed
 
 ## Progress/Curriculum
 
-- [ ] [Section 01](#) - Introduction.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2001#section-01-introduction) - Introduction ✅.
+- [ ] [Section 02](#) - Kubernetes Cluster.
+- [ ] [Section 03](#) -
+- [ ] [Section 04](#) -
+- [ ] [Section 05](#) -
+
 
 ### Additional stuff.
-
-- [ ] Some task.
