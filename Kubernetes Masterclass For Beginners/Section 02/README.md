@@ -105,8 +105,7 @@ Kubernetes Cluster.
 ```
 # three node (two workers) cluster config
 kind: Cluster
-apiVersion: kind.x-k8s.io/v1alpha4
-name: dev-cluster
+apiVersion: kind.c
 nodes:
 - role: control-plane
 - role: worker
@@ -114,3 +113,32 @@ nodes:
 ```
 
 # 9. Kind Cluster - Part 2.
+
+
+- We need to check if we have Kubernetes folder on the system, one of such is `ls ~/.kube`.
+    - Like folder `kube` folder.
+
+- We are using following command to **local cluster** configurations `kind create cluster --config 01-cluster.yaml`.
+    - We have created before this config file.
+    - This will have two **workers** node.
+    - One **Master** node.
+
+<img src="kindCreatedCluster.PNG" alt="alt text" width="500"/>
+
+1. As you can see the **kind** has created cluster.
+    - And master is exposing some **ports**.
+
+- You can see the file from:ish `C:\Users\ScoopiDoo\.kube`
+    - There will be `kind` cluster configuration file, and you can see the docker `docker network` mapping the same port.
+
+- This will usually be created by file.
+
+- You can see the cluster configuration with command: `kubectl version --output==yaml` with this you can talk the cluster master.
+
+<img src="kubectlConfig.PNG" alt="alt text" width="500"/>
+
+1. There is for configuration for client.
+2. There is for configuration for server.
+
+- You can see also the **node** from `kubectl`
+    - `kubectl get nodes`
