@@ -102,6 +102,7 @@ Kubernetes Cluster.
 - We are going to create **cluster** with this config with this `.yaml` file.
     - One **master**.
     - Two **workers**.
+
 ```
 # three node (two workers) cluster config
 kind: Cluster
@@ -113,7 +114,6 @@ nodes:
 ```
 
 # 9. Kind Cluster - Part 2.
-
 
 - We need to check if we have Kubernetes folder on the system, one of such is `ls ~/.kube`.
     - Like folder `kube` folder.
@@ -129,11 +129,11 @@ nodes:
     - And master is exposing some **ports**.
 
 - You can see the file from:ish `C:\Users\ScoopiDoo\.kube`
-    - There will be `kind` cluster configuration file, and you can see the docker `docker network` mapping the same port.
+    - There cluster configuration file, and you can see the docker `docker network` mapping are the same port.
 
-- This will usually be created by file.
+- This will usually be created with some tool. In this example we created with **kind**.
 
-- You can see the cluster configuration with command: `kubectl version --output==yaml` with this you can talk the cluster master.
+- You can see the cluster configuration with **kubectl** command: `kubectl version --output==yaml` with this **k8** can talk the cluster master.
 
 <img src="kubectlConfig.PNG" alt="alt text" width="500"/>
 
@@ -141,4 +141,41 @@ nodes:
 2. There is for configuration for server.
 
 - You can see also the **node** from `kubectl`
-    - `kubectl get nodes`
+    - `kubectl get nodes`.
+
+# 10. Kube Config.
+
+<img src="kubeConfig.PNG" alt="alt text" width="500"/>
+
+1. K8 will be looking for the configuration, usually this is found from `home` directly.
+
+<img src="kubernetesClusterConfig.PNG" alt="alt text" width="500"/>
+
+1. When `kubectl` wants to talk to **master**, it will look for the `config` file.
+
+- When using the big companies, these config files will be provided.
+
+# 11. Exploring Kind Cluster.
+
+- Before this one, explore `docker ps` and get the **id** for the **master**.
+
+- We are going to explore inside **master** file, which was created by **kind**. `docker exec -it aa7e`.
+
+- We can explore difference processes with, **worker** and **master** `ps -aux`.
+
+- Deleting **cluster** `kind delete cluster --name dev-cluster`.
+    - This will remove old config file from the cluster configuration file `:\Users\ScoopiDoo\.kube`
+
+- After deleting, we cannot find the server version. `kubectl version --output=yaml`.
+
+<img src="serversVersionNotFound.PNG" alt="alt text" width="500"/>
+
+1. Server version not found.
+
+# 12. Summary.
+
+<img src="summary.PNG" alt="alt text" width="500"/>
+
+1. Master is managing the work.
+
+<img src="summary2.PNG" alt="alt text" width="400"/>

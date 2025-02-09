@@ -287,10 +287,9 @@ Insert certificate here when completed
 ## Progress/Curriculum
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2001#section-01-introduction) - Introduction ✅.
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2002#section-02-kubernetes-cluster) - Kubernetes Cluster.
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2002#section-02-kubernetes-cluster) - Kubernetes Cluster ✅.
 - [ ] [Section 03](#) - Pod.
 - [ ] [Section 04](#) -
 - [ ] [Section 05](#) -
-
 
 ### Additional stuff.
