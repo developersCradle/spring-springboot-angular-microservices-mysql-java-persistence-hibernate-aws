@@ -288,8 +288,15 @@ Insert certificate here when completed
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2001#section-01-introduction) - Introduction ✅.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2002#section-02-kubernetes-cluster) - Kubernetes Cluster ✅.
-- [ ] [Section 03](#) - Pod.
-- [ ] [Section 04](#) -
-- [ ] [Section 05](#) -
+- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2003#section-03-pod) - Pod.
+- [ ] [Section 04](#) - ReplicaSet.
+- [ ] [Section 05](#) - Deployment.
+- [ ] [Section 06](#) -
+- [ ] [Section 07](#) -
+- [ ] [Section 08](#) -
+- [ ] [Section 09](#) -
+- [ ] [Section 10](#) -
+- [ ] [Section 11](#) -
+- [ ] [Section 12](#) -
 
 ### Additional stuff.

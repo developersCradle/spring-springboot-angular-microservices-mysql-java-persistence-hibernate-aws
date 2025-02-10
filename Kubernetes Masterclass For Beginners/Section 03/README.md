@@ -44,10 +44,28 @@ spec:
 
 # 15. Creation & Deletion.
 
+
+# Our pod configuration
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+```
+
 - **Kind** has some deprecated way for creating cluster
     - Should be used `kubectl apply -f my-pod.yaml`.
 
 > [!CAUTION]
 > Use kubectl.
 
+- To check information about the resource `kubectl get pod`.
 
+- We don't need to use `watch` command.
+
+- TOdo jäin 3:000
