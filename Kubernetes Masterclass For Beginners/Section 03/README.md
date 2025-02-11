@@ -1,7 +1,5 @@
 # Section 03: Pod. 
-
 Pod.
-
 # What I Learned.
 
 # 13. Introduction.
@@ -45,7 +43,8 @@ spec:
 # 15. Creation & Deletion.
 
 
-# Our pod configuration
+# Our pod configuration.
+
 ```
 apiVersion: v1
 kind: Pod
@@ -58,14 +57,63 @@ spec:
 
 ```
 
-- **Kind** has some deprecated way for creating cluster
-    - Should be used `kubectl apply -f my-pod.yaml`.
+- **Kind** has some deprecated way for creating cluster.
+    - Or use **kind** if it works, use `kind create cluster --config 01-cluster.yaml`.
 
 > [!CAUTION]
-> Use kubectl.
+> Use kubectl. If kind does not work.
 
-- To check information about the resource `kubectl get pod`.
+- Get **any** resource from kubectl with `kubectl get pod`.
 
-- We don't need to use `watch` command.
+- We don't need to use `watch` command, since my **OS** won't support.
 
-- TOdo jäin 3:000
+- Applying pod for cluster`kubectl apply -f my-pod.yaml`.
+
+- Delete resource `kubectl delete -f 01-simple-pod.yaml`.
+
+# 16. Describing Pod.
+
+- To get information about the **resource**, we can use the command `resource` example of such. `kubectl describe pod`
+    - If we don't have **pod** created, we can create such with following command `kubectl create -f 01-simple-pod.yaml`.
+
+<img src="eventsFromDescribeCommand.PNG"  alt="alt text" width="600"/>
+
+1. This part is one super important when debugging.
+
+<img src="kubectl describe.PNG"  alt="alt text" width="600"/>
+
+1. **First** (the **scheduler**) we assign `worker node` to run the **pod**. 
+2. **Second** (the **kubelet**) Kubelet got the work, "the pod". What it needs to get it to work?
+    - **Pull** the nginx image.
+    - **Create** container.
+    - **Start** the container.
+
+- So this field tells what is going on.
+
+# 17. [Quick-Note] - apply Command.
+
+<img src="podUpdate.PNG"  alt="alt text" width="600"/>
+
+1. We can change the version of pod, or update its fields using `apply` command.
+
+- Usually **we don't** usually deal with such commands ourselves.
+    - We won't be creating **pods** ourselves.
+        - We have other programs for managing different version.
+
+# 18. Image Pull Backoff.
+
+<img src="errorToInspectWithDescribe.PNG"  alt="alt text" width="700"/>
+
+1. We can see from **describe** that there was error pulling error!
+2. You can see the first step have been made, and how long it took `scheduler` to execute! 
+
+# 19. Crash Loop Backoff.
+
+
+<img src="kubectl describe second.PNG"  alt="alt text" width="700"/>
+
+1. You can tell that, pulling off this image is having problem.
+
+2. You can watch the **Age** of the logs.
+
+# 20. Pod Status.
