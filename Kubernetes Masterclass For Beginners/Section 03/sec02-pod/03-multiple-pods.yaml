@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+  labels: # These can be anything.
+    dept : dept-1
+    team: team-1
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
+  labels: # These can be anything.
+    dept : dept-3
+    team: team-3
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-3
+  labels: # These can be anything.
+    dept : dept-3
+    team: team-3
+spec:
+  containers:
+    - name: nginx
+      image: nginx

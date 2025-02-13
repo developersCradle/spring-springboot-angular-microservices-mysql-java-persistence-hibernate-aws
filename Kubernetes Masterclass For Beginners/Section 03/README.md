@@ -109,7 +109,6 @@ spec:
 
 # 19. Crash Loop Backoff.
 
-
 <img src="kubectl describe second.PNG"  alt="alt text" width="700"/>
 
 1. You can tell that, pulling off this image is having problem.
@@ -117,3 +116,86 @@ spec:
 2. You can watch the **Age** of the logs.
 
 # 20. Pod Status.
+
+<img src="podStatus.PNG"  alt="alt text" width="700"/>
+
+1. In Happy case, **1/1** is running.
+2. Failed case, **0/1**.
+
+- This is what you mostly see.
+
+<img src="mostOfPodStatuses.PNG"  alt="alt text" width="700"/>
+
+1. This is when the **workload** has been run successfully. 
+2. **Kubelet** is retrying the connection. There were error in running container.
+
+# 21. Pod Labels - Part 1.
+
+- Normally there can be multiple **pods**.
+    - We could use the label to identify with queries.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+  labels: # These can be anything.
+    dept : dept-1
+    team: team-1
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
+  labels: # These can be anything.
+    dept : dept-3
+    team: team-3
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-3
+  labels: # These can be anything.
+    dept : dept-3
+    team: team-3
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+```
+
+# 22. Pod Labels - Part 2.
+
+- We create deploy these **pods**. `kubectl create -f 03-multiple-pods.yaml`.
+
+- When we use `kubectl describe pod`.
+    - This print all pods.
+
+- We can **describe** one pod using command with label. `kubectl get pod pod-1`.
+
+- This will print the labels, which have been registered `kubectl get pod --show-labels`.
+
+- We use where **dept=dept-1**. Like this `kubectl get pod -l dept=dept-1`.
+    - We can also use exclusion `kubectl get pod -l dept!=dept-1`.
+
+# 23. Formatting Output.
+
+- Getting information about **pod** in `yaml` format.
+    - `kubectl get pod pod-1 -o yaml`.
+
+# 24. Deleting A Pod.
+
+- Deleting one particular pod. `kubectl delete pod pod-2`.
+
+# 25. Port Forward.
+
+<img src="portFoward.PNG"  alt="alt text" width="700"/>
