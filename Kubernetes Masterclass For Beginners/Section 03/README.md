@@ -1,5 +1,7 @@
 # Section 03: Pod. 
+
 Pod.
+
 # What I Learned.
 
 # 13. Introduction.
@@ -198,4 +200,136 @@ spec:
 
 # 25. Port Forward.
 
+- We have been running `ngnix` container, not connected to the homepage.
+
 <img src="portFoward.PNG"  alt="alt text" width="700"/>
+
+1. These containers are connected to with node network.
+  - Every container has their own IP-address.
+2. **Nodes** are having running **pods** internally.
+  - These **pods** are having their own connection internally.
+
+- So networks are build **top of each other**.
+  - We can **simplify** this one with the **port forwarding** concept.
+    - This is super simple.
+
+<img src="portFowardTec.PNG"  alt="alt text" width="700"/>
+
+1. This creates simple pipe between you machine and your node.
+
+- We make **port forwarding** with following **.yaml** file. 
+
+```
+   apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - name: "web-port"
+        containerPort: 80
+        # protocol: TCP / UDP Default is the TCP.
+```
+
+- If there running **pods** `kubectl get pod`, we need to delete this. `kubectl delete pod my-pod`.
+
+- We can set up connection with **kubectl** **port forwarding** with following command: `kubectl port-forward my-pod 8080:80`.
+
+- Now, when we go to `http://localhost:8080/`, this will go to nginx homepage.
+  - This is **port forwarding** for debugging not proper way to server traffic!
+
+# 26. Restart Policy
+
+- We will use **ubuntu** for the image.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: ubuntu
+      image: ubuntu
+```
+
+- **Kubelet** will try to restart automatically.
+
+- Pod is having automatically `restartPolicy: Always`.
+
+<img src="restartingPolicy.PNG"  alt="alt text" width="600"/>
+
+1. You can see that **Kubelet** is having restarts many times with the restart policy.
+
+- There are many properties for `restartPolicy`:
+  - `Never`.
+  - `OnFailure`.
+
+# 27. Docker - ENTRYPOINT vs CMD.
+
+<img src="DockeImage.PNG"  alt="alt text" width="600"/>
+
+<img src="entryPoint.PNG"  alt="alt text" width="600"/>
+
+<img src="kubernetesTerminologies.PNG"  alt="alt text" width="600"/>
+
+1. **Docker** and **Kubernetes** terms are different.
+
+# 28. Pod Args - Exec Form.
+
+- If there are **commands** inside docker file for the **pod**. Like here, we can execute them inside **pod**.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  restartPolicy: Never
+  containers:
+    - name: ubuntu
+      image: ubuntu
+      args:
+        - "date"
+```
+
+# 29. Pod Container Logs.
+
+- Following command will print the **logs** from inside **pod** `kubectl logs my-pod`.
+
+- Same as **docker**, but with the pod name.
+
+# 30. Pod Args - Shell Form.
+
+- First we ran, docker in interactive mode. `docker run -it ubuntu`.
+  - Then we can echo `$PATH` inside shell.  
+    - `echo this is my path $PATH`.
+- We want to execute following **shell** command `/bin/sh -c 'echo this is my path $PATH'`.
+
+- So this command inside our `yaml` file.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  restartPolicy: Never
+  containers:
+    - name: ubuntu
+      image: ubuntu
+      args:
+        - "/bin/sh"
+        - "-c"
+        - "echo This is my path : $PATH"
+```
+
+- Now, we can just run this and check the logs:
+
+```
+C:\Users\******\Desktop\git projektit\spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws\Kubernetes Masterclass For Beginners\Section 03\sec02-pod>kubectl logs my-pod
+This is my path : /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```

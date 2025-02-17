@@ -44,19 +44,17 @@ Insert certificate here when completed
 - [ ] [Section 12](#) - Section 12: Appendix.
 - [ ] [Section 13](#) - Section 13: Bonus.
 
-<hr>
-
-- TODO Refactor paths and projects inside eclipse.
-- TODO Check typos.
-- TODO Make folder 00 based.
-- TODO Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
-- TODO Make Chapters/headings when reviewing.
-
 ### Additional stuff.
 
 - [ ] Read/skim thought Spring documentation when finished this course.
-- [ ] Make unix clock in Thymeleaf or in Angular.
+- [ ] Make Unix clock in Thymeleaf or in Angular.
 - [ ] Make crypt program in Angular.
+- [ ] Refactor paths and projects inside eclipse.
+- [ ] Check typos.
+- [ ] Make folder 00 based.
+- [ ] Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
+- [ ] Make Chapters/headings when reviewing.
+
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
@@ -174,9 +172,10 @@ Insert certificate here when completed
 - [ ] [Section 05](#) - Getting Started with JPA
 - [ ] [Section 06](#) - Best Practices
 
-<hr>
+### Additional stuff.
 
-- TODO start this when time and transfer local progress here.
+- [ ] Start this and transfer local progress here.
+
 
 ## The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert.
 
@@ -205,9 +204,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] [All Done](#) - All Done! ✅.
 
-<hr>
+### Additional stuff.
 
-- TODO Course got updated, transfer your answers here with updated content!
+- [ ] Course got updated, transfer your answers here with updated content!
 
 # Cloud Native course series.
 
@@ -295,8 +294,8 @@ Insert certificate here when completed
 - [ ] [Section 07](#) - Namespace.
 - [ ] [Section 08](#) - Probes.
 - [ ] [Section 09](#) - ConfigMap & Secret.
-- [ ] [Section 10](#) -
-- [ ] [Section 11](#) -
-- [ ] [Section 12](#) -
+- [ ] [Section 10](#) - Persistent Volume & StatefulSet.
+- [ ] [Section 11](#) - HPA - Horizontal Pod Autoscaler.
+- [ ] [Section 12](#) - Ingress.
 
 ### Additional stuff.
