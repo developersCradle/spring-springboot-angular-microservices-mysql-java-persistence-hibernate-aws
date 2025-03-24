@@ -174,7 +174,7 @@ Insert certificate here when completed
 
 ### Additional stuff.
 
-- [ ] Start this and transfer local progress here.
+- [ ] .
 
 
 ## The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert.

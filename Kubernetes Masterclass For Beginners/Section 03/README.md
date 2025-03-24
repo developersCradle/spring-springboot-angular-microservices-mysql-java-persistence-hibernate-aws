@@ -333,3 +333,5 @@ spec:
 C:\Users\******\Desktop\git projektit\spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws\Kubernetes Masterclass For Beginners\Section 03\sec02-pod>kubectl logs my-pod
 This is my path : /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
+
+# 31. Termination Grace Period.
