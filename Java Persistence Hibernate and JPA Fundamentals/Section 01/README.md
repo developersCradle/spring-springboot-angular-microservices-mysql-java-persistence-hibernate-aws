@@ -1,4 +1,4 @@
-# Section 01:
+# Section 01: About this Course.
 
 Introduction.
 
@@ -10,6 +10,6 @@ Introduction.
 
 - **Object model** difference **Relational model**.
 
-- Some of the concept.
+- Some example of the concept.
 
 <img src="someJPAMapping.PNG"  alt="alt text" width="500"/>

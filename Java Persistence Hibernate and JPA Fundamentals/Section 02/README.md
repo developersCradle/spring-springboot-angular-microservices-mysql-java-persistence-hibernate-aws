@@ -4,7 +4,7 @@ Understanding object/relational persistence.
 
 # What I Learned.
 
-# 2. Object Relational Impedance Mismatch.
+# 02. Object Relational Impedance Mismatch.
 
 <img src="objMismatchAndRelationalDb.PNG"  alt="alt text" width="600"/>
 
@@ -42,3 +42,48 @@ Understanding object/relational persistence.
     - Meaning more `Java Classes` than `Relational Model Tables`.
 2. Two **Java classes**.
 3. Only **One** Table in database.
+
+<img src="subtypeInheritance.PNG" alt="alt text" width="600"/>
+
+1. In **Object Model**, there is **Inheritance**. 
+    - Example Java and OOP.
+2. ❌ No suck thing in **Relational Model**. ❌
+
+- Third is **identity mismatch**.
+
+<img src="identityMismatch.PNG" alt="alt text" width="600"/>
+
+1. In Java, there is **Object Identity** and **Object equality**.
+2. In **Relational Model** the **identity** is can be defined by **Primary key**.   
+    - If two keys are the same, they are **thought** to be **identical**.
+3. Result of following will be **false**, `foo==bar`.
+    - **3.1** `id` of `foo` will be `1`.
+    - **3.2** `id` of `bar` will be `2`.
+
+- Third mismatch is **Association mismatch**.
+
+<img src="assosationMismatch.PNG" alt="alt text" width="600"/>
+
+1. In Java the **association** is handled by **Object References**.
+2. In **Relational Model** this is handled by **Foreign Key**
+3. To say that classes have **bi-directional**, this relationship needs to be defined in **both way!**
+> [!IMPORTANT]
+> **4.** ❌**Foreign Keys** are not bidirectional.❌
+### Example of bidirectional relationship.
+
+- Here is example of **birational** reference!
+
+>  **Order.java**
+
+```
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<OrderItemInCart> orderItems = new HashSet<>(); // Initialized to an empty set.
+```
+
+>  **OrderItemInCart.java**
+
+```
+    @ManyToOne
+    @JoinColumn(name = "order_id", nullable = false) 
+    private Order order;
+```
