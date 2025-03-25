@@ -68,7 +68,7 @@ Understanding object/relational persistence.
 2. In **Relational Model** this is handled by **Foreign Key**
 3. To say that classes have **bi-directional**, this relationship needs to be defined in **both way!**
 > [!IMPORTANT]
-> **4.** ❌**Foreign Keys** are not bidirectional.❌
+> **4.**❌**Foreign Keys** are not bidirectional.❌
 ### Example of bidirectional relationship.
 
 - Here is example of **birational** reference!
@@ -87,3 +87,11 @@ Understanding object/relational persistence.
     @JoinColumn(name = "order_id", nullable = false) 
     private Order order;
 ```
+
+<img src="dataNavigationMismatch.PNG" alt="alt text" width="600"/>
+
+1. In **Java** one access the **object route**, `y: foo.getBar().getY()` and `z: foo.getBar().getY().getZ()`.
+
+- **Fundamentally** this is the difference, between how, one **access** the data in **Database** or in **Java**.
+
+- Todo muuta noi kaikkia mimatchisksi.

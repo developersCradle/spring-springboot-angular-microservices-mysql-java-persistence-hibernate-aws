@@ -1,6 +1,6 @@
-# Section 12: Appendix - Introduction To Mockito.
+# Section 3: Getting Started with Hibernate and JPA Annotations.
 
-Appendix - Introduction To Mockito.
+Getting Started with Hibernate and JPA Annotations.
 
 # What I Learned
 
