@@ -1,9 +1,9 @@
 ## Java backend studying repository hall.
 
 
-   <img src="pixelPillar.png" alt="Left Pillar" width="300" style="display:inline-block;"/>
+   <img src="pixelPillar.png" alt="Left Pillar" width="200" style="display:inline-block;"/>
    <img src="readingSomeCrap.gif" alt="GIF" width="350" style="display:inline-block;"/>
-   <img src="pixelPillar.png" alt="Right Pillar" width="300" style="display:inline-block;"/>
+   <img src="pixelPillar.png" alt="Right Pillar" width="200" style="display:inline-block;"/>
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
