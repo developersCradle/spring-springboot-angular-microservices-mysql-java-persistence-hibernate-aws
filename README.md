@@ -167,7 +167,7 @@ Insert certificate here when completed
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2001#section-01-about-this-course) - About this Course. ✅
 - [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2002#section-02-understanding-objectrelational-persistence) - Understanding object/relational persistence. 
-- [ ] [Section 03](#) - Getting Started with Hibernate and JPA Annotations.
+- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2003#section-3-getting-started-with-hibernate-and-jpa-annotations) - Getting Started with Hibernate and JPA Annotations.
 - [ ] [Section 04](#) - Mapping Concepts.
 - [ ] [Section 05](#) - Getting Started with JPA.
 - [ ] [Section 06](#) - Best Practices.

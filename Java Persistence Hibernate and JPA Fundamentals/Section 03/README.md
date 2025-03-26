@@ -2,5 +2,4 @@
 
 Getting Started with Hibernate and JPA Annotations.
 
-# What I Learned
-
+# What I Learned.

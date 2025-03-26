@@ -127,3 +127,25 @@ Understanding object/relational persistence.
 2. `Book` has **one or more** `Chapter` on it!
 3. `Book` has `Publisher` class on it.
 4. In **Relation Database** this achieved by **Foreign Key** reference.
+
+- We will have the following Java **POJO** classes.
+
+<img src="objectModelClasses.PNG" alt="alt text" width="600"/>
+
+<img src="relationalModel.PNG" alt="alt text" width="600"/>
+
+1. One thing to notice is that, **CHAPTER_NUM** and **BOOK_ISBN** is marked as **PRIMARY KEY**, they make **CHAPTER** unique.
+
+<img src="overAllFlow.PNG" alt="alt text" width="600"/>
+
+1. We are using **JDBC** to write into database.
+    - We need `.jar` driver.
+
+<img src="bookStoreClientCode.PNG" alt="alt text" width="600"/>
+
+1. Notice we **associate** `Book` object with the `Publisher` Object, before **persisting**.
+2. We **associate** the `List<Chapter>` with `book` object.
+3. In the end we **persist** one object with **associates** with the `BookStoreService` class.
+4. Result of **persisting** will be following in the database.
+
+<img src="bookStoreService.PNG" alt="alt text" width="600"/>
