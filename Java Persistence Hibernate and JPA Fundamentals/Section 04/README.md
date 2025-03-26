@@ -1,6 +1,6 @@
-# Section 12: Appendix - Introduction To Mockito.
+# Section 04: Mapping Concepts.
 
-Appendix - Introduction To Mockito.
+Mapping Concepts.
 
-# What I Learned
+# What I Learned.
 

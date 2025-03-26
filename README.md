@@ -1,8 +1,15 @@
+## Java backend studying repository hall.
 
-- For these courses one should configure **GIT** for handle projects.
-    - `git config --global http.postBuffer 524288000`.
-    - `git config --global core.longpaths true`.
-    
+
+   <img src="pixelPillar.png" alt="Left Pillar" width="300" style="display:inline-block;"/>
+   <img src="readingSomeCrap.gif" alt="GIF" width="350" style="display:inline-block;"/>
+   <img src="pixelPillar.png" alt="Right Pillar" width="300" style="display:inline-block;"/>
+</p>
+
+> For these courses one should configure **GIT** for handle projects.
+> `git config --global http.postBuffer 524288000`
+> `git config --global core.longpaths true`
+
 ## [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners.
 
 ![Spring boot beginners](SpringBootBeginnerCourse.jpg)

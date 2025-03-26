@@ -1,6 +1,6 @@
-# Section 12: Appendix - Introduction To Mockito.
+# Section 05: Getting Started with JPA.
 
-Appendix - Introduction To Mockito.
+Getting Started with JPA.
 
-# What I Learned
+# What I Learned.
 
