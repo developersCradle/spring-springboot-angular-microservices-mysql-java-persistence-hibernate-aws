@@ -22,10 +22,12 @@ Understanding object/relational persistence.
 > [!IMPORTANT]
 > We can say this, **Object Model** and **Relational Model** do not work very well together.
 
+- This context is **e-commerce application**.
+
 <img src="granularity.PNG"  alt="alt text" width="600"/>
 
 1. First mismatch is **Granularity** mismatch.
-2. One can think this as **system** can be broke down into **smaller pieces**.
+2. One can think, **system** can be broke down into **smaller pieces**.
 3. **Person** can be broken down into smaller pieces: 
     - **Address**.
     - **Order**.
@@ -42,12 +44,13 @@ Understanding object/relational persistence.
     - Meaning more `Java Classes` than `Relational Model Tables`.
 2. Two **Java classes**.
 3. Only **One** Table in database.
+4. By definition the `granular` means more depth of info.
 
 <img src="subtypeInheritance.PNG" alt="alt text" width="600"/>
 
 1. In **Object Model**, there is **Inheritance**. 
     - Example Java and OOP.
-2. ❌ No suck thing in **Relational Model**. ❌
+2. ❌ No inheritance in **Relational Model**. ❌
 
 - Third is **identity mismatch**.
 
@@ -92,6 +95,35 @@ Understanding object/relational persistence.
 
 1. In **Java** one access the **object route**, `y: foo.getBar().getY()` and `z: foo.getBar().getY().getZ()`.
 
-- **Fundamentally** this is the difference, between how, one **access** the data in **Database** or in **Java**.
+2. Obvious way to make query more performant, is to minimize number of queries to the database.  This can be done using `SQL JOIN Query` from **two different tables**.
 
-- Todo muuta noi kaikkia mimatchisksi.
+- **Summary:** We come to 5 different mismatch problems when we load **Java Objects** into **Relational Database**.
+
+- Todo all mismathhes 
+
+# 3. Object Relational Mapping.
+
+<img src="bookStorePersist.PNG" alt="alt text" width="600"/>
+
+1. We will model **Book Store** object graph
+2. We will **persist** it into database. 
+
+<img src="bookStoreRetrieve.PNG" alt="alt text" width="600"/>
+
+1. We will retrieve the Book **object**.
+
+<img src="bookStoreJDBC.PNG" alt="alt text" width="600"/>
+
+1. We will do this by writing **JDBC** code!
+    - We will see if there are **problems** using this **approach**.
+        - How will **ORM** mapping solves these closes :).
+
+<img src="umlAndErd.PNG" alt="alt text" width="600"/>
+
+1. We will have **3** classes:
+    - `Publisher` class.
+    - `Book` class.
+    - `Chapter` class.
+2. `Book` has **one or more** `Chapter` on it!
+3. `Book` has `Publisher` class on it.
+4. In **Relation Database** this achieved by **Foreign Key** reference.
