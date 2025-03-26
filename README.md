@@ -1,15 +1,7 @@
-## Java backend studying repository hall.
 
-<p id="logos" align="center">
-
-<img src="pixelPillar.png" style="float:left; margin-right:10px;" width="250"  height="70">
-    
- <img src="readingSomeCrap.gif" alt="GIF" width="350"/>
-
-<img src="pixelPillar.png" style="float:right;" width="250" height="70">
-
+<p align="center">
+    <img id="text" src="textWelcome.png" width=700>
 </p>
-
 
 > For these courses one should configure **GIT** for handle projects.
 > `git config --global http.postBuffer 524288000`
