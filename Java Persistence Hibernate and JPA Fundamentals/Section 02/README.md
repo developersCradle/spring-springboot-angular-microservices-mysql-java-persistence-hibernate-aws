@@ -251,3 +251,10 @@ public class BookStoreService {
 1. Now saving can be done by calling `save(book)` and Java Object with required associations. Getting Book`.get(identifier of book)`. No need to write **SQL** or **JDSBC** codes.
 
 # 4. Installing MySQL.
+
+- Install all. ✅.
+- Connector [ConnectorJ](https://dev.mysql.com/downloads/connector/j/).
+
+# 5. Installing Eclipse IDE.
+
+- Install. ✅.

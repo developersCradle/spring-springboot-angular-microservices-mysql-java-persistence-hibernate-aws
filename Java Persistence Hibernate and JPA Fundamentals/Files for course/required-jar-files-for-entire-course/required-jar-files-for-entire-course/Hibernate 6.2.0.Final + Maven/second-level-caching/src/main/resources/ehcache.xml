@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				  xsi:noNamespaceSchemaLocation="ehcache.xsd">
+
+	 
+	<cache name="entity.Guide"
+				  maxElementsInMemory="1000"
+				  eternal="true"
+				  overflowToDisk="false"
+	 />
+	<cache name="entity.Student"
+				  maxElementsInMemory="10000"
+				  eternal="true"
+				  overflowToDisk="false"
+	 />
+	 <cache name="entity.Guide.students"
+				  maxElementsInMemory="1000"
+				  eternal="true"
+				  overflowToDisk="false"
+	 />
+
+</ehcache>
+
+

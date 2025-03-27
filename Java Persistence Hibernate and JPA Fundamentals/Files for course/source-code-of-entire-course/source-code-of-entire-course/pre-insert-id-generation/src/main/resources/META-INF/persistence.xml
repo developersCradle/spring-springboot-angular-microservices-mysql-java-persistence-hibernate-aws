@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					version="3.0"
+					xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
+													 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+	<persistence-unit name="myPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+		<properties>
+		
+			<!-- Database connection settings -->
+			 
+			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mydb" />
+			<property name="jakarta.persistence.jdbc.user" value="root" />
+			<property name="jakarta.persistence.jdbc.password" value="password" />
+ 			
+			<!-- SQL dialect -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			
+			<!-- Create/update tables automatically using mapping metadata -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			
+			<!-- The 3 options available in Hibernate 6 are "single", "legacy", and "standard" -->
+			<!-- "single" and "legacy" strategies create "hibernate_sequence" -->
+			<!-- "standard", for StandardTableStrategy, creates "student_seq" -->
+			<!-- Hibernate 6 uses "standard" strategy by default -->
+			<property name="hibernate.id.db_structure_naming_strategy" value="single" />
+			
+			<!-- ############################################################################### -->	
+			
+			<!-- H2 (supports database sequences) -->
+			<!-- Database connection settings -->
+			<!-- 
+			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:./data/mydb" />			 
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			 -->
+ 			<!-- ############################################################################### -->
+
+			<!-- DROP and then CREATE schema when EntityManagerFactory is created -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />	
+			
+			<!-- Pretty print the SQL in the log file and console -->
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+
+	</persistence-unit>
+</persistence>

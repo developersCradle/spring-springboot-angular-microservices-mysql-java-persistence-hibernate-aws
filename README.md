@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img id="text" src="textWelcome.png" width=700>
+    <img id="text" src="textWelcome.png" width=700 height=50>
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
@@ -162,7 +162,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-Insert certificate here when completed
+<img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java Persistence Hibernate and JPA Fundamentals.jpg" alt="Java Persistence Hibernate and JPA Fundamentals" width="600"/>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -172,14 +172,13 @@ Insert certificate here when completed
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2001#section-01-about-this-course) - About this Course. ✅
 - [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2002#section-02-understanding-objectrelational-persistence) - Understanding object/relational persistence. 
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2003#section-3-getting-started-with-hibernate-and-jpa-annotations) - Getting Started with Hibernate and JPA Annotations.
-- [ ] [Section 04](#) - Mapping Concepts.
-- [ ] [Section 05](#) - Getting Started with JPA.
-- [ ] [Section 06](#) - Best Practices.
+- [ ] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2004#section-04-mapping-concepts) - Mapping Concepts.
+- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2005/README.md#section-05-getting-started-with-jpa) - Getting Started with JPA.
+- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2006#section-06-best-practices) - Best Practices.
 
 ### Additional stuff.
 
 - [ ] Read again the mismatches.
-
 
 ## The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert.
 
@@ -200,9 +199,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <img id="UltimateMySqlBootcampCertificate?trk=public_profile_see-credential" src="UltimateMySqlBootcampCertificate.jpg" alt="UltimateMySqlBootcampCertificate.jpg" width="600"/>
 
-
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
-
 
 ## Progress/Curriculum.
 

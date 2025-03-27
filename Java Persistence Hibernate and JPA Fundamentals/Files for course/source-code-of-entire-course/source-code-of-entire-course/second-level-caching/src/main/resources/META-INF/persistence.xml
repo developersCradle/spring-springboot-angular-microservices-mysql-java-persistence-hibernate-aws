@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					version="3.0"
+					xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
+													 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+	<persistence-unit name="hello-world" transaction-type="RESOURCE_LOCAL">
+		<properties>
+		
+			<!-- Database connection settings -->
+			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hello-world" />
+			<property name="jakarta.persistence.jdbc.user" value="root" />
+			<property name="jakarta.persistence.jdbc.password" value="password" />
+
+			<!-- SQL dialect -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			
+			<!-- Create/update tables automatically using mapping metadata -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			<!-- Pretty print the SQL in the log file and console -->
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- Enable second-level caching selectively -->
+			<property name="jakarta.persistence.sharedCache.mode" value="ENABLE_SELECTIVE"/>
+			
+			<!-- EHCache 3 settings -->
+			<property name="hibernate.cache.region.factory_class" value="jcache"/>	
+			<property name="hibernate.jakarta.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>	
+		</properties>
+
+	</persistence-unit>
+</persistence>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
