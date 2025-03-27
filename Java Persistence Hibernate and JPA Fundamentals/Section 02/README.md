@@ -149,3 +149,105 @@ Understanding object/relational persistence.
 4. Result of **persisting** will be following in the database.
 
 <img src="bookStoreService.PNG" alt="alt text" width="600"/>
+
+1. We load the driver and make connection.
+2. Then we create `PreparedStatement` and load the **PreparedStatement** with query and data, then execute to the database. In the end we call **close** for releasing resources made from `PreparedStatment`.
+3. We do this same with all **Chapter** objects.
+4. We wrap this around `try-catch` for closing the connection when we don't need it.  
+
+- This approach brings ❌ **negatives** ❌:
+    - If we are a java developer, we need to know SQL ❌ **SQL Knowledge** ❌.
+    - For simple task of **persisting**, we are writing pretty much code ❌ **Too Many SQL Statements** ❌.
+        - Think if the book object would be **complex**.
+    - Book details need to be copied to `PreparedStatement` one more time. ❌ **Too Many Copy Codes** ❌.
+    - SQL code is dependent to the **MySQL system**. ❌ **Database Dependent** ❌.
+
+<img src="clientGetBOok.PNG" alt="alt text" width="500"/>
+
+1. Printing will be looking, when printing Book object.
+
+<img src="bookStoreServiceSecond.PNG" alt="alt text" width="600"/>
+
+1. Reads from two different tables.
+2. We get following **ResultSet** from database.
+3. Then we manually associate data from result set to the `Book` and `Publisher`.  
+4. Then we query and **assosiate** `Chapters` with the `Book` Object.
+
+- Same problems as previously and as extra.
+    - We are manually association with the Object. ❌ **Manually Handled Associations** ❌.
+        - This is fairly simple, but when it **gets bigger** and **complex!** 
+
+> **ResultSet** represents the result of a query executed on a database using **JDBC** in **Java**.
+
+- Example codes before:
+
+```
+public class BookStoreService {
+    private Connection connection = null;
+
+    public Book retrieveObjectGraph(String isbn) {
+        Book book = null;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore", "root", "password");
+
+            PreparedStatement stmt = connection.prepareStatement(
+                "SELECT * FROM BOOK, PUBLISHER WHERE BOOK.PUBLISHER_CODE = PUBLISHER.CODE AND BOOK.ISBN = ?");
+            stmt.setString(1, isbn);
+            ResultSet rs = stmt.executeQuery();
+
+            book = new Book();
+            if (rs.next()) {
+                book.setIsbn(rs.getString("ISBN"));
+                book.setName(rs.getString("BOOK_NAME"));
+
+                Publisher publisher = new Publisher();
+                publisher.setCode(rs.getString("CODE"));
+                publisher.setName(rs.getString("PUBLISHER_NAME"));
+                book.setPublisher(publisher);
+            }
+
+            rs.close();
+            stmt.close();
+
+            List<Chapter> chapters = new ArrayList<Chapter>();
+            stmt = connection.prepareStatement("SELECT * FROM CHAPTER WHERE BOOK_ISBN = ?");
+            stmt.setString(1, isbn);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Chapter chapter = new Chapter();
+                chapter.setTitle(rs.getString("TITLE"));
+                chapter.setChapterNumber(rs.getInt("CHAPTER_NUM"));
+                chapters.add(chapter);
+            }
+
+            book.setChapters(chapters);
+
+            rs.close();
+            stmt.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try { connection.close(); } catch (SQLException e) { e.printStackTrace(); }
+        }
+        return book;
+    }
+}
+```
+
+<img src="problemsOfMismatchBetweenObjectModelAndRelationalModel.PNG" alt="alt text" width="600"/>
+
+1. These problems presented here could be solved by using **ORM**.
+
+<img src="ormMapping.PNG" alt="alt text" width="600"/>
+
+- This will be done with following associations.
+
+<img src="ormSave.PNG" alt="alt text" width="600"/>
+
+1. Now saving can be done by calling `save(book)` and Java Object with required associations. Getting Book`.get(identifier of book)`. No need to write **SQL** or **JDSBC** codes.
+
+# 4. Installing MySQL.
