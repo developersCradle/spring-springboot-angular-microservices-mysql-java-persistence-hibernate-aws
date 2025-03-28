@@ -155,7 +155,7 @@ All course material from **Java Persistence: Hibernate and JPA Fundamentals** by
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
-[The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/)   
+[The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -170,7 +170,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ## Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2001#section-01-about-this-course) - About this Course. ✅
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2002#section-02-understanding-objectrelational-persistence) - Understanding object/relational persistence. 
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2002#section-02-understanding-objectrelational-persistence) - Understanding object/relational persistence. ✅
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2003#section-3-getting-started-with-hibernate-and-jpa-annotations) - Getting Started with Hibernate and JPA Annotations.
 - [ ] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2004#section-04-mapping-concepts) - Mapping Concepts.
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2005/README.md#section-05-getting-started-with-jpa) - Getting Started with JPA.

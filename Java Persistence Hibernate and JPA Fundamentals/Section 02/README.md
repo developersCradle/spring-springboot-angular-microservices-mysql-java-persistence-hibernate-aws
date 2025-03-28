@@ -6,6 +6,8 @@ Understanding object/relational persistence.
 
 # 02. Object Relational Impedance Mismatch.
 
+<img src="hyvaKurssi.jpg"  alt="alt text" width="300"/>
+
 <img src="objMismatchAndRelationalDb.PNG"  alt="alt text" width="600"/>
 
 1. This will represent **OOP**.
@@ -258,3 +260,120 @@ public class BookStoreService {
 # 5. Installing Eclipse IDE.
 
 - Install. ✅.
+
+# 6. Lab - Object Relational Mapping
+
+<img src="makeFollowingTables.PNG" alt="alt text" width="600"/>
+
+- We create following tables, `PUBLISHER`, `BOOK` and `CHAPTER`.
+
+```
+DROP DATABASE IF EXISTS bookstore;
+CREATE DATABASE bookstore;
+
+USE bookstore;
+
+CREATE TABLE PUBLISHER (
+	CODE VARCHAR(4) NOT NULL,
+	PUBLISHER_NAME VARCHAR(100) NOT NULL,
+	PRIMARY KEY (CODE)
+);
+
+CREATE TABLE BOOK (
+	ISBN VARCHAR(50) NOT NULL,
+	BOOK_NAME VARCHAR(100) NOT NULL,
+	PUBLISHER_CODE VARCHAR(4),
+	PRIMARY KEY (ISBN),
+	FOREIGN KEY (PUBLISHER_CODE) REFERENCES PUBLISHER (CODE)
+);
+
+CREATE TABLE CHAPTER (
+	BOOK_ISBN VARCHAR(50) NOT NULL,
+	CHAPTER_NUM INT NOT NULL,
+	TITLE VARCHAR(100) NOT NULL,
+	PRIMARY KEY (BOOK_ISBN, CHAPTER_NUM),
+	FOREIGN KEY (BOOK_ISBN) REFERENCES BOOK (ISBN)
+);
+```
+
+- Check the **POM** dependency for the `mysql-connector-java`.
+    - If using the later **Mysql** server, you need to update the **Connector**.
+```
+<dependency>
+			    <groupId>mysql</groupId>
+			    <artifactId>mysql-connector-java</artifactId>
+			    <version>5.1.29</version>
+</dependency>
+```
+
+> [!IMPORTANT]
+> When using the **MySQL80**, you need to update the MySQL drivers!!
+
+
+- New drivers `Class.forName("com.mysql.cj.jdbc.Driver");`
+
+<img src="rightTools.jpg" alt="alt text" width="600"/>
+
+
+- We are calling following for saving the object!
+
+```
+
+		//persisting object graph
+		Publisher publisher = new Publisher("MANN", "Manning Publications Co.");
+
+		Book book = new Book("9781617290459", "Java Persistence with Hibernate, Second Edition", publisher);
+
+		List<Chapter> chapters = new ArrayList<Chapter>();
+		Chapter chapter1 = new Chapter("Introducing JPA and Hibernate", 1);
+		chapters.add(chapter1);
+		Chapter chapter2 = new Chapter("Domain Models and Metadata", 2);
+		chapters.add(chapter2);
+
+		book.setChapters(chapters);
+
+		bookStoreService.persistObjectGraph(book);
+
+```
+
+- We call following to get the saved object.
+
+```
+	//This is for retrieving object graph
+		Book book = bookStoreService.retrieveObjectGraph("9781617290459");
+		System.out.println(book);
+```
+
+<img src="relationshipAndGraphObjectMismatch.PNG" alt="alt text" width="600"/>
+
+1. We can easily see the problem of **Object relational mismatch**.
+    - Two classes, in their corresponding system!
+        - We need to **handle** manually association between models.
+2. In **Relational Database system** there is **FK** `BOOK_ISBN` inside `CHAPTER` **Table** referencing `ISBN` field to the **Table** `BOOK`.  
+3. You can see, that `Chapter` does not have any relationship to the `Book` class in **Java** world!
+
+# 7. Lab Exercise - Object Relational Mapping.
+
+<img src="labObjectMapping.PNG" alt="alt text" width="600"/>
+
+1. Answer to this the **Identity mismatch**.
+
+
+- Remember to driver the settings for what ever MySQL serer you have!
+
+- **Lab exercise**.
+    - We will get following **exception** `SQLIntegrityConstraintViolationException`.
+
+```
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'MANN' for key 'publisher.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at service.BookStoreService.persistObjectGraph(BookStoreService.java:27)
+	at client.BookStoreClient.main(BookStoreClient.java:30)
+
+```
