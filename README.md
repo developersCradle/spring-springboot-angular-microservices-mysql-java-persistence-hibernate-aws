@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img id="text" src="textWelcome.png" width=700 height=50>
+    <img id="text" src="textWelcome.png" width=700 height=40>
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
@@ -147,9 +147,11 @@ Insert certificate here when completed
 
 - [ ] [Section 01](#) - Welcome.
 
-## Java Persistence: Hibernate and JPA Fundamentals.
+<p align="center">
+    <img id="text" src="textWelcome.png" width=700 height=40>
+</p>
 
-<img src="JpaCourse.jpg" alt="Jpa Course here" width="700"/>
+<img src="JpaCourse.jpg" alt="Jpa Course here" width="600"/>
 
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran**. With my own notes as extra.
 
@@ -180,9 +182,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Read again the mismatches.
 
-## The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert.
+<p align="center">
+    <img id="text" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" width=800 height=40>
+</p>
 
-<img src="ultimateSql.PNG" alt="Jpa Course here" width="700"/>
+
+<img src="ultimateSql.PNG" alt="Jpa Course here" width="600"/>
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele**. With my own notes as extra.
 

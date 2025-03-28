@@ -6,8 +6,6 @@ Understanding object/relational persistence.
 
 # 02. Object Relational Impedance Mismatch.
 
-<img src="hyvaKurssi.jpg"  alt="alt text" width="300"/>
-
 <img src="objMismatchAndRelationalDb.PNG"  alt="alt text" width="600"/>
 
 1. This will represent **OOP**.
