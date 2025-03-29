@@ -1,13 +1,16 @@
 
 <p align="center">
-    <img id="text" src="textWelcome.png" width=700 height=40>
+    <img id="text" src="StudingJavaRepoHallCaption.png">
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
 > `git config --global http.postBuffer 524288000`
 > `git config --global core.longpaths true`
 
-## [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners.
+<p align="center">
+    <img id="text" src="Spring Boot 3 Spring 6 Hibernate for Beginners.png">
+</p>
+
 
 ![Spring boot beginners](SpringBootBeginnerCourse.jpg)
 
@@ -28,7 +31,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-Insert certificate here when completed
+<div align="center">
+    Insert certificate here when completed
+</div>
+
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -91,7 +97,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-Insert certificate here when completed
+<div align="center">
+    Insert certificate here when completed
+</div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -139,7 +147,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-Insert certificate here when completed
+<div align="center">
+    Insert certificate here when completed
+</div>
+
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -147,11 +158,14 @@ Insert certificate here when completed
 
 - [ ] [Section 01](#) - Welcome.
 
+
+<!-- Change the name -->
 <p align="center">
-    <img id="text" src="textWelcome.png" width=700 height=40>
+    <img id="text" src="textWelcome.png" width=700 height=60>
 </p>
 
-<img src="JpaCourse.jpg" alt="Jpa Course here" width="600"/>
+![Jpa Course here](JpaCourse.jpg)
+
 
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran**. With my own notes as extra.
 
@@ -164,7 +178,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java Persistence Hibernate and JPA Fundamentals.jpg" alt="Java Persistence Hibernate and JPA Fundamentals" width="600"/>
+<div align="center">
+    <img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java Persistence Hibernate and JPA Fundamentals.jpg" alt="Java Persistence Hibernate and JPA Fundamentals" width="600"/>
+</div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -183,11 +199,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Read again the mismatches.
 
 <p align="center">
-    <img id="text" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" width=800 height=40>
+    <img id="text" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" width=800 height=50>
 </p>
 
-
-<img src="ultimateSql.PNG" alt="Jpa Course here" width="600"/>
+![SQL course](ultimateSql.PNG)
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele**. With my own notes as extra.
 
@@ -202,7 +217,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<img id="UltimateMySqlBootcampCertificate?trk=public_profile_see-credential" src="UltimateMySqlBootcampCertificate.jpg" alt="UltimateMySqlBootcampCertificate.jpg" width="600"/>
+<div align="center">
+    <img id="UltimateMySqlBootcampCertificate?trk=public_profile_see-credential" src="UltimateMySqlBootcampCertificate.jpg" alt="UltimateMySqlBootcampCertificate.jpg" width="600"/>
+</div>
+
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -245,7 +263,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-Insert certificate here when completed
+<div align="center">
+    Insert certificate here when completed
+</div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -266,7 +286,7 @@ Insert certificate here when completed
 
 ## Kubernetes Masterclass For Beginners [Hands-On].
 
-<img src="kubernetes.PNG"  alt="kubernetes course" width="500"/>
+![Kubernetes Masterclass For Beginners](kubernetes.PNG)
 
 All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj**. With my own notes.
 
@@ -285,7 +305,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-Insert certificate here when completed
+<div align="center">
+    Insert certificate here when completed
+</div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -305,3 +327,42 @@ Insert certificate here when completed
 - [ ] [Section 12](#) - Ingress.
 
 ### Additional stuff.
+
+- [ ] Some.
+
+
+## Apache Maven: Beginner to Guru.
+
+![Apache Maven: Beginner to Guru](maven.PNG)
+
+All course material from Apache Maven: Beginner to Guru **Vinoth Selvaraj**. With my own notes, need this to manage our corporate POM :fire:hell:fire:.
+
+Contains my own notes with some course material to enforce learning experience.
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
+[The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
+
+<!-- add these later.
+[Content maker](https://www.vinsguru.com/).
+
+[Latest GIT ](https://github.com/vinsguru/kubernetes-course). -->
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+## Progress/Curriculum
+
+- [ ] [Section 01](#) - Section 1: Apache Maven Introduction.
+
+### Additional stuff.
+
+- [ ] Some.
