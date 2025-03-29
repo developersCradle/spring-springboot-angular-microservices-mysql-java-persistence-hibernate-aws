@@ -10,7 +10,7 @@ Getting Started.
 
 # 10. System Requirements.
 
-<img src="minuses.PNG"  alt="alt text" width="500"/>
+<img src="systemReq.PNG"  alt="alt text" width="500"/>
 
 <img src="osReq.PNG"  alt="alt text" width="500"/>
 
