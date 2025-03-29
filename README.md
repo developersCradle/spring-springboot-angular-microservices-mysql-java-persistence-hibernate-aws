@@ -54,7 +54,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 12](#) - Section 12: Appendix.
 - [ ] [Section 13](#) - Section 13: Bonus.
 
-### Additional stuff.
+#### Additional stuff.
 
 - [ ] Read/skim thought Spring documentation when finished this course.
 - [ ] Make Unix clock in Thymeleaf or in Angular.
@@ -122,7 +122,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 15](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2015#section-15-appendix---introduction-to-jpa-in-10-steps---v2) - Appendix - Introduction to JPA in 10 Steps - V2 ✅.
 - [ ] [Section 16](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2016#section-16-appendix---introduction-to-functional-programming-in-30-minutes) - Appendix - Introduction to Functional Programming in 30 Minutes.
 
-### Additional stuff.
+#### Additional stuff.
 
 - [ ] Read [Pro GIT book](https://git-scm.com/book/en/v2).
 - [ ] Move Spring V1 into appendix folder, since it depreciated.
@@ -154,7 +154,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum.
+#### Progress/Curriculum.
 
 - [ ] [Section 01](#) - Welcome.
 
@@ -194,7 +194,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2005/README.md#section-05-getting-started-with-jpa) - Getting Started with JPA.
 - [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2006#section-06-best-practices) - Best Practices.
 
-### Additional stuff.
+#### Additional stuff.
 
 - [ ] Read again the mismatches.
 
@@ -228,7 +228,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] [All Done](#) - All Done! ✅.
 
-### Additional stuff.
+#### Additional stuff.
 
 - [ ] Course got updated, transfer your answers here with updated content!
 
@@ -280,7 +280,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 07](#) 
 - [ ] [Section 08](#)
 
-### Additional stuff.
+#### Additional stuff.
 
 - [ ] Do the last chapter exercise from Section 05.
 
@@ -326,7 +326,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 11](#) - HPA - Horizontal Pod Autoscaler.
 - [ ] [Section 12](#) - Ingress.
 
-### Additional stuff.
+#### Additional stuff.
 
 - [ ] Some.
 
@@ -360,10 +360,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-#### Progress/Curriculum
+#### Progress/Curriculum.
 
 - [ ] [Section 01](#) - Section 1: Apache Maven Introduction.
 
-### Additional stuff.
+#### Additional stuff.
 
-- [ ] Some.
+- [ ] For now do till basic level.
