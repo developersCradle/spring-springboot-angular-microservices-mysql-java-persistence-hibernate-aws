@@ -71,4 +71,4 @@ Apache Maven Introduction.
 
 - The course is using the **GitHub** workflow.
     - There will be end and start checkpoint.
-        - You can `compare` the solutions.
+        - You can `compare` the solutions, when there is error.
