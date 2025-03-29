@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img id="text" src="StudingJavaRepoHallCaption.png">
+    <img id="studying" src="StudyingJavaRepoHallCaption.png">
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
@@ -8,7 +8,7 @@
 > `git config --global core.longpaths true`
 
 <p align="center">
-    <img id="text" src="Spring Boot 3 Spring 6 Hibernate for Beginners.png">
+    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners.png">
 </p>
 
 
@@ -38,7 +38,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum.
+#### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201#section-1-new---spring-boot-3-quick-start) - Section 1: NEW - Spring Boot 3 Quick Start.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202#section-2-new---spring-boot-3---inversion-of-control-and-dependency-injection) - Section 2: NEW - Spring Core.
@@ -68,7 +68,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
-## Progress/Curriculum.
+#### Progress/Curriculum.
 
 - [x] [Section 01](#) - Course Introduction
 - [X] [Section 02](#) - Spring Overview
@@ -103,7 +103,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum new.
+#### Progress/Curriculum new.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%201#section-1-introduction) - Introduction ✅.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%202#section-2-introduction-to-web-services) - Introduction To Web Services ✅.
@@ -161,7 +161,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <!-- Change the name -->
 <p align="center">
-    <img id="text" src="textWelcome.png" width=700 height=60>
+    <img id="text" src="Java Persistence Hibernate and JPA Fundamentals.png">
 </p>
 
 ![Jpa Course here](JpaCourse.jpg)
@@ -179,13 +179,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 -->
 
 <div align="center">
-    <img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java Persistence Hibernate and JPA Fundamentals.jpg" alt="Java Persistence Hibernate and JPA Fundamentals" width="600"/>
+    <img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java Persistence Hibernate and JPA Fundamentals Cert.jpg" alt="Java Persistence Hibernate and JPA Fundamentals" width="600"/>
 </div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 
-## Progress/Curriculum.
+#### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2001#section-01-about-this-course) - About this Course. ✅
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2002#section-02-understanding-objectrelational-persistence) - Understanding object/relational persistence. ✅
@@ -199,7 +199,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Read again the mismatches.
 
 <p align="center">
-    <img id="text" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" width=800 height=50>
+    <img id="sql" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" width=800 height=50>
 </p>
 
 ![SQL course](ultimateSql.PNG)
@@ -224,7 +224,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum.
+#### Progress/Curriculum.
 
 - [x] [All Done](#) - All Done! ✅.
 
@@ -269,7 +269,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum.
+#### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2001#section-01-introduction) - Introduction ✅.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2002#section-02-need-for-docker) - Need For Docker ✅.
@@ -311,7 +311,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum
+#### Progress/Curriculum
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2001#section-01-introduction) - Introduction ✅.
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2002#section-02-kubernetes-cluster) - Kubernetes Cluster ✅.
@@ -330,13 +330,14 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Some.
 
-
-## Apache Maven: Beginner to Guru.
+<p align="center">
+    <img id="maven" src="Apache Maven Beginner to Guru.gif">
+</p>
 
 ![Apache Maven: Beginner to Guru](maven.PNG)
 
-All course material from Apache Maven: Beginner to Guru **Vinoth Selvaraj**. With my own notes, need this to manage our corporate POM :fire:hell:fire:.
-
+All course material from Apache Maven: Beginner to Guru **John Thompson**. With my own notes need this to manage our corporate POM <span style="color: red;">:fire:HELL:fire:</span>. 
+<!-- Tohod fix the red fire -->
 Contains my own notes with some course material to enforce learning experience.
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
@@ -359,7 +360,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
-## Progress/Curriculum
+#### Progress/Curriculum
 
 - [ ] [Section 01](#) - Section 1: Apache Maven Introduction.
 
