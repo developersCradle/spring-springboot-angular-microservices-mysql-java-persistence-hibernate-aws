@@ -14,11 +14,11 @@
 
 ![Spring boot beginners](SpringBootBeginnerCourse.jpg)
 
-All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby**.
+All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby** ©. 
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/). 
 
@@ -80,11 +80,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Master microservices](MasterMicroservices.JPG)
 
-All course material from Master Microservices with Spring Boot and Spring Cloud by **in28Minutes**. With my own notes.
+All course material from Master Microservices with Spring Boot and Spring Cloud by **in28Minutes** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/).
 
@@ -132,11 +132,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Microservices Architecture - The Complete Guide](microserviceArchitecture.PNG)
 
-All course material from Microservices Architecture - The Complete Guide by **Memi Lavi**. With my own notes.
+All course material from Microservices Architecture - The Complete Guide by **Memi Lavi** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/microservices-architecture-the-complete-guide/).
 
@@ -167,9 +167,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ![Jpa Course here](JpaCourse.jpg)
 
 
-All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran**. With my own notes as extra.
+All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
@@ -204,13 +204,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![SQL course](ultimateSql.PNG)
 
-All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele**. With my own notes as extra.
+All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
 
 [The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/).   
 
 [Home page of maker](https://www.youtube.com/c/ColtSteeleCode).
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -252,11 +252,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Docker Masterclass For Java Spring Boot Developers](dockerMasterClass.PNG)
 
-All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj**. With my own notes.
+All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/docker-java/).
 
@@ -292,11 +292,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
 
-All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj**. With my own notes.
+All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/kubernetes-cloud-native/).
 
@@ -340,12 +340,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Apache Maven: Beginner to Guru](maven.PNG)
 
-All course material from Apache Maven: Beginner to Guru **John Thompson**. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:. 
-
+All course material from Apache Maven: Beginner to Guru **John Thompson** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
 
@@ -377,14 +376,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] For now do till basic level.
 
-
 <p align="center">
     <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png" width=800 height=20>
 </p>
 
 ![Cryptography and Hashing Fundamentals in Python and Java](crypth.PNG)
 
-All course material from Cryptography and Hashing Fundamentals in Python and Java **Holczer Balazs**. With my own notes.
+All course material from Cryptography and Hashing Fundamentals in Python and Java **Holczer Balazs** ©.
 
 Contains my own notes with some course material to enforce learning experience.
 
