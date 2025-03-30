@@ -76,7 +76,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration
 
-## Master Microservices with Spring Boot and Spring Cloud.
+<p align="center">
+    <img id="Microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" height="50px">
+</p>
+
 
 ![Master microservices](MasterMicroservices.JPG)
 
@@ -128,7 +131,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Move Spring V1 into appendix folder, since it depreciated.
     - Also numbering got changed.
 
-## Microservices Architecture - The Complete Guide.
+
+
+<p align="center">
+    <img id="Microservice Architecture" src="Microservices Architecture - The Complete Guide Caption.png" height="50px">
+</p>
+
 
 ![Microservices Architecture - The Complete Guide](microserviceArchitecture.PNG)
 
@@ -231,24 +239,27 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [ ] Course got updated, transfer your answers here with updated content!
+- [ ] Do little game as refresher. [Fun game](https://mystery.knightlab.com/).
 
 # Cloud Native course series.
 
 - This course series will have the following courses. 
 
-<img src="cloudSeries.PNG"  alt="alt text" width="500"/>
 
-1. About **Docker**. [Course](https://www.udemy.com/course/docker-java/)
-2. About **Kubernetes**. [Course](https://www.udemy.com/course/kubernetes-cloud-native/)
+<div align="center">
+    <img src="cloudSeries.PNG"  alt="alt text" width="500"/>
+</div>
+
+1. About **Docker**. [Course](https://www.udemy.com/course/docker-java/).
+2. About **Kubernetes**. [Course](https://www.udemy.com/course/kubernetes-cloud-native/).
 3. About **Helm**.
 4. About **Service Mesh**. 
 
 <br>
 
 <p align="center">
-    <img id="sql" src="Docker Masterclass For Java Spring Boot Developers.png" width=800 height=50>
+    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers.png" width=800 height=50>
 </p>
-
 
 ![Docker Masterclass For Java Spring Boot Developers](dockerMasterClass.PNG)
 
@@ -288,7 +299,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Do the last chapter exercise from Section 05.
 
-## Kubernetes Masterclass For Beginners [Hands-On].
+<p align="center">
+    <img id="kubernetes" src="Kubernetes Masterclass For Beginners [Hands-On] caption.png" height=60>
+</p>
 
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
 
@@ -366,8 +379,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2001#section-1-apache-maven-introduction) - Apache Maven Introduction. ✅
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2002#section-2-getting-started) - Getting Started.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2001#section-1-apache-maven-introduction) - Apache Maven Introduction. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2002#section-2-getting-started) - Getting Started. ✅
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2003#section-3-compiling-java) - Compiling Java.
 - [ ] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2004#section-4-getting-started-with-maven) - Getting Started with Maven.
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2005#section-5-maven-basics) - Maven Basics.
@@ -377,7 +390,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] For now do till basic level.
 
 <p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png" width=800 height=20>
+    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png" width=800 height=40>
 </p>
 
 ![Cryptography and Hashing Fundamentals in Python and Java](crypth.PNG)
@@ -403,7 +416,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) -
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Cryptography Fundamentals.
+- [ ] [Section 03](#) - SYMMETRIC (PRIVATE KEY) CRYPTOGRAPHY.
 
 #### Additional stuff.
 

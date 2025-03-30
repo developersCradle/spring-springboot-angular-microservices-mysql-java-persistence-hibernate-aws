@@ -2,8 +2,8 @@ package client;
 
 import org.hibernate.Session;
 
-import util.HibernateUtil;
 import entity.Message;
+import util.HibernateUtil;
 
 public class HelloWorldClient {
 	public static void main(String[] args) {
