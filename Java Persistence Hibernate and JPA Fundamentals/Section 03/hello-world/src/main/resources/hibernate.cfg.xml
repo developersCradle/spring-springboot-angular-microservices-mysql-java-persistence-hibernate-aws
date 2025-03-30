@@ -19,10 +19,10 @@
         <property name="show_sql">true</property>
         
         <!-- Use XML-based mapping metadata -->	
-        <!-- <mapping resource="domain/Message.hbm.xml"/> -->
+        <mapping resource="domain/Message.hbm.xml"/> 
         
         <!-- Use Annotation-based mapping metadata -->
-        <mapping class="entity.Message"/> 
+        <!--  mapping class="entity.Message"/> -->
         
     </session-factory>
 </hibernate-configuration>
