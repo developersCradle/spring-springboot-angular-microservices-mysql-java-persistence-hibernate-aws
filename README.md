@@ -350,7 +350,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Some.
 
 <p align="center">
-    <img id="maven" src="Apache Maven Beginner to Guru.gif">
+    <img id="maven" src="Apache Maven Beginner to Guru.gif" width=900 height=110>
 </p>
 
 ![Apache Maven: Beginner to Guru](maven.PNG)
