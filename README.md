@@ -1,16 +1,16 @@
 
 <p align="center">
-    <img id="studying" src="StudyingJavaRepoHallCaption.png">
+    <img id="studying" src="StudyingJavaRepoHallCaption.png" height=200>
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
 > `git config --global http.postBuffer 524288000`
 > `git config --global core.longpaths true`
 
+<br>
 <p align="center">
-    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners.png">
+    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners.png" height=110>
 </p>
-
 
 ![Spring boot beginners](SpringBootBeginnerCourse.jpg)
 
@@ -78,9 +78,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration
 
 <p align="center">
-    <img id="Microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" height="50px">
+    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" height="100">
 </p>
-
 
 ![Master microservices](MasterMicroservices.JPG)
 
@@ -135,7 +134,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <p align="center">
-    <img id="Microservice Architecture" src="Microservices Architecture - The Complete Guide Caption.png" height="50px">
+    <img id="microservice architecture" src="Microservices Architecture - The Complete Guide Caption.png" height="90">
 </p>
 
 
@@ -169,8 +168,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <!-- Change the name -->
+
 <p align="center">
-    <img id="text" src="Java Persistence Hibernate and JPA Fundamentals.png">
+    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals.png" height=100>
 </p>
 
 ![Jpa Course here](JpaCourse.jpg)
@@ -208,7 +208,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Read again the mismatches.
 
 <p align="center">
-    <img id="sql" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" width=800 height=50>
+    <img id="sql" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" height=70>
 </p>
 
 ![SQL course](ultimateSql.PNG)
@@ -248,7 +248,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <div align="center">
-    <img src="cloudSeries.PNG"  alt="alt text" width="500"/>
+    <img src="cloudSeries.PNG"  alt="cloud series" width="600"/>
 </div>
 
 1. About **Docker**. [Course](https://www.udemy.com/course/docker-java/).
@@ -259,7 +259,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <br>
 
 <p align="center">
-    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers.png" width=800 height=50>
+    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers.png" height=90>
 </p>
 
 ![Docker Masterclass For Java Spring Boot Developers](dockerMasterClass.PNG)
@@ -292,16 +292,18 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2003#section-03-resource) - Resource ✅.
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2004#section-04-docker-crash-course) - Docker Crash Course. ✅.
 - [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose ✅.
-- [ ] [Section 06](#) 
-- [ ] [Section 07](#) 
-- [ ] [Section 08](#)
+- [ ] [Section 06](#). 
+- [ ] [Section 07](#).
+- [ ] [Section 08](#).
 
 #### Additional stuff.
 
 - [ ] Do the last chapter exercise from Section 05.
 
+<br>
+
 <p align="center">
-    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" height=60>
+    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" height=100>
 </p>
 
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
@@ -350,7 +352,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Some.
 
 <p align="center">
-    <img id="maven" src="Apache Maven Beginner to Guru.gif" width=900 height=210>
+    <img id="maven" src="Apache Maven Beginner to Guru.gif" height=190>
 </p>
 
 ![Apache Maven: Beginner to Guru](maven.PNG)
@@ -392,7 +394,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] For now do till basic level.
 
 <p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png" width=800 height=40>
+    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  height=70>
 </p>
 
 ![Cryptography and Hashing Fundamentals in Python and Java](crypth.PNG)

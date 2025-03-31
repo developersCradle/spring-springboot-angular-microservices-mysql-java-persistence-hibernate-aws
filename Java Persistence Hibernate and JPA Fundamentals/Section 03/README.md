@@ -242,6 +242,8 @@ public class HelloWorldClient {
 
 - If using **hibernate 5**, you might have the following mapping error.
 
+<img src="mappingExpectionForHibernate5.PNG"  alt="hibernate course" width="400"/>
+
 - After Hibernate 5, `GenerationType.AUTO` have been changed.
 
 <p align="center">
@@ -290,10 +292,6 @@ public class Message {
 }
 ```
 
-- You might have the following mapping error if old **Hibernate** `.jar` will be used.
-
-<img src="mappingExpectionForHibernate5.PNG"  alt="hibernate course" width="400"/>
-
 # 12. Note for Hibernate 6 Users.
 
 > [!IMPORTANT]
@@ -338,7 +336,7 @@ public class HibernateUtil {
 
 - Also **Hibernate 6** will be using `.persist()` instead of `.save()`.
 
-- Also, could see `jakarta.` packages form **Hibernate 6** on.
+- Moreover, you can see `jakarta.` packages form **Hibernate 6** on.
     - Before **Hibernate 5** it will have `.javax`.
 
 ```
@@ -379,16 +377,82 @@ import jakarta.persistence.Table;
 <img src="labAnswer3.PNG"  alt="hibernate course" width="600"/>
 
 1. At the `19` at **Session** will be **closed**.
-    - After this the object will be **Detached Object**.
+    - After this the object will be **Detached Object**, so we call it having **Detach State**.
         - No longer manged by the **Session Object**.
 
 - Summary:
 
 > [!NOTE]
-> **Three** states were:
->   - 1. **Transient state**.
->   - 2. **Persistent state**.
->   - 3. **Detached state**.
+>**Three** states were:
+>1. **Transient State**.
+>2. **Persistent State**.
+>3. **Detached State**.
 
 # 14. Logging.
 
+- These **Hibernate** logs `Hibernate: insert into message (TEXT) values (?)`.
+    - These are **not enough**, we don't see the values!
+        - If we were debugging some problem.
+
+- **Hibernate** `4.0` has started using **JBoss logging** framework.
+    - You can choose you favorite logging framework <3.
+        - We are using **log4j** framework.
+
+- You can tell logger **lot of levels**.
+
+<img src="loggingLevels.PNG"  alt="hibernate course" width="500"/>
+
+1. If you want to log all, you choose `ALL` level.
+2. If you want **fine-grained details**, you choose `DEBUG` level.
+
+- Example of `ALL` logging. 
+
+```
+# Log everything (this will also include the logging information configured by "log4j.logger.org.hibernate.SQL=ALL" and "log4j.
+# logger.org.hibernate.type.descriptor.sql.BasicBinder=TRACE")
+log4j.logger.org.hibernate=ALL
+```
+
+- Example of full logging file:
+
+```
+# Direct to file.
+log4j.appender.file=org.apache.log4j.RollingFileAppender
+log4j.appender.file.File=hello-world.log
+log4j.appender.file.MaxFileSize=2MB
+log4j.appender.file.MaxBackupIndex=1
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+# Direct to stdout.
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+# Root logger option.
+log4j.rootLogger=OFF, stdout, file
+
+# Log everything (this will also include the logging information configured by "log4j.logger.org.hibernate.SQL=ALL" and "log4j.logger.org.hibernate.type.descriptor.sql.BasicBinder=TRACE")
+#log4j.logger.org.hibernate=ALL
+
+# Show SQL statements.
+log4j.logger.org.hibernate.SQL=ALL
+
+# Show the bind parameter values.
+log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
+```
+
+<img src="allKindOfLogs.PNG"  alt="hibernate course" width="500"/>
+
+1. With `ALL` you can see a lot of logs.
+
+# 15. Lab Exercise - Logging.
+
+<img src="loggingLab.PNG"  alt="hibernate course" width="500"/>
+
+# 16. Manipulating Objects.
+
+# 17. Lab - Manipulating Objects.
+
+# 18. Lab Exercise - Manipulating Objects.
