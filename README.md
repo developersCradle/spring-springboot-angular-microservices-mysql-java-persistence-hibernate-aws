@@ -18,13 +18,14 @@ All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/). 
 
 [Content maker](https://luv2code.com/).
 
 [Git repo](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners/blob/main/11-appendix/course-links.md).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -87,13 +88,13 @@ All course material from Master Microservices with Spring Boot and Spring Cloud 
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
 [The course at Udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/).
 
 [Content maker](https://www.in28minutes.com/).
 
 [Latest GIT](https://github.com/in28minutes/spring-microservices-v3).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -144,11 +145,11 @@ All course material from Microservices Architecture - The Complete Guide by **Me
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
 [The course at Udemy](https://www.udemy.com/course/microservices-architecture-the-complete-guide/).
 
 [Content maker](https://memilavi.com/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -177,9 +178,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -267,11 +268,11 @@ All course material from Docker Masterclass For Java Spring Boot Developers by *
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
 [The course at Udemy](https://www.udemy.com/course/docker-java/).
 
 [Content maker](https://www.vinsguru.com/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -300,7 +301,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Do the last chapter exercise from Section 05.
 
 <p align="center">
-    <img id="kubernetes" src="Kubernetes Masterclass For Beginners [Hands-On] caption.png" height=60>
+    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" height=60>
 </p>
 
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
@@ -309,13 +310,14 @@ All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vi
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 [The course at Udemy](https://www.udemy.com/course/kubernetes-cloud-native/).
 
 [Content maker](https://www.vinsguru.com/).
 
 [Latest GIT ](https://github.com/vinsguru/kubernetes-course).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -357,9 +359,9 @@ All course material from Apache Maven: Beginner to Guru **John Thompson** ©. Wi
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
 [The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- add these later.
 [Content maker](https://www.vinsguru.com/).
@@ -399,9 +401,9 @@ All course material from Cryptography and Hashing Fundamentals in Python and Jav
 
 Contains my own notes with some course material to enforce learning experience.
 
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
-
 [The course at Udemy](https://www.udemy.com/course/learn-cryptography-basics-in-python/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case

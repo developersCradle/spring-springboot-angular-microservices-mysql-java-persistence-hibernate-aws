@@ -233,5 +233,162 @@ public class HelloWorldClient {
 
 # 11. Note for Hibernate 5+ Users.
 
+- **Hibernate** got released `Mar 2015`, we have included following `.jar` files.
+    - We will be using **Hibernate 6** jars 
+
+> Hibernate 6 release the `javax.*` package got changed to the `jakarta.*` package.
+
+<img src="noticeTheSameDomain.PNG"  alt="hibernate course" width="400"/>
+
+- If using **hibernate 5**, you might have the following mapping error.
+
+- After Hibernate 5, `GenerationType.AUTO` have been changed.
+
+<p align="center">
+    <img src="hibernateDifference.jpg"  alt="hibernate course" width="300"/>
+</p>
+
+
+
+```
+package entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="message")
+public class Message {
+
+	//1. Before Hibernate 5.x, GenerationType.AUTO used GenerationType.IDENTITY as default strategy
+	//2. After Hibernate 5.x, GenerationType.AUTO used GenerationType.SEQUENCE as default strategy
+	//3. To follow the course with Hibernate 6.y, use GenerationType.IDENTITY strategy explicitly
+	//4. Q&A on AUTO vs IDENTITY: https://www.udemy.com/course/hibernate-and-jpa-fundamentals/learn/lecture/26324154#questions/937412
+	//5. In the lecture on "Pre-INSERT Identifier Generation", we talk more about AUTO, IDENTITY, SEQUENCE and TABLE strategies
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@Column(name="ID")	
+	private Long id;
+
+	@Column(name="TEXT")	
+	private String text;
+	
+	public Message() {}
+	public Message(String text) {
+		this.text = text;
+	}
+	
+	@Override
+	public String toString() {
+		return "Message [id=" + id + ", text=" + text + "]";
+	}	
+	
+}
+```
+
+- You might have the following mapping error if old **Hibernate** `.jar` will be used.
+
+<img src="mappingExpectionForHibernate5.PNG"  alt="hibernate course" width="400"/>
 
 # 12. Note for Hibernate 6 Users.
+
+> [!IMPORTANT]
+> Note when using Hibernate 6 minimum version of Java is 11.
+
+- And for **Hibernate 6** `Session Factory` we are using **Metadata**. Below example.
+
+```
+package util;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+public class HibernateUtil {
+	
+    private static final SessionFactory sessionFactory = buildSessionFactory();
+    
+    private static SessionFactory buildSessionFactory() {
+        try {        	
+            // Create the SessionFactory from hibernate.cfg.xml            
+            StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+            Metadata metadata = new MetadataSources(serviceRegistry).getMetadataBuilder().build();
+            return metadata.getSessionFactoryBuilder().build();
+            
+        }
+        catch (Throwable ex) {
+            // Make sure you log the exception, as it might be swallowed
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+	
+}
+```
+
+- Also **Hibernate 6** will be using `.persist()` instead of `.save()`.
+
+- Also, could see `jakarta.` packages form **Hibernate 6** on.
+    - Before **Hibernate 5** it will have `.javax`.
+
+```
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+```
+
+# 13. Lab Exercise - Hello World with Hibernate and JPA Annotations.
+
+<img src="LabExerciseJPA.PNG"  alt="hibernate course" width="600"/>
+
+1. The `12` line gets executed, and the **Transaction is started**. At `14` the Java object is having `null` value. At `16` the underlying database is called and `id` get inserted. At `18` the **Transaction** will be `committed` and the **row** will be inserted into the database.
+
+<p align="center">
+    <img src="memeTheAnswer.jpg"  alt="hibernate course" width="500" height="300"/>
+</p>
+
+<img src="labAnswer.PNG"  alt="hibernate course" width="600"/>
+
+1. At line `14` the **Message** object is created, it's called **Transient object**
+    - **Message** object is called `Transient State`.
+        - This **state** is **lost** and will be **garbage collected**, as soon as the object is **not** referenced!
+
+> A **Transient** object is an object that exists temporarily and is not persisted to a database or storage system. 
+
+<img src="labAnswer2.PNG"  alt="hibernate course" width="600"/>
+
+1. At line `16` **Message object** is not called anymore `Transient Object`, it will be called `Persisten State`, since It's **associated** with the **database row**.
+    - **Persistent Object** with the database identity.
+2. As soon the object is **Persistent Object**, it will be manged by ⚠️**Session**⚠️.
+
+- At the `18` the **database connection** will be **closed**, but the `Session` object will still manage the `Message` Object.
+
+<img src="labAnswer3.PNG"  alt="hibernate course" width="600"/>
+
+1. At the `19` at **Session** will be **closed**.
+    - After this the object will be **Detached Object**.
+        - No longer manged by the **Session Object**.
+
+- Summary:
+
+> [!NOTE]
+> **Three** states were:
+>   - 1. **Transient state**.
+>   - 2. **Persistent state**.
+>   - 3. **Detached state**.
+
+# 14. Logging.
+

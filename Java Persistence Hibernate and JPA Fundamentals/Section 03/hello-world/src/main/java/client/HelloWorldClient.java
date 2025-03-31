@@ -13,7 +13,8 @@ public class HelloWorldClient {
         
         		Message message = new Message( "Hello World with Hibernate and JPA Annotations" );
         
-        		session.save(message);    
+//        		session.save(message); // Hibernate 5 uses .save
+        		session.persist(message); // Hibernate 6 uses .persist
         
         		session.getTransaction().commit();
         		session.close();
