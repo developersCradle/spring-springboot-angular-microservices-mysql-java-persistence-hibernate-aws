@@ -451,7 +451,36 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 
 <img src="loggingLab.PNG"  alt="hibernate course" width="500"/>
 
+- We get more information for performance inspection with:
+
+- **Hibernate config:**
+
+```
+<property name="generate_statistics">true</property>
+```
+
+- You can have **Log4j** config for logging session: 
+
+- **Log4j config:**
+
+```
+#Log everything (this will also include the logging information configured by "log4j.logger.org.hibernate.SQL=ALL" and "log4j.logger.org.hibernate.type.descriptor.sql.BasicBinder=TRACE")
+#log4j.logger.org.hibernate=ALL
+```
+
+<img src="exerciseLogging.PNG"  alt="hibernate course" width="500"/>
+
+1. When you enable the **Session** logging, you can see much information about its internals.
+
+<img src="doNotEnableTheseSettings.PNG"  alt="hibernate course" width="500"/>
+
+1. **Remember**, these settings should **not** be in production environment, since there is performance cost and exposes information.
+
 # 16. Manipulating Objects.
+
+<img src="manipulatingObject.PNG"  alt="hibernate course" width="500"/>
+
+<img src="whatIsTransaction.PNG"  alt="hibernate course" width="500"/>
 
 # 17. Lab - Manipulating Objects.
 
