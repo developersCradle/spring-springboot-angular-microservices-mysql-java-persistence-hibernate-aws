@@ -480,7 +480,45 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 
 <img src="manipulatingObject.PNG"  alt="hibernate course" width="500"/>
 
+- This is inside **database**, context.
+
 <img src="whatIsTransaction.PNG"  alt="hibernate course" width="500"/>
+
+1. Context is **selling of books**. Book store.
+2. Only when `commit` is executed, the **Transaction** is finished.
+
+- In other words, either the whole operation **succeeds** or everything **rolls back**. 
+
+3. Manually **rollback** can be also be used. Also, same in **code** `4.1`.
+4. Same in **code**.
+
+<img src="findingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. As soon the line `19` is executed `Messge msg = (Message) session.get(Message.class, 2L);`, will return **Message** object from the database.
+    - The Class **Message** will be looked for.
+    - The **ID** with `2L` will be looked on. 
+    - Also, `null` returned when no such `id` is found.
+2. Following row is being populated into memory from database, when the `19` is executed.
+
+- **NOTICE** No clumsy **SQL** needed, when working with **Hibernate!**
+
+<img src="updatingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. At `18` the state of **Message** object is following, note that this is not at db yet. 
+
+<img src="updatingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. When **Transaction** is`commit`:ed line executes, the line gets updated into **database**.
+    - As soon as `commit` gets executed **Hibernate** does `automatic dirty checking`, it checks if any of data got changed during the **Transaction** and updates the changes into **database**.
+
+<img src="deletingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. Only after `.commit()` is called, the **Message** object is deleted from database.
+
+<img src="messageEntity.PNG"  alt="hibernate course" width="500"/>
+
+1. All **Persistence Entities** needs **no-args** constructors.
+    - This is for **Java Reflection**.
 
 # 17. Lab - Manipulating Objects.
 

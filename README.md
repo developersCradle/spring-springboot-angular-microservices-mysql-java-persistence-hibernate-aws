@@ -317,7 +317,7 @@ Contains my own notes with some course material to enforce learning experience.
 
 [Content maker](https://www.vinsguru.com/).
 
-[Latest GIT ](https://github.com/vinsguru/kubernetes-course).
+[Latest GIT repo from owner](https://github.com/vinsguru/kubernetes-course).
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
