@@ -6,9 +6,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
+import lombok.Setter;
 
 @Entity
 @Table(name="message")
+@Data
 public class Message {
 
 	//1. Before Hibernate 5.x, GenerationType.AUTO used GenerationType.IDENTITY as default strategy
@@ -26,6 +29,10 @@ public class Message {
 	
 	public Message() {}
 	public Message(String text) {
+		this.text = text;
+	}
+	
+	public void setText(String text) {
 		this.text = text;
 	}
 	

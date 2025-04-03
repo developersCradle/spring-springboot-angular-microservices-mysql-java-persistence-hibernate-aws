@@ -8,7 +8,7 @@ Getting Started with Hibernate and JPA Annotations.
 
 <img src="hibernate.PNG"  alt="hibernate course" width="500"/>
 
-1. This mapping shit will be solved by **Hibernate**.
+1. These **mappings** will be solved by **Hibernate**.
     - Idea is that Java developers, are using **POJOS** rather than **SQL** language to persist objects.
 
 - If **Object Mode** mapping is done correctly. We don't need to use low level languages or **JDBC** at all.
@@ -388,6 +388,7 @@ import jakarta.persistence.Table;
 >2. **Persistent State**.
 >3. **Detached State**.
 
+- There is more, but these are the most popular.
 # 14. Logging.
 
 - These **Hibernate** logs `Hibernate: insert into message (TEXT) values (?)`.
@@ -521,5 +522,128 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
     - This is for **Java Reflection**.
 
 # 17. Lab - Manipulating Objects.
+
+
+- We are implementing the **rollback** behavior.
+
+```
+package client;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import entity.Message;
+import util.HibernateUtil;
+
+public class HelloWorldClient {
+	public static void main(String[] args) {
+		
+				Session session = HibernateUtil.getSessionFactory().openSession();
+        		Transaction transaction = session.beginTransaction();
+        		
+        		// We are going to make transaction.
+        		try {
+				for	transaction.begin();
+					
+					Message message = new Message( "Hello World with Hibernate and JPA Annotations" );
+					
+					transaction.commit();
+					
+				} catch (Exception e) {
+					if (transaction != null) {
+						transaction.rollback(); // Something happened in the query process. If transaction is not null, we are going to rollback.
+					}
+					e.printStackTrace();
+				} finally {
+					if (session != null))
+					{		
+						session.close()
+					}
+				}
+	
+	}
+}
+
+```
+
+<img src="messageGet.PNG"  alt="hibernate course" width="500"/>
+
+1. Here we can see the `session.get()` working!
+
+- `<property name="format_sql">true</property>` you could set this to true for better **SLQ** formatting.
+
+- Here we will illustrate the `automatic dirty checking`.
+    - The **modification** is changed between **Transaction**, when `.commit()` will be called the change is being applied.
+
+```
+package client;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import entity.Message;
+import util.HibernateUtil;
+
+public class HelloWorldClient {
+	public static void main(String[] args) {
+		
+				Session session = HibernateUtil.getSessionFactory().openSession();
+        		Transaction transaction = session.getTransaction();
+        		
+        		// We are going to make transaction.
+        		try {
+					transaction.begin();
+					
+					// Message object is managed by session.
+					Message message = (Message) session.get(Message.class, 3L);
+					message.setText(" This text is changed.");
+//					System.out.println(message);
+					
+					
+					
+					transaction.commit();
+					
+				} catch (Exception e) {
+					if (transaction != null) {
+						transaction.rollback(); // Something happened in the query process. If transaction is not null, we are going to rollback.
+					}
+					e.printStackTrace();
+				} finally {
+					if (session != null)
+					{		
+						session.close();
+					}
+				}
+	
+	}
+}
+
+```
+<img src="updatingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. Here you can see that **Hibernate** will deduct the **change old** or the **insert new**.
+
+<img src="updatingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. At `17` The **Message** is being manged by the **Session** object.
+    - `Persistnet state`.
+
+<img src="deletingObject.PNG"  alt="hibernate course" width="500"/>
+
+1. At `19` delete will be called, and the **Message** is no longed manged by the **Session** object.
+    - `removed state`.
+
+
+- There is different **States**.
+
+
+| Hibernate State  | Description |
+|---------------|-------------|
+| **Transient** | Object is created but not associated with Hibernate. No DB representation. |
+| **Persistent** | Object is associated with an active session and saved in DB. |
+| **Detached** | Object was persistent but is now disconnected from the session. |
+| **Removed** | Object is marked for deletion from the database. |
+
+
 
 # 18. Lab Exercise - Manipulating Objects.

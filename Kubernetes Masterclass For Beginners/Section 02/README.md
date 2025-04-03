@@ -27,7 +27,7 @@ Kubernetes Cluster.
 
 <img src="kubernetesClusterDiagram.PNG"  alt="alt text" width="500"/>
 
-1. Master node with the **4 components**.
+- Master node with the **4 components**.
     1. **api-server**.
     2. **etcd**.
     3. **controller-manager**.

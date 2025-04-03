@@ -1,5 +1,6 @@
 package domain;
 
+
 public class Message {	
 	private Long id;
 	private String text;
