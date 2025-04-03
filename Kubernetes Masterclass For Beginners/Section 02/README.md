@@ -27,11 +27,11 @@ Kubernetes Cluster.
 
 <img src="kubernetesClusterDiagram.PNG"  alt="alt text" width="500"/>
 
-- Master node with the **4 components**.
-    1. **api-server**.
-    2. **etcd**.
-    3. **controller-manager**.
-    4. **scheduler**.
+Master node with the **4 components**:
+1. **api-server**.
+2. **etcd**.
+3. **controller-manager**.
+4. **scheduler**.
 
 - We will always talk to the **api-server** as entry point.
 
