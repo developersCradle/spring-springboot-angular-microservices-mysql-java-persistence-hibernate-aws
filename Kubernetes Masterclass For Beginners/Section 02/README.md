@@ -35,14 +35,14 @@ Master node with the **4 components**:
 
 - We will always talk to the **api-server** as entry point.
 
-- When sending request to **api-server**.
-    1. **Validate** the request.
-    2. **Etcd** will be saved the request.
-        - This contains **cluster** information.
-    3. **Scheduler** will be asked for the help.
-        - **Scheduler** will be picking up nodes for the request.
-    4. **controller-manager** will be managing the load.
-        - Example, if there is some error with running nodes.
+When sending request to **api-server**:
+1. **Validate** the request.
+2. **Etcd** will be saved the request.
+    - This contains **cluster** information.
+3. **Scheduler** will be asked for the help.
+    - **Scheduler** will be picking up nodes for the request.
+4. **controller-manager** will be managing the load.
+    - Example, if there is some error with running nodes.
 
 # 6. Kubernetes Architecture - Nodes.
 

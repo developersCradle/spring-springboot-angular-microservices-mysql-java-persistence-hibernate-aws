@@ -512,7 +512,7 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 1. When **Transaction** is`commit`:ed line executes, the line gets updated into **database**.
     - As soon as `commit` gets executed **Hibernate** does `automatic dirty checking`, it checks if any of data got changed during the **Transaction** and updates the changes into **database**.
 
-<img src="deletingObject.PNG"  alt="hibernate course" width="500"/>
+<img src="updatingObjectCommit.PNG"  alt="hibernate course" width="500"/>
 
 1. Only after `.commit()` is called, the **Message** object is deleted from database.
 
@@ -523,8 +523,7 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 
 # 17. Lab - Manipulating Objects.
 
-
-- We are implementing the **rollback** behavior.
+- We are implementing the **Rollback** behavior.
 
 ```
 package client;
@@ -555,8 +554,7 @@ public class HelloWorldClient {
 					}
 					e.printStackTrace();
 				} finally {
-					if (session != null))
-					{		
+					if (session != null)					{		
 						session.close()
 					}
 				}
@@ -570,10 +568,10 @@ public class HelloWorldClient {
 
 1. Here we can see the `session.get()` working!
 
-- `<property name="format_sql">true</property>` you could set this to true for better **SLQ** formatting.
+- `<property name="format_sql">true</property>` you could set this to true for better **SQL** formatting.
 
 - Here we will illustrate the `automatic dirty checking`.
-    - The **modification** is changed between **Transaction**, when `.commit()` will be called the change is being applied.
+    - The **modifications** that have been changed inside **Transaction**, when `.commit()` will be called, will apply the changes.
 
 ```
 package client;
@@ -619,11 +617,12 @@ public class HelloWorldClient {
 }
 
 ```
+
 <img src="updatingObject.PNG"  alt="hibernate course" width="500"/>
 
 1. Here you can see that **Hibernate** will deduct the **change old** or the **insert new**.
 
-<img src="updatingObject.PNG"  alt="hibernate course" width="500"/>
+<img src="updatingObjectCommit.PNG"  alt="hibernate course" width="500"/>
 
 1. At `17` The **Message** is being manged by the **Session** object.
     - `Persistnet state`.
@@ -631,11 +630,9 @@ public class HelloWorldClient {
 <img src="deletingObject.PNG"  alt="hibernate course" width="500"/>
 
 1. At `19` delete will be called, and the **Message** is no longed manged by the **Session** object.
-    - `removed state`.
+    -  State will change to the `Removed state`.
 
-
-- There is different **States**.
-
+- There is different **States** as Summary:
 
 | Hibernate State  | Description |
 |---------------|-------------|
@@ -644,6 +641,24 @@ public class HelloWorldClient {
 | **Detached** | Object was persistent but is now disconnected from the session. |
 | **Removed** | Object is marked for deletion from the database. |
 
+- As summary:
 
+<img src="managedByTheSessionObject.PNG"  alt="hibernate course" width="500"/>
+
+1. At line `17` **Message** with id `2` is loaded from database. It will be in `Persistent State`.
+
+<img src="delted.PNG"  alt="hibernate course" width="500"/>
+
+1. At line `18` when `.delete` is called, it will no longer be managed by **Session**, the state changes to `Removed State`.
 
 # 18. Lab Exercise - Manipulating Objects.
+
+<img src="manipulatingLab.PNG"  alt="hibernate course" width="500"/>
+
+1. Updating the **Message** field does not have any effect after the `.close()` have been called. 
+
+<img src="manipulatingLabAfter.PNG"  alt="hibernate course" width="500"/>
+
+1. If trying to call methods on **closed** session, it will throw **exception**.
+
+<img src="session2.PNG.PNG"  alt="hibernate course" width="500"/>

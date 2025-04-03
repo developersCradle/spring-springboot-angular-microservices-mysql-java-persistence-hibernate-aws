@@ -6,7 +6,7 @@ Understanding object/relational persistence.
 
 # 02. Object Relational Impedance Mismatch.
 
-<img src="objMismatchAndRelationalDb.PNG"  alt="alt text" width="600"/>
+<img src="objMismatchAndRelationalDb.PNG"  alt="hibernate course" width="600"/>
 
 1. This will represent **OOP**.
     - One of OOP language is **Java** language.
@@ -24,7 +24,7 @@ Understanding object/relational persistence.
 
 - This context is **e-commerce application**.
 
-<img src="granularity.PNG"  alt="alt text" width="600"/>
+<img src="granularity.PNG"  alt="hibernate course" width="600"/>
 
 1. First mismatch is **Granularity** mismatch.
 2. One can think, **system** can be broke down into **smaller pieces**.
@@ -33,7 +33,7 @@ Understanding object/relational persistence.
     - **Order**.
     - **Billing Details**.
 
-<img src="granularityContd.PNG"  alt="alt text" width="600"/>
+<img src="granularityContd.PNG"  alt="hibernate course" width="600"/>
 
 1. In **Object Model** we can have **various level** **granularity**.
     - In **Relational Model** this is restricted to **two level**
@@ -46,7 +46,7 @@ Understanding object/relational persistence.
 3. Only **One** Table in database.
 4. By definition the `granular` means more depth of info.
 
-<img src="subtypeInheritance.PNG" alt="alt text" width="600"/>
+<img src="subtypeInheritance.PNG" alt="hibernate course" width="600"/>
 
 1. In **Object Model**, there is **Inheritance**. 
     - Example Java and OOP.
@@ -54,7 +54,7 @@ Understanding object/relational persistence.
 
 - Third is **identity mismatch**.
 
-<img src="identityMismatch.PNG" alt="alt text" width="600"/>
+<img src="identityMismatch.PNG" alt="hibernate course" width="600"/>
 
 1. In Java, there is **Object Identity** and **Object equality**.
 2. In **Relational Model** the **identity** is can be defined by **Primary key**.   
@@ -65,7 +65,7 @@ Understanding object/relational persistence.
 
 - Third mismatch is **Association mismatch**.
 
-<img src="assosationMismatch.PNG" alt="alt text" width="600"/>
+<img src="assosationMismatch.PNG" alt="hibernate course" width="600"/>
 
 1. In Java the **association** is handled by **Object References**.
 2. In **Relational Model** this is handled by **Foreign Key**
@@ -91,7 +91,7 @@ Understanding object/relational persistence.
     private Order order;
 ```
 
-<img src="dataNavigationMismatch.PNG" alt="alt text" width="600"/>
+<img src="dataNavigationMismatch.PNG" alt="hibernate course" width="600"/>
 
 1. In **Java** one access the **object route**, `y: foo.getBar().getY()` and `z: foo.getBar().getY().getZ()`.
 
@@ -103,22 +103,22 @@ Understanding object/relational persistence.
 
 # 3. Object Relational Mapping.
 
-<img src="bookStorePersist.PNG" alt="alt text" width="600"/>
+<img src="bookStorePersist.PNG" alt="hibernate course" width="600"/>
 
 1. We will model **Book Store** object graph
 2. We will **persist** it into database. 
 
-<img src="bookStoreRetrieve.PNG" alt="alt text" width="600"/>
+<img src="bookStoreRetrieve.PNG" alt="hibernate course" width="600"/>
 
 1. We will retrieve the Book **object**.
 
-<img src="bookStoreJDBC.PNG" alt="alt text" width="600"/>
+<img src="bookStoreJDBC.PNG" alt="hibernate course" width="600"/>
 
 1. We will do this by writing **JDBC** code!
     - We will see if there are **problems** using this **approach**.
         - How will **ORM** mapping solves these closes :).
 
-<img src="umlAndErd.PNG" alt="alt text" width="600"/>
+<img src="umlAndErd.PNG" alt="hibernate course" width="600"/>
 
 1. We will have **3** classes:
     - `Publisher` class.
@@ -130,25 +130,25 @@ Understanding object/relational persistence.
 
 - We will have the following Java **POJO** classes.
 
-<img src="objectModelClasses.PNG" alt="alt text" width="600"/>
+<img src="objectModelClasses.PNG" alt="hibernate course" width="600"/>
 
-<img src="relationalModel.PNG" alt="alt text" width="600"/>
+<img src="relationalModel.PNG" alt="hibernate course" width="600"/>
 
 1. One thing to notice is that, **CHAPTER_NUM** and **BOOK_ISBN** is marked as **PRIMARY KEY**, they make **CHAPTER** unique.
 
-<img src="overAllFlow.PNG" alt="alt text" width="600"/>
+<img src="overAllFlow.PNG" alt="hibernate course" width="600"/>
 
 1. We are using **JDBC** to write into database.
     - We need `.jar` driver.
 
-<img src="bookStoreClientCode.PNG" alt="alt text" width="600"/>
+<img src="bookStoreClientCode.PNG" alt="hibernate course" width="600"/>
 
 1. Notice we **associate** `Book` object with the `Publisher` Object, before **persisting**.
 2. We **associate** the `List<Chapter>` with `book` object.
 3. In the end we **persist** one object with **associates** with the `BookStoreService` class.
 4. Result of **persisting** will be following in the database.
 
-<img src="bookStoreService.PNG" alt="alt text" width="600"/>
+<img src="bookStoreService.PNG" alt="hibernate course" width="600"/>
 
 1. We load the driver and make connection.
 2. Then we create `PreparedStatement` and load the **PreparedStatement** with query and data, then execute to the database. In the end we call **close** for releasing resources made from `PreparedStatment`.
@@ -162,11 +162,11 @@ Understanding object/relational persistence.
     - Book details need to be copied to `PreparedStatement` one more time. ❌ **Too Many Copy Codes** ❌.
     - SQL code is dependent to the **MySQL system**. ❌ **Database Dependent** ❌.
 
-<img src="clientGetBOok.PNG" alt="alt text" width="500"/>
+<img src="clientGetBOok.PNG" alt="hibernate course" width="500"/>
 
 1. Printing will be looking, when printing Book object.
 
-<img src="bookStoreServiceSecond.PNG" alt="alt text" width="600"/>
+<img src="bookStoreServiceSecond.PNG" alt="hibernate course" width="600"/>
 
 1. Reads from two different tables.
 2. We get following **ResultSet** from database.
@@ -238,15 +238,15 @@ public class BookStoreService {
 }
 ```
 
-<img src="problemsOfMismatchBetweenObjectModelAndRelationalModel.PNG" alt="alt text" width="600"/>
+<img src="problemsOfMismatchBetweenObjectModelAndRelationalModel.PNG" alt="hibernate course" width="600"/>
 
 1. These problems presented here could be solved by using **ORM**.
 
-<img src="ormMapping.PNG" alt="alt text" width="600"/>
+<img src="ormMapping.PNG" alt="hibernate course" width="600"/>
 
 - This will be done with following associations.
 
-<img src="ormSave.PNG" alt="alt text" width="600"/>
+<img src="ormSave.PNG" alt="hibernate course" width="600"/>
 
 1. Now saving can be done by calling `save(book)` and Java Object with required associations. Getting Book`.get(identifier of book)`. No need to write **SQL** or **JDSBC** codes.
 
@@ -261,7 +261,7 @@ public class BookStoreService {
 
 # 6. Lab - Object Relational Mapping
 
-<img src="makeFollowingTables.PNG" alt="alt text" width="600"/>
+<img src="makeFollowingTables.PNG" alt="hibernate course" width="600"/>
 
 - We create following tables, `PUBLISHER`, `BOOK` and `CHAPTER`.
 
@@ -310,7 +310,7 @@ CREATE TABLE CHAPTER (
 
 - New drivers `Class.forName("com.mysql.cj.jdbc.Driver");`
 
-<img src="rightTools.jpg" alt="alt text" width="600"/>
+<img src="rightTools.jpg" alt="hibernate course" width="600"/>
 
 
 - We are calling following for saving the object!
@@ -342,7 +342,7 @@ CREATE TABLE CHAPTER (
 		System.out.println(book);
 ```
 
-<img src="relationshipAndGraphObjectMismatch.PNG" alt="alt text" width="600"/>
+<img src="relationshipAndGraphObjectMismatch.PNG" alt="hibernate course" width="600"/>
 
 1. We can easily see the problem of **Object relational mismatch**.
     - Two classes, in their corresponding system!
@@ -352,7 +352,7 @@ CREATE TABLE CHAPTER (
 
 # 7. Lab Exercise - Object Relational Mapping.
 
-<img src="labObjectMapping.PNG" alt="alt text" width="600"/>
+<img src="labObjectMapping.PNG" alt="hibernate course" width="600"/>
 
 1. Answer to this the **Identity mismatch**.
 
