@@ -11,5 +11,50 @@ Mapping Concepts.
 - **Aggregation** → **Whole** and **its Parts**.
 
 1. **Band** is **whole** and is made from **Parts** of **Artists**.
+2. **Aggregation**, when whole is **destroyed** its **children** are **NOT** destroyed.
+
+<img src="composition.PNG"  alt="hibernate course" width="600"/>
+
+1. In the **Composition**, when **whole** is **destroyed**, then its children **ARE** destroyed.
+
+- This indicates **strong** form of **aggregation**.
+
+2. When the **house** is destroyed then the **rooms** are also destroyed.
+3. **NOTICE** the parts may not be shared. 
+    - Example, the rooms are not shared with your neighbor.
 
 # 20. Entities and Value Types.
+
+> [!NOTE]
+> How does the **Persistent classes** have the identity?
+
+<img src="EntitiesAndValueTypes.PNG"  alt="hibernate course" width="600"/>
+
+1. If in **Database** the **ID** is at present, how can this in **Java classes**. You could present whole table as full class, but its rather bad OOP design.
+2. We would **brake** the class into **smaller pieces**.
+3. Is the `id` part of `User` or `Address` field, which one **owns** the identity.
+    - That depends, if user cares about **identifying** **User** uniquely or **Address**.
+
+- Object that has **database identity type**, are called `Entity` types.
+    - And those who does **NOT** have **database identity type**, are called **VALUE TYPE**. These belong to the entity.
+- In this example, the **User** it has database identity, it's called **Entity** and the **Address** does not have identity type, so it's called **Value type**.
+
+<img src="groupGraph.PNG"  alt="hibernate course" width="600"/>
+
+1. **Value types** are belonging, to the **Entity** type.
+    - **Value types** are identified **thought** the **Entity**.
+
+- If the **User** is deleted, then all the **Addresses** are deleted.
+
+2. They cannot be **referenced** by other **Entity types**. Entity cannot reference **Entity**.
+    - It can be done only by the Entity that its being owned by.
+
+3. The Object of the **Entity** can be referenced.
+
+<img src="valueType.PNG"  alt="hibernate course" width="600"/>
+
+<img src="integer.PNG"  alt="hibernate course" width="300"/>
+
+1. Example, the **integer** is being owned by.
+
+# 21. Component Mapping.
