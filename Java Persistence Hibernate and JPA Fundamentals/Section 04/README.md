@@ -69,4 +69,11 @@ Mapping Concepts.
 
 1. You could think that `Address` in the **Shopping App**, does not need `ID` it would be **Value Type**, but in **Real Estate Search Engine** this should be identified with `ID`, so it would be **Entity Type**.
     - In search engine it would be critical information.
+    
 # 21. Component Mapping.
+
+<img src="componentMapping.PNG"  alt="hibernate course" width="400"/>
+
+1. Component is **part** of a **whole**. 
+
+# 22. Lab Exercise - Component Mapping.

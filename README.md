@@ -210,6 +210,39 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 
 <p align="center">
+    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.PNG" height=100>
+</p>
+
+![Advanced hibernate here](advancedHibernate.PNG)
+
+All course material from **Hibernate: Advanced Development Techniques** by **Harinath Kuntamukkala** and **Chad Darby** ©.
+
+[The Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
+
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    cert here.
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Some.  
+
+#### Additional stuff.
+
+- [ ] 
+
+<p align="center">
     <img id="sql" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" height=70>
 </p>
 
