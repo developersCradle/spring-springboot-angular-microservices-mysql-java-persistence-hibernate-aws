@@ -35,9 +35,9 @@ Mapping Concepts.
 3. Is the `id` part of `User` or `Address` field, which one **owns** the identity.
     - That depends, if user cares about **identifying** **User** uniquely or **Address**.
 
-- Object that has **database identity type**, are called `Entity` types.
-    - And those who does **NOT** have **database identity type**, are called **VALUE TYPE**. These belong to the entity.
-- In this example, the **User** it has database identity, it's called **Entity** and the **Address** does not have identity type, so it's called **Value type**.
+- Object that has **Database Identity Type**, are called `Entity` types.
+    - And those who does **NOT** have **Database Identity Type**, are called **VALUE TYPE**. These belong to the entity.
+- In this example, the **User** it has **Database Identity**, it's called **Entity** and the **Address** does not have **Identity**, so it's called **Value type**.
 
 <img src="groupGraph.PNG"  alt="hibernate course" width="600"/>
 
@@ -51,10 +51,22 @@ Mapping Concepts.
 
 3. The Object of the **Entity** can be referenced.
 
-<img src="valueType.PNG"  alt="hibernate course" width="600"/>
+<img src="valueTypeBefore.PNG"  alt="hibernate course" width="600"/>
 
-<img src="integer.PNG"  alt="hibernate course" width="300"/>
+1. Most simple **Values types** from Java are **String** and **Integer**.
 
-1. Example, the **integer** is being owned by.
+<img src="valueTypeAfter.PNG"  alt="hibernate course" width="600"/>
 
+1. If you would need, **UID** `Adress`, you would need add `id`.
+    - So, its **designers** choice, whether you make Object **Value type** or **Entity type**.
+2. You can ask yourself about `Does the database identity of an object matters?`
+
+<img src="integer.PNG"  alt="hibernate course" width="400"/>
+
+1. Example, the **Integer** is being owned by **Object**.
+
+<img src="thinkingOfIdentity.PNG"  alt="hibernate course" width="400"/>
+
+1. You could think that `Address` in the **Shopping App**, does not need `ID` it would be **Value Type**, but in **Real Estate Search Engine** this should be identified with `ID`, so it would be **Entity Type**.
+    - In search engine it would be critical information.
 # 21. Component Mapping.

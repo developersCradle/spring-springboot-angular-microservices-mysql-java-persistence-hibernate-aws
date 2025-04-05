@@ -207,6 +207,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Read again the mismatches.
 - [ ] Redo 18. Lab Exercise - Manipulating Objects.
+- [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 
 <p align="center">
     <img id="sql" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" height=70>

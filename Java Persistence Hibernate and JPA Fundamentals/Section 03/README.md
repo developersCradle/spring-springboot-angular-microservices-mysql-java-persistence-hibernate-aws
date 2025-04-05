@@ -661,4 +661,6 @@ public class HelloWorldClient {
 
 1. If trying to call methods on **closed** session, it will throw **exception**.
 
-<img src="session2.PNG.PNG"  alt="hibernate course" width="500"/>
+<img src="session2.PNG"  alt="hibernate course" width="500"/>
+
+1. We open new connection and update **Message** at `.commit()`.
