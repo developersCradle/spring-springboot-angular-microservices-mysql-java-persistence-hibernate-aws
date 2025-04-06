@@ -24,6 +24,10 @@
         <!-- Use XML-based mapping metadata -->	
         <!--  <mapping resource="domain/Message.hbm.xml"/>  --> 
         
+        <!-- Create/update tables automatically using mapping metadata -->
+		<!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			
+			
         <!-- Use Annotation-based mapping metadata -->
         <mapping class="entity.Message"/> 
         

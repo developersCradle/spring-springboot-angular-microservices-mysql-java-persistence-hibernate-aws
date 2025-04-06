@@ -86,7 +86,7 @@ Mapping Concepts.
 5. **Notice** the component does not have **identity**!
     - It cannot be `Entity`.
 
-- In **SQL** it's related to the `SQL columns` and in **Hibenrate** it's related to the `classes` to make composition.
+- In **SQL** it's related to the `SQL columns` and in **Hibernate** it's related to the `classes` to make composition.
 
 <img src="componentMappingWhenThereIsManyTables.PNG"  alt="hibernate course" width="400"/>
 
@@ -117,6 +117,19 @@ Mapping Concepts.
 
 <img src="mappingOfTheEntity.PNG"  alt="hibernate course" width="500"/>
 
-1. We never instructed the mapping to the **Hibernate**.
+1. We never instructed the mapping to the **Hibernate**!?
+
+<img src="componentMappingReason1.PNG"  alt="hibernate course" width="500"/>
+
+1. **Hibernate** uses **Reasonable Default Values**, for **XML** and **annotations**.
+
+- When **Hibernate** find information missing, it uses **Reasonable Default Values** for that. It acts like `2.` that these informations were present.
+    - If no name, or column information provided, name of attribute is used.
+
+<img src="componentMappingReason2.PNG"  alt="hibernate course" width="500"/>
+
+1. We are using `<property name="hibernate.hbm2ddl.auto" value="update"/>`. It **creates** tables for you and **updates** them for you, whenever there is update. **USE ONLY IN DEVELOPMENT ENV**.
+
+2. It creates the mapping attribute of the `<mapping class="entity.Message"/>`. It creates and executes following **schema** against the `hello-world` database.
 
 # 22. Lab Exercise - Component Mapping.

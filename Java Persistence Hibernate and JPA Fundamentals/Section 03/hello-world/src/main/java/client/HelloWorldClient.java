@@ -19,7 +19,7 @@ public class HelloWorldClient {
 					// Message object is managed by session.
 					Message message = (Message) session.get(Message.class, 3L);
 					message.setText(" This text is changed.");
-//					System.out.println(message);
+					// System.out.println(message);
 					
 					
 					
