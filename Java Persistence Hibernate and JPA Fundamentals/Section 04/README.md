@@ -23,6 +23,10 @@ Mapping Concepts.
 3. **NOTICE** the parts may not be shared. 
     - Example, the rooms are not shared with your neighbor.
 
+- This is in general:
+> This is an **object-oriented design concept**.
+> It means building an entity out of smaller parts (components).
+
 # 20. Entities and Value Types.
 
 > [!NOTE]
@@ -75,5 +79,44 @@ Mapping Concepts.
 <img src="componentMapping.PNG"  alt="hibernate course" width="400"/>
 
 1. Component is **part** of a **whole**. 
+2. If **whole** is destroyed the **parts** of it are also destroyed. 
+3. These smaller one are not shared. Example the rooms cannot be shared with your neighbors.
+4. `coponent` is referring to **Java composition relationship** from OOP concept. In this context this will be included to the whole **Java** object. In **Hibernate** this will be persisted as **value type**.
+    - It exists only for the **Entity** who owns it.
+5. **Notice** the component does not have **identity**!
+    - It cannot be `Entity`.
+
+- In **SQL** it's related to the `SQL columns` and in **Hibenrate** it's related to the `classes` to make composition.
+
+<img src="componentMappingWhenThereIsManyTables.PNG"  alt="hibernate course" width="400"/>
+
+1. We are mapping **two classes** to the **one** database table.
+
+<img src="valueTypeIsIncludedToEntity.PNG"  alt="hibernate course" width="400"/>
+
+1. So, we can notice that `AdDress` is included into the `Person` table.
+2. We can also notice that, Entity outside cannot refer to the **Type object** inside it.
+
+<img src="componentsInsideJavaEntity.PNG"  alt="hibernate course" width="500"/>
+
+1. We mark the **persistence component class** with the `@Embeddable` for the Entity.
+    - Notice no `ID` can be found here!
+2. Also, we add this to the parent object who owns it `@Embedded`.
+
+<img src="configOfTheEntity.PNG"  alt="hibernate course" width="500"/>
+
+1. You just need to add the **configuration** for the file.
+
+<img src="helloWoldClient.PNG"  alt="hibernate course" width="500"/>
+
+1. Just like in `.xml` mapping.
+
+<img src="personTable.PNG"  alt="hibernate course" width="500"/>
+
+1. Who decided about **schema** about this database table?
+
+<img src="mappingOfTheEntity.PNG"  alt="hibernate course" width="500"/>
+
+1. We never instructed the mapping to the **Hibernate**.
 
 # 22. Lab Exercise - Component Mapping.

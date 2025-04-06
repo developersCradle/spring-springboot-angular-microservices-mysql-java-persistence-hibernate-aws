@@ -308,10 +308,12 @@ CREATE TABLE CHAPTER (
 > When using the **MySQL80**, you need to update the MySQL drivers!!
 
 
-- New drivers `Class.forName("com.mysql.cj.jdbc.Driver");`
+- New drivers `Class.forName("com.mysql.cj.jdbc.Driver");`.
 
-<img src="rightTools.jpg" alt="hibernate course" width="600"/>
 
+<div align="center">
+    <img src="rightTools.jpg" alt="hibernate course" width="600"/>
+</div>
 
 - We are calling following for saving the object!
 

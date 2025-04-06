@@ -210,7 +210,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 
 <p align="center">
-    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.PNG" height=100>
+    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" height=100>
 </p>
 
 ![Advanced hibernate here](advancedHibernate.PNG)
@@ -236,19 +236,23 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Some.  
+- [ ] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2001#section-1-introduction) - Some.  
+- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Some.  
+- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-3-mapping-collections---maps-sorted-maps-and-sorted-sets) - Some.  
 
 #### Additional stuff.
 
 - [ ] 
 
 <p align="center">
-    <img id="sql" src="nightmare-the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.png" height=70>
+    <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" height=70>
 </p>
 
-![SQL course](ultimateSql.PNG)
+![The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert course](The%20Ultimate%20MySQL%20Bootcamp%20Go%20from%20SQL%20Beginner%20to%20Expert%20caption%20desc.PNG)
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
+
+Contains my own notes with some course material to enforce learning experience.
 
 [The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/).   
 
