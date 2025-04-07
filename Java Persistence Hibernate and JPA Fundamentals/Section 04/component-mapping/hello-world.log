@@ -1,0 +1,20 @@
+20:02:11,778 DEBUG SQL:131 - 
+    create table Person (
+        ID bigint not null auto_increment,
+        city varchar(255),
+        street varchar(255),
+        zipcode varchar(255),
+        name varchar(255) not null,
+        primary key (ID)
+    ) engine=InnoDB
+20:02:11,878 DEBUG SQL:131 - 
+    insert 
+    into
+        Person
+        (city,street,zipcode,name) 
+    values
+        (?,?,?,?)
+20:02:11,881 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Seattle]
+20:02:11,882 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [200 E Main St]
+20:02:11,882 TRACE bind:28 - binding parameter [3] as [VARCHAR] - [85123]
+20:02:11,883 TRACE bind:28 - binding parameter [4] as [VARCHAR] - [Ruby]

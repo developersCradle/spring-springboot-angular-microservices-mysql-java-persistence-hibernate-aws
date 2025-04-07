@@ -109,7 +109,7 @@ Mapping Concepts.
 
 <img src="helloWoldClient.PNG"  alt="hibernate course" width="500"/>
 
-1. Just like in `.xml` mapping.
+1. **Mapping** can be done just like in `.xml` mapping.
 
 <img src="personTable.PNG"  alt="hibernate course" width="500"/>
 
@@ -122,7 +122,7 @@ Mapping Concepts.
 <img src="componentMappingReason1.PNG"  alt="hibernate course" width="500"/>
 
 1. **Hibernate** uses **Reasonable Default Values**, for **XML** and **annotations**.
-
+0
 - When **Hibernate** find information missing, it uses **Reasonable Default Values** for that. It acts like `2.` that these informations were present.
     - If no name, or column information provided, name of attribute is used.
 
@@ -131,5 +131,86 @@ Mapping Concepts.
 1. We are using `<property name="hibernate.hbm2ddl.auto" value="update"/>`. It **creates** tables for you and **updates** them for you, whenever there is update. **USE ONLY IN DEVELOPMENT ENV**.
 
 2. It creates the mapping attribute of the `<mapping class="entity.Message"/>`. It creates and executes following **schema** against the `hello-world` database.
+
+- Following client added Entity with `@Embedded` and `@Embeddable`, which we are using.
+
+```
+package client;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import util.HibernateUtil;
+import entity.Address;
+import entity.Person;
+
+
+public class ComponentMappingClient {
+	public static void main(String[] args) {
+		
+				Session session = HibernateUtil.getSessionFactory().openSession();
+        		Transaction txn = session.getTransaction();
+        		try {
+        			txn.begin();
+        			//Person having 1 Address    
+        			
+        			Address address = new Address("200 E Main St", "Seattle", "85123");
+        			Person person = new Person("Ruby", address);
+        	
+        			session.save(person);   			
+        			//---------------------------------------------------------------------------------------
+
+        			//Person having 2 Address (homeAddress and billingAddress) using AttributeOverrides
+        			/*
+        			Address homeAddress = new Address("200 E Main St", "Seattle", "85123");
+        			Address billingAddress = new Address("2751  Sigley Road", "Charlotte", "28273");
+        			Person person = new Person("Ruby", homeAddress, billingAddress);      			
+        	
+        			session.save(person);
+	        		*/
+	        		txn.commit();
+        		}	catch(Exception e) {
+	        			if(txn != null) { txn.rollback(); }
+	        			e.printStackTrace();
+        		}	finally {
+        				if(session != null) { session.close(); }
+        		}
+	
+	}
+}
+```
+
+<img src="customMappingForColumns.PNG"  alt="hibernate course" width="500"/>
+
+1. If we want to we could specify the mapping for the columns.
+
+<img src="mappingOfMultipleFields.PNG"  alt="hibernate course" width="500"/>
+
+1. It would have some **restrictions**, but if you would want to use customs columns mapped, while using `@Embedded`. Like it the pic, `address_stree`, `address_city` and `address_zipcode`.
+
+<img src="attributeOverride.PNG"  alt="hibernate course" width="500"/>
+
+- You can see the **fields** getting mapped into following `COLUMNS`.
+
+1. You could use following code, with the `@AttributeOverrides`.
+
+```
+	@Embedded
+	@AttributeOverrides( {
+		@AttributeOverride(name="street", column=@Column(name="home_street")),
+		@AttributeOverride(name="city", column=@Column(name="home_city")),
+		@AttributeOverride(name="zipcode", column=@Column(name="home_zipcode"))
+	} )
+	private Address homeAddress;
+```
+
+<img src="attributeOverride.PNG"  alt="hibernate course" width="500"/>
+
+1. When there are **TWO Addresses** in `1` and `2`, it becomes requirement for the use of `@AttributeOverrides`, for both `Home Address` and for `Billing Adress`.
+    - You need both unique address rows names.
+
+<img src="embeddedableObject.PNG"  alt="hibernate course" width="500"/>
+
+1. **Component** is also called, **Embeddable Object**, since it embedded inside `Entity` and persisted as **Value Type**.
 
 # 22. Lab Exercise - Component Mapping.
