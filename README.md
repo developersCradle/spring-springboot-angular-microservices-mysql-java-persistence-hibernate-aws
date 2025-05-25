@@ -65,6 +65,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Make folder 00 based.
 - [ ] Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
 - [ ] Make Chapters/headings when reviewing.
+- [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
@@ -130,7 +131,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Read [Pro GIT book](https://git-scm.com/book/en/v2).
 - [ ] Move Spring V1 into appendix folder, since it depreciated.
     - Also numbering got changed.
-
+- [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 
 <p align="center">
@@ -210,7 +211,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 - [ ] Do including POM file `<classpathentry kind="lib" path="C:/Users/ScoopiDoo/Desktop/git projektit/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/Java Persistence Hibernate and JPA Fundamentals/Files for course/connector/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"/>`
     - In `.classpath`.
-    
+- [ ] Remove numbers from packages and from lecture notes `.md` if there is.
+
 <p align="center">
     <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" height=100>
 </p>
@@ -340,6 +342,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [ ] Do the last chapter exercise from Section 05.
+- [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 <br>
 

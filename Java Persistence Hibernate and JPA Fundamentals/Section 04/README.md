@@ -4,7 +4,7 @@ Mapping Concepts.
 
 # What I Learned.
 
-# 19. Aggregation and Composition.
+# Aggregation and Composition.
 
 <img src="Aggregation.PNG"  alt="hibernate course" width="600"/>
 
@@ -27,7 +27,7 @@ Mapping Concepts.
 > This is an **object-oriented design concept**.
 > It means building an entity out of smaller parts (components).
 
-# 20. Entities and Value Types.
+# Entities and Value Types.
 
 > [!NOTE]
 > How does the **Persistent classes** have the identity?
@@ -74,7 +74,7 @@ Mapping Concepts.
 1. You could think that `Address` in the **Shopping App**, does not need `ID` it would be **Value Type**, but in **Real Estate Search Engine** this should be identified with `ID`, so it would be **Entity Type**.
     - In search engine it would be critical information.
     
-# 21. Component Mapping.
+# Component Mapping.
 
 <img src="componentMapping.PNG"  alt="hibernate course" width="400"/>
 
@@ -94,7 +94,7 @@ Mapping Concepts.
 
 <img src="valueTypeIsIncludedToEntity.PNG"  alt="hibernate course" width="400"/>
 
-1. So, we can notice that `AdDress` is included into the `Person` table.
+1. So, we can notice that `Address` is included into the `Person` table.
 2. We can also notice that, Entity outside cannot refer to the **Type object** inside it.
 
 <img src="componentsInsideJavaEntity.PNG"  alt="hibernate course" width="500"/>
@@ -211,6 +211,106 @@ public class ComponentMappingClient {
 
 <img src="embeddedableObject.PNG"  alt="hibernate course" width="500"/>
 
-1. **Component** is also called, **Embeddable Object**, since it embedded inside `Entity` and persisted as **Value Type**.
+1. **Component** is also called, **Embeddable Object**, since it embedded inside `Entity` and **persisted** as **Value Type**.
+2. When using **multiple** `Address` in same `Entity`, it comes **requirement**, to use the `@AttributeOverride()` for both addresses.
+3. **Notice** these having different variables!
 
-# 22. Lab Exercise - Component Mapping.
+# Lab Exercise - Component Mapping.
+
+<img src="labExerciseComponentMapping.PNG"  alt="hibernate course" width="600"/>
+
+1. **Question 1:**
+	- **Answer:** Entity.
+
+```
+Question 1: If it mattered for your application to uniquely identify an Address object,
+by a database identity for e.g., would you create it as an Entity or a Value Type ?
+```
+
+<img src="labExerciseComponentMapping2.PNG"  alt="hibernate course" width="500"/>
+
+1. **Question 2:**
+	- There are three objects here:
+		- `Address object`.
+		- `Order object`.
+		- `User object`.
+	- **Answer:** Address object.
+
+
+```
+Question 2: Looking at the Figure 1 given below, could you figure out which of the objects are Value Type?
+```
+
+<img src="labExerciseComponentMapping3.PNG"  alt="hibernate course" width="500"/>
+
+1. **Question 3:**
+	- **Answer:** My answer is **A**. When `Band` is destroyed, the `Artist` are **not** destroyed with it.
+
+```
+Question 3: Which of the relationships shown in the Figure 2 given below indicates the Aggregation relationship? Choose an option between (A) and (B)?
+```
+
+<img src="labExerciseComponentMapping4.PNG"  alt="hibernate course" width="500"/>
+
+1. We talked about the `update` configuration for the mapping.
+
+<img src="labExerciseComponentMapping5.PNG"  alt="hibernate course" width="500"/>
+
+1. This case is with the `create` mapping.
+
+- When using the `create` mapping, 
+
+<img src="createMappingUsed.PNG"  alt="hibernate course" width="500"/>
+
+1. When we are using `create` config, the `DROP` statement is executed and then the `CREATE` statement is created.
+2. Following **SQL** is created.
+3. The `Person` is being affected, from the config. This **SQL** is being executed once the `.save()` been executed.
+
+<img src="createMappingUsedCommitIsIssued.PNG"  alt="hibernate course" width="500"/>
+
+1. `.commit()` is issued, the date is **persisted** into to the database.
+2. With these the **session** is closed.
+
+- Example of usage of in code:
+
+```
+package client;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import util.HibernateUtil;
+import entity.Address;
+import entity.Person;
+
+public class Question4Client {
+	public static void main(String[] args) {
+
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction txn = session.getTransaction();
+		txn.begin();
+
+		Address address = new Address("200 E Main St", "Seattle", "85123");
+		Person person = new Person("Ruby", address);
+
+		session.save(person);
+
+		txn.commit();
+		session.close();
+		sessionFactory.close();
+
+	}
+}
+
+```
+
+<img src="labExerciseComponentMapping6.PNG"  alt="hibernate course" width="500"/>
+
+1. This case is with the `create-drop` mapping.
+	- This will be the same, until the `sessionFacotory.close()` is called. 
+
+<img src="caseDroppedMappingUsed.PNG"  alt="hibernate course" width="500"/>
+
+1. The table will be dropped, with the `DROP` statement.
