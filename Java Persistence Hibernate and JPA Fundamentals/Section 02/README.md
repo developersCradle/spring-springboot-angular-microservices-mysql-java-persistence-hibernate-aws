@@ -71,7 +71,7 @@ Understanding object/relational persistence.
 2. In **Relational Model** this is handled by **Foreign Key**
 3. To say that classes have **bi-directional**, this relationship needs to be defined in **both way!**
 > [!IMPORTANT]
-> **4.**❌**Foreign Keys** are not bidirectional.❌
+> **4.** ❌ **Foreign Keys** are not bidirectional. ❌
 ### Example of bidirectional relationship.
 
 - Here is example of **birational** reference!

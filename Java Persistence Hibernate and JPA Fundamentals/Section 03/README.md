@@ -4,7 +4,7 @@ Getting Started with Hibernate and JPA Annotations.
 
 # What I Learned.
 
-# 8. What is Hibernate.
+# What is Hibernate.
 
 <img src="hibernate.PNG"  alt="hibernate course" width="500"/>
 
@@ -15,7 +15,7 @@ Getting Started with Hibernate and JPA Annotations.
 
 - **Hibernate** handles the 5 different mismatch problems.
 
-# 9. Hello World with Hibernate and JPA Annotations.
+# Hello World with Hibernate and JPA Annotations.
 
 <img src="helloWorldWithHibernate.PNG"  alt="hibernate course" width="500"/>
 
@@ -66,11 +66,11 @@ Getting Started with Hibernate and JPA Annotations.
     - **Unique primary key** is generated and this `ID` is mapped into `id` of Message object by **Hibernate**.
 2. **NOTICE**, no `id` is given here in **Java object**, therefore it comes from **MySQL**.
 3. `text` is mapped into `TEXT` of database.
-4. **NOTICE** the `string` datatype is ❌not❌:
-    - ❌ SQL datatype ❌.
-    - ❌ Java datatype ❌.
+4. **NOTICE** the `string` data type is ❌not❌:
+    - ❌ SQL data type ❌.
+    - ❌ Java data type ❌.
     - ✔️ Its **Hibernate Mapping Type** ✔️.
-        - Takes care of **mapping** from **Java datatype** to **MySQL datatype**.
+        - Takes care of **mapping** from **Java data type** to **MySQL data type**.
             - In practical sense, takes care of `String` to `VARCHAR`.
 5. Also, **Hibernate** is smart to map without configuration `long` to the `BIGINT` type.
 
@@ -108,7 +108,7 @@ Getting Started with Hibernate and JPA Annotations.
 4. When using **annotation** remember to add, the configuration to the `<mapping> class="entity.Message"/>`. 
     - With **annotations**, we don't need the **XML** definition of mapping as in the top with ❌.
 
-# 10. Lab - Hello World with Hibernate and JPA Annotations.
+# Lab - Hello World with Hibernate and JPA Annotations.
 
 - In this lab we will have the following db. We will do `hello-word` application.
 
@@ -231,7 +231,7 @@ public class HelloWorldClient {
 
 - The same does works with `@Annotations`.
 
-# 11. Note for Hibernate 5+ Users.
+# Note for Hibernate 5+ Users.
 
 - **Hibernate** got released `Mar 2015`, we have included following `.jar` files.
     - We will be using **Hibernate 6** jars 
@@ -249,7 +249,6 @@ public class HelloWorldClient {
 <p align="center">
     <img src="hibernateDifference.jpg"  alt="hibernate course" width="300"/>
 </p>
-
 
 
 ```
@@ -348,7 +347,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 ```
 
-# 13. Lab Exercise - Hello World with Hibernate and JPA Annotations.
+# Lab Exercise - Hello World with Hibernate and JPA Annotations.
 
 <img src="LabExerciseJPA.PNG"  alt="hibernate course" width="600"/>
 
@@ -370,7 +369,7 @@ import jakarta.persistence.Table;
 
 1. At line `16` **Message object** is not called anymore `Transient Object`, it will be called `Persisten State`, since It's **associated** with the **database row**.
     - **Persistent Object** with the database identity.
-2. As soon the object is **Persistent Object**, it will be manged by ⚠️**Session**⚠️.
+2. As soon the object is **Persistent Object**, it will be managed by ⚠️**Session**⚠️.
 
 - At the `18` the **database connection** will be **closed**, but the `Session` object will still manage the `Message` Object.
 
@@ -378,7 +377,7 @@ import jakarta.persistence.Table;
 
 1. At the `19` at **Session** will be **closed**.
     - After this the object will be **Detached Object**, so we call it having **Detach State**.
-        - No longer manged by the **Session Object**.
+        - No longer managed by the **Session Object**.
 
 - Summary:
 
@@ -389,7 +388,8 @@ import jakarta.persistence.Table;
 >3. **Detached State**.
 
 - There is more, but these are the most popular.
-# 14. Logging.
+
+# Logging.
 
 - These **Hibernate** logs `Hibernate: insert into message (TEXT) values (?)`.
     - These are **not enough**, we don't see the values!
@@ -448,7 +448,7 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 
 1. With `ALL` you can see a lot of logs.
 
-# 15. Lab Exercise - Logging.
+# Lab Exercise - Logging.
 
 <img src="loggingLab.PNG"  alt="hibernate course" width="500"/>
 
@@ -477,7 +477,7 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 
 1. **Remember**, these settings should **not** be in production environment, since there is performance cost and exposes information.
 
-# 16. Manipulating Objects.
+# Manipulating Objects.
 
 <img src="manipulatingObject.PNG"  alt="hibernate course" width="500"/>
 
@@ -521,7 +521,7 @@ log4j.logger.org.hibernate.orm.jdbc.bind=TRACE
 1. All **Persistence Entities** needs **no-args** constructors.
     - This is for **Java Reflection**.
 
-# 17. Lab - Manipulating Objects.
+# Lab - Manipulating Objects.
 
 - We are implementing the **Rollback** behavior.
 

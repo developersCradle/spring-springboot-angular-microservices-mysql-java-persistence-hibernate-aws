@@ -314,3 +314,95 @@ public class Question4Client {
 <img src="caseDroppedMappingUsed.PNG"  alt="hibernate course" width="500"/>
 
 1. The table will be dropped, with the `DROP` statement.
+
+# Mapping Associations.
+
+<img src="manyToOne.PNG"  alt="hibernate course" width="500"/>
+
+- In this example **Student** has **Guide**.
+
+1. **Object mode** is associating the references with **object references**.
+2. In **Relational Model** associating is done with the **foreign key**.
+
+<img src="manyToOneSecond.PNG"  alt="hibernate course" width="500"/>
+
+1. Guide is the `One side` and Student is the `Many side`.
+
+<img src="mappingObjectReferenceManyToOne.PNG"  alt="hibernate course" width="500"/>
+
+1. We need to add mapping to the for **Object Model**.
+
+<img src="mappingObjectReferenceManyToOneWithTheAnnotation.PNG"  alt="hibernate course" width="500"/>
+
+1. To achieve this, we are using the `@ManyToOne` and `@JoinColumn(...)`
+
+<img src="addingThenEntityToTheConfiguration.PNG"  alt="hibernate course" width="500"/>
+
+1. We just add the **Entities** to the configurations.
+
+<img src="mappingWIthTheUpdate.PNG"  alt="hibernate course" width="500"/>
+
+1. To save these to db, we need to call **two times** `session.save()`.
+
+# Cascades.
+
+- We want to **persist** all object in same time.
+
+<img src="usingTheCascade.PNG"  alt="hibernate course" width="500"/>
+
+1. We want to call one method `session.persist(student)`.
+2. These are can be called "cascading the `PERSIST` operation" or can be called **Transitive Persistence**.
+	- We can use the `(cascade=CascadeType.PERSIST))` for mapping.
+	
+<img src="persistingTheObjectWithTheCascadingOperationInTheCode.PNG"  alt="hibernate course" width="500"/>
+
+1. We are persisting the objects with the one `.persist()` line, and it will be persisted to the db.
+
+<img src="cascadingWithTheDeleteOperation.PNG"  alt="hibernate course" width="400"/>
+
+<img src="cascadingWithThePersistAndDeleteOperationInCode.PNG"  alt="hibernate course" width="500"/>
+
+# Lab Exercise - Cascades.
+
+<img src="labExerciseCasccading.PNG"  alt="hibernate course" width="500"/>
+
+1. `session.delete()`, what will happen when this line will be executed.
+
+```
+Task 1: What will happen to the Student and Guide tables after executing the delete?
+```
+
+1. **Task 1:**
+	- **Answer:** There will be exception will be thrown, `ConstraintViolationException`.
+
+<img src="exceptionWillBeThrown.PNG"  alt="hibernate course" width="500"/>
+
+1. Once the `.delete()` is called, the following **SQL** will be generated and executed.
+2. The following `ConstraintViolationException` will be thrown.
+
+<img src="exceptionWillBeThrownDeleted.PNG"  alt="hibernate course" width="500"/>
+
+1. **Student** with `id` **2** will be deleted, so its **Guide** that its referred. Then there is no guide to refer with `id` **2**. 
+2. You cannot have the following data in the database, where **2** is referring something that does not exist. This situation cannot have this in **relational database**, for this reason **Hibernate** throws `ConstraintViolationException`.
+	- This is called:
+		- `Foreign-key Constraint`.
+		- `Referential Integrity Constraint`.
+
+> [!IMPORTANT]
+> Then, how to delete **Student**, without violating the Foreign-key constraint.
+
+<img src="byPassingTheCascadingEffectInHibernate.PNG"  alt="hibernate course" width="500"/>
+
+1. We need to setting `Guide` value to `null`.
+2. You can see **Student** is deleted, and its **Guide** is not.
+3. **Recommended**, not cascade the delete operation in the first place.
+	- If that is not option, you know how to delete **Student** without getting exception thrown.
+
+ # One-To-Many Relationship.
+ 
+<img src="OneToManyRelationship.PNG"  alt="hibernate course" width="600"/>
+
+1. We can go from **Student** to the **Guide**, with the `getGuide()`, but there is no relationship, from **Guide** to the **Student**.
+	- This makes this `uni-directional` relationship.
+
+# Lab Exercise - One-To-Many Relationship.
