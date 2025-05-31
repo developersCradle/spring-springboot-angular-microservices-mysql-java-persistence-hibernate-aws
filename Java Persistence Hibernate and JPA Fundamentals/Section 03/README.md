@@ -624,12 +624,12 @@ public class HelloWorldClient {
 
 <img src="updatingObjectCommit.PNG"  alt="hibernate course" width="500"/>
 
-1. At `17` The **Message** is being manged by the **Session** object.
+1. At `17` The **Message** is being managed by the **Session** object.
     - `Persistnet state`.
 
 <img src="deletingObject.PNG"  alt="hibernate course" width="500"/>
 
-1. At `19` delete will be called, and the **Message** is no longed manged by the **Session** object.
+1. At `19` delete will be called, and the **Message** is no longed managed by the **Session** object.
     -  State will change to the `Removed state`.
 
 - There is different **States** as Summary:
@@ -651,7 +651,7 @@ public class HelloWorldClient {
 
 1. At line `18` when `.delete` is called, it will no longer be managed by **Session**, the state changes to `Removed State`.
 
-# 18. Lab Exercise - Manipulating Objects.
+# Lab Exercise - Manipulating Objects.
 
 <img src="manipulatingLab.PNG"  alt="hibernate course" width="500"/>
 

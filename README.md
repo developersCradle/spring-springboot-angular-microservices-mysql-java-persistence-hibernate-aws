@@ -65,7 +65,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Make folder 00 based.
 - [ ] Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
 - [ ] Make Chapters/headings when reviewing.
-- [ ] Remove numbers from packages and from lecture notes `.md` if there is.
+- [ ] Remove numbers from packages.
 
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 

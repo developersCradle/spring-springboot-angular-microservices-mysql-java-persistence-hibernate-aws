@@ -4,7 +4,7 @@ Introduction.
 
 # What I Learned.
 
-# 1. Introduction.
+# Introduction.
 
 - Different JPA mappings.
 

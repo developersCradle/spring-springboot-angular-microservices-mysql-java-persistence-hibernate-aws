@@ -121,14 +121,15 @@ Mapping Concepts.
 
 <img src="componentMappingReason1.PNG"  alt="hibernate course" width="500"/>
 
-1. **Hibernate** uses **Reasonable Default Values**, for **XML** and **annotations**.
-0
-- When **Hibernate** find information missing, it uses **Reasonable Default Values** for that. It acts like `2.` that these informations were present.
-    - If no name, or column information provided, name of attribute is used.
+1. **Hibernate** uses **Reasonable Default Values**, for **XML**-mapping and **annotations**-based mapping.
+
+- When **Hibernate** find information missing, it uses **Reasonable Default Values** for that. It acts like in the point `2.`, where these pieces of information would be present.
+    - If there is no `name`, or `column` information provided, these informations will be used as the name.
 
 <img src="componentMappingReason2.PNG"  alt="hibernate course" width="500"/>
 
-1. We are using `<property name="hibernate.hbm2ddl.auto" value="update"/>`. It **creates** tables for you and **updates** them for you, whenever there is update. **USE ONLY IN DEVELOPMENT ENV**.
+1. We are using `<property name="hibernate.hbm2ddl.auto" value="update"/>` or the `update` strategy. It **creates** tables 
+ and **updates** them for you, when **Hibernate** detect changes in your entity classes. **USE ONLY IN DEVELOPMENT ENV**.
 
 2. It creates the mapping attribute of the `<mapping class="entity.Message"/>`. It creates and executes following **schema** against the `hello-world` database.
 
@@ -182,15 +183,16 @@ public class ComponentMappingClient {
 
 <img src="customMappingForColumns.PNG"  alt="hibernate course" width="500"/>
 
-1. If we want to we could specify the mapping for the columns.
+1. If we want, we could specify the mapping for the columns.
 
-<img src="mappingOfMultipleFields.PNG"  alt="hibernate course" width="500"/>
+<img src="mappingOfSingleFields.PNG"  alt="hibernate course" width="500"/>
 
-1. It would have some **restrictions**, but if you would want to use customs columns mapped, while using `@Embedded`. Like it the pic, `address_stree`, `address_city` and `address_zipcode`.
+1. Fields will be mapped with default name.
 
 <img src="attributeOverride.PNG"  alt="hibernate course" width="500"/>
 
-- You can see the **fields** getting mapped into following `COLUMNS`.
+- You can see the **fields** getting mapped into following `COLUMNS` with customer names.
+	- `address_stree`, `address_city` and `address_zipcode`.
 
 1. You could use following code, with the `@AttributeOverrides`.
 
@@ -204,10 +206,10 @@ public class ComponentMappingClient {
 	private Address homeAddress;
 ```
 
-<img src="attributeOverride.PNG"  alt="hibernate course" width="500"/>
+<img src="embeddedableObjectTwoAddresses.PNG"  alt="hibernate course" width="500"/>
 
 1. When there are **TWO Addresses** in `1` and `2`, it becomes requirement for the use of `@AttributeOverrides`, for both `Home Address` and for `Billing Adress`.
-    - You need both unique address rows names.
+    - You need both unique address rows names!
 
 <img src="embeddedableObject.PNG"  alt="hibernate course" width="500"/>
 
@@ -252,18 +254,17 @@ Question 3: Which of the relationships shown in the Figure 2 given below indicat
 
 <img src="labExerciseComponentMapping4.PNG"  alt="hibernate course" width="500"/>
 
-1. We talked about the `update` configuration for the mapping.
+1. We talked about the `update` configuration in last session.
 
 <img src="labExerciseComponentMapping5.PNG"  alt="hibernate course" width="500"/>
 
-1. This case is with the `create` mapping.
-
-- When using the `create` mapping, 
+1. This case, we are using the `create` mapping.
+	- When using the `create` mapping, following behavior is expected:
 
 <img src="createMappingUsed.PNG"  alt="hibernate course" width="500"/>
 
 1. When we are using `create` config, the `DROP` statement is executed and then the `CREATE` statement is created.
-2. Following **SQL** is created.
+2. Following **SQL** is created and executed.
 3. The `Person` is being affected, from the config. This **SQL** is being executed once the `.save()` been executed.
 
 <img src="createMappingUsedCommitIsIssued.PNG"  alt="hibernate course" width="500"/>

@@ -4,7 +4,7 @@ Understanding object/relational persistence.
 
 # What I Learned.
 
-# 02. Object Relational Impedance Mismatch.
+# Object Relational Impedance Mismatch.
 
 <img src="objMismatchAndRelationalDb.PNG"  alt="hibernate course" width="600"/>
 
@@ -101,7 +101,7 @@ Understanding object/relational persistence.
 
 - Todo all mismathhes 
 
-# 3. Object Relational Mapping.
+# Object Relational Mapping.
 
 <img src="bookStorePersist.PNG" alt="hibernate course" width="600"/>
 
@@ -250,16 +250,16 @@ public class BookStoreService {
 
 1. Now saving can be done by calling `save(book)` and Java Object with required associations. Getting Book`.get(identifier of book)`. No need to write **SQL** or **JDSBC** codes.
 
-# 4. Installing MySQL.
+# Installing MySQL.
 
 - Install all. ✅.
 - Connector [ConnectorJ](https://dev.mysql.com/downloads/connector/j/).
 
-# 5. Installing Eclipse IDE.
+# Installing Eclipse IDE.
 
 - Install. ✅.
 
-# 6. Lab - Object Relational Mapping
+# Lab - Object Relational Mapping.
 
 <img src="makeFollowingTables.PNG" alt="hibernate course" width="600"/>
 
@@ -352,7 +352,7 @@ CREATE TABLE CHAPTER (
 2. In **Relational Database system** there is **FK** `BOOK_ISBN` inside `CHAPTER` **Table** referencing `ISBN` field to the **Table** `BOOK`.  
 3. You can see, that `Chapter` does not have any relationship to the `Book` class in **Java** world!
 
-# 7. Lab Exercise - Object Relational Mapping.
+# Lab Exercise - Object Relational Mapping.
 
 <img src="labObjectMapping.PNG" alt="hibernate course" width="600"/>
 
