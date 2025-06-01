@@ -291,10 +291,10 @@ public class Message {
 }
 ```
 
-# 12. Note for Hibernate 6 Users.
+# Note for Hibernate 6 Users.
 
 > [!IMPORTANT]
-> Note when using Hibernate 6 minimum version of Java is 11.
+> Note when using **Hibernate 6** minimum version of Java is **11**.
 
 - And for **Hibernate 6** `Session Factory` we are using **Metadata**. Below example.
 

@@ -383,14 +383,14 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 
 <img src="exceptionWillBeThrownDeleted.PNG"  alt="hibernate course" width="500"/>
 
-1. **Student** with `id` **2** will be deleted, so its **Guide** that its referred. Then there is no guide to refer with `id` **2**. 
-2. You cannot have the following data in the database, where **2** is referring something that does not exist. This situation cannot have this in **relational database**, for this reason **Hibernate** throws `ConstraintViolationException`.
+1. **Student** with `id` **2** will be deleted and its **Guide**, which were referred. There is no guide to refer with `id` **2**. 
+2. You cannot have the following data in the database, where **2** is referring something that does not exist. This situation cannot exist **relational database**, for this reason **Hibernate** throws `ConstraintViolationException`.
 	- This is called:
 		- `Foreign-key Constraint`.
 		- `Referential Integrity Constraint`.
 
 > [!IMPORTANT]
-> Then, how to delete **Student**, without violating the Foreign-key constraint.
+> Then, how we can delete **Student**, without violating the Foreign-key constraint.
 
 <img src="byPassingTheCascadingEffectInHibernate.PNG"  alt="hibernate course" width="500"/>
 
@@ -403,7 +403,117 @@ Task 1: What will happen to the Student and Guide tables after executing the del
  
 <img src="OneToManyRelationship.PNG"  alt="hibernate course" width="600"/>
 
-1. We can go from **Student** to the **Guide**, with the `getGuide()`, but there is no relationship, from **Guide** to the **Student**.
-	- This makes this `uni-directional` relationship.
+1. We can go from **Student** to the **Guide**, with the `getGuide()`, but there is no relationship, from **Guide** to the **Student**. This arrow tells us, that `Student` and the `Guide` is **uni-directional relationship**.
+
+<img src="OneToManyRelationshipRelationshipsBiDirectional.PNG"  alt="hibernate course" width="600"/>
+
+1. Now, when there are fields inside `Guide` for the `Student`'s, this relationship turns to be `bi-directional`.
+
+<img src="OneToManyRelationshipRelationshipsBiDirectionalMapping.PNG"  alt="hibernate course" width="600"/>
+
+1. `@OneToMany(mappedBy = "guide")` is telling Hibernate in what to map by.
+	- In `bi-directional` relationship there needs to be **owner** of the relationship and this is needed to define with the `mappedBy` attribute.
+	- **Owner** of the relationship is responsible for the association column(s) update. 
+
+2. The **Many side** in **One-to-Many** bi-directional relational is (almost) always the **owner** side.
+	- Meaning if the `Student` is update, then the `Student` reference is updated as well. At time of **dirty checking**.
+	- In case of the `Guide` is updated, then references are **not** updated, which not the **owner** of the relationship. At time of **dirty checking**.
+
+
+- **Reminder** that, in JPA (Java Persistence API), `CascadeType` controls how **operations** on a parent entity are **propagated** to its associated child entities. Currently there, were:
+
+| Cascade Type   | Description |
+|----------------|-------------|
+| `PERSIST`      | When the parent is persisted, all associated child entities are also persisted automatically. |
+| `MERGE`        | When the parent is merged (updated), all associated child entities are also merged. |
+| `REMOVE`       | When the parent is deleted, all associated child entities are also deleted. |
+| `REFRESH`      | When the parent is refreshed from the database, the child entities are also refreshed. |
+| `DETACH`       | When the parent is detached from the persistence context, the child entities are detached too. |
+| `ALL`          | Applies all of the above: `PERSIST`, `MERGE`, `REMOVE`, `REFRESH`, and `DETACH`. |
+
+<img src="exampleOfTheBiDirectionalMapping.PNG "  alt="hibernate course" width="600"/>
+
+1. We are adding the `CascadeType.Persist` in to the `inverse end` or `not the owner of the relationship`, to make sure that, when the `Guide` is **persisted**. All its `Student`'s associated with it, are also **persisted**.
+
+- Student Entity.
+
+```
+// Student.java
+package entity;
+
+import javax.persistence.*;
+
+@Entity
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "enrollment_id", nullable = false)
+    private String enrollmentId;
+
+    private String name;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @JoinColumn(name = "guide_id")
+    private Guide guide;
+
+    public Student() {}
+
+    public Student(String enrollmentId, String name, Guide guide) {
+        this.enrollmentId = enrollmentId;
+        this.name = name;
+        this.guide = guide;
+    }
+
+    public Guide getGuide() { return guide; }
+
+    public void setGuide(Guide guide) { this.guide = guide; }
+}
+```
+
+- Guide Entity.
+
+```
+// Guide.java
+package entity;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+public class Guide {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "staff_id", nullable = false)
+    private String staffId;
+
+    private String name;
+
+    private Integer salary;
+
+    @OneToMany(mappedBy = "guide", cascade = {CascadeType.PERSIST})
+    private Set<Student> students = new HashSet<>();
+
+    public Guide() {}
+
+    public Guide(String staffId, String name, Integer salary) {
+        this.staffId = staffId;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public Set<Student> getStudents() { return students; }
+}
+```
+
+<img src="cascadeMappingConfiguration.PNG"  alt="hibernate course" width="600"/>
 
 # Lab Exercise - One-To-Many Relationship.
+
+
