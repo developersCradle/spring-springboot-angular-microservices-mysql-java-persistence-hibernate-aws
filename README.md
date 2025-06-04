@@ -176,7 +176,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Jpa Course here](JpaCourse.jpg)
 
-
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
@@ -211,7 +210,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 - [ ] Do including POM file `<classpathentry kind="lib" path="C:/Users/ScoopiDoo/Desktop/git projektit/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/Java Persistence Hibernate and JPA Fundamentals/Files for course/connector/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"/>`
     - In `.classpath`.
-- [ ] Remove numbers from packages and from lecture notes `.md` if there is.
+- [ ] Remove numbers from packages `.md` if there is.
 
 <p align="center">
     <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" height=100>

@@ -416,7 +416,7 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 	- **Owner** of the relationship is responsible for the association column(s) update. 
 
 2. The **Many side** in **One-to-Many** bi-directional relational is (almost) always the **owner** side.
-	- Meaning if the `Student` is update, then the `Student` reference is updated as well. At time of **dirty checking**.
+	- Meaning if the `Student` is updated, then the `Student` reference is updated as well. At time of **dirty checking**.
 	- In case of the `Guide` is updated, then references are **not** updated, which not the **owner** of the relationship. At time of **dirty checking**.
 
 
@@ -434,6 +434,9 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 <img src="exampleOfTheBiDirectionalMapping.PNG "  alt="hibernate course" width="600"/>
 
 1. We are adding the `CascadeType.Persist` in to the `inverse end` or `not the owner of the relationship`, to make sure that, when the `Guide` is **persisted**. All its `Student`'s associated with it, are also **persisted**.
+
+> [!IMPORTANT]
+> If you add a Student to the students set without setting the guide field on the Student, the relationship **won’t** be persisted properly, because the inverse side doesn’t control the foreign key.
 
 - Student Entity.
 
@@ -512,8 +515,65 @@ public class Guide {
 }
 ```
 
+- Hibernate config file will look like such. **No changes**.
+
 <img src="cascadeMappingConfiguration.PNG"  alt="hibernate course" width="600"/>
 
+<img src="helloWoldClientWithCascades.PNG"  alt="hibernate course" width="600"/>
+
+1. We are **associating** one **Guide** with the both **Students**. 
+	- Because we have **cascaded** the **persist** option.
+
+- We are updating on the **Guide** side.
+
+<img src="updatingInverseSide.PNG"  alt="hibernate course" width="600"/>
+
+1. We are **updating** inverse side.
+2. This should have been updated to id `2`!
+	- Answer to this, `Guide` was not the **owner** of the relationship!
+
+<img src="updatingInverseSideSecond.PNG"  alt="hibernate course" width="600"/>
+
+1. `guide_id` should have been updated to `2` in `Student`. It was due, the **Guide** is not owner of relationship!
+	- In other terms: `Inverse-end does not care about the relationship!`
+
+<img src="updatingInverseSideThirdExample.PNG"  alt="hibernate course" width="600"/>
+
+1. Value updates are **fine**.
+2. The **reference** updates, still would **NOT** work!
+
+<img src="ownerOfTheRelationship.PNG"  alt="hibernate course" width="600"/>
+
+1. If the **update** is happened from the side of **owner** of the relationship. This will update the references as well!
+
+<img src="entityHelperMethod.PNG"  alt="hibernate course" width="600"/>
+
+1. With **helper method**, we make **Guide** also responsible for the **relationship**.
+	- When we add `Student` to the `Guide`'s collection of `Student`'s, it will also update students reference to this `Guide`.
+
+<img src="entityHelperMethodInAction.PNG"  alt="hibernate course" width="600"/>
+
+1. Now, the **Guide** comes responsible for the relationship and update the appropriated column, as you can see!
+
+- How to identify the **owner** of the relationship from the database?
+
+<img src="howToIdentifyOwnerOfTheRelationship.PNG"  alt="hibernate course" width="600"/>
+
+1. You can look, which entity has the **foreign key** in it, so this one is the owner side of the relationship. In this example `student` table has `guide_id`.
+	- Also, you can see in `Entity` that its have `mappedBy=guide` in the inverse end, to verify the other end.
+
 # Lab Exercise - One-To-Many Relationship.
+
+# orphanRemoval.
+
+# One-To-One Relationship.
+
+# Derived Identifiers with @MapsId.
+
+# Many-To-Many Relationship.
+
+# Lab Exercise - Many-To-Many Relationship.
+
+# Mapping Enums.
 
 
