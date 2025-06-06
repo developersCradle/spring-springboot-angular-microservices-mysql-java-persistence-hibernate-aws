@@ -1,0 +1,48 @@
+19:53:11,462 DEBUG SQL:131 - 
+    create table Guide (
+        ID bigint not null auto_increment,
+        name varchar(255),
+        salary integer,
+        staff_id varchar(255) not null,
+        primary key (ID)
+    ) engine=InnoDB
+19:53:11,488 DEBUG SQL:131 - 
+    create table Guide_Student (
+        Guide_ID bigint not null,
+        students_ID bigint not null,
+        primary key (Guide_ID, students_ID)
+    ) engine=InnoDB
+19:53:11,509 DEBUG SQL:131 - 
+    create table Student (
+        ID bigint not null auto_increment,
+        enrollment_id varchar(255) not null,
+        name varchar(255),
+        primary key (ID)
+    ) engine=InnoDB
+19:53:11,530 DEBUG SQL:131 - 
+    alter table Guide_Student 
+       drop index UK_p1l4q5rhahj5hcqwvxx9s2no3
+19:53:11,573 DEBUG SQL:131 - 
+    alter table Guide_Student 
+       add constraint UK_p1l4q5rhahj5hcqwvxx9s2no3 unique (students_ID)
+19:53:11,593 DEBUG SQL:131 - 
+    alter table Guide_Student 
+       add constraint FKk2vtuarqa31x0ynv8vewotcuc 
+       foreign key (students_ID) 
+       references Student (ID)
+19:53:11,657 DEBUG SQL:131 - 
+    alter table Guide_Student 
+       add constraint FK9ewvps9cdg4xyl616khx7s6ex 
+       foreign key (Guide_ID) 
+       references Guide (ID)
+19:53:11,824 DEBUG SQL:131 - 
+    select
+        g1_0.ID,
+        g1_0.name,
+        g1_0.salary,
+        g1_0.staff_id 
+    from
+        Guide g1_0 
+    where
+        g1_0.ID=?
+19:53:11,826 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]

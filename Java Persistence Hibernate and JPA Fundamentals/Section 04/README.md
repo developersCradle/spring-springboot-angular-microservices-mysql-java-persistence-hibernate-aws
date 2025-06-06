@@ -564,6 +564,77 @@ public class Guide {
 
 # Lab Exercise - One-To-Many Relationship.
 
+<img src="labExerciseOneToMany.PNG"  alt="hibernate course" width="600"/>
+
+<img src="biDirectionalOneToMany.PNG"  alt="hibernate course" width="600"/>
+
+- **Bidirectional** mapping.
+
+<img src="makingThisUniDirectional.PNG"  alt="hibernate course" width="600"/>
+
+1. To make this **unidirectional**, we remove **Guide** references from **Student**.
+
+<img src="uniDirectional.PNG"  alt="hibernate course" width="600"/>
+
+1. In **uni-directional @OneToMany**. Hibernate generates **Join Table**.
+
+<img src="uniqueJoinTable.PNG"  alt="hibernate course" width="600"/>
+
+1. How **Hibernate** archives this **uni-directional @OneToMany** mapping, is done using with `unique` constraint.
+	- **uni-directional @OneToMany** is bad idea, from perspective of the **performance**.
+		- We should **always** prefer **Bidirectional @OneToMany**.
+
+<img src="uniAndBiDirectionalOneToMany.PNG"  alt="hibernate course" width="600"/>
+
+1. Bidirectional `@OneToMany`, we are dealing with **foreign key** column.
+2. Unidirectional `@OneToMany`, we are dealing with **extra** table.
+	- This means, extra **insert** or **join** for statements.
+
+- We will have following **uni-directional**, with the `@OneToMany()` mapping in the entities.
+
+<img src="weWillHaveFollowingEntityMapping.PNG"  alt="hibernate course" width="600"/>
+
+- **Persisting!**
+
+<img src="persistingTheGuideObjectWithTheJoinTable.PNG"  alt="hibernate course" width="600"/>
+
+1. We are having the following `Client` code executed.
+2. For **persisting** you will have **5** different queries executed.
+	- For every **persist**.
+ 
+<img src="perisistingFirstQuery.PNG"  alt="hibernate course" width="600"/>
+
+1. First **query** is for inserting the `Guide` into `guide` table.
+
+<img src="perisistingSecondQuery.PNG"  alt="hibernate course" width="600"/>
+
+1. Second **query** is for inserting the `Stundent` into `student` table.
+
+<img src="perisistingThirdQuery.PNG"  alt="hibernate course" width="600"/>
+
+1.  Third **query** is for inserting **relationships** for the `join` **table**.
+
+<img src="biDirectionalOneToManyExecutingQueries.PNG"  alt="hibernate course" width="600"/>
+
+1. With the **Bidirectional** `@OneToMany`, we would be executing **three** queries for inserting same `Student`. 
+
+- **Updating!**.
+
+<img src="updatingTheUniDirectionalOneToMany.PNG"  alt="hibernate course" width="600"/>
+
+1. We are having the following `Client` code executed, when updating.
+2. For `update`, we will execute **4** different **queries**.
+
+<img src="updatingTheUniDirectionalOneToManyUpdateInExample.PNG"  alt="hibernate course" width="600"/>
+
+1. When `updating`, it will create **new** entry in `student` table and also in the `join` table.
+
+<img src="updatingTheBiDirectionalOneToManyUpdateInExample.PNG"  alt="hibernate course" width="600"/>
+
+1. With the **Bidirectional** `@OneToMany`, the **update** will be having **tree** queries executed.
+2. **Join** is also **unnecessary**.
+	- `Joins` in **SQL** are in general **expensive**. One should minimise their usage to the **minimal** as possible.
+
 # orphanRemoval.
 
 # One-To-One Relationship.
