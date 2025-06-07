@@ -46,3 +46,135 @@
     where
         g1_0.ID=?
 19:53:11,826 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:26:06,905 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide
+        (name,salary,staff_id) 
+    values
+        (?,?,?)
+13:26:06,912 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Natalie Payne]
+13:26:06,913 TRACE bind:28 - binding parameter [2] as [INTEGER] - [1000]
+13:26:06,913 TRACE bind:28 - binding parameter [3] as [VARCHAR] - [2014NN10222]
+13:26:06,932 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:26:06,932 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014JH10455]
+13:26:06,933 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Jason Wright]
+13:26:06,934 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:26:06,935 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014JE50324]
+13:26:06,935 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Julia Slater]
+13:26:06,952 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:26:06,952 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:26:06,953 TRACE bind:28 - binding parameter [2] as [BIGINT] - [1]
+13:26:06,955 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:26:06,955 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:26:06,955 TRACE bind:28 - binding parameter [2] as [BIGINT] - [2]
+13:34:09,433 DEBUG SQL:131 - 
+    select
+        g1_0.ID,
+        g1_0.name,
+        g1_0.salary,
+        g1_0.staff_id 
+    from
+        Guide g1_0 
+    where
+        g1_0.ID=?
+13:34:09,436 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:34:09,464 DEBUG SQL:131 - 
+    select
+        s1_0.Guide_ID,
+        s1_1.ID,
+        s1_1.enrollment_id,
+        s1_1.name 
+    from
+        Guide_Student s1_0 
+    join
+        Student s1_1 
+            on s1_1.ID=s1_0.students_ID 
+    where
+        s1_0.Guide_ID=?
+13:34:09,464 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:34:09,483 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:34:09,485 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014RR10209]
+13:34:09,486 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Rebecca Parr]
+13:34:09,509 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:34:09,510 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:34:09,510 TRACE bind:28 - binding parameter [2] as [BIGINT] - [3]
+13:39:55,191 DEBUG SQL:131 - 
+    select
+        g1_0.ID,
+        g1_0.name,
+        g1_0.salary,
+        g1_0.staff_id 
+    from
+        Guide g1_0 
+    where
+        g1_0.ID=?
+13:39:55,195 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:39:55,221 DEBUG SQL:131 - 
+    select
+        s1_0.Guide_ID,
+        s1_1.ID,
+        s1_1.enrollment_id,
+        s1_1.name 
+    from
+        Guide_Student s1_0 
+    join
+        Student s1_1 
+            on s1_1.ID=s1_0.students_ID 
+    where
+        s1_0.Guide_ID=?
+13:39:55,222 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:39:55,241 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:39:55,243 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014RR10209]
+13:39:55,244 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Rebecca Parr]
+13:39:55,266 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:39:55,268 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:39:55,268 TRACE bind:28 - binding parameter [2] as [BIGINT] - [4]

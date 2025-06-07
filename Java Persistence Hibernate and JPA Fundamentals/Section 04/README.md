@@ -618,7 +618,7 @@ public class Guide {
 
 1. With the **Bidirectional** `@OneToMany`, we would be executing **three** queries for inserting same `Student`. 
 
-- **Updating!**.
+- **Updating!**
 
 <img src="updatingTheUniDirectionalOneToMany.PNG"  alt="hibernate course" width="600"/>
 
@@ -627,15 +627,248 @@ public class Guide {
 
 <img src="updatingTheUniDirectionalOneToManyUpdateInExample.PNG"  alt="hibernate course" width="600"/>
 
-1. When `updating`, it will create **new** entry in `student` table and also in the `join` table.
+1. When **updating**, it will create **new** entry in `student` table and also in the `join` table.
 
 <img src="updatingTheBiDirectionalOneToManyUpdateInExample.PNG"  alt="hibernate course" width="600"/>
 
 1. With the **Bidirectional** `@OneToMany`, the **update** will be having **tree** queries executed.
 2. **Join** is also **unnecessary**.
-	- `Joins` in **SQL** are in general **expensive**. One should minimise their usage to the **minimal** as possible.
+	- `Joins` in **SQL** are in general **expensive**. One should minimize their usage to the **minimal** as possible.
+
+- **Lab time**: Before executing the **client** code:
+
+```
+DROP DATABASE IF EXISTS unionetomany; 
+CREATE DATABASE unionetomany; 
+```
+
+- The **Client** code for **Persisting**:
+
+```
+package client;
+
+import org.hibernate.Session;
+
+import entity.Guide;
+import entity.Student;
+import util.HibernateUtil;
+
+public class PersistingAGuideUsingUniOneToManyClient {
+	public static void main(String[] args) {
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.getTransaction().begin();
+	
+		Guide guide1 = new Guide("2014NN10222", "Natalie Payne", 1000);			
+		
+		Student student1 = new Student("2014JE50324", "Julia Slater");
+		Student student2 = new Student("2014JH10455", "Jason Wright");
+		
+		guide1.addStudent(student1);
+		guide1.addStudent(student2);
+
+		session.persist(guide1);
+
+		session.getTransaction().commit();
+		session.close();
+	
+	}
+}
+```
+
+- You can see that there are **5** queries executed with previous code, with the **Persist** operation. Logs below:
+
+```
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+13:26:06,905 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide
+        (name,salary,staff_id) 
+    values
+        (?,?,?)
+13:26:06,912 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Natalie Payne]
+13:26:06,913 TRACE bind:28 - binding parameter [2] as [INTEGER] - [1000]
+13:26:06,913 TRACE bind:28 - binding parameter [3] as [VARCHAR] - [2014NN10222]
+13:26:06,932 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:26:06,932 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014JH10455]
+13:26:06,933 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Jason Wright]
+13:26:06,934 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:26:06,935 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014JE50324]
+13:26:06,935 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Julia Slater]
+13:26:06,952 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:26:06,952 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:26:06,953 TRACE bind:28 - binding parameter [2] as [BIGINT] - [1]
+13:26:06,955 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:26:06,955 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:26:06,955 TRACE bind:28 - binding parameter [2] as [BIGINT] - [2]
+```
+
+- And same as from **instructor**
+	- Five different **Inserts**.
+
+<img src="persistingWith5DifferentInserts.PNG"  alt="hibernate course" width="500"/>
+
+- Example of the **Update**. Below is the code for update:
+
+```
+package client;
+
+import org.hibernate.Session;
+
+import entity.Guide;
+import entity.Student;
+import util.HibernateUtil;
+
+public class UpdatingAGuideUsingUniOneToManyClient {
+	public static void main(String[] args) {
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.getTransaction().begin();
+
+		Guide guide1 = (Guide) session.get(Guide.class, 1L);	
+		Student student3 = new Student("2014RR10209", "Rebecca Parr");
+		guide1.addStudent(student3);
+
+		session.persist(guide1);
+  
+		session.getTransaction().commit();
+		session.close();
+	
+	}
+}
+```
+
+- And logs from **Update**:
+	- You can see the **extra** `insert` and the **extra** `join`.
+
+```
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+13:34:09,433 DEBUG SQL:131 - 
+    select
+        g1_0.ID,
+        g1_0.name,
+        g1_0.salary,
+        g1_0.staff_id 
+    from
+        Guide g1_0 
+    where
+        g1_0.ID=?
+13:34:09,436 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:34:09,464 DEBUG SQL:131 - 
+    select
+        s1_0.Guide_ID,
+        s1_1.ID,
+        s1_1.enrollment_id,
+        s1_1.name 
+    from
+        Guide_Student s1_0 
+    join
+        Student s1_1 
+            on s1_1.ID=s1_0.students_ID 
+    where
+        s1_0.Guide_ID=?
+13:34:09,464 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:34:09,483 DEBUG SQL:131 - 
+    insert 
+    into
+        Student
+        (enrollment_id,name) 
+    values
+        (?,?)
+13:34:09,485 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [2014RR10209]
+13:34:09,486 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Rebecca Parr]
+13:34:09,509 DEBUG SQL:131 - 
+    insert 
+    into
+        Guide_Student
+        (Guide_ID,students_ID) 
+    values
+        (?,?)
+13:34:09,510 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]
+13:34:09,510 TRACE bind:28 - binding parameter [2] as [BIGINT] - [3]
+```
+- And same as from **instructor**.
+
+<img src="extraQueriesWhenUpdating.PNG"  alt="hibernate course" width="500"/>
+
+1. Extra `JOIN`.
+2. Extra `INSERT`.
+
+- Verifying the **updates** worked.
+
+- Before students table.
+
+<img src="beforeUpdate.PNG"  alt="hibernate course" width="400"/>
+
+- After students table.
+
+<img src="afterUpdate.PNG"  alt="hibernate course" width="400"/>
+
+- The **joined table** updated.
+
+<img src="joinTableUpadted.PNG"  alt="hibernate course" width="400"/>
+
+<img src="preference.PNG"  alt="hibernate course" width="600"/>
+
+1. **Avoid** **uni-directional** `@OneToMany` and prefer **bidirectional**.
 
 # orphanRemoval.
+
+<img src="orphanRemovalStartingState.PNG"  alt="hibernate course" width="600"/>
+
+1. We will have the following **situation** where `Student`, with `Id` **2**, will be removed.
+
+<img src="foreignKeyConstraintExceptionThrown.PNG"  alt="hibernate course" width="600"/>
+
+1. We will be having the following **exception thrown**. 
+	- **Foreign key constraint fails**.
+
+<img src="orphanedRecord.PNG"  alt="hibernate course" width="600"/>
+
+1. **Orphaned record**, is the record whose **foreign key** value references a **non-existent** primary key value.
+
+- Database does not let this happened, because it brakes one of its **integrity** constraints.
+	- This is what the `orphanRemoval` does!
+
+<img src="usingOrphanRemoval.PNG"  alt="hibernate course" width="600"/>
+
+1. `orphanRemoval=true`, will deal with `ConstraintViolationException` when **cascading** the remove operation, we delete **left behind orphan Student entries** as well!
+	- In this **example**, Student with **Id** `3`, will be deleted.
+
+<img src="orphanRemovalOrder.PNG"  alt="hibernate course" width="600"/>
+
+- Notice the **order** the **SQL** gets executed.
+
+1. First is the `DELETE` **Student** with id `2`.
+2. Second is the `DELETE` **Student** with id `3`.
+3. Third is the `DELETE` **Guide** with id `2`.
+
+- **Notice** the **Student**s were first to be deleted and then the **Guide**.
 
 # One-To-One Relationship.
 
