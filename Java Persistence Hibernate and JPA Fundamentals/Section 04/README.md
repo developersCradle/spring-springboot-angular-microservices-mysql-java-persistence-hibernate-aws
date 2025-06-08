@@ -872,7 +872,66 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 
 # One-To-One Relationship.
 
+<img src="oneToOneRelationapMapping.PNG"  alt="hibernate course" width="600"/>
+
+1. Each `Customer` can only hold one `Passport`, and vice versa. This is called **One-to-one** relationship. 
+2. Each can navigate to each other, this means its **bidirectional relationship**. 
+3. **Owner** of the relationship is the pointed by the `mappedBy = "passport"`. This makes the `Customer` the **owner** of the relationship.
+4. This makes the `Customer` the owner of the relationship, and it is **responsible** for the **association** column(s) update.
+	- `passport_id` in Customer table.
+5. Notice the `unique=true`, in the owner side.
+
+> If you omit `unique=true`, the database treats the foreign key like a typical **many-to-one** relationship. That means **multiple rows** in the owning table (e.g., Customer) could point to the same Passport, **violating** the **one-to-one** rule.
+
+<img src="oneToOneMappingInEntity.PNG"  alt="hibernate course" width="600"/>
+
+<img src="OneToOneClient.PNG"  alt="hibernate course" width="600"/>
+
+1. Pretty **basic** operations, with the `.persist()`.
+
 # Derived Identifiers with @MapsId.
+
+<img src="derivedIntegers.PNG"  alt="hibernate course" width="600"/>
+
+1. These can be used only, with the **Single point associations**.
+	- With `@OneToMany` and `@ManyToOne`.
+2. One way to use `@OneToOne` annotation, is to use `@MapsId` annotation.
+	- This is the case when you want to use **shared primary key** or **derived primary key**.
+3. Because this is `one-to-one` relationship. We could make **Customer** `id` same as the **Passport** `id`. This is done with the `@MapsId`.
+	- We can tell the **Passport** entity to share its `id` for the **customer** `id` as well.
+
+- **Shared Primary** Key Design.
+- Enforces **tight coupling** between two `Entities`.
+- Example: A `Passport` should not exist without a `Customer`.
+- Using the **same ID** makes the relationship clearer and more consistent.
+
+<img src="notUsingGenerativeStrategy.PNG"  alt="hibernate course" width="600"/>
+
+1. We need to **enforce** the usage of `@GenerativeValue(strategy=GenerationType=AUTO)` in the `Passport` **Entity**, not in the `Customer` **Entity**.
+	- Since we are getting the **Id** value from the **Passport Entity**.
+
+<img src="mappedId.PNG"  alt="hibernate course" width="600"/>
+
+1. Then we add the `@MappedId` in the **Passport**.
+
+<img src="persistingTheMappedById.PNG"  alt="hibernate course" width="600"/>
+
+1. Now the these two **share** same `primary key` value.
+
+- `@MapsId` tells the **JPA**:
+
+> "**Don't** generate a separate **primary key** for this entity — instead, **reuse** the primary key of the associated entity."
+
+
+<img src="persistingTheMappedById.PNG"  alt="hibernate course" width="600"/>
+
+1. Since we are **sharing** the `id`. We could get it, without getting it. We can use same **primary key** of the 
+
+```
+Passport passport = (Passport).session.get(Passport.class, 1L);
+Customer customer = passport-getCustomer();
+```
+
 
 # Many-To-Many Relationship.
 
