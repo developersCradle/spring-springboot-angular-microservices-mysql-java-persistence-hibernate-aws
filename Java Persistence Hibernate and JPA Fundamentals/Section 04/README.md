@@ -62,12 +62,12 @@ Mapping Concepts.
 <img src="valueTypeAfter.PNG"  alt="hibernate course" width="600"/>
 
 1. If you would need, **UID** `Adress`, you would need add `id`.
-    - So, its **designers** choice, whether you make Object **Value type** or **Entity type**.
-2. You can ask yourself about `Does the database identity of an object matters?`
+    - So, it would be **designers** choice, whether you make Object **Value type** or **Entity type**.
+2. You could ask yourself about following questin `Does the database identity of an object matters?`
 
 <img src="integer.PNG"  alt="hibernate course" width="400"/>
 
-1. Example, the **Integer** is being owned by **Object**.
+1. One example: The **Integer** is being owned by **Object**.
 
 <img src="thinkingOfIdentity.PNG"  alt="hibernate course" width="400"/>
 
@@ -729,9 +729,11 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 ```
 
 - And same as from **instructor**
-	- Five different **Inserts**.
 
-<img src="persistingWith5DifferentInserts.PNG"  alt="hibernate course" width="500"/>
+
+<img src="persistingWith5DifferentInserts.PNG"  alt="hibernate course" width="400"/>
+
+1. Notice the **Five** different **inserts** queries.
 
 - Example of the **Update**. Below is the code for update:
 
@@ -846,7 +848,7 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 <img src="foreignKeyConstraintExceptionThrown.PNG"  alt="hibernate course" width="600"/>
 
 1. We will be having the following **exception thrown**. 
-	- **Foreign key constraint fails**.
+	- When the **Foreign key constraint fails**, it will be throwing `ConstraintViolationException`.
 
 <img src="orphanedRecord.PNG"  alt="hibernate course" width="600"/>
 
@@ -918,22 +920,70 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 
 1. Now the these two **share** same `primary key` value.
 
-- `@MapsId` tells the **JPA**:
-
-> "**Don't** generate a separate **primary key** for this entity — instead, **reuse** the primary key of the associated entity."
-
+-  `@MapsId` is telling the **JPA** following:
+	- **Don't** generate a separate **primary key** for this entity — instead, **reuse** the primary key of the associated entity.
 
 <img src="persistingTheMappedById.PNG"  alt="hibernate course" width="600"/>
 
-1. Since we are **sharing** the `id`. We could get it, without getting it. We can use same **primary key** of the 
+1. Since we are **sharing** the `id`. We could get it, without getting it, trough getters. We can use same **primary key** of the **passport** entity. 
+
+- So with following **logic**, we would not need to get this, as this would **extra** logic.
 
 ```
 Passport passport = (Passport).session.get(Passport.class, 1L);
-Customer customer = passport-getCustomer();
+Customer customer = passport.getCustomer();
 ```
 
+<img src="gettingPassportAndCustomer.PNG"  alt="hibernate course" width="600"/>
+
+1. We could use following logic to get same object, with same **ID**:  
+
+```
+Passport passport = (Passport).session.get(Passport.class, 1L);
+Customer customerByPassportId = (Customer)session.get(Customer.class, passport.getId());
+```
+
+2. ❌ We don't need, **bi-direction** mapping anymore ❌. We could remove this!
+
+- Todo, tee uudestaan.
 
 # Many-To-Many Relationship.
+
+<img src="manyToMany.PNG"  alt="hibernate course" width="600"/>
+
+1. We will have many **Movies** where there can be many **Actors**.
+2. We can navigate form both side, the **Movies** and the **Actor**. This makes these `bi-directional`.
+3. We will add for both side `@ManyToMany` annotation.
+4. In `bi-directional` we need to tell the **owner** of the **relationship**, we can do this with the `mappedBy="actors"` **attribute**.
+	- This makes the **Actor** entity, 
+
+<img src="manyToManySecond.PNG"  alt="hibernate course" width="600"/>
+
+1. The `mappedBy` does make the `Actor` the **inverse end** of the **relationship** and the `Movie` side the **owner** of the relationship.
+	- The **owner** will be **responsible** for updating the relationship.
+2. The mapping in the `@ManyToMany` is done with **Linked table**. 
+	- This can be called **Joined table**.
+		- Both side are here!
+
+<img src="manyToManyThird.PNG"  alt="hibernate course" width="600"/>
+
+1. The mapping is done with the `@JoinTable` in the **owner** of the relationship.
+2. The name of the **Joined table**, will be form `name="SomeTableName"`.
+
+<img src="manyToManyFourth.PNG"  alt="hibernate course" width="600"/>
+
+1. **Both sides** need to be defined in mapping annotations.
+	- `joinColumns={@JoinColumn(name="movie_id")},`
+	- `inverseJoinComuns=inverseJoinColumns={@JoinColumn(name="actor_id")}`.
+
+<img src="EnetityesForThisDemonstration.PNG"  alt="hibernate course" width="600"/>
+
+1. We want the **persisting** to be **cascading** to the `Actor` classes as well!
+
+<img src="ManyToManyClient.PNG"  alt="hibernate course" width="600"/>
+
+1. **Notice** `Actor1` is acting on the `Movie1` and the `Actor1` and `Actor2` are acting in `Movie2`.
+2. We will have the following mapping in the **database**.
 
 # Lab Exercise - Many-To-Many Relationship.
 
