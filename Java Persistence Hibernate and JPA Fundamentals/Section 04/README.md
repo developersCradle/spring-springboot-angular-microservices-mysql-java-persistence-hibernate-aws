@@ -984,9 +984,39 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 
 1. **Notice** `Actor1` is acting on the `Movie1` and the `Actor1` and `Actor2` are acting in `Movie2`.
 2. We will have the following mapping in the **database**.
+	- As mapped!
+
+<img src="updatingTheInverseEnd.PNG"  alt="hibernate course" width="600"/>
+
+1. We are **updating** the inverse end.
+2. Like here we can see that **movies** are not updated from the **inverse end**.
+
+<img src="updatingTheOwnerEnd.PNG"  alt="hibernate course" width="600"/>
+
+1. We are **updating** the owner end, and we can see, the **movies** get added!
 
 # Lab Exercise - Many-To-Many Relationship.
 
+<img src="manytToManyRelationshipLab.PNG"  alt="hibernate course" width="600"/>
+
+1. **Update** did not happen from the inverse end.
+
+2. **Question 1:**
+	- **Answer:** Add utility methods, check **two** pics below.
+
+```
+Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsible for the bi-directional relationship?
+```
+
+<img src="manytToManyRelationshipLab2.PNG"  alt="hibernate course" width="600"/>
+
+1. We can update, **both** sides of the relationship by using the **util function** `.addMovie`.
+
+<img src="manytToManyRelationshipLab3.PNG"  alt="hibernate course" width="600"/>
+
+1. We can update, **both** sides of the relationship by using the **util function**. Remember to add `.remove` also.
+
 # Mapping Enums.
 
+<img src="mappingEnums.PNG"  alt="hibernate course" width="600"/>
 
