@@ -1020,3 +1020,102 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 
 <img src="mappingEnums.PNG"  alt="hibernate course" width="600"/>
 
+1. Since these values are fixed, these can be `Enum`. 
+
+<img src="mappingEnumInCode.PNG" alt="hibernate course" width="600"/>
+
+1. All you need to map the **enum** column `employee_status` to the database table. 
+
+<img src="mappingEnumInCodeAsInteger.PNG" alt="hibernate course" width="600"/>
+
+1. If don't have the type with the `@Enumerated`, this will **default** to the **Enum Ordinal**.
+2. Ordinal is position of the **constant** in the **enum**.
+	- **0** = `FULL_TIME`.
+	- **1** = `PART_TIME`.
+	- **2** = `CONTRACT`.
+
+> The **ordinal** is the zero-based position of an enum constant in its declaration.
+
+<img src="mappingEnumInCodeOrdinal.PNG" alt="hibernate course" width="600"/>
+
+1. If we are not specifying, the type. `@Enumerated(EnumType.ORDINAL)` will be the default.
+
+<img src="enumConfig.PNG" alt="hibernate course" width="600"/>
+
+1. We add the configuration as standard.
+
+<img src="storingTheEnumsClient.PNG" alt="hibernate course" width="600"/>
+
+<img src="storingTheEnumsClientGetting.PNG" alt="hibernate course" width="600"/>
+
+# Lab Exercise - Mapping Enums.
+
+<img src="labMappingEnum.PNG" alt="hibernate course" width="600"/>
+
+1. How we map the `enum` for the custom values.
+2. We want such custom values persisted.
+3. **Question 1:**
+	- **Answer:** How to map an Enum value to a custom value?
+	For example, how to map the Enum value:
+    	`FULL_TIME` to **100**,
+    	`PART_TIME` to **200**,
+    	`CONTRACT` to **300**?
+
+<img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
+
+1. We can achieve this using **Converter** class.
+	- This is taking place, when ever we are:
+		- **Retrieving** the data.
+		- **Saving** the data.
+
+
+- This is having **three** main steps:
+
+- The **Converter** code, below:
+
+```
+package converter;
+
+import enums.EmployeeStatus;
+import jakarta.persistence.AttributeConverter;
+
+public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatus, Integer>{
+
+	public Integer convertToDatabaseColumn(EmployeeStatus attr) {
+        if (attr == null) { 
+            return null;
+        }
+        switch (attr) {
+            case FULL_TIME:
+                return 100;
+            case PART_TIME:
+                return 200;
+            case CONTRACT:
+                return 300;
+            default:
+                throw new IllegalArgumentException("The " + attr + " not supported.");
+        }
+	}
+
+	public EmployeeStatus convertToEntityAttribute(Integer dbData) {
+        if (dbData == null) {
+            return null;
+        }
+        switch (dbData) {
+            case 100:
+                return EmployeeStatus.FULL_TIME;
+            case 200:
+                return EmployeeStatus.PART_TIME;
+            case 300:
+                return EmployeeStatus.CONTRACT;
+            default:
+                throw new IllegalArgumentException("The " + dbData + " not supported.");
+        }
+	}
+
+}
+```
+
+
+
+
