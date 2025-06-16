@@ -1071,6 +1071,24 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 
 - This is having **three** main steps:
 
+<img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
+
+1. First is to implement `AttributeConverter`
+    - **First** parameter is what we need, we want store 
+    - **Second** parameter is the database column where we want to store the data.
+
+<img src="secondStepDataConverter.PNG" alt="hibernate course" width="600"/>
+
+1. We specify, when we **persist** to hibernate object, how we would want our data be **converted**.
+
+<img src="thirdStepDataConverter.PNG" alt="hibernate course" width="600"/>
+
+1. We specify, the **database data** to the **entity** presentation of data.
+
+<img src="mappingEnumToIntegersIndb.PNG" alt="hibernate course" width="600"/>
+
+1. We map **enum** value to custom **value**.
+
 - The **Converter** code, below:
 
 ```
@@ -1115,7 +1133,16 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 
 }
 ```
+- Todo do this one.
 
+<img src="labEnum.PNG" alt="hibernate course" width="600"/>
 
+# Mapping Collections of Value Types.
 
+<img src="Mapping Collections of Value Types.PNG" alt="hibernate course" width="400"/>
 
+1. Collection of basic data type **string**. 
+
+<img src="savingMultipleValuesOwnRowNotWorking.PNG" alt="hibernate course" width="400"/>
+
+1. We cannot have each row as its own database row, It's going to give same **id** value for every data row.

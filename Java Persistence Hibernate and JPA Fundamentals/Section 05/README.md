@@ -23,5 +23,10 @@ Getting Started with JPA.
 
 <img src="whyUseJPA.PNG"  alt="hibernate course" width="600"/>
 
+- You could ask yourself what is the role of **JPA** if to **hibernate** provides all the functions?
+    - If you **JPA** as interface provider, you could easily change to another vendor!
+
+1. These vendors cans be seen here!
+
 
 # Hibernate as JPA Provider.
