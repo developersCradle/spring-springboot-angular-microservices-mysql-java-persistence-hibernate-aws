@@ -1146,3 +1146,58 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 <img src="savingMultipleValuesOwnRowNotWorking.PNG" alt="hibernate course" width="400"/>
 
 1. We cannot have each row as its own database row, It's going to give same **id** value for every data row.
+
+<img src="savingMultipleValuesInRowNotWorking.PNG" alt="hibernate course" width="400"/>
+
+1. We **cannot** such, where it's saved as whole row!
+
+<img src="mappingSimpleTypes.PNG" alt="hibernate course" width="600"/>
+
+1. To **hold** simple values types, we use `friend_nickname` table, this is called **Collection Table**.
+    - We are joining the table.
+2. We need to make the `friend_nickname` table having **composite key**, to make names **unique**.
+
+<img src="mappingTheSimpleType.PNG" alt="hibernate course" width="600"/>
+
+- For **Collection Table**, we need to add **three** mappings to the entity.
+1. We are mapping **simple value types** → `@ElementCollection`.
+2. What is the properties for **Collection table** → `@CollectionTable`.
+3. What holds the **Simple value type** → `@Column`.
+
+<img src="configsForPersitingCollectionOfValueTypes.PNG" alt="hibernate course" width="500"/>
+
+<img src="helloWoldClientForSimpleCollectionTypes.PNG" alt="hibernate course" width="500"/>
+
+1. Persisted correctly.
+
+<img src="simpleValueTypesWithCompositeKey.PNG" alt="hibernate course" width="500"/>
+
+1. We need to add **composite key**, to make the **names** unique. 
+2. You can see the **composite key**(`friend_id` and `nickname`).
+
+<img src="printingDifferentNamesWithSimpleTypes.PNG" alt="hibernate course" width=" 500"/>
+
+1. We get the **nicknames**, with the **collection of value types** mapping.
+
+<img src="collectionOfOwnMadeType.PNG" alt="hibernate course" width=" 500"/>
+
+1. We are **not** limited to map **simple** types, we can map our own **types** with `@Embeddable`.
+
+- TODO How this can be diffent @Embeddable. 
+
+<img src="weCanUseTheEmbeddableObjectsInCollection.PNG" alt="hibernate course" width=" 500"/>
+
+1. We can **map** embeddable object.
+    - This uses the **variable names**, in the database column.
+
+<img src="weCanSpesifyTheColumnNamesForTheEmbeddableCollectionMapping.PNG" alt="hibernate course" width=" 500"/>
+
+1. We can even specify the names.
+
+# Lab Exercise - Mapping Collections of Value Types.
+
+<img src="labExerciseMappingCollectionTypes.PNG" alt="hibernate course" width=" 500"/>
+
+- Todo tee ota tästä tekstit ulos.
+
+# Composite Keys.
