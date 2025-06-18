@@ -1183,7 +1183,7 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 
 1. We are **not** limited to map **simple** types, we can map our own **types** with `@Embeddable`.
 
-- TODO How this can be diffent @Embeddable. 
+- Reminded that `@Embeddable` value type class whose properties can be embedded into an entity.
 
 <img src="weCanUseTheEmbeddableObjectsInCollection.PNG" alt="hibernate course" width=" 500"/>
 
@@ -1198,6 +1198,54 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 
 <img src="labExerciseMappingCollectionTypes.PNG" alt="hibernate course" width=" 500"/>
 
-- Todo tee ota tästä tekstit ulos.
+1. **Question 1:**
+	- **Answer:** **D**. 
+
+Question 1:
+
+```
+Question 1: Considering the code in the Item entity given below in Figure
+1, which option(s) will enable you to store the values in the images collection to a column named filename?
+```
 
 # Composite Keys.
+
+<img src="compositePrimaryKey.PNG" alt="hibernate course" width=" 500"/>
+
+1. `Composite Key` makes the table column to **identified** uniquely.
+2. Is it good to make `firstname` and `lastname` as **composite key**.
+    - No it is not.
+3. There can be **multiple states**, where they will be identified as different, even thought the values are the **same**!
+
+<img src="compositePrimaryKeySecond.PNG" alt="hibernate course" width=" 500"/>
+
+- Todo what is record?
+
+<img src="howToMakeCompisiteKeyFromFirstNameAndLastName.PNG" alt="hibernate course" width="300"/>
+
+1. How we will make **composite key** from `firstName` and `lastName`?
+
+<img src="makingCompositeKeyInTheEntity.PNG" alt="hibernate course" width="400"/>
+
+1. We need to **encapsulate** the **composite key attributes**.
+    - Call it similar to`ParentPrimaryKey` class.
+    - Implement the Serializable, example: `implements Serializable`.
+2. Implements `.equals()` and the `hashCode()`.
+    - These are implemented for the **comparing uniqueness** in the **memory** and in the **cache**!
+        - These **implementations** are following certain logic. These will be covered later!
+3. Annotate `@Embeddable`.
+
+<img src="makingCompositePrimaryKeyForTheParentClass.PNG" alt="hibernate course" width="400"/>
+
+1. We need just add following mapping `@EmbeddedId` into to the parent class.
+
+```
+@EmbeddedId
+private ParentPrimaryKey parentPrimaryKey;
+``` 
+
+- Now this `ParentPrimaryKey.java` can be used as **composite primary key** for the `Parent.java`.
+
+<img src="configAndUsage.PNG" alt="hibernate course" width="400"/>
+
+1. The following the same configurations.

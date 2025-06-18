@@ -180,6 +180,10 @@ All course material from **Java Persistence: Hibernate and JPA Fundamentals** by
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
+[Homepage of Course](https://mavenedge.com/).   
+
+
+
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
@@ -440,7 +444,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  height=70>
 </p>
 
-![Cryptography and Hashing Fundamentals in Python and Java](crypth.PNG)
+![Cryptography and Hashing Fundamentals in Python and Java](Cryptography.PNG)
 
 All course material from Cryptography and Hashing Fundamentals in Python and Java **Holczer Balazs** ©.
 
