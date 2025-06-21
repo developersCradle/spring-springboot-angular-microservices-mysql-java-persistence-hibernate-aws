@@ -1210,25 +1210,32 @@ Question 1: Considering the code in the Item entity given below in Figure
 
 # Composite Keys.
 
-<img src="compositePrimaryKey.PNG" alt="hibernate course" width=" 500"/>
+<img src="compositePrimaryKey.PNG" alt="hibernate course" width=" 600"/>
 
 1. `Composite Key` makes the table column to **identified** uniquely.
-2. Is it good to make `firstname` and `lastname` as **composite key**.
-    - No it is not.
-3. There can be **multiple states**, where they will be identified as different, even thought the values are the **same**!
+2. Is it good to make `firstname` and `lastname` as **composite key**?
+    - **No it is not**, for reasons:
+        - Many people share the same first and last names.
+        -  Example: There could be many `John Smith` in the world.
+        - You risk **duplicate key** violations or incorrect data overwriting.
+3. There can be **multiple states**, where they can be identified, **non uniquely**.
 
 <img src="compositePrimaryKeySecond.PNG" alt="hibernate course" width=" 500"/>
 
-- Todo what is record?
+1. It is not **recommended** to use `first_name` and `second_name` for **uniquely** identify record.
+    - This refers to using **real-world data** (like names, emails, etc.) as keys.
+    - It's better to know this since, **some legacy** system can have this **wrong** way to make **composite key**.
+
+- **Record** in this context this means a **database row** or **inserter record into database**.
 
 <img src="howToMakeCompisiteKeyFromFirstNameAndLastName.PNG" alt="hibernate course" width="300"/>
 
 1. How we will make **composite key** from `firstName` and `lastName`?
-
+    
 <img src="makingCompositeKeyInTheEntity.PNG" alt="hibernate course" width="400"/>
 
 1. We need to **encapsulate** the **composite key attributes**.
-    - Call it similar to`ParentPrimaryKey` class.
+    - Call it similar to `ParentPrimaryKey.java` or some other name.
     - Implement the Serializable, example: `implements Serializable`.
 2. Implements `.equals()` and the `hashCode()`.
     - These are implemented for the **comparing uniqueness** in the **memory** and in the **cache**!
@@ -1249,3 +1256,32 @@ private ParentPrimaryKey parentPrimaryKey;
 <img src="configAndUsage.PNG" alt="hibernate course" width="400"/>
 
 1. The following the same configurations.
+2. Straight forward to `.persist()` the **composite key** class.
+
+<img src="bussinessKey.PNG" alt="hibernate course" width="400"/>
+
+1. We should not use **Business Key** or **Composite Key** for uniquely identify the record.
+    - **Business Key** is also called **Natural Key**.
+2. **Business Key** has not only **unique identifier** it also has **business meaning** associated to it!
+    - **Uniquely** identified.
+    - Has **Business meaning**.
+
+<img src="isbnAndSocialNumber.PNG" alt="hibernate course" width="600"/>
+
+- Here is the example of **Business Keys**.
+    - **Business Keys** should not be used for the **primary key**.
+1. For example **ISBN** in the book `Entity`.
+2. For example **social security number** in the `Person` **Entity**.
+
+- So make sure, when designing **Entity**, that the **primary key** does not have any **business** association. Below the updated version:
+
+<img src="syntheticIndentifier.PNG" alt="hibernate course" width="600"/>
+
+1. It's **recommended** to have **Synthetic Identifier** in your **entities**.¨
+2. Synthetic identifier has no business meaning.
+
+ > Using a synthetic auto-incremented key as the primary key is the default.
+
+<img src="compositeForeignKey.PNG" alt="hibernate course" width="600"/>
+
+> When using a **composite foreign key**, the referencing table must have the **same number of columns as the composite primary** (or candidate) key in the referenced table.
