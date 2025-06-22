@@ -1277,11 +1277,67 @@ private ParentPrimaryKey parentPrimaryKey;
 
 <img src="syntheticIndentifier.PNG" alt="hibernate course" width="600"/>
 
-1. It's **recommended** to have **Synthetic Identifier** in your **entities**.¨
+1. It's **recommended** to have **Synthetic Identifier** in your **entities**.
 2. Synthetic identifier has no business meaning.
 
  > Using a synthetic auto-incremented key as the primary key is the default.
 
 <img src="compositeForeignKey.PNG" alt="hibernate course" width="600"/>
 
-> When using a **composite foreign key**, the referencing table must have the **same number of columns as the composite primary** (or candidate) key in the referenced table.
+1. **Composite** **Foreign Key** needs to be defined in both sides.
+
+> When using a **composite foreign key**, the referencing table must have the **same number of columns as the composite primary** (or candidate) key in the referenced table. 
+
+<img src="mappingCompositeForeignKey.PNG" alt="hibernate course" width="600"/>
+
+1. Difference to the previous, with **synthetic primary keys**. We are using the **composite key**, `@EmbeddedId`. 
+2. We are making multiple **foreign key** in the child entity to the parent Entity.
+3. There are different annotations for the association, if the there is **Multiple Foreign Key** or single **Composite Foreign Key**
+    - We are using here the `@JoinColumns()`.
+
+<img src="weAreMappingMultipleForeignKeysExample.PNG" alt="hibernate course" width="600"/>
+
+1. Basic configurations.
+2. Here you can see that the **two child** are associated with **one parent**.
+
+- Go thought this concept again.
+
+# Lab Exercise - Composite Keys.
+
+- Todo this later.
+
+1. **Question 1:**
+	- **Answer:** 
+
+```
+Question 1: How to define a composite primary-key for the @Entity B using the name and age data-attributes of class A, without modifying the A?
+```
+
+# Foreign-Key in Composite Primary-Key using MapsId.
+
+
+# Book Store with Hibernate and JPA Annotations.
+
+
+# Mapping JSON.
+
+<img src="mappingJSON.PNG" alt="hibernate course" width="600"/>
+
+1. We will be mapping **JSON** object into database column.
+2. This is not **Entity**, but **POJO**.
+
+<img src="mappingJSONsecond.PNG" alt="hibernate course" width="600"/>
+
+1. To map **JSON** into database, we can use the `@JdbcTypeCode(SqlType.JSON)`.
+
+<img src="mappingJSONthird.PNG" alt="hibernate course" width="600"/>
+
+1. We **execute** following client code. 
+2. We will produce following **SQL** code. 
+3. We can see the **JSON** values are persisted into the database.
+
+<img src="mappingJSONsomeNotes.PNG" alt="hibernate course" width="600"/>
+
+1. This syntax is after **Hibernate 6**.
+2. Form DB side, we need **MySQL 5.7+**.
+3. **Book** object to be persisted. You need the getter and setters.
