@@ -27,6 +27,98 @@ Getting Started with JPA.
     - If you **JPA** as interface provider, you could easily change to another vendor!
 
 1. These vendors cans be seen here!
-
+    - **DataNucleus** is a **JPA** provider!
 
 # Hibernate as JPA Provider.
+
+- We are going to use **Hibernate** as JPA provider.
+
+- We want to get rid of following old notations. Example `Session session = HibernateUtil.getSessionFactory().openSession();`.
+    - These are **Hibernate** specific things and to make **JPA** complaint, we would use `EntityManager` from **JPA**.
+
+<img src="jpaVsHibernate.PNG"  alt="hibernate course" width="600"/>
+
+1. These are provided by **Hibernate**.
+2. These are provided by **JPA**.
+3. These are **replaced**, by the things that are provided by **JPA**.
+
+<img src="JPAloadingPersistanceUnit.PNG"  alt="hibernate course" width="600"/>
+
+1. We are using **Hibernates** way **Persistence Unit**, which is loaded and called `hello-world` is loaded.
+
+<img src="hibernateConfiguration.PNG"  alt="hibernate course" width="300"/>
+
+1. With **Hibernate** we need to load `persistance.xml` from `META-INF` folder.
+
+- Example of `Persistance.xml`.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					version="3.0"
+					xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
+													 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+	<persistence-unit name="hello-world" transaction-type="RESOURCE_LOCAL">
+		<properties>
+		
+			<!-- Database connection settings -->
+			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hello-world" />
+			<property name="jakarta.persistence.jdbc.user" value="root" />
+			<property name="jakarta.persistence.jdbc.password" value="password" />
+
+			<!-- SQL dialect -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			
+			<!-- Create/update tables automatically using mapping metadata -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			<!-- Pretty print the SQL in the log file and console -->
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+
+	</persistence-unit>
+</persistence>
+```
+
+- **JTA** allows the framework or container to provide and manage transactions for you.
+    - We could provide the **JTA**.
+
+- **Notice** also that there is no need to provide the **entities** here.
+    - These are **automatically** identified.
+
+- How was the **Hibernate** internals before `5.2`.
+
+<img src="beforeHibernate5dot2.PNG"  alt="hibernate course" width="600"/>
+
+1. **Composition** - `EntityManagerImpl` contains the `Session`. Example in Java:
+
+```
+public class EntityManagerImpl {
+    private Session session; // This is the "has a" relationship.
+    ... Other variables here.
+}
+```
+
+- How was the **Hibernate** internals after `5.2`.
+
+<img src="afterHibernate5dot2.PNG"  alt="hibernate course" width="600"/>
+
+1.  Example in Java `Session extends EntityManager`.
+2. `SessionImpl` would implement both, `Session` and `EntityManager` interfaces.
+
+> **Since Hibernate 5.2**, the **SessionImpl** class implements both **Session** and **EntityManager**,
+meaning a Hibernate Session now has **all** EntityManager methods too.
+
+- This would mean, with example:
+
+<img src="exampleOfTheHibernate.PNG"  alt="hibernate course" width="600"/>
+
+1. You would need to cast Object.
+2. Now the `EntityManager` would have inherited the into the `Session` Object. 
+
+# Working with Objects.
+
+# Lab Exercise - Working with Objects.

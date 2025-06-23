@@ -1,0 +1,28 @@
+17:19:39,136 DEBUG SQL:131 - 
+    drop table if exists Author
+17:19:39,187 DEBUG SQL:131 - 
+    create table Author (
+        id bigint not null auto_increment,
+        name varchar(255),
+        book json,
+        primary key (id)
+    ) engine=InnoDB
+17:19:39,288 DEBUG SQL:131 - 
+    insert 
+    into
+        Author
+        (book,name) 
+    values
+        (cast(? as json),?)
+17:19:39,304 TRACE bind:28 - binding parameter [1] as [JSON] - [Book{ title=Effective Java, 3rd Edition, isbn=9356060665, yearOfRelease=2022 }]
+17:19:39,346 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Joshua Bloch]
+17:19:39,407 DEBUG SQL:131 - 
+    select
+        a1_0.id,
+        a1_0.book,
+        a1_0.name 
+    from
+        Author a1_0 
+    where
+        a1_0.id=?
+17:19:39,408 TRACE bind:28 - binding parameter [1] as [BIGINT] - [1]

@@ -1341,3 +1341,17 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 1. This syntax is after **Hibernate 6**.
 2. Form DB side, we need **MySQL 5.7+**.
 3. **Book** object to be persisted. You need the getter and setters.
+
+<img src="step4FormatMapper.PNG" alt="hibernate course" width="600"/>
+
+
+4. We need following **format mapper**. For to **hibernate**.
+
+```
+			<!-- FormatMapper for JSON format (required for mapping JSON types) -->
+			<dependency>
+			    <groupId>com.fasterxml.jackson.module</groupId>
+			    <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
+			    <version>2.14.0</version>
+			</dependency>
+```
