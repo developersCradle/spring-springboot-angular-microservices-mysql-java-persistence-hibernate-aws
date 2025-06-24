@@ -121,4 +121,40 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 
 # Working with Objects.
 
+- We will explore the lifestyle of the methods.
+ 
+<img src="workingWithObjects.PNG"  alt="hibernate course" width="600"/>
+
+- Will be using following object.
+
+<img src="messageObject.PNG"  alt="hibernate course" width="600"/>
+
+<img src="exploringObjectStates.PNG"  alt="hibernate course" width="600"/>
+
+1. **Transient object**, with `ID` value is `null`.
+
+<img src="persistentObject.PNG"  alt="hibernate course" width="600"/>
+
+1. Soon as the `.persist()` is called. The object will be **Persistent Object**, and its will have database identity.
+
+<img src="persistentObjectWithTheQuery.PNG"  alt="hibernate course" width="600"/>
+
+1. **Persistent Object** can be also created thought calling **lookup method**.
+	- Example. `em.find(Message.class, 2L);`
+
+<img src="persistentObjectPersistentContext.PNG"  alt="hibernate course" width="600"/>
+
+1. Soon as the **Entity** is persisted it will turn into the **Persistent Object** and these, will be managed by **Entity Manager**.
+
+2. What is this **Persistence Context**?
+	- It is **First-level Cache**.
+	- In this **Context** it will have also **Automatic Dirty Checking** feature.
+3. What is the **Cache**?
+	- It is **copy of data**, where its data have been **pulled** from the database, but it's **living outside the database**.
+
+<img src="persistenceContext.PNG"  alt="hibernate course" width="600"/>
+
+1. Every time `EntityManager` or `Session object` has **Persistent Context**.
+2. Persistent content represent **First-level Cache**.
+
 # Lab Exercise - Working with Objects.

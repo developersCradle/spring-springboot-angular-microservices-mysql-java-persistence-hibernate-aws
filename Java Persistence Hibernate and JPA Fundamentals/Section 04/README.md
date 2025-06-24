@@ -1344,7 +1344,6 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 
 <img src="step4FormatMapper.PNG" alt="hibernate course" width="600"/>
 
-
 4. We need following **format mapper**. For to **hibernate**.
 
 ```
