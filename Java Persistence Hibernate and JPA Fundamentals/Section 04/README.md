@@ -390,14 +390,14 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 		- `Referential Integrity Constraint`.
 
 > [!IMPORTANT]
-> Then, how we can delete **Student**, without violating the Foreign-key constraint.
+> Then, how we can delete **Student**, without **violating** the Foreign-key Constraint?
 
 <img src="byPassingTheCascadingEffectInHibernate.PNG"  alt="hibernate course" width="500"/>
 
 1. We need to setting `Guide` value to `null`.
-2. You can see **Student** is deleted, and its **Guide** is not.
-3. **Recommended**, not cascade the delete operation in the first place.
-	- If that is not option, you know how to delete **Student** without getting exception thrown.
+2. You can see that **Student** is deleted, and its associated **Guide** is not.
+3. **Recommended**, not cascade the **delete operation** in the first place.
+	- If that is **not** option, you know how to delete **Student** without getting exception thrown.
 
  # One-To-Many Relationship.
  

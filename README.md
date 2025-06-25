@@ -197,6 +197,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
+- Currently transferring handwritten notes to **digital form**.
 
 #### Progress/Curriculum.
 

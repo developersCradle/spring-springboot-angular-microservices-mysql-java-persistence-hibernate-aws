@@ -127,9 +127,9 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 
 - Will be using following object.
 
-<img src="messageObject.PNG"  alt="hibernate course" width="600"/>
+<img src="messageObject.PNG"  alt="hibernate course" width="400"/>
 
-<img src="exploringObjectStates.PNG"  alt="hibernate course" width="600"/>
+<img src="exploringObjectStates.PNG"  alt="hibernate course" width="700"/>
 
 1. **Transient object**, with `ID` value is `null`.
 
@@ -155,6 +155,68 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 <img src="persistenceContext.PNG"  alt="hibernate course" width="600"/>
 
 1. Every time `EntityManager` or `Session object` has **Persistent Context**.
-2. Persistent content represent **First-level Cache**.
+2. **Persistent Context** is represented as **First-level Cache**.
+
+<img src="closedDatabaseConnection.PNG"  alt="hibernate course" width="600"/>
+
+1. Once the `.getTransaction().commit()` is **committed** the database connection is closed.
+	- It's still in **Persistent state** and managed by the **Persistent Context** or in **JPA** world its managed by the **Entity Manager**.
+
+<img src="entityMangerClosingTheConnection.PNG"  alt="hibernate course" width="600"/>
+
+1. When `.close` is called, the state will become **detached** and no longer handled by the **Entity Manger**.
+
+<img src="detachedObjectAreMangaedInJavaMemory.PNG"  alt="hibernate course" width="600"/>
+
+1. After the `EntityManger` is `.closed()` and `Message`field gets
+ **updated**, it will only update in **Java memory** and does not have any connection to the database. 
+	- We will only modify its state in **Detached mode**.
+
+<img src="reAttachingThePersistentContext.PNG"  alt="hibernate course" width="600"/>
+
+1. We can **attach** a detached entity, with the `.merge(message)`.
+	- Pass the **reference** to it.
+
+<img src="mergeChecksThePersistenceContext.PNG"  alt="hibernate course" width="600"/>
+
+1. If **detached object** `id` is `1L`, it will first check from **Persistence Context** if its present there.
+
+<img src="javaPersistanceEngineChecksTheIfItsPresentInDb.PNG"  alt="hibernate course" width="600"/>
+
+1. It will **perform** lookup method, for given `id` is `1L`.
+2. **Notice** the **content** of messages, another has `"hi"` and another one `"hello"`. 
+
+<img src="contentOfTheMessageIsCopied.PNG"  alt="hibernate course" width="600"/>
+
+1. The **message** is copied to the object inside **Persistence Context**.
+
+<img src="updatingTheDetachedObjectIntoToDatabase.PNG"  alt="hibernate course" width="600"/>
+
+1. When the `.commit()` is executed, the state will be **dirty checked**, and it will be noticed that `Message` **Object** has been changed.
+2. The **update** will be executed to for that.
+
+<img src="updatingTheDetachedObjectIntoToDatabaseAfter.PNG"  alt="hibernate course" width="600"/>
+
+1. New **value** is updated in database.
+
+- We can manually **Detach Objects**, with the `detach()` method. Below example:
+
+<img src="detachMethod.PNG"  alt="hibernate course" width="600"/>
+
+1. We get `1L` from **database**.
+
+<img src="CallingDetachMethod.PNG"  alt="hibernate course" width="600"/>
+
+1. Soon as we call the `.detach()`, the `Message` object changes to the **Detached State**.
+	- ❌NEVER❌ **Delete** Detached Object. Example Below:
+
+<img src="removingDetachObject.PNG"  alt="hibernate course" width="600"/>
+
+1. We call `em.remove(message)`, it will throw `IllegalArgumentException`.
+	- **Detached Object** ❌cannot❌ be **deleted**!
+		- To delete object it needs to be in **Persistence State**.
 
 # Lab Exercise - Working with Objects.
+
+
+# Caching Objects.
