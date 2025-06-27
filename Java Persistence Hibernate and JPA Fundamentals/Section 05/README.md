@@ -216,7 +216,57 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 	- **Detached Object** ❌cannot❌ be **deleted**!
 		- To delete object it needs to be in **Persistence State**.
 
+<img src="removingFromPersistenceContext.PNG"  alt="hibernate course" width="600"/>
+
+1. When we delete this in the **Persistence Context**.
+
+<img src="removingFromPersistenceContextAfter.PNG"  alt="hibernate course" width="600"/>
+
+1. The `Message` object gets removed from the **Persistence Context** and its state turns into **removed state**.
+
+<img src="removingFromPersistenceContextAfterDeleteStatemetn.PNG"  alt="hibernate course" width="600"/>
+
+1. Once the `em.getTransaction().commit();` the **delete statement** gets executed and following line will be deleted form the database.
+
+<img src="summaryWorkingWithObject.PNG"  alt="hibernate course" width="600"/>
+
+- TODO make notes about this state transfer.
+
 # Lab Exercise - Working with Objects.
+
+- Todo. 
 
 
 # Caching Objects.
+
+> [!NOTE]
+> What is the cache?
+
+- **Cache** is **internal thing**, it is hard to grasp from the **coding perspective**.
+	- This is not exposed trough **JPA API**.
+
+<img src="cachingObjects.PNG"  alt="hibernate course" width="600"/>
+
+1. Cache is a **copy of data**, outside the database.
+	
+- The principle of **caching persistence object** is when the **Object** is queried first time from the database, the **copy** of it will be stored in the **cache**.
+	- **Subsequent** reading of such object will be read from the cache.
+
+2. When **querying** the `Message` object from the database, following **SQL** will be executed. 
+
+<img src="cachingObjectsSecondQuery.PNG"  alt="hibernate course" width="600"/>
+
+1. When `.find(Message.class, 7L)` will be executed, the **Object** is not queried from the database. Rather than its retrieved from **Cache**.
+	- **EntityManager** has cache.
+
+<img src="cachingObjectsSecondQueryMultipleEntityManagers.PNG"  alt="hibernate course" width="600"/>
+
+1. There will be **two separate** select statements issued, for each a`EntityManger`.
+	- Notice the same `ID` values `7L`.
+
+<img src="notPersistingHibernateObjectBetweenDifferentManagers.PNG"  alt="hibernate course" width="600"/>
+
+1. **Hibernate** by default does not cache **persistent objects** between `EntityManagers`.
+	- This is called **First-level Caching**.
+
+# Lab Exercise - Caching Objects (covers more on PersistenceContext).
