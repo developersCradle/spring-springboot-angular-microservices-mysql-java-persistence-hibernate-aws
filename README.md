@@ -183,7 +183,6 @@ All course material from **Java Persistence: Hibernate and JPA Fundamentals** by
 [Homepage of Course](https://mavenedge.com/).   
 
 
-
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 

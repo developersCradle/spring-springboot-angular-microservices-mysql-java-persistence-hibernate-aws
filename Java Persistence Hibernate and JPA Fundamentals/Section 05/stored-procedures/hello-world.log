@@ -1,0 +1,219 @@
+16:34:13,663 DEBUG SQL:131 - 
+    drop table if exists Employee
+16:34:13,724 DEBUG SQL:131 - 
+    create table Employee (
+        salary integer,
+        id bigint not null auto_increment,
+        department varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+16:34:13,850 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:34:13,860 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:34:13,860 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Mark Young]
+16:34:13,870 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5000]
+16:34:13,891 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:34:13,892 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Accounting]
+16:34:13,892 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Olivia Goy]
+16:34:13,892 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+16:34:13,894 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:34:13,895 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [QA]
+16:34:13,895 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Joana Tom]
+16:34:13,896 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5500]
+16:34:13,897 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:34:13,898 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:34:13,899 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Alicia Nimar]
+16:34:13,899 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5000]
+16:34:13,900 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:34:13,901 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:34:13,901 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Katy Loin]
+16:34:13,901 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+16:34:13,903 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:34:13,904 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:34:13,905 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Rahul Singh]
+16:34:13,905 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+16:34:13,951 DEBUG SQL:131 - 
+    {call count_employee_by_department(?,?)}
+16:34:13,966 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:54:23,650 DEBUG SQL:131 - 
+    drop table if exists Employee
+16:54:23,713 DEBUG SQL:131 - 
+    create table Employee (
+        salary integer,
+        id bigint not null auto_increment,
+        department varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+16:54:23,839 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:54:23,852 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:54:23,853 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Mark Young]
+16:54:23,854 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5000]
+16:54:23,869 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:54:23,870 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Accounting]
+16:54:23,870 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Olivia Goy]
+16:54:23,870 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+16:54:23,872 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:54:23,873 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [QA]
+16:54:23,873 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Joana Tom]
+16:54:23,874 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5500]
+16:54:23,877 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:54:23,878 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:54:23,878 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Alicia Nimar]
+16:54:23,879 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5000]
+16:54:23,881 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:54:23,882 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:54:23,883 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Katy Loin]
+16:54:23,883 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+16:54:23,885 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+16:54:23,886 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+16:54:23,886 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Rahul Singh]
+16:54:23,886 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+16:54:23,931 DEBUG SQL:131 - 
+    {call count_employee_by_department(?,?)}
+16:54:23,947 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+17:29:03,534 DEBUG SQL:131 - 
+    drop table if exists Employee
+17:29:03,582 DEBUG SQL:131 - 
+    create table Employee (
+        salary integer,
+        id bigint not null auto_increment,
+        department varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+17:29:03,712 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+17:29:03,725 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+17:29:03,725 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Mark Young]
+17:29:03,726 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5000]
+17:29:03,745 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+17:29:03,745 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Accounting]
+17:29:03,746 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Olivia Goy]
+17:29:03,747 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+17:29:03,749 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+17:29:03,749 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [QA]
+17:29:03,750 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Joana Tom]
+17:29:03,750 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5500]
+17:29:03,752 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+17:29:03,753 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+17:29:03,754 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Alicia Nimar]
+17:29:03,754 TRACE bind:28 - binding parameter [3] as [INTEGER] - [5000]
+17:29:03,756 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+17:29:03,757 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+17:29:03,757 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Katy Loin]
+17:29:03,758 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+17:29:03,760 DEBUG SQL:131 - 
+    insert 
+    into
+        Employee
+        (department,name,salary) 
+    values
+        (?,?,?)
+17:29:03,760 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+17:29:03,761 TRACE bind:28 - binding parameter [2] as [VARCHAR] - [Rahul Singh]
+17:29:03,761 TRACE bind:28 - binding parameter [3] as [INTEGER] - [4500]
+17:29:03,816 DEBUG SQL:131 - 
+    {call find_employee_by_department(?)}
+17:29:03,835 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]

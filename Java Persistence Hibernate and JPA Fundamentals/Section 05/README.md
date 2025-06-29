@@ -270,3 +270,289 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 	- This is called **First-level Caching**.
 
 # Lab Exercise - Caching Objects (covers more on PersistenceContext).
+
+<img src="labExerciseCachingObject.PNG"  alt="hibernate course" width="600"/>
+
+- **Question 1:**
+	- **Answer:** Entity.
+
+```
+Question 1: What will be the result of executing the following Question1Client given below? Choose the correct option(s).
+```
+
+# Stored Procedures.
+
+- How to **map** and **call Stored Procedure** from `EntityManger`.
+
+<img src="StoredProcedure.PNG"  alt="hibernate course" width="600"/>
+
+1. We want to call **Stored Procedure**. 
+2. How can we call the `count_employee_by_department` stored procedure.
+
+<img src="StoredProcedureCallingNumberOne.PNG"  alt="hibernate course" width="600"/>
+
+1. We are using the following block of code to define **stored procedure**.
+2. We are using the `@NamedStoredProcedureQueries({})`
+	- This for mapping or **storing procedures**.
+		- We can map multiple **stored procedures**.
+
+3. `@NameStoredProcedureQuery()` here the following configurations.
+	- `name = "CountByDepartmentProcedure",` // Java-side name
+    - `procedureName = "count_employee_by_department",` // DB-side procedure name
+	- `@StoredProcedureParameter` Is defining what parameters are going to be used.
+
+<img src="StoredProcedureCallingNumberMapping.PNG"  alt="hibernate course" width="600"/>
+
+2. We're mapping **input** parameter, **SQL** `p_dept` into the Java to `dept`.
+1. We're mapping **input** parameter, **SQL** `p_count` into the Java to `count`.
+
+<img src="StoredProcedureCallingNumberTwo.PNG"  alt="hibernate course" width="600"/>
+
+1. We are calling the procedure with the Java signature and we are setting the **input parameter**.
+2. Then we are calling the procedure. **Notice** it would call the `count_employee_by_department` not the `CountByDepartmentProcedure`.
+3. We are reading input parameter from the procedure.
+4. This would return **4** from the procedure.
+5. If this would be **executed** in SQL client, it would throw exception, for `;` delimiter it would interpret as it would end of the query.
+
+<img src="delimeterStoredProcedures.PNG"  alt="hibernate course" width="600"/>
+
+1. To **MySql**, we are telling this as it would be "one line of code", with the `DELIMETER` keyword.
+	- Notice the **before**:
+		- `DELIMETER $$`.
+	- And **after**:
+		- `DELIMETER ;`.
+
+- The **stored procedure**, what we are going to save into the database:
+	- This example is `count_employee_by_department`.
+
+```
+DELIMITER $$
+
+
+DROP PROCEDURE IF EXISTS count_employee_by_department;
+
+CREATE PROCEDURE count_employee_by_department(IN p_dept CHAR(20), OUT p_count INT)
+BEGIN  
+  SELECT COUNT(*) INTO p_count FROM employee WHERE department = p_dept;    
+END $$
+
+
+DELIMITER ;
+
+```
+
+- And the calling client code as following:
+
+```
+package client;
+
+import entity.Employee;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.ParameterMode;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.StoredProcedureQuery;
+
+public class CountEmployeeByDepartmentStoredProcedureClient {
+	public static void main(String[] args) {
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello-world");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();		
+		
+		Employee emp1 = new Employee("Mark Young", 5000, "Engineering");
+		Employee emp2 = new Employee("Olivia Goy", 4500, "Accounting");
+		Employee emp3 = new Employee("Joana Tom", 5500, "QA");
+		Employee emp4 = new Employee("Alicia Nimar", 5000, "Engineering");
+		Employee emp5 = new Employee("Katy Loin", 4500, "Engineering");
+		Employee emp6 = new Employee("Rahul Singh", 4500, "Engineering");
+		
+		em.persist(emp1);
+		em.persist(emp2);
+		em.persist(emp3);
+		em.persist(emp4);
+		em.persist(emp5);
+		em.persist(emp6);
+		
+		em.getTransaction().commit();
+		em.close();
+		
+		EntityManager em2 = emf.createEntityManager();
+		em2.getTransaction().begin();
+		
+		//using named-stored-procedure (CountByDepartmentProcedure)
+		StoredProcedureQuery q = em2.createNamedStoredProcedureQuery("CountByDepartmentProcedure");
+		q.setParameter("dept", "Engineering");
+		q.execute();
+		Integer count = (Integer) q.getOutputParameterValue("count");
+		System.out.println("count: " + count);
+	
+		
+		//using stored-procedure (count_employee_by_department)
+		/*
+		StoredProcedureQuery q = em2.createStoredProcedureQuery("count_employee_by_department");
+		q.registerStoredProcedureParameter("p_dept", String.class, ParameterMode.IN);
+		q.registerStoredProcedureParameter("p_count", Integer.class, ParameterMode.OUT);
+		q.setParameter("p_dept", "Engineering");
+		q.execute();
+		Integer count = (Integer) q.getOutputParameterValue("p_count");
+		System.out.println("count: " + count);
+		*/
+		em2.getTransaction().commit();
+		em2.close();		
+
+	}
+
+}
+```
+
+- We can see this client have been called the **stored procedure** and returning the number of engineering students correctly, `4`.
+
+```
+16:34:13,951 DEBUG SQL:131 - 
+    {call count_employee_by_department(?,?)}
+16:34:13,966 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+count: 4
+```
+
+- We can also, use `named-stored-procedure`, this takes the **procedure** mapping out of the **Entity** and puts into the **client code**. 
+	- We are defined it here.
+
+```
+	//using named-stored-procedure (CountByDepartmentProcedure)
+		
+		
+		
+		//using stored-procedure (count_employee_by_department)
+		/*
+		StoredProcedureQuery q = em2.createStoredProcedureQuery("count_employee_by_department");
+		q.registerStoredProcedureParameter("p_dept", String.class, ParameterMode.IN);
+		q.registerStoredProcedureParameter("p_count", Integer.class, ParameterMode.OUT);
+		q.setParameter("p_dept", "Engineering");
+		q.execute();
+		Integer count = (Integer) q.getOutputParameterValue("p_count");
+		System.out.println("count: " + count);
+		*/
+```
+
+- We notice we get same answer:
+
+```
+16:54:23,931 DEBUG SQL:131 - 
+    {call count_employee_by_department(?,?)}
+16:54:23,947 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+count: 4
+```
+
+- **Why use Stored Procedures**? We have **JDBC** programming!
+	- **RDBMS highly optimized** for large volumes of data.
+		- So if you are dealing with a lot of data, you might consider making the logic as **stored procedure**.
+	- Data heavy complex operations.
+	- Save database round trips.
+		- Also, save one round trip to database.
+	- Performance.
+
+- Example of `find_employee_by_department` procedure.
+
+```
+DELIMITER $$
+DROP PROCEDURE IF EXISTS find_employee_by_department;
+CREATE PROCEDURE find_employee_by_department(IN p_dept CHAR(20))
+BEGIN
+    SELECT * FROM employee WHERE department = p_dept;
+END $$
+DELIMITER ;
+```
+
+<img src="findEmployeeByDepartmentProcedure.PNG"  alt="hibernate course" width="600"/>
+
+1. We are returning **result set**.
+2. We want to map this result to the `Employee.class`.
+3. Here is the result what we are going to get. 
+
+> [!TIP]
+> The **Result Set**, is called such, because result set refers to the set of **rows** (or "records") returned by a query.
+
+
+- The client code what we are executing:
+
+```
+package client;
+
+import java.util.List;
+
+import entity.Employee;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.ParameterMode;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.StoredProcedureQuery;
+
+public class FindEmployeeByDepartmentStoredProcedureClient {
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello-world");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();		
+		
+		Employee emp1 = new Employee("Mark Young", 5000, "Engineering");
+		Employee emp2 = new Employee("Olivia Goy", 4500, "Accounting");
+		Employee emp3 = new Employee("Joana Tom", 5500, "QA");
+		Employee emp4 = new Employee("Alicia Nimar", 5000, "Engineering");
+		Employee emp5 = new Employee("Katy Loin", 4500, "Engineering");
+		Employee emp6 = new Employee("Rahul Singh", 4500, "Engineering");
+		
+		em.persist(emp1);
+		em.persist(emp2);
+		em.persist(emp3);
+		em.persist(emp4);
+		em.persist(emp5);
+		em.persist(emp6);
+		
+		em.getTransaction().commit();
+		em.close();
+		
+		EntityManager em2 = emf.createEntityManager();
+		em2.getTransaction().begin();
+		
+		//using named-stored-procedure (FindByDepartmentProcedure)
+		StoredProcedureQuery q = em2.createNamedStoredProcedureQuery("FindByDepartmentProcedure");
+		q.setParameter("dept", "Engineering");
+		q.execute();
+		List<Employee> empList = q.getResultList();
+		for (Employee employee : empList) {
+			System.out.println(employee);
+		}
+		
+		//using stored-procedure (find_employee_by_department)
+		/*
+		StoredProcedureQuery q = em2.createStoredProcedureQuery("find_employee_by_department", Employee.class);
+		q.registerStoredProcedureParameter("p_dept", String.class, ParameterMode.IN);
+		q.setParameter("p_dept", "Engineering");
+		q.execute();
+		List<Employee> empList = q.getResultList();
+		for (Employee employee : empList) {
+			System.out.println(employee);
+		}		
+		*/
+		em2.getTransaction().commit();
+		em2.close();
+	}
+
+}
+```
+
+- We are getting same amount of people from the engineering department.
+
+```
+17:29:03,816 DEBUG SQL:131 - 
+    {call find_employee_by_department(?)}
+17:29:03,835 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+Employee [id=1, name=Mark Young, salary=5000, department=Engineering]
+Employee [id=4, name=Alicia Nimar, salary=5000, department=Engineering]
+Employee [id=5, name=Katy Loin, salary=4500, department=Engineering]
+Employee [id=6, name=Rahul Singh, salary=4500, department=Engineering]
+```
+
+- 20:00
