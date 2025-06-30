@@ -543,7 +543,8 @@ public class FindEmployeeByDepartmentStoredProcedureClient {
 }
 ```
 
-- We are getting same amount of people from the engineering department.
+- We are getting same amount of people from the **Engineering department**.
+
 
 ```
 17:29:03,816 DEBUG SQL:131 - 
@@ -555,4 +556,98 @@ Employee [id=5, name=Katy Loin, salary=4500, department=Engineering]
 Employee [id=6, name=Rahul Singh, salary=4500, department=Engineering]
 ```
 
-- 20:00
+- Example of `find_name_and_salary_by_department`. 
+
+```
+DELIMITER $$
+
+
+DROP PROCEDURE IF EXISTS find_name_and_salary_by_department;
+
+CREATE PROCEDURE find_name_and_salary_by_department(IN p_dept CHAR(20))
+BEGIN  
+  SELECT name, salary FROM employee WHERE department = p_dept;    
+END $$
+
+
+DELIMITER ;
+```
+
+- If we want to return `name` and `salary` data, not the whole list. 
+
+<img src="findEmployeeByDepartmentProcedureWithSelectedFieldsToReturn.PNG"  alt="hibernate course" width="600"/>
+
+1. We **Define** the two fields what we are returning.
+2. We cannot have **Result.class** anymore. 
+	- The result of **query** will be `Object[]`.
+3. We need to change the return type.
+
+- We are getting same amount of people from the **Engineering department**, but the query is **partial**.
+
+```
+18:32:58,990 DEBUG SQL:131 - 
+    {call find_name_and_salary_by_department(?)}
+18:32:59,020 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [Engineering]
+Name: Mark Young, Salary: 5000
+Name: Alicia Nimar, Salary: 5000
+Name: Katy Loin, Salary: 4500
+Name: Rahul Singh, Salary: 4500
+
+```
+
+- There is a better way to deal with the `Object[]` returning.
+
+<img src="findEmployeeByDepartmentProcedureWithSelectedFieldsToReturnWithDTO.PNG"  alt="hibernate course" width="600"/>
+
+1. This is done using **DTO Objects**. It is used to **transfer data** from another palace to another. 
+2. We are using following **mapping** for the **DTO**:
+
+```
+@SqlResultSetMapping(
+		name = "EmployeeDtoMapping",
+		classes = @ConstructorResult(
+							targetClass = EmployeeDto.class,
+							columns = {
+												@ColumnResult(name = "name"),
+												@ColumnResult(name = "salary")
+							}
+					)
+)
+```
+
+- And add this, for the query in **DTO**: 
+
+```
+    @NamedStoredProcedureQuery(
+            name = "FindNameAndSalaryByDepartmentProcedure",
+            procedureName = "find_name_and_salary_by_department",
+            resultSetMappings = "EmployeeDtoMapping",
+            parameters = {
+                    @StoredProcedureParameter(
+                            name = "dept",
+                            type = String.class,
+                            mode = ParameterMode.IN)
+            }
+    )
+```
+
+3. We could operate thought **DTO**, as such. 
+
+# Database Views.
+
+<img src="databaseView.PNG"  alt="hibernate course" width="600"/>
+
+1. Current situation in the **Database**
+	- **Create**, **Read**, **Update** and **Delete** for the database operations.
+		
+2. We will have the following data coming out for the **View**.
+	- Summary could be expanding multiple tables.
+		- Read only for the **views**
+3. The **View** is **pre-defined** query, saved in the **database**.
+	- **Query Execution** can be **optimized** by the database engine. 
+
+# Batch Processing.
+
+<img src="batchProcessing.PNG"  alt="hibernate course" width="600"/>
+
+1. We want to use **batch processing**, when there is **huge amount** of queries to be processed **within transaction**.
