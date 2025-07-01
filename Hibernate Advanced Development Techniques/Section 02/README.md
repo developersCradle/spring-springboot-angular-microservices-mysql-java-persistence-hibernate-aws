@@ -72,8 +72,54 @@ Mapping Collections - Sets and Lists.
 
 <img src="step3.PNG"  alt="hibernate course" width="500"/>
 
-1. Mapping in Java.
+1. Mapping in **Java**.
+
 
 <img src="annotationsToMapCollection.PNG"  alt="hibernate course" width="500"/>
 
-4:20
+- **@Annotations** used for the mapping.
+
+<img src="mappingCollection.PNG"  alt="hibernate course" width="500"/>
+
+1. The mappings for the **set**, which we were discussing in previous slide.
+
+<img src="mappingCollectionCode.PNG"  alt="hibernate course" width="500"/>
+
+1. Getting reference for the **Set**.
+2. Adding **photos** to the **Set**.
+3. Begins the **Transaction**.
+4. Transferring the Objects into **Persistence Context**.
+5. Ending transaction, and **executing queries**.
+
+- Same as code:
+
+```
+/ create the object
+Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
+Set<String> theImages = tempStudent.getImages();
+
+theImages.add("photo1.jpg");
+theImages.add("photo2.jpg");
+theImages.add("photo3.jpg");
+
+// start a transaction
+session.beginTransaction();
+
+// save the object
+System.out.println("Saving the student and images..");
+session.persist(tempStudent);
+
+// commit the transaction
+session.getTransaction().commit();
+```
+
+<img src="runApp.PNG"  alt="hibernate course" width="500"/>
+
+- We can see the mapped **Student** to multiple **Images** in the **Collection** (collection are mapped in separate table!).
+
+<img src="runApp.PNG"  alt="hibernate course" width="500"/>
+
+# Mapping Sets - Going Deep!
+
+
+
