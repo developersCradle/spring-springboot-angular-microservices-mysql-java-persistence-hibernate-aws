@@ -23,7 +23,7 @@ Getting Started with JPA.
 
 <img src="whyUseJPA.PNG"  alt="hibernate course" width="600"/>
 
-- You could ask yourself what is the role of **JPA** if to **hibernate** provides all the functions?
+- You could ask yourself what is the role of **JPA** if to **Hibernate** provides all the functions?
     - If you **JPA** as interface provider, you could easily change to another vendor!
 
 1. These vendors cans be seen here!
@@ -650,4 +650,153 @@ Name: Rahul Singh, Salary: 4500
 
 <img src="batchProcessing.PNG"  alt="hibernate course" width="600"/>
 
-1. We want to use **batch processing**, when there is **huge amount** of queries to be processed **within transaction**.
+1. We want to use **batch processing**, when there is **huge amount** of queries to be processed **within transaction**. This helps with:
+	- **Out-of-memory** issues.
+	- **Transaction time-out**.
+	- **Performance penalty** `(1,000 INSERTs requires 1,000 separate database round trips)`.
+		- You would want to **lower** this number!
+
+- Idea here is that, we don't want to process in **one go**, we rather use **smaller batches**.
+	- Batches contains part of the data.
+2. We process here one by one!
+
+<img src="batchProcessing2.PNG"  alt="hibernate course" width="600"/>
+
+1. All the **25** `Book` Objects are **persisted** into the **PersistenceContext**, and we can only hope that:
+	- Java memory does **not** run out. `Point 1.`.
+	- Transaction does **not** time out, when all this is happening. `Point 2.`.
+
+2. At line `12` all the **25** gets issued together.	
+	- Each will have their own database trip.
+
+<img src="batchProcessing3.PNG"  alt="hibernate course" width="600"/>
+
+1. When we are dealing within **Transaction**.
+2. There will be **5** objects is going to be loaded into **PeristenceContext**, after the **Batch** is going to be inserted into the database. 
+3. We should batch in **JDBC** level.
+	- Batching in **JDBC** level means:
+
+- **Without** batching:
+
+```
+INSERT INTO book (id, title, isbn) VALUES (1, 'A', 'ISBN-A');
+--> Sent to DB
+INSERT INTO book (id, title, isbn) VALUES (2, 'B', 'ISBN-B');
+--> Sent to DB
+INSERT INTO book (id, title, isbn) VALUES (3, 'C', 'ISBN-C');
+--> Sent to DB
+```
+
+- **3** different trips for the database.
+
+- **With** batching:
+
+```
+INSERT INTO book (id, title, isbn) VALUES (1, 'A', 'ISBN-A');
+INSERT INTO book (id, title, isbn) VALUES (2, 'B', 'ISBN-B');
+INSERT INTO book (id, title, isbn) VALUES (3, 'C', 'ISBN-C');
+```
+
+- **1** trip only, this is done in one trip.
+
+<img src="batchProcessing4.PNG"  alt="hibernate course" width="600"/>
+
+1. `em.flush()` when the flush is getting executed the **PersistenceContext** is going to be **cleared** and the **Object** are moved into the **detached state**.
+	- This is repeated till all the object are **persisted**
+
+- In general the `em.flush()` **synchronizes** the **persistence context** to the database.
+
+- The database code:
+
+```
+DROP DATABASE IF EXISTS batchprocessing; 
+CREATE DATABASE batchprocessing; 
+```
+
+- We will have the following client code for the **batch processing**.
+
+```
+package client;
+
+import entity.Book;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+//Before running this example, enable IDENTITY id generation strategy in Book entity
+public class BatchingInsertsUsingIdentityStrategyClient {
+	public static void main(String[] args) {
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello-world");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();		
+		
+	    for (int i = 1; i <= 25; i++) {
+	    	Book book = new Book("Title-" + i, "ISBN-" + i);
+	        em.persist(book);
+	        
+	        if (i % 5 == 0) {
+	            em.flush();
+	            em.clear();
+	            System.out.println();
+	        }
+	    }
+		
+		em.getTransaction().commit();
+		em.close();	
+		
+	}
+}
+```
+
+- We can see that the **batch** have been executed **5** times.
+
+```
+17:36:56,284 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,288 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,288 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,289 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,289 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+
+17:36:56,301 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,302 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,303 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,303 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,304 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+
+17:36:56,309 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,309 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,310 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,310 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,311 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+
+17:36:56,318 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,318 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,319 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,320 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,320 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+
+17:36:56,327 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,328 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,329 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,330 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+17:36:56,330 DEBUG SQL:131 - insert into Book (isbn,title,id) values (?,?,?)
+
+17:36:56,341  INFO StatisticalLoggingSessionEventListener:261 - Session Metrics {
+    748500 nanoseconds spent acquiring 1 JDBC connections;
+    634000 nanoseconds spent releasing 1 JDBC connections;
+    24897700 nanoseconds spent preparing 5 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    22780700 nanoseconds spent executing 5 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    89812700 nanoseconds spent executing 5 flushes (flushing a total of 25 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+```
+
+<img src="batchProcessingDoesNotWorkWithIdentityStrategy.PNG"  alt="hibernate course" width="600"/>
+
+
+- Todo tee tämä loppuun.

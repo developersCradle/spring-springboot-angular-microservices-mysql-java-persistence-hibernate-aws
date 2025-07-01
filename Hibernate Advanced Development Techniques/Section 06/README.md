@@ -1,4 +1,4 @@
-# Section 03: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 
 Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 

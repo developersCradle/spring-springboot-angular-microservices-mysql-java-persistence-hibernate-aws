@@ -244,13 +244,24 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2001#section-1-introduction) - Some.  
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Some.  
-- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-3-mapping-collections---maps-sorted-maps-and-sorted-sets) - Some.  
+- [ ] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2001#section-1-introduction) - Introduction.  
+- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Mapping Collections - Sets and Lists.  
+- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-3-mapping-collections---maps-sorted-maps-and-sorted-sets) - Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+- [ ] [Section 04](#) - Mapping Components - Embeddable.
+- [ ] [Section 05](#) - Mapping Enums.
+- [ ] [Section 06](#) - Inheritance Mapping - Single Table Strategy.
+- [ ] [Section 07](#) - Inheritance Mapping - Table per Class Strategy.
+- [ ] [Section 08](#) - Inheritance Mapping - Joined Table Strategy.
+- [ ] [Section 09](#) - Inheritance Mapping - Mapped Superclass.
+- [ ] [Section 10](#) - Inheritance Mapping - Recap and Comparison.
+- [ ] [Section 11](#) - Course Summary - Thank You.
+- [ ] [Section 12](#) - Bonus.
+
+ 
 
 #### Additional stuff.
 
-- [ ] 
+- [x] The repository for the code is [here](https://github.com/darbyluv2code/hibernate-advanced-development-techniques?tab=readme-ov-file#hibernate-advanced-development-techniques).
 
 <p align="center">
     <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" height=70>
