@@ -117,9 +117,116 @@ session.getTransaction().commit();
 
 - We can see the mapped **Student** to multiple **Images** in the **Collection** (collection are mapped in separate table!).
 
-<img src="runApp.PNG"  alt="hibernate course" width="500"/>
-
 # Mapping Sets - Going Deep!
 
+<img src="mappingCollectionDeepper.PNG"  alt="hibernate course" width="500"/>
+
+1. `name=image` What table we are using.
+2. `joinColumns = @JoinColumn(name="student_id")` Where to join on. It hooks up in `student` table for `id`.
+3. `@ElementCollection` Tells that we are mapping **collection**.
+4. `@Column(name="file_name")` The column where we are mapping on.
+
+<img src="ElementCollectionMore.PNG"  alt="hibernate course" width="500"/>
+
+1. `@ElementCollection` can be used for define **relationships**.
+    - This can be used for the **One-to-many** to the `@Embeddable` **object**.
+    - This can be used for the **One-to-many** to the ` **object**.
+        - These can be **Integer**, **Double** etc...
+2. Example here is using `Set` of `String`:s.
+
+<img src="comparingOneToManyInTheElementsCollection.PNG"  alt="hibernate course" width="500"/>
+
+1. This behaves like **One-to-many**, but with the **collection** of the simple/basic objects.
+
+<img src="limitationsOnTheElementCollection.PNG"  alt="hibernate course" width="500"/>
+
+- Since these are included into the parent objects, they have some limitations.
+
+1. You cannot perform any operations on these **independently**.
+2. No support for the **cascades**!
+    - These are **ALWAYS** persisted, merged or removed when parent object is receiving the operation.
+
+<img src="comparingOneToManyAndElementCollecion.PNG"  alt="hibernate course" width="500"/>
+
+1. For **simple** cases!
+2. For more **fine-grained** control!
+
+# Mapping Sets - Project Set Up.
+
+<img src="simpleMavenArchetype.PNG"  alt="hibernate course" width="500"/>
+
+1. We will use the `maven-archetype-quickstart`.
+
+- We are having the following dependencies:
+
+```
+<!-- Hibernate's core ORM functionality -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.3.6.Final</version>
+		</dependency>
+
+<!-- JDBC driver for MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.12</version>
+		</dependency>
+
+<!-- Support for Java 9/10/11 -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.activation</groupId>
+			<artifactId>javax.activation</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+```
 
 
+- We are using following **SQL** script for the tables:
+
+```
+CREATE DATABASE  IF NOT EXISTS `hb_student_tracker`;
+USE `hb_student_tracker`;
+--
+-- Table structure for tables `student` and `image`
+--
+
+DROP TABLE IF EXISTS `student`;
+
+CREATE TABLE `student` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `image`;
+
+CREATE TABLE `image` (
+  `student_id` int(11) NOT NULL,
+  `file_name` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+```
+
+
+- Tee loppuun

@@ -23,11 +23,19 @@ Getting Started with JPA.
 
 <img src="whyUseJPA.PNG"  alt="hibernate course" width="600"/>
 
-- You could ask yourself what is the role of **JPA** if to **Hibernate** provides all the functions?
-    - If you **JPA** as interface provider, you could easily change to another vendor!
+- You could ask yourself what is the role of **JPA**, if the **Hibernate** provides all the functions already?
+    - If you implement the **JPA** as **interface provider**, you could easily change to another vendor, when there is need to change underlying **JPA provider**!
+		- Since they follow same **marking** style.
 
-1. These vendors cans be seen here!
-    - **DataNucleus** is a **JPA** provider!
+1. These are some vendors, that can be seen here!
+2. There can be **DataNucleus** as **JPA** provider! Keep going **Kide systems**-
+	- [Home Page](https://www.datanucleus.org/).
+
+
+> [!IMPORTANT]  
+> **Kide** thought me of practical usage of JPA(DataNucleus).
+
+<img src="datanucleusInKideAriBest.jpg"  alt="hibernate course" width="500"/>
 
 # Hibernate as JPA Provider.
 
