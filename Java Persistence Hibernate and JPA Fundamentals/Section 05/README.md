@@ -28,12 +28,11 @@ Getting Started with JPA.
 		- Since they follow same **marking** style.
 
 1. These are some vendors, that can be seen here!
-2. There can be **DataNucleus** as **JPA** provider! Keep going **Kide systems**-
+2. There can be **DataNucleus** as **JPA** provider! Keep going **Kide systems**.
 	- [Home Page](https://www.datanucleus.org/).
 
-
 > [!IMPORTANT]  
-> **Kide** thought me of practical usage of JPA(DataNucleus).
+> **Kide** taught me practical usage of the **JPA**(**DataNucleus**).
 
 <img src="datanucleusInKideAriBest.jpg"  alt="hibernate course" width="500"/>
 

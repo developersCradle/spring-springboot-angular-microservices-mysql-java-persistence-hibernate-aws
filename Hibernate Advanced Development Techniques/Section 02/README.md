@@ -200,7 +200,6 @@ session.getTransaction().commit();
 		</dependency>
 ```
 
-
 - We are using following **SQL** script for the tables:
 
 ```
@@ -228,5 +227,384 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
 
+# Mapping Sets - Create our Entity class.
 
-- Tee loppuun
+- Remember to use `javax` version, which implement **JPA** rather than `hibernate` version.
+	- `import javax.persistence.Entity;`
+	- `import org.hibernate.annotations.Entity;`
+
+- The **entity**:
+
+```
+package com.love2code.hibernate.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="student")
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="lasat_name")
+	private String lastName;
+	@Column(name="email")
+	private String email;
+	
+	@ElementCollection
+	@CollectionTable(name = "image",
+					joinColumns = @JoinColumn(name = "student_id"))
+	@Column(name="file_name") // Defaults to images.
+	private Set<String> images = new HashSet<String>();
+	
+	public Student(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public Set<String> getImages() {
+		return images;
+	}
+
+	public void setImages(Set<String> images) {
+		this.images = images;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+	
+}
+```
+
+- Hibernate config:
+
+```
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- DB connection -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+
+
+
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Hibernate behavior -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+	<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		
+    </session-factory>
+</hibernate-configuration>
+```
+
+# Mapping Sets - Apply the @ElementCollection.
+
+<img src="studentImages.PNG"  alt="hibernate course" width="500"/>
+
+1. Here we will map the **images**.
+
+- The **Student** **entity**.
+
+```
+package com.love2code.hibernate.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="student")
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="lasat_name")
+	private String lastName;
+	@Column(name="email")
+	private String email;
+	
+	@ElementCollection
+	@CollectionTable(name = "image",
+					joinColumns = @JoinColumn(name = "student_id"))
+	@Column(name="file_name") // Defaults to images.
+	private Set<String> images = new HashSet<String>();
+	
+	public Student(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public Set<String> getImages() {
+		return images;
+	}
+
+	public void setImages(Set<String> images) {
+		this.images = images;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+	
+}
+```
+
+# Mapping Sets - Create and Run the Main App.
+
+- Client for **saving** this Entity:
+
+```
+package com.love2code.hibernate.demo;
+
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.love2code.hibernate.entity.Student;
+
+
+public class CreateStudentImagesSetDemo {
+
+	public static void main(String[] args) {
+
+		// Create session factory.
+		SessionFactory factory = new Configuration()
+									.configure("hibernate.cfg.xml")
+									.addAnnotatedClass(Student.class)
+									.buildSessionFactory();
+
+		// Create session.
+		Session session = factory.getCurrentSession();
+		
+		try {
+			
+			// Create the object.
+			Student tempStudent = new Student("FirstName", "SecondName", "paul@luv2code.com");
+			Set<String> theImages = tempStudent.getImages();
+			
+			theImages.add("SomePic1.jpg");
+			theImages.add("SomePic2.jpg");
+			theImages.add("SomePic3.jpg");
+			theImages.add("SomePic4.jpg");
+			theImages.add("SomePic5.jpg");
+			theImages.add("SomePic5.jpg"); // Will not be in Set, no duplicates in Set.
+		
+			// Start transaction.
+			session.beginTransaction();
+			
+			// Save the object.
+			System.out.println("Saving the student with images..");
+			session.persist(tempStudent);
+			
+			// Commit the transaction.
+			session.getTransaction().commit();
+			System.out.println("Done!!");
+			
+		} finally {
+			// Cleanup the code.
+			session.close();
+			factory.close();
+		}
+				
+	}
+	
+}
+```
+
+<img src="pictureInDb.PNG"  alt="hibernate course" width="400"/>
+
+1. As you can see, there are no **duplicates**.
+
+# Mapping Lists - Overview.
+
+- List allows **duplicates**!
+
+<img src="useCaseForTheList.PNG"  alt="hibernate course" width="500"/>
+
+1. When the **order** is important.
+2. We want to access our **email** in order.
+3. Customers are server how they came to restaurant! **Order** is important.
+
+<img src="studentImagesWithList.PNG"  alt="hibernate course" width="500"/>
+
+1. We will do store the **images** with in the **list**, With these:
+	- We want to **keep** the **order**!
+	- We want to **allow** **duplicates** images!
+
+<img src="databaseForTheImagesInList.PNG"  alt="hibernate course" width="500"/>
+
+1. Furthermore, we will have `images_ORDER` for saving the **order** in the images.
+
+<img src="theProcess.PNG"  alt="hibernate course" width="500"/>
+
+<img src="step1WithTheList.PNG"  alt="hibernate course" width="500"/>
+
+1. We can also use **hibernate** for the creating the database!
+
+> [!IMPORTANT]  
+> The point **2** is **good** for testing and developing!
+
+<img src="hibernateConfiguration.PNG"  alt="hibernate course" width="500"/>
+
+1. We need to add following. `<property name="hibernate.hbm2ddl.auto">create</property>`.
+
+- The value `create` will:
+	- Hibernate will `DROP` all existing tables in the database.
+    - Then it will `CREATE` them again based on your JPA annotations.
+
+<img src="creatingTableInTheCode.PNG"  alt="hibernate course" width="500"/>
+
+1. These will be read and created into the database.
+2. Following **SQL** will be executed!
+
+<img src="hibernateConfigurationDifferentOptions.PNG"  alt="hibernate course" width="500"/>
+
+1. These can have **different** values! This will take place when there will be **startup action**.
+2. Some of the **options**.
+	- `none` action will be performed!
+	- `create-only` Database will be only created!
+	- `drop` Database tables are dropped! **Notice**, all the **data** will be **lost**!
+	- `create` Tables are dropped and created!
+	- `create-drop` Notice the difference! There will be **DROP** at shutdown.
+		- Good for **UNIT TESTING**!
+	- `update`, when there will be update on the **db** schema! 
+
+| Property       | Drops tables at startup | Creates tables at startup | Drops tables at shutdown |
+|----------------|--------------------------|-----------------------------|----------------------------|
+| `create`       | ✅                        | ✅                           | ❌                          |
+| `create-drop`  | ✅                        | ✅                           | ✅                          |
+
+c
+1. **NOTICE** the tables are dropped, so all **data will be lost!!**
+	- Good for **dev** and **testing**!
+	
+<img src="warning.PNG"  alt="hibernate course" width="500"/>
+
+1. ❌❌❌❌❌❌❌❌❌ **NOT** for the production ❌❌❌❌❌❌❌.
+2. Its ✔️✔️✔️**Recommended** to have **SQL script** for the production ✔️✔️✔️✔️✔️.
+	
+<img src="step2Mapping.PNG"  alt="hibernate course" width="500"/>
+
+1. We will have the following list for having **order**.
+
+<img src="annotationToMapList.PNG"  alt="hibernate course" width="500"/>
+
+- Todo jatka tästä
