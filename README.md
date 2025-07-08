@@ -165,11 +165,26 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Welcome.
+- [ ] [Section 1](#) - Welcome.
+- [ ] [Section 2](#) - History of Microservices.
+- [ ] [Section 3](#) - Problems with Monolith & SOA.
+- [ ] [Section 4](#) - Microservices Architecture.
+- [ ] [Section 5](#) - Problems Solved by Microservices.
+- [ ] [Section 6](#) - Designing Microservices Architecture.
+- [ ] [Section 7](#) - Deploying Microservices.
+- [ ] [Section 8](#) - Testing Microservices.
+- [ ] [Section 9](#) - Service Mesh.
+- [ ] [Section 10](#) - Logging and Monitoring.
+- [ ] [Section 11](#) - When Not to Use Microservices.
+- [ ] [Section 12](#) - Microservices and the Organization.
+- [ ] [Section 13](#) - Anti-Patterns and Common Mistakes.
+- [ ] [Section 14](#) - Breaking Monolith to Microservices.
+- [ ] [Section 15](#) - Case study.
+- [ ] [Section 16](#) - Conclusion.
 
 
 <p align="center">
-    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals.png" height=100>
+    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" width="800" height="100">
 </p>
 
 ![Jpa Course here](JpaCourse.jpg)
@@ -243,7 +258,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2001#section-01-introduction) - Introduction. ✅
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Mapping Collections - Sets and Lists.  
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Mapping Collections - Sets and Lists. ✅ 
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-3-mapping-collections---maps-sorted-maps-and-sorted-sets) - Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 - [ ] [Section 04](#) - Mapping Components - Embeddable.
 - [ ] [Section 05](#) - Mapping Enums.
@@ -254,8 +269,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 10](#) - Inheritance Mapping - Recap and Comparison.
 - [ ] [Section 11](#) - Course Summary - Thank You.
 - [ ] [Section 12](#) - Bonus.
-
- 
 
 #### Additional stuff.
 

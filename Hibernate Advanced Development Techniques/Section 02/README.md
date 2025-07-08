@@ -1,7 +1,18 @@
-# Section 02: Mapping Collections - Sets and Lists
+# Section 02: Mapping Collections - Sets and Lists.
 
 Mapping Collections - Sets and Lists.
 
+## Summary:
+
+#### [Mapping Overview - Section Roadmap](#).
+#### [Mapping Sets - Overview](#).
+#### [Mapping Sets - Going Deep!](#)
+#### [Mapping Sets - Project Set Up](#).
+#### [Mapping Sets - Code the Entity](#).
+#### [Mapping Sets - Apply the @ElementCollection](#).
+#### [Mapping Sets - Create and Run the Main App](#).
+#### [Mappings Lists - Write Some Code](#).
+ 
 # What I Learned.
 
 # Mapping Overview - Section Roadmap.
@@ -34,7 +45,7 @@ Mapping Collections - Sets and Lists.
 # Mapping Sets - Overview.
     
 > **Set**
-> Is Collection of items that cannot **contain duplicates**.
+> Is Collection of items that **cannot contain duplicates**!
 
 <img src="useCaseForTheSet.PNG"  alt="hibernate course" width="500"/>
 
@@ -68,16 +79,15 @@ Mapping Collections - Sets and Lists.
 
 <img src="step2.PNG"  alt="hibernate course" width="500"/>
 
-1. Basic **CRUD** work.
+1. Basic **CRUD** entity setup.
 
 <img src="step3.PNG"  alt="hibernate course" width="500"/>
 
 1. Mapping in **Java**.
 
-
 <img src="annotationsToMapCollection.PNG"  alt="hibernate course" width="500"/>
 
-- **@Annotations** used for the mapping.
+1. **@Annotations** used for the mapping.
 
 <img src="mappingCollection.PNG"  alt="hibernate course" width="500"/>
 
@@ -123,6 +133,7 @@ session.getTransaction().commit();
 
 1. `name=image` What table we are using.
 2. `joinColumns = @JoinColumn(name="student_id")` Where to join on. It hooks up in `student` table for `id`.
+	- We need this because **Set** **need** to have **position saved**!
 3. `@ElementCollection` Tells that we are mapping **collection**.
 4. `@Column(name="file_name")` The column where we are mapping on.
 
@@ -138,7 +149,7 @@ session.getTransaction().commit();
 
 1. This behaves like **One-to-many**, but with the **collection** of the simple/basic objects.
 
-<img src="limitationsOnTheElementCollection.PNG"  alt="hibernate course" width="500"/>
+<img src="limitationsOnTheElementCollections.PNG"  alt="hibernate course" width="500"/>
 
 - Since these are included into the parent objects, they have some limitations.
 
@@ -146,10 +157,10 @@ session.getTransaction().commit();
 2. No support for the **cascades**!
     - These are **ALWAYS** persisted, merged or removed when parent object is receiving the operation.
 
-<img src="comparingOneToManyAndElementCollecion.PNG"  alt="hibernate course" width="500"/>
+<img src="comparingOneToManyInTheElementsCollection.PNG"  alt="hibernate course" width="500"/>
 
 1. For **simple** cases!
-2. For more **fine-grained** control!
+2. For if you want more **fine-grained** control!
 
 # Mapping Sets - Project Set Up.
 
@@ -535,7 +546,8 @@ public class CreateStudentImagesSetDemo {
 
 # Mapping Lists - Overview.
 
-- List allows **duplicates**!
+> **List**
+> Is Collection of items that **can contain duplicates**!
 
 <img src="useCaseForTheList.PNG"  alt="hibernate course" width="500"/>
 
@@ -579,7 +591,7 @@ public class CreateStudentImagesSetDemo {
 
 1. These can have **different** values! This will take place when there will be **startup action**.
 2. Some of the **options**.
-	- `none` action will be performed!
+	- `none` No action will be performed!
 	- `create-only` Database will be only created!
 	- `drop` Database tables are dropped! **Notice**, all the **data** will be **lost**!
 	- `create` Tables are dropped and created!
@@ -592,9 +604,9 @@ public class CreateStudentImagesSetDemo {
 | `create`       | ✅                        | ✅                           | ❌                          |
 | `create-drop`  | ✅                        | ✅                           | ✅                          |
 
-c
+
 1. **NOTICE** the tables are dropped, so all **data will be lost!!**
-	- Good for **dev** and **testing**!
+	- Good for **developing** and **testing**!
 	
 <img src="warning.PNG"  alt="hibernate course" width="500"/>
 
@@ -607,4 +619,190 @@ c
 
 <img src="annotationToMapList.PNG"  alt="hibernate course" width="500"/>
 
-- Todo jatka tästä
+1. Used to **store** the position for the **order**.
+	- We can name it how we want.
+
+<img src="mappingCollectionAndUsingTheOrderAnnotation.PNG"  alt="hibernate course" width="500"/>
+
+1. We can use following **annotation** for the mapping images.
+	- **Notice** that we don't need to have to **mapping** to the **external ID**, since it's in the **List** and we are using the `@OrderColumn`.
+2. Also, we **don't** need to use `images_` prefix name, we can use custom naming for this.
+
+<img src="columnForTheImageName.PNG"  alt="hibernate course" width="500"/>
+
+1. The column for the **image** name.
+
+<img src="savingMultipleImagesIntoTheListWithTheOrderAnnotation.PNG"  alt="hibernate course" width="500"/>
+
+1. We are adding the images to the list.
+2. **Notice**, we can add **duplicates**, into the list.
+
+<img src="runningTheAppWithSavingIntoTheList.PNG"  alt="hibernate course" width="500"/>
+
+1. Notice the **List** can have **duplicates**.
+
+#  Mappings Lists - Write Some Code.
+
+- The **entity** for the **Student**.
+
+```
+package com.love2code.hibernate.entity;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="student")
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="lasat_name")
+	private String lastName;
+	@Column(name="email")
+	private String email;
+	
+	@ElementCollection
+	@CollectionTable(name = "image")
+	@OrderColumn
+	@Column(name="file_name") // Defaults to images.
+	private List<String> images = new ArrayList<String>();
+	
+	public Student(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public List<String> getImages() {
+		return images;
+	}
+
+	public void setImages(List<String> images) {
+		this.images = images;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+	
+}
+```
+
+- The **client** code for persisting the **list** of collection of the images, with the **order** column.
+
+```
+package com.love2code.hibernate.demo;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.love2code.hibernate.entity.Student;
+
+
+public class CreateStudentImagesSetDemo {
+
+	public static void main(String[] args) {
+
+		// Create session factory.
+		SessionFactory factory = new Configuration()
+									.configure("hibernate.cfg.xml")
+									.addAnnotatedClass(Student.class)
+									.buildSessionFactory();
+
+		// Create session.
+		Session session = factory.getCurrentSession();
+		
+		try {
+			
+			// Create the object.
+			Student tempStudent = new Student("FirstName", "SecondName", "paul@luv2code.com");
+			List<String> theImages = tempStudent.getImages();
+			
+			theImages.add("SomePic1.jpg");
+			theImages.add("SomePic2.jpg");
+			theImages.add("SomePic3.jpg");
+			theImages.add("SomePic4.jpg");
+			theImages.add("SomePic4.jpg");
+		
+			// Start transaction.
+			session.beginTransaction();
+			
+			// Save the object.
+			System.out.println("Saving the student with images..");
+			session.persist(tempStudent);
+			
+			// Commit the transaction.
+			session.getTransaction().commit();
+			System.out.println("Done!!");
+			
+		} finally {
+			// Cleanup the code.
+			session.close();
+			factory.close();
+		}
+				
+	}
+	
+}
+```
+
+<img src="savingImagesIntoListAndInDb.PNG"  alt="hibernate course" width="500"/>
+
+1. As you can see, the **images** have been saved into to the db and the **order** is saved as well.
