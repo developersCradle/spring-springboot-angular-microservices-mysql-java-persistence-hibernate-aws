@@ -1,11 +1,46 @@
 
 <p align="center">
-    <img id="studying" src="StudyingJavaRepoHallCaption.png" height=200>
+    <img id="studying" src="StudyingJavaRepoHallCaption.png" height=200 width=900>
+  <text>Attempt to stud Java related topics!</text>
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
 > `git config --global http.postBuffer 524288000`
 > `git config --global core.longpaths true`
+
+> 🧱 **Core Spring Framework**.
+> - Spring Core.  
+> - Spring MVC.  
+> - Spring Boot.  
+>
+> 🔐 **Security**.
+> - Spring Security.  
+>
+> 🌐 **Web & RESTful Services**.
+> - Spring REST.  
+> - REST API (REST Web Services).  
+> - Thymeleaf.
+>
+> 🗄️ **Data Persistence**.
+> - JPA / Hibernate.  
+> - MySQL.  
+>
+> 🧩 **Microservices Architecture**.
+> - Spring Boot Microservices.  
+> - Spring Cloud.  
+> 
+> 🐳 **Containerization & Orchestration**.
+> - Docker.
+> - Kubernetes.  
+>
+> ☁️ **Cloud Services**.
+> - AWS.  
+
+
+<p align="center">
+   <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="300"/>
+</p>
+
 
 <br>
 <p align="center">
@@ -261,7 +296,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Mapping Collections - Sets and Lists. ✅ 
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-3-mapping-collections---maps-sorted-maps-and-sorted-sets) - Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 - [ ] [Section 04](#) - Mapping Components - Embeddable.
-- [ ] [Section 05](#) - Mapping Enums.
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2005#section-05-mapping-enums) - Mapping Enums. ✅
 - [ ] [Section 06](#) - Inheritance Mapping - Single Table Strategy.
 - [ ] [Section 07](#) - Inheritance Mapping - Table per Class Strategy.
 - [ ] [Section 08](#) - Inheritance Mapping - Joined Table Strategy.
@@ -356,11 +391,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2001#section-01-introduction) - Introduction ✅.
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2002#section-02-need-for-docker) - Need For Docker ✅.
-- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2003#section-03-resource) - Resource ✅.
-- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2004#section-04-docker-crash-course) - Docker Crash Course. ✅.
-- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose ✅.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2001#section-01-introduction) - Introduction. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2002#section-02-need-for-docker) - Need For Docker. ✅
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2003#section-03-resource) - Resource. ✅
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2004#section-04-docker-crash-course) - Docker Crash Course. ✅
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose. ✅
 - [ ] [Section 06](#). 
 - [ ] [Section 07](#).
 - [ ] [Section 08](#).
@@ -404,8 +439,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2001#section-01-introduction) - Introduction ✅.
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2002#section-02-kubernetes-cluster) - Kubernetes Cluster ✅.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2001#section-01-introduction) - Introduction. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2002#section-02-kubernetes-cluster) - Kubernetes Cluster. ✅
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Kubernetes%20Masterclass%20For%20Beginners/Section%2003#section-03-pod) - Pod.
 - [ ] [Section 04](#) - ReplicaSet.
 - [ ] [Section 05](#) - Deployment.
