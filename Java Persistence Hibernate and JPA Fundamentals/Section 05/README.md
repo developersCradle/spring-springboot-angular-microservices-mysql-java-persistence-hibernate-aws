@@ -34,7 +34,10 @@ Getting Started with JPA.
 > [!IMPORTANT]  
 > **Kide** taught me practical usage of the **JPA**(**DataNucleus**).
 
-<img src="datanucleusInKideAriBest.jpg"  alt="hibernate course" width="500"/>
+<div align="center">
+	<img src="datanucleusInKideAriBest.jpg"  alt="hibernate course" width="500"/>
+</div>
+
 
 # Hibernate as JPA Provider.
 
@@ -263,7 +266,7 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 
 <img src="cachingObjectsSecondQuery.PNG"  alt="hibernate course" width="600"/>
 
-1. When `.find(Message.class, 7L)` will be executed, the **Object** is not queried from the database. Rather than its retrieved from **Cache**.
+1. When `.find(Message.class, 7L)` will be executed for the **second time**, the **Object** is not queried from the database. Rather than its retrieved from **Cache**.
 	- **EntityManager** has cache.
 
 <img src="cachingObjectsSecondQueryMultipleEntityManagers.PNG"  alt="hibernate course" width="600"/>

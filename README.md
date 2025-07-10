@@ -1,53 +1,24 @@
 
 <p align="center">
-    <img id="studying" src="StudyingJavaRepoHallCaption.png" height=200 width=900>
-  <text>Attempt to stud Java related topics!</text>
+    <img id="studying" src="StudyingJavaRepoHallCaption.png" height=250 width=900>
+  <text>Attempt to study <b>Java</b> related topics!</text>
 </p>
 
 > For these courses one should configure **GIT** for handle projects.
 > `git config --global http.postBuffer 524288000`
 > `git config --global core.longpaths true`
 
-> 🧱 **Core Spring Framework**.
-> - Spring Core.  
-> - Spring MVC.  
-> - Spring Boot.  
->
-> 🔐 **Security**.
-> - Spring Security.  
->
-> 🌐 **Web & RESTful Services**.
-> - Spring REST.  
-> - REST API (REST Web Services).  
-> - Thymeleaf.
->
-> 🗄️ **Data Persistence**.
-> - JPA / Hibernate.  
-> - MySQL.  
->
-> 🧩 **Microservices Architecture**.
-> - Spring Boot Microservices.  
-> - Spring Cloud.  
-> 
-> 🐳 **Containerization & Orchestration**.
-> - Docker.
-> - Kubernetes.  
->
-> ☁️ **Cloud Services**.
-> - AWS.  
-
-
 <p align="center">
-   <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="300"/>
+   <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="400" height="300"/>
 </p>
-
 
 <br>
+
 <p align="center">
-    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners.png" height=110>
+    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" height=110>
 </p>
 
-![Spring boot beginners](SpringBootBeginnerCourse.jpg)
+![Spring boot beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners.jpg)
 
 All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby** ©. 
 
@@ -457,10 +428,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Some.
 
 <p align="center">
-    <img id="maven" src="Apache Maven Beginner to Guru.gif" height=120>
+    <img id="maven" src="Apache Maven Beginner to Guru caption.gif" height=120>
 </p>
 
-![Apache Maven: Beginner to Guru](maven.PNG)
+![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru.PNG)
 
 All course material from Apache Maven: Beginner to Guru **John Thompson** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
