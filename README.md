@@ -4,15 +4,15 @@
   <text>Attempt to study <b>Java</b> related topics!</text>
 </p>
 
-> For these courses one should configure **GIT** for handle projects.
-> `git config --global http.postBuffer 524288000`
-> `git config --global core.longpaths true`
 
 <p align="center">
    <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="400" height="300"/>
 </p>
 
-<br>
+> For these courses one should configure **GIT** for handle projects.
+> `git config --global http.postBuffer 524288000`
+> `git config --global core.longpaths true`
+
 
 <p align="center">
     <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" height=110>
@@ -367,9 +367,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2003#section-03-resource) - Resource. ✅
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2004#section-04-docker-crash-course) - Docker Crash Course. ✅
 - [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose. ✅
-- [ ] [Section 06](#). 
-- [ ] [Section 07](#).
-- [ ] [Section 08](#).
+- [ ] [Section 6](#) - Dockerizing Spring Application.
+- [ ] [Section 7](#) - Integration Testing With TestContainers.
+- [ ] [Section 8](#) - Assignment.
+- [ ] [Section 9](#) - Mockserver.
+- [ ] [Section 10](#) - API Gateway / Service Integration.
+- [ ] [Section 11](#) - Spring Native.
+- [ ] [Section 12](#) - What's Next?
 
 #### Additional stuff.
 
@@ -470,7 +474,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] For now do till basic level.
 
 <p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  height=70>
+    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png" width="600" height="50">
 </p>
 
 ![Cryptography and Hashing Fundamentals in Python and Java](Cryptography.PNG)
@@ -496,9 +500,33 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Introduction.
-- [ ] [Section 02](#) - Cryptography Fundamentals.
-- [ ] [Section 03](#) - SYMMETRIC (PRIVATE KEY) CRYPTOGRAPHY.
+- [ ] [Section 1](#) - Introduction.
+- [ ] [Section 2](#) - Cryptography Fundamentals.
+- [ ] [Section 3](#) - Symmetric (Private Key) Cryptography.
+- [ ] [Section 4](#) - Caesar Cipher.
+- [ ] [Section 5](#) - Cracking Caesar Cipher & Detecting Languages.
+- [ ] [Section 6](#) - Vigenere Cipher.
+- [ ] [Section 7](#) - Cracking the Vigenere Cipher (Kasiski Algorithm).
+- [ ] [Section 8](#) - One Time Pad (Vernam Cipher).
+- [ ] [Section 9](#) - Randomness in Cryptography.
+- [ ] [Section 10](#) - Data Encryption Standard (DES).
+- [ ] [Section 11](#) - Cracking Data Encryption Standard (DES).
+- [ ] [Section 12](#) - Advanced Encryption Standard (AES).
+- [ ] [Section 13](#) - Cracking Advanced Encryption Standard (AES).
+- [ ] [Section 14](#) - Asymmetric (Public Key) Cryptography.
+- [ ] [Section 15](#) - Asymmetric Cryptosystems.
+- [ ] [Section 16](#) - Modular Arithmetic.
+- [ ] [Section 17](#) - Diffie-Hellman Key Exchange.
+- [ ] [Section 18](#) - Cracking Diffie-Hellman Cryptosystem.
+- [ ] [Section 19](#) - RSA Cryptosystem.
+- [ ] [Section 20](#) - Cracking RSA.
+- [ ] [Section 21](#) - Elliptic Curve.Cryptography (ECC).
+- [ ] [Section 22](#) - Elliptic Curve Digital Signature Algorithm (ECDSA).
+- [ ] [Section 23](#) - Hashing.
+- [ ] [Section 24](#) - Hashing Algorithms Implementation (Python).
+- [ ] [Section 25](#) - Hashing Algorithms Implementation (Java).
+- [ ] [Section 26](#) - Applications of Cryptography.
+- [ ] [Section 27](#) - Course Materials (Downloads).
 
 #### Additional stuff.
 

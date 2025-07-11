@@ -242,5 +242,85 @@ public class CreateStudentImagesMapDemo {
 2. `file_name` **value** is being saved.
 3. `image` is the table name.
 
-
 # Sorted Sets - Overview.
+
+> **Sorted Set**
+> **Collection** that does **not** contain **duplicates**.
+> When, get, the order is given.
+
+<img src="useCaseForTheSet.PNG"  alt="hibernate course" width="500"/>
+
+1. When you are interested in `yes`**/**`no` answers from the `.contains()`. Also, when getting the **element** the **order** is important!
+2. Take the examples here.
+
+<img src="usingOrderSetInEntity.PNG"  alt="hibernate course" width="500"/>
+
+1. We will have the `images` in the **set**. We want **get** image in the **descending** order. This cannot contain **duplicates**!
+
+<img src="databaseDiagram.PNG"  alt="hibernate course" width="500"/>
+
+1. **Notice** that we will not have the external **Entity**.
+
+<img src="devProcessForTheSet.PNG"  alt="hibernate course" width="500"/>
+
+<img src="step1CreatingDb.PNG"  alt="hiqbernate course" width="500"/>
+
+1. We will be using `update`, for the **Hibernate** configuration!
+2. The properties for the update:
+
+<img src="annotationForTheOrdering.PNG"  alt="hibernate course" width="500"/>
+
+1. `@OrderBy` specifies the **ordering** of the **elements when** a collection is **retrieved**.
+2.  **Syntax**: `@OrderBy (" [field name or property name] [ASC | DESC]")`
+**Example**: `@OrderBy ("file_name DESC")`.
+3. Close comparison is for the **SQL** ordering syntax. Example [SQL Keyword](https://www.w3schools.com/sql/sql_orderby.asp).
+	- SQL: `select * from image order by file_name`.
+4. If `ASC` or `DESC` is **not specified** then `ASC` is the **default**.
+
+<br>
+
+- This will be **second** annotation for **ordering**:
+	- With the **Collection type** it was `@OrderColumn` and as following:
+	```
+	@ElementCollection
+	@CollectionTable(name = "image")
+	@OrderColumn
+	@Column(name="file_name") // Defaults to images.
+	private List<String> images = new ArrayList<String>();¨
+	```
+	- With the **Sorted Set** it was `@OrderBy`.
+	```
+	@ElementCollection
+	@CollectionTable(name="image")
+	@org.hibernate.annotations.OrderBy(clause = "file_name") //default asc
+	@Column(name="file_name") //defaults to images
+	private Set<String> images = new LinkedHashSet<String>();
+	
+	```
+
+<img src="mappingCollection.PNG"  alt="hibernate course" width="500"/>
+
+1. We are using the `@OrderBy"file_name DESC")`. This will **order** by `file_name`.
+
+<img src="step3CodingForTheOrdering.PNG"  alt="hibernate course" width="500"/>
+
+- Code as following:
+
+```
+// create the object
+Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
+Set<String> theImages = tempStudent.getImages();
+
+theImages.add("photo1.jpg");
+theImages.add("photo2.jpg");
+theImages.add("photo3.jpg");
+theImages.add("photo4.jpg");
+theImages.add("photo5.jpg");
+
+// start a transaction
+session.beginTransaction();
+
+// save the object
+System.out.println("Saving the student and images...");
+session.persist(tempStudent);
+```

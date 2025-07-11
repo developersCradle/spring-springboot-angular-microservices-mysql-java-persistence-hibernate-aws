@@ -1063,27 +1063,26 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 
 <img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
 
-1. We can achieve this using **Converter** class.
-	- This is taking place, when ever we are:
+1. We can achieve this using by using the **Converter** class.
+	- This will be taking place, when ever we are, either:
 		- **Retrieving** the data.
 		- **Saving** the data.
 
+<img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
 
 - This is having **three** main steps:
 
-<img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
-
-1. First is to implement `AttributeConverter`
-    - **First** parameter is what we need, we want store 
+1. 1️**First Step**1️ is to implement `AttributeConverter`.
+    - **First** parameter is what we need, we want store. 
     - **Second** parameter is the database column where we want to store the data.
 
 <img src="secondStepDataConverter.PNG" alt="hibernate course" width="600"/>
 
-1. We specify, when we **persist** to hibernate object, how we would want our data be **converted**.
+1. 2️**Second Step**2️ we specify, when we **persist** to hibernate object, how we would want our data be **converted**.
 
 <img src="thirdStepDataConverter.PNG" alt="hibernate course" width="600"/>
 
-1. We specify, the **database data** to the **entity** presentation of data.
+1. 3️⃣**Third Step**3️⃣ we specify, the **database data** to the **entity** presentation of data.
 
 <img src="mappingEnumToIntegersIndb.PNG" alt="hibernate course" width="600"/>
 
