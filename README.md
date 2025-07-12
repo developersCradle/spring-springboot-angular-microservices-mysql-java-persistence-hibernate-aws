@@ -4,7 +4,6 @@
   <text>Attempt to study <b>Java</b> related topics!</text>
 </p>
 
-
 <p align="center">
    <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="400" height="300"/>
 </p>
@@ -18,7 +17,7 @@
     <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" height=110>
 </p>
 
-![Spring boot beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners.jpg)
+![Spring Boot beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners%20desc.jpg)
 
 All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby** ©. 
 
@@ -139,11 +138,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     - Also numbering got changed.
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
-
 <p align="center">
     <img id="microservice architecture" src="Microservices Architecture - The Complete Guide Caption.png" height="90">
 </p>
-
 
 ![Microservices Architecture - The Complete Guide](microserviceArchitecture.PNG)
 
@@ -171,15 +168,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 1](#) - Welcome.
-- [ ] [Section 2](#) - History of Microservices.
-- [ ] [Section 3](#) - Problems with Monolith & SOA.
-- [ ] [Section 4](#) - Microservices Architecture.
-- [ ] [Section 5](#) - Problems Solved by Microservices.
-- [ ] [Section 6](#) - Designing Microservices Architecture.
-- [ ] [Section 7](#) - Deploying Microservices.
-- [ ] [Section 8](#) - Testing Microservices.
-- [ ] [Section 9](#) - Service Mesh.
+- [ ] [Section 01](#) - Welcome.
+- [ ] [Section 02](#) - History of Microservices.
+- [ ] [Section 03](#) - Problems with Monolith & SOA.
+- [ ] [Section 04](#) - Microservices Architecture.
+- [ ] [Section 05](#) - Problems Solved by Microservices.
+- [ ] [Section 06](#) - Designing Microservices Architecture.
+- [ ] [Section 07](#) - Deploying Microservices.
+- [ ] [Section 08](#) - Testing Microservices.
+- [ ] [Section 09](#) - Service Mesh.
 - [ ] [Section 10](#) - Logging and Monitoring.
 - [ ] [Section 11](#) - When Not to Use Microservices.
 - [ ] [Section 12](#) - Microservices and the Organization.
@@ -240,7 +237,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" height=100>
 </p>
 
-![Advanced hibernate here](advancedHibernate.PNG)
+![Advanced hibernate here](Hibernate%20Advanced%20Development%20Techniques%20caption%20desc.PNG)
 
 All course material from **Hibernate: Advanced Development Techniques** by **Harinath Kuntamukkala** and **Chad Darby** ©.
 
@@ -367,10 +364,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2003#section-03-resource) - Resource. ✅
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2004#section-04-docker-crash-course) - Docker Crash Course. ✅
 - [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers/Section%2005#section-5-docker-compose) - Docker Compose. ✅
-- [ ] [Section 6](#) - Dockerizing Spring Application.
-- [ ] [Section 7](#) - Integration Testing With TestContainers.
-- [ ] [Section 8](#) - Assignment.
-- [ ] [Section 9](#) - Mockserver.
+- [ ] [Section 06](#) - Dockerizing Spring Application.
+- [ ] [Section 07](#) - Integration Testing With TestContainers.
+- [ ] [Section 08](#) - Assignment.
+- [ ] [Section 09](#) - Mockserver.
 - [ ] [Section 10](#) - API Gateway / Service Integration.
 - [ ] [Section 11](#) - Spring Native.
 - [ ] [Section 12](#) - What's Next?
@@ -468,6 +465,20 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2003#section-3-compiling-java) - Compiling Java.
 - [ ] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2004#section-4-getting-started-with-maven) - Getting Started with Maven.
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2005#section-5-maven-basics) - Maven Basics.
+- [ ] [Section 06](#) - Common Maven Plugins.  
+- [ ] [Section 07](#) - Generating Source with Maven.  
+- [ ] [Section 08](#) - Alternate JVM Languages.  
+- [ ] [Section 09](#) - Testing with Maven.  
+- [ ] [Section 10](#) - Multi-Module Projects.  
+- [ ] [Section 11](#) - Apache Maven for Spring Boot.  
+- [ ] [Section 12](#) - Maven Repositories.  
+- [ ] [Section 13](#) - Deploying to Maven Projects to Packagecloud.  
+- [ ] [Section 14](#) - Deploying Apache Maven Projects to Nexus.  
+- [ ] [Section 15](#) - Maven Build Profiles.  
+- [ ] [Section 16](#) - Maven Release Plugin.  
+- [ ] [Section 17](#) - Maven in the Real World.  
+- [ ] [Section 18](#) - Enterprise Dependency Management.  
+- [ ] [Section 19](#) - Appendix A: Using GitHub.
 
 #### Additional stuff.
 

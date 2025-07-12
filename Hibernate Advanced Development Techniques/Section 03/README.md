@@ -77,7 +77,7 @@ public class Department {
 
 - We are **mapping** :D the **map** in Hibernate.
 
-- The Student entity:
+- The Student Entity:
 
 ```
 package com.luv2code.hibernate.demo.entity;
@@ -324,3 +324,402 @@ session.beginTransaction();
 System.out.println("Saving the student and images...");
 session.persist(tempStudent);
 ```
+
+<img src="step3ForTheDeveloping.PNG"  alt="hibernate course" width="500"/>
+
+<img src="runTheApp.PNG"  alt="hibernate course" width="500"/>
+
+1. These will be **saved** into the database as in order like in the database as in **Sorted Set**.
+
+# Sorted Sets - Write Some Code - Part 1.
+
+- The **Hibernate** configuration:
+
+```
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+        <!-- Select our SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Auto create tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+ 
+    </session-factory>
+
+</hibernate-configuration>
+```
+
+
+- The student **Entity**:
+
+```
+package com.luv2code.hibernate.demo.entity;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="student")
+public class Student {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="last_name")
+	private String lastName;
+	
+	@Column(name="email")
+	private String email;
+		
+	@ElementCollection
+	@CollectionTable(name="image")
+@org.hibernate.annotations.OrderBy(clause = "file_name") //default asc
+	@Column(name="file_name") //defaults to images
+	private Set<String> images = new LinkedHashSet<String>();
+	
+	
+	public Student() {
+		
+	}
+	
+	public Student(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public Set<String> getImages() {
+		return images;
+	}
+
+	public void setImages(Set<String> images) {
+		this.images = images;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+	
+}
+```
+
+
+- The **client** for creating the students:
+
+```
+package com.luv2code.hibernate.demo;
+
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.luv2code.hibernate.demo.entity.Student;
+
+public class CreateStudentImagesSortedSetDemo {
+
+
+	public static void main(String[] args) {
+		
+		//create session factory
+		SessionFactory factory = new Configuration()
+									.configure("hibernate.cfg.xml")
+									.addAnnotatedClass(Student.class)
+									.buildSessionFactory();
+		
+
+		//create session
+		Session session = factory.getCurrentSession();
+		
+		try {
+		//create the object
+			Student tempStudent = new Student("John","Doe","john@luv2code.com");
+			Set<String> theImages = tempStudent.getImages();
+			
+			theImages.add("photo1.jpg");
+			theImages.add("photo2.jpg");
+			theImages.add("photo3.jpg");
+			theImages.add("photo4.jpg");
+			theImages.add("photo4.jpg"); //Duplicate, filtered at java level by HashSet!!!
+			theImages.add("photo5.jpg");
+			theImages.add("photo5.jpg"); //Duplicate, filtered at java level by HashSet!!!
+			
+		//start a transaction
+			session.beginTransaction();
+			
+		//save the object
+			System.out.println("Saving the student and images..");
+			session.persist(tempStudent);
+			
+		//commit the transaction
+			session.getTransaction().commit();
+			System.out.println("Done!!");
+		}
+		finally {
+		//clean up code
+			session.close();
+			factory.close();
+		}
+		
+
+	}
+
+}
+
+```
+
+<img src="savingIntoTheOrderedSortedSet.PNG"  alt="hibernate course" width="300"/>
+
+1. We can see we have saved into to the database, thought to the **Ordered Set**.
+
+# Sorted Sets - Write Some Code - Part 2.
+
+- The student **Entity**:
+
+```
+package com.luv2code.hibernate.demo.entity;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OrderBy;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="student")
+public class Student {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="last_name")
+	private String lastName;
+	
+	@Column(name="email")
+	private String email;
+		
+	@ElementCollection
+	@CollectionTable(name="image")
+//	@OrderBy we could use the the @orderBy form package import javax.persistence.OrderBy;
+@org.hibernate.annotations.OrderBy(clause = "file_name") //default asc
+	@Column(name="file_name") //defaults to images
+	private Set<String> images = new LinkedHashSet<String>();
+	
+	
+	public Student() {
+		
+	}
+	
+	public Student(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public Set<String> getImages() {
+		return images;
+	}
+
+	public void setImages(Set<String> images) {
+		this.images = images;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+	
+}
+```
+
+
+- The **client** for getting the students:
+
+```
+package com.luv2code.hibernate.demo;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.luv2code.hibernate.demo.entity.Student;
+
+public class GetStudentImagesDemo {
+
+	public static void main(String[] args) {
+
+		//create session factory
+		SessionFactory factory = new Configuration()
+									.configure("hibernate.cfg.xml")
+									.addAnnotatedClass(Student.class)
+									.buildSessionFactory();
+		
+
+		//create session
+		Session session = factory.getCurrentSession();
+		
+		try {
+			
+			//start a transaction
+			session.beginTransaction();
+			
+			// get the student id
+			int theId = 1;
+			Student student = session.get(Student.class, theId);
+			
+			//print the student detail
+			System.out.println("Student details: "+student);
+			
+			//print the associated images
+			System.out.println("The associated images: "+student.getImages());
+			
+			//commit the transaction
+			session.getTransaction().commit();
+			
+			//done
+			System.out.println("Done!");
+		}
+		finally {
+			//close the transaction
+			session.close();
+			factory.close();
+			
+		}
+		
+		
+	}
+
+}
+```
+
+- You can get the **ordered images**, using with `@OrderBy` annotation.
+
+```
+Hibernate: select student0_.id as id1_1_0_, student0_.email as email2_1_0_, student0_.first_name as first_na3_1_0_, student0_.last_name as last_nam4_1_0_ from student student0_ where student0_.id=?
+Student details: Student [id=1, firstName=John, lastName=Doe, email=john@luv2code.com]
+Hibernate: select images0_.Student_id as Student_1_0_0_, images0_.file_name as file_nam2_0_0_ from image images0_ where images0_.Student_id=? order by images0_.file_name
+The associated images: [photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg, photo5.jpg]
+Done!
+```
+
+# Sorted Maps - Overview.
+
+> **Sorted Map**
+> Elements are **sorted** when insert happen!
+> This can be used for mapping **unique** key:s to value:s.
+> We can also, specify **sorting order**.
+
+<img src="useCaseForSortedMaps.PNG"  alt="hibernate course" width="400"/>
+
+1. Do the examples.
+2. This will be useful, when we want to **retrieve data**.
+
+<img src="studentAndImagesMaps.PNG"  alt="hibernate course" width="400"/>

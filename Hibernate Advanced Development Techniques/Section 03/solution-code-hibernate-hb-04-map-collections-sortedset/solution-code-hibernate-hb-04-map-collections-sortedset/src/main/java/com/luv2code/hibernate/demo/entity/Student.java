@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 @Entity
@@ -31,6 +32,7 @@ public class Student {
 		
 	@ElementCollection
 	@CollectionTable(name="image")
+//	@OrderBy we could use the the @orderBy form package import javax.persistence.OrderBy;
 @org.hibernate.annotations.OrderBy(clause = "file_name") //default asc
 	@Column(name="file_name") //defaults to images
 	private Set<String> images = new LinkedHashSet<String>();
