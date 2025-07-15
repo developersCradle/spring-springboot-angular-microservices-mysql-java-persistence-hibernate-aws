@@ -13,7 +13,10 @@ Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 
 <img src="useForTheMaps.PNG"  alt="hibernate course" width="500"/>
 
-1. insert examples here.s
+1. Examples of usage:
+	- Map of error codes and error messages.
+	- Map of country codes and country names.
+	- Map of image file names and image descriptions.
 2. Example of using **maps**, there will be **keys** mapped to **value**.
 3. When you want access using **key** rather than using **integer** index.
 
@@ -364,7 +367,6 @@ session.persist(tempStudent);
 
 </hibernate-configuration>
 ```
-
 
 - The student **Entity**:
 
@@ -719,7 +721,33 @@ Done!
 
 <img src="useCaseForSortedMaps.PNG"  alt="hibernate course" width="400"/>
 
-1. Do the examples.
-2. This will be useful, when we want to **retrieve data**.
+1. **Example of error codes** and **error messages**.
+2. **Example image file names** and **images description**.
 
 <img src="studentAndImagesMaps.PNG"  alt="hibernate course" width="400"/>
+ 
+ 1. This will be sorted by the **filename** or sort based on **key**.
+
+<img src="sortedMapDatabaseDiagram.PNG"  alt="hibernate course" width="400"/>
+
+<img src="developementProgress.PNG"  alt="hibernate course" width="400"/>
+
+<img src="step1sortedMap.PNG"  alt="hibernate course" width="400"/>
+
+<img src="step2AnnotationMap.PNG"  alt="hibernate course" width="400"/>
+
+<img src="annotationForOrdering.PNG"  alt="hibernate course" width="400"/>
+
+1. The `@OrderBy` is applied when the **collection** is **retrieved**.
+
+<img src="step2AnnotationMapAnnotations.PNG"  alt="hibernate course" width="400"/>
+
+1. `@OrderBy` **defaults** by `file_name` as ASCENDING.
+
+<img src="step3ForTheDevelopingMainApplication.PNG"  alt="hibernate course" width="400"/>
+
+<img src="runTheAppOverView.PNG"  alt="hibernate course" width="400"/>
+
+# Sorted Maps - Write Some Code.
+
+- TODO this ones
