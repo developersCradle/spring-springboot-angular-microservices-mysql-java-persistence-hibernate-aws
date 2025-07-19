@@ -8,10 +8,9 @@
    <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="400" height="300"/>
 </p>
 
-> For these courses one should configure **GIT** for handle projects.
-> `git config --global http.postBuffer 524288000`
-> `git config --global core.longpaths true`
-
+- For these courses one should configure **GIT** for handle projects.
+    - `git config --global http.postBuffer 524288000`.
+    - `git config --global core.longpaths true`.
 
 <p align="center">
     <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" height=110>
@@ -23,6 +22,7 @@ All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **
 
 Contains my own notes with some course material to enforce learning experience.
 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
 [The course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/). 
 
@@ -92,6 +92,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 All course material from Master Microservices with Spring Boot and Spring Cloud by **in28Minutes** ©.
 
 Contains my own notes with some course material to enforce learning experience.
+
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
 
 [The course at Udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/).
 
@@ -198,7 +201,6 @@ All course material from **Java Persistence: Hibernate and JPA Fundamentals** by
 
 [Homepage of Course](https://mavenedge.com/).   
 
-
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
@@ -243,7 +245,6 @@ All course material from **Hibernate: Advanced Development Techniques** by **Har
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
 
-
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
 <!-- 
@@ -256,7 +257,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
-
 
 #### Progress/Curriculum.
 
@@ -331,10 +331,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <br>
 
 <p align="center">
-    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers.png" height=90>
+    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers caption.png" height=90>
 </p>
 
-![Docker Masterclass For Java Spring Boot Developers](dockerMasterClass.PNG)
+![Docker Masterclass For Java Spring Boot Developers](Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers%20desc.PNG)
 
 All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj** ©.
 
@@ -423,6 +423,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 10](#) - Persistent Volume & StatefulSet.
 - [ ] [Section 11](#) - HPA - Horizontal Pod Autoscaler.
 - [ ] [Section 12](#) - Ingress.
+- [ ] [Section 13](#) - **** ASSIGNMENT ****.  
+- [ ] [Section 14](#) - GKE / Google Kubernetes Engine.  
+- [ ] [Section 15](#) - What's Next?
 
 #### Additional stuff.
 
@@ -432,7 +435,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="maven" src="Apache Maven Beginner to Guru caption.gif" height=120>
 </p>
 
-![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru.PNG)
+![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru%20desc.PNG)
 
 All course material from Apache Maven: Beginner to Guru **John Thompson** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
@@ -462,7 +465,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2001#section-1-apache-maven-introduction) - Apache Maven Introduction. ✅
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2002#section-2-getting-started) - Getting Started. ✅
-- [ ] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2003#section-3-compiling-java) - Compiling Java.
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2003#section-3-compiling-java) - Compiling Java. ✅
 - [ ] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2004#section-4-getting-started-with-maven) - Getting Started with Maven.
 - [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2005#section-5-maven-basics) - Maven Basics.
 - [ ] [Section 06](#) - Common Maven Plugins.  
@@ -494,9 +497,12 @@ All course material from Cryptography and Hashing Fundamentals in Python and Jav
 
 Contains my own notes with some course material to enforce learning experience.
 
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
 [The course at Udemy](https://www.udemy.com/course/learn-cryptography-basics-in-python/).
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
+
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -511,15 +517,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 1](#) - Introduction.
-- [ ] [Section 2](#) - Cryptography Fundamentals.
-- [ ] [Section 3](#) - Symmetric (Private Key) Cryptography.
-- [ ] [Section 4](#) - Caesar Cipher.
-- [ ] [Section 5](#) - Cracking Caesar Cipher & Detecting Languages.
-- [ ] [Section 6](#) - Vigenere Cipher.
-- [ ] [Section 7](#) - Cracking the Vigenere Cipher (Kasiski Algorithm).
-- [ ] [Section 8](#) - One Time Pad (Vernam Cipher).
-- [ ] [Section 9](#) - Randomness in Cryptography.
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Cryptography Fundamentals.
+- [ ] [Section 03](#) - Symmetric (Private Key) Cryptography.
+- [ ] [Section 04](#) - Caesar Cipher.
+- [ ] [Section 05](#) - Cracking Caesar Cipher & Detecting Languages.
+- [ ] [Section 06](#) - Vigenere Cipher.
+- [ ] [Section 07](#) - Cracking the Vigenere Cipher (Kasiski Algorithm).
+- [ ] [Section 08](#) - One Time Pad (Vernam Cipher).
+- [ ] [Section 09](#) - Randomness in Cryptography.
 - [ ] [Section 10](#) - Data Encryption Standard (DES).
 - [ ] [Section 11](#) - Cracking Data Encryption Standard (DES).
 - [ ] [Section 12](#) - Advanced Encryption Standard (AES).

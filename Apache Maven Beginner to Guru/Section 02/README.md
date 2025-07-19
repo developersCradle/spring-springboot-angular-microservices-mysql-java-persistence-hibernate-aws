@@ -1,14 +1,14 @@
-# Section 2: Getting Started.
+# Section 02: Getting Started.
 
 Getting Started.
 
 # What I Learned.
 
-# 9. Introduction.
+# Introduction.
 
 - Check ✅.
 
-# 10. System Requirements.
+# System Requirements.
 
 <img src="systemReq.PNG"  alt="alt text" width="500"/>
 
@@ -16,15 +16,15 @@ Getting Started.
 
 <img src="javaReq.PNG"  alt="alt text" width="500"/>
 
-- OpenJDK in the past were really buggy, now it's fine.
+- `OpenJDK` in the past were really buggy, now it's fine.
 
 <img src="IDErequirement.PNG"  alt="alt text" width="500"/>
 
-# 11. Maven Installation.
+# Maven Installation.
 
 - Check ✅.
 
-# 12. Environment Verification.
+# Environment Verification.
 
 - Verifying `Java` < `11` is needed!
     - Runtime `java --version`
@@ -32,6 +32,6 @@ Getting Started.
 - Verifying `Maven` < `3.6`!
     - `mvn -v`
 
-# 13. Conclusion.
+# Conclusion.
 
 - Check ✅.

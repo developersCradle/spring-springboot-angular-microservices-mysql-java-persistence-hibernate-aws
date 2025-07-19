@@ -1,18 +1,18 @@
-# Section 1: Apache Maven Introduction.
+# Section 01: Apache Maven Introduction.
 
 Apache Maven Introduction.
 
 # What I Learned.
 
-# 1. Welcome to Apache Maven - Beginner to Guru course.
+# Welcome to Apache Maven - Beginner to Guru course.
 
 - Lot of stuff. ✅
 
-# 2. Meet your Instructor.
+# Meet your Instructor.
 
 - He does stuff. ✅
 
-# 3. Getting the Most Out of this Course.
+# Getting the Most Out of this Course.
 
 <img src="numberOneTip.PNG"  alt="alt text" width="500"/>
 
@@ -30,7 +30,7 @@ Apache Maven Introduction.
 
 <img src="summary.PNG"  alt="alt text" width="500"/>
 
-# 4. Why Use Apache Maven?
+# Why Use Apache Maven?
 
 <img src="whyUseMaven.PNG"  alt="alt text" width="500"/>
 
@@ -51,21 +51,20 @@ Apache Maven Introduction.
 
 - **Maven** and **Gradle** have their own benefits. 
 
-# 5. Slack Group for Apache Maven: Beginner to Guru.
+# Slack Group for Apache Maven: Beginner to Guru.
 
 - Check. ✅
 
-# 6. Is your IDE Free Like a Puppy?
+# Is your IDE Free Like a Puppy?
 
 - When weird things happening in **IntelliJ**, try to **Invalid Caches**.
     - There is very fast and good support.
 
-
-# 7. Free 120 Day IntelliJ IDEA Trial!
+# Free 120 Day IntelliJ IDEA Trial!
 
 - Get Free license key for IntelliJ.
 
-# 8. GitHub Workflow.
+# GitHub Workflow.
 
 - Check. ✅
 
