@@ -1,4 +1,4 @@
-# Section 4: Getting Started with Maven.
+# Section 04: Getting Started with Maven.
 
 Getting Started with Maven.
 
