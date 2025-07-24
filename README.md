@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img id="studying" src="StudyingJavaRepoHallCaption.png" height=300 width=900>
+    <img id="studying" src="StudyingJavaRepoHallCaption.png" style="height: 200px; width: 900px;">
   <text>Attempt to study <b>Java</b> related topics!</text>
 </p>
 

@@ -42,7 +42,7 @@ Getting Started with Maven.
 
 
 - `mvn clean` will the environment.
-- `mvn package` will compile your code, run tests, and package the compiled code into a JAR or WAR file.
+- `mvn package` will compile your code, run tests, and package the compiled code into a **JAR** or **WAR** file.
 
 - We will make the `.jar` file with the `mvn package`.
 
