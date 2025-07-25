@@ -13,7 +13,7 @@
     - `git config --global core.longpaths true`.
 
 <p align="center">
-    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" height=110>
+    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 110px; width: 900px;">
 </p>
 
 ![Spring Boot beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners%20desc.jpg)
@@ -77,14 +77,14 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](#) - Course Introduction
-- [X] [Section 02](#) - Spring Overview
-- [ ] [Section 03](#) - Setting Up Your Development Environment
-- [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration
-- [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration
+- [x] [Section 01](#) - Course Introduction.
+- [X] [Section 02](#) - Spring Overview.
+- [ ] [Section 03](#) - Setting Up Your Development Environment.
+- [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration.
+- [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration.
 
 <p align="center">
-    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png"  height=150 width=900>
+    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 150px; width: 900px;">
 </p>
 
 ![Master Microservices](Master%20Microservices%20with%20Spring%20Boot%20and%20Spring%20Cloud%20desc.JPG)
@@ -142,7 +142,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 <p align="center">
-    <img id="microservice architecture" src="Microservices Architecture - The Complete Guide Caption.png" height="90">
+    <img id="microservice architecture" src="Microservices Architecture - The Complete Guide Caption.png" style="height: 90px; width: 900px;">
 </p>
 
 ![Microservices Architecture - The Complete Guide](microserviceArchitecture.PNG)
@@ -437,18 +437,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru%20desc.PNG)
 
-All course material from Apache Maven: Beginner to Guru **John Thompson** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
+All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
-Contains my own notes with some course material to enforce learning experience.
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys. This is why it will include configuration files which are related to this IDE this approach, and it will be favored for now, also the compiled classed for explanatory experiments. ⚙️
 
 [The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
 
+[Spring Ahead Code Academy](https://springaheadcode.academy/).
+
+[Spring Framework Guru](https://springframework.guru/).
+
+
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
-<!-- add these later.
-[Content maker](https://www.vinsguru.com/).
-
-[Latest GIT ](https://github.com/vinsguru/kubernetes-course). -->
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -484,7 +485,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 19](#) - Appendix A: Using GitHub.
 
 #### Additional stuff.
-
+- [ ] TODO maven depencies.
 - [ ] For now do till basic level.
 
 <p align="center">
@@ -537,7 +538,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 18](#) - Cracking Diffie-Hellman Cryptosystem.
 - [ ] [Section 19](#) - RSA Cryptosystem.
 - [ ] [Section 20](#) - Cracking RSA.
-- [ ] [Section 21](#) - Elliptic Curve.Cryptography (ECC).
+- [ ] [Section 21](#) - Elliptic Curve. Cryptography (ECC).
 - [ ] [Section 22](#) - Elliptic Curve Digital Signature Algorithm (ECDSA).
 - [ ] [Section 23](#) - Hashing.
 - [ ] [Section 24](#) - Hashing Algorithms Implementation (Python).

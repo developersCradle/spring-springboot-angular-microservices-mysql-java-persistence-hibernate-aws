@@ -83,6 +83,7 @@ They are **not** cached permanently like releases
 
 - You can see, that there is much more **files** in the **central repository** for given dependency `https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8/`.
     - This also uses the **Maven coordinates** for navigating!
+
 # Maven Wagon.
 
 <img src="MavenWagon.JPG"  alt="alt text" width="400"/>
@@ -101,3 +102,40 @@ They are **not** cached permanently like releases
         - Such as, if one needs proxy, this can be found already inside **Maven**.
 
 # Maven Project Object Model.
+
+<img src="mavenPom.JPG"  alt="alt text" width="400"/>
+
+1. **POM** is standing for the **P**roject **O**bject **M**odel.
+    - POM is used to describe build process!
+
+2. The `maven-4.0.0.xsd` **schema** defines what can be inside **POM**.
+    - This is **pretty** huge file!
+3. In **spring** projects, some are inheriting from the parent project.
+
+- **Effective POM** is the **POM** that gets used when there is compilation.
+    - In **IntelliJ** its, when click the `show effective POM`. 
+    - In **Maven** this can be called with: `mvn help:effective-pom`.
+
+# Maven Dependencies.
+
+<img src="mavenDependencies.JPG"  alt="alt text" width="400"/>
+
+1. **Transitive Dependency** is called, if you have dependency and that dependency has dependency!
+2. **Maven Management** feature of **Maven**, allows authors to specify certain of dependency to use!
+
+<img src="mavenDependencies2.JPG"  alt="alt text" width="400"/>
+
+1. When there is multiple version of same **dependency**, which one gets applied?
+    - In Maven terms: `Nearest Defination` in dependency tree is used!
+
+2. We can **Exclude Dependencies**!
+3. We can make **Optional Dependencies**, for example if we use build multiple **JAR** files. Furthermore, we can optionally exclude this from the other **JAR**.
+
+- Todo tee tämä uudestaan.
+
+<img src="dependencyScope.JPG"  alt="alt text" width="400"/>
+
+1. **Compile** is the default scope.
+
+<img src="dependencyPlugIn.JPG"  alt="alt text" width="400"/>
+
