@@ -13,7 +13,7 @@
     - `git config --global core.longpaths true`.
 
 <p align="center">
-    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 110px; width: 900px;">
+    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 90px; width: 900px;">
 </p>
 
 ![Spring Boot beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners%20desc.jpg)
@@ -432,7 +432,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Some.
 
 <p align="center">
-    <img id="maven" src="Apache Maven Beginner to Guru caption.gif" height=120>
+    <img id="maven" src="Apache Maven Beginner to Guru caption.gif" style="height: 100px; width: 900px;">
 </p>
 
 ![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru%20desc.PNG)
@@ -489,7 +489,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] For now do till basic level.
 
 <p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png" width="600" height="50">
+    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  style="height: 50px; width: 900px;">
 </p>
 
 ![Cryptography and Hashing Fundamentals in Python and Java](Cryptography.PNG)

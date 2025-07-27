@@ -6,7 +6,7 @@ Section 5: Maven Basics
 
 # Introduction.
 
-- Lot of power points and less practical work at work!  
+- There will be a lot of power points and less practical work at work!  
 
 # Maven Coordinates.
 
@@ -131,11 +131,61 @@ They are **not** cached permanently like releases
 2. We can **Exclude Dependencies**!
 3. We can make **Optional Dependencies**, for example if we use build multiple **JAR** files. Furthermore, we can optionally exclude this from the other **JAR**.
 
-- Todo tee tämä uudestaan.
+> In **Java** and **Maven context**, there is **Three** main class paths.
+>
+> **Run Class Path**:
+> Tells Java Virtual Machine (JVM) where to find your **compiled classes** and **libraries**.
+>
+> **Compile Class Path**:
+> Tells where to find **compiled classes** and **libraries** for the **Java compiler**!
+>
+> **Test Class Path**:
+> For the test runners. This is for **compile** and **run tests**.
 
-<img src="dependencyScope.JPG"  alt="alt text" width="400"/>
+<img src="dependencyScope.JPG"  alt="alt text" width="600"/>
 
-1. **Compile** is the default scope.
+1. These **keywords** define the **scopes** for the **dependencies**!
+2. **Compile** is the default scope. This projected into to the inherited **dependencies**!
+3. **Provided** is expecting to provide dependencies, by the **JDK** or the **container** at runtime!
+4. **Runtime** the dependency is **not needed at compile** time, but in the **Runtime**. For example:
+> JDBC Drivers, logging backends, or other libraries that are only called > via reflection or injected at **runtime**.
+5. **Test** makes only available in **Test Classpath**.
+    - One **common mistake**, is that the is being omitted from the test decencies. This will be **prograded** into the child dependencies, which is not wanted.
+> **Test Dependencies**. Be included in the test classpath (for compiling 
+and running tests).
+6. **System** is similar to the **Provided**, but `.jar` is added to the system **explicitly** (**file path**).
+> [!WARNING]
+> **Scope** is mostly discouraged. It's inflexible, doesn't work well across teams or CI environments, and has better alternatives.
+7. **Import** Used to import **version number management** inside `<dependencyManagement>`.
+    - It lets you import a **BOM** (Bill of Materials), which is a Maven feature that **manages dependency versions** in one place.
+    - It does **not add** any actual dependencies to your project — it only brings in version information and centralizes dependency management.
 
-<img src="dependencyPlugIn.JPG"  alt="alt text" width="400"/>
+<img src="dependencyPlugIn.JPG"  alt="alt text" width="600"/>
 
+- **Dependency Plugins**.
+
+1. **Shows** dependency tree. **Command:** `mvn dependency:tree`. This will be useful when **resolving conflict**! You can see the versions and where it's coming from. Example of the output:
+
+```
+[INFO] com.example:my-app:jar:1.0
+[INFO] +- org.springframework:spring-context:jar:5.3.27:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.27:compile
+[INFO] |  \- org.springframework:spring-beans:jar:5.3.27:compile
+[INFO] +- junit:junit:jar:4.13.2:test
+[INFO] \- com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile
+```
+
+2. **Preloads** all projects decencies **into the local** repository. **Command:** `mvn dependency:go-offline`.
+    - Useful for the **CircleCI** build to cache your dependencies. 
+3. **Clears** the artifacts form local repository. **Command:** `mvn dependency:purge-local-repository`.
+    - Useful if there are some dependencies **corrupted**.
+4. **Source file** are being downloaded. This especially the case, when **open-source** project are published into **maven central**.  **Command:** `mvn dependency:sources`.
+
+<img src="usingTheDependencyTree.JPG"  alt="alt text" width="600"/>
+
+1. The **project**.
+2. The **coordinates**.
+3. The **version**.
+4. The **scope**.
+
+# Maven Standard Directory Layout.
