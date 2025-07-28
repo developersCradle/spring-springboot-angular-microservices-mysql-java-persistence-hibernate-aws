@@ -1,6 +1,6 @@
-# Section 5: Maven Basics.
+# Section 05: Maven Basics.
 
-Section 5: Maven Basics
+Maven Basics.
 
 # What I Learned.
 
@@ -189,3 +189,41 @@ and running tests).
 4. The **scope**.
 
 # Maven Standard Directory Layout.
+
+- In **beginning** there was **no** common `Java standard directory layout`!
+    - Apache maven set the standard as **defacto**.
+    
+<img src="standardLayout.JPG"  alt="alt text" width="600"/>
+
+1. `Main` for the for files. 
+2. `Test` for test related things.
+3. Under `Main` is **usually** categorized with **Language**.
+
+- You can check the latest standard from here: [Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
+
+- If you **need** to override the standard layout, you **should** ask why? 
+
+# Maven Build Lifecycles.
+
+<img src="mavenLifeSycles.JPG"  alt="alt text" width="600"/>
+
+1. Mavens building block is **build lifecycle**.
+2. **Lifecycle** is pre-defined group of the **steps** called **phases**.
+3. These **phases** can bound to one or more **plugin goals**!
+4. Work is done by **Maven plugins**!
+
+<img src="mavenBuildSycles.JPG"  alt="alt text" width="600"/>
+
+1. Maven has **three** pre-defined **lifecycles**.
+
+- Todo tee udestaan.
+
+# Maven Wrapper.
+
+- Todo
+
+# Maven Archetypes.
+
+- Todo
+
+# Conclusion.

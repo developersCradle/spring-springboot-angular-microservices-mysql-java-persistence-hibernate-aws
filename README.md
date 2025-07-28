@@ -84,7 +84,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration.
 
 <p align="center">
-    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 150px; width: 900px;">
+    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 130px; width: 900px;">
 </p>
 
 ![Master Microservices](Master%20Microservices%20with%20Spring%20Boot%20and%20Spring%20Cloud%20desc.JPG)
@@ -114,6 +114,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+- Currently transferring handwritten notes to **digital form**.
 
 #### Progress/Curriculum new.
 
@@ -262,7 +264,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2001#section-01-introduction) - Introduction. ✅
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Mapping Collections - Sets and Lists. ✅ 
-- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-3-mapping-collections---maps-sorted-maps-and-sorted-sets) - Mapping Collections - Maps, Sorted Maps and Sorted Sets. ✅
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-03-mapping-collections---maps-sorted-maps-and-sorted-sets) - Mapping Collections - Maps, Sorted Maps and Sorted Sets. ✅
 - [ ] [Section 04](#) - Mapping Components - Embeddable.
 - [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2005#section-05-mapping-enums) - Mapping Enums. ✅
 - [ ] [Section 06](#) - Inheritance Mapping - Single Table Strategy.
@@ -485,8 +487,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 19](#) - Appendix A: Using GitHub.
 
 #### Additional stuff.
-- [ ] TODO maven depencies.
-- [ ] For now do till basic level.
+
+- [x] For now do till basic level.
 
 <p align="center">
     <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  style="height: 50px; width: 900px;">
