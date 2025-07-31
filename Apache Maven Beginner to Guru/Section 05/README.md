@@ -215,15 +215,91 @@ and running tests).
 <img src="mavenBuildSycles.JPG"  alt="alt text" width="600"/>
 
 1. Maven has **three** pre-defined **lifecycles**.
+    - **Clean build cycle** will clean the artifacts. By **default**, will be defined by the plugins.
+    - **Default build life cycle** does build and deployment of the project.
+    - Bindings are defined by the packaging type in **POM**.
+        - This will change `.jar`, `.war` depending on the packaging type.
 
-- Todo tee udestaan.
+<img src="siteBuildCycle.JPG"  alt="alt text" width="600"/>
+
+1. It creates **website** for your project!
+    - Not so used!
+
+<img src="cleanLifecycle.JPG"  alt="alt text" width="600"/>
+
+1. **Clean Lifecycle has three Phases**, these are:
+    - Phase: pre-clean ❌
+    - Phase: clean ✅ (Plugin Binding)
+    - Phase: post-clean ❌
+2. These are not configured as **default**. So there no **Plugin Binding** by default!
+3. **Clean** has Plugin Bindings to **Plugin Goal: clean** goal.
+
+<img src="defaultLifeCycle.JPG"  alt="alt text" width="600"/>
+
+1. `Validate`, we have project, we have project. Different steps to **check projects sanity**.
+2. `Compile` Compiles source code for us.
+3. `Test` Tests compiled source code.
+4. `Package` Takes compiled code and makes them into package, which was defined in **POM**. 
+5. `Verify` Runs integrations tests.
+6. `Install` Install to local Maven Repository.
+7. `Deploy` Deploy to shared Maven Repository.
+
+<img src="allPhases.JPG"  alt="alt text" width="600"/>
+
+1. All different phases available.
+    - We can hook into these!
+        - When the project complexity grows, this grows also!
+
+<img src="defaultLifeCycleJarPackaging.JPG"  alt="alt text" width="600"/>
+
+1. Default Lifecycle for the **JAR** Packaging.
+
+<img src="siteBuildLifeSycle.JPG"  alt="alt text" width="600"/>
+
+1. Notice, **Phase:** Pre-site, does not have **Plugin goals**.
 
 # Maven Wrapper.
 
-- Todo
+- There are many ways to ship the **maven**.
+    - Good habit is to **ship** Maven with your project.
+        - This is done with **Maven wrapper**.
+            - Using of wrapper, that you need Maven to be installed on the specific machine!
+
+- Running the maven wrapper goal `mvn -N io.takari:maven:wrapper`.
+    - Generate Maven Wrapper.
+
+<img src="differenceBetweenMavenVersions.JPG"  alt="alt text" width="600"/>
+
+1. You can see the **difference**, between maven version. There is specific to computer installation and the wrapper made one.
+
+- The file tells the **Maven versions**. From the wrapper file `maven-wrapper.properties`.
+
+```
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.3/apache-maven-3.6.3-bin.zip
+wrapperUrl=https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar
+```
+
+- We can make the wrapper with specific maven version for the wrapper. `mvn -N io.takari:maven:wrapper -Dmaven=3.6.0`.
+
+
+- The file tells the after specifying version. From the wrapper file `maven-wrapper.properties`.
+
+```
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.0/apache-maven-3.6.0-bin.zip
+wrapperUrl=https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar
+```
+
+- We **verify** this from the command line.
+
+<img src="versionAfterDownGradingTheWrapperVersion.JPG"  alt="alt text" width="600"/>
+
+1. The specified version is there from the **wrapper**. `3.6.0`.
 
 # Maven Archetypes.
 
-- Todo
+<img src="mavenArhetypes.JPG"  alt="alt text" width="600"/>
+
+1. **Maven Archetypes** define project templates.
+2. Some archetypes are getting old! Example **J2EE** is rather old. 
 
 # Conclusion.

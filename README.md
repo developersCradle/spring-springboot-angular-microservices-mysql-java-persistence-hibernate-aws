@@ -84,7 +84,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration.
 
 <p align="center">
-    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 130px; width: 900px;">
+    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 110px; width: 900px;">
 </p>
 
 ![Master Microservices](Master%20Microservices%20with%20Spring%20Boot%20and%20Spring%20Cloud%20desc.JPG)
@@ -192,7 +192,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <p align="center">
-    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" width="800" height="100">
+    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" width="800" height="120">
 </p>
 
 ![Jpa Course here](JpaCourse.jpg)
