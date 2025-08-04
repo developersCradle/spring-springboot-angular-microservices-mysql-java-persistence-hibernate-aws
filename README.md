@@ -83,6 +83,47 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration.
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration.
 
+# Master the Basics of Spring Integration and it's Components.
+
+<!-- 
+<p align="center">
+    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 90px; width: 900px;">
+</p> -->
+
+![Master the Basics of Spring Integration and it's Components](Master%20the%20Basics%20of%20Spring%20Integration%20and%20it's%20Components%20desc.JPG)
+
+All course material from Master the Basics of Spring Integration and it's Components by **Rajshree Umarekar** ©. 
+
+Contains my own notes with some course material to enforce learning experience.
+
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+[The course at Udemy](https://www.udemy.com/course/master-the-basics-of-spring-integration-and-its-components/). 
+
+[Content maker](https://www.letsunderstandjava.com/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    <img id="Master the Basics of Spring Integration and it&apos;s Components?trk=public_profile_see-credential" src="Master the Basics of Spring Integration and it&apos;s Components certificate.jpg" alt="Master the Basics of Spring Integration and it&apos;s Components cert" width="600"/>
+</div>
+
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- add here.
+
+#### Additional stuff.
+
+- Add here additional.
+
 <p align="center">
     <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 110px; width: 900px;">
 </p>
@@ -192,7 +233,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <p align="center">
-    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" width="800" height="120">
+    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" style="height: 90px; width: 900px;" >
 </p>
 
 ![Jpa Course here](JpaCourse.jpg)
@@ -238,7 +279,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] When course finished, remove the projects from the IDE!
 
 <p align="center">
-    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" height=100>
+    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" style="height: 90px; width: 900px;">
 </p>
 
 ![Advanced hibernate here](Hibernate%20Advanced%20Development%20Techniques%20caption%20desc.PNG)
@@ -280,7 +321,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] The repository for the code is [here](https://github.com/darbyluv2code/hibernate-advanced-development-techniques?tab=readme-ov-file#hibernate-advanced-development-techniques).
 
 <p align="center">
-    <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" height=70>
+    <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" style="height: 80px; width: 900px;">
 </p>
 
 ![The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert course](The%20Ultimate%20MySQL%20Bootcamp%20Go%20from%20SQL%20Beginner%20to%20Expert%20caption%20desc.PNG)
@@ -333,7 +374,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <br>
 
 <p align="center">
-    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers caption.png" height=90>
+    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers caption.png" style="height: 90px; width: 900px;">
 </p>
 
 ![Docker Masterclass For Java Spring Boot Developers](Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers%20desc.PNG)
@@ -382,7 +423,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <br>
 
 <p align="center">
-    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" height=100>
+    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" style="height: 90px; width: 900px;">
 </p>
 
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
