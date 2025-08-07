@@ -300,6 +300,117 @@ wrapperUrl=https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/ma
 <img src="mavenArhetypes.JPG"  alt="alt text" width="600"/>
 
 1. **Maven Archetypes** define project templates.
-2. Some archetypes are getting old! Example **J2EE** is rather old. 
+2. Some archetypes are getting **old!** Example **J2EE** is rather **old**. This is retired decade ago!
+3. **Apache Maven** provides multiple different standard archetypes for starting up the project! 
+
+
+- Here you can see different examples of **Maven Archetypes** [Archetypes examples](https://maven.apache.org/archetypes/index.html).
+
+- We are interested in the simple case: `maven-archetype-simple` An archetype to generate a simple Maven project.
+    - Simple [case](https://maven.apache.org/archetypes/maven-archetype-simple/).
+
+
+<img src="SimpleGenerateArchetype.JPG"  alt="alt text" width="600"/>
+
+1. Name of the **plugin**.
+2. Name of the **plugin goal**.
+
+- We can generate our project structure. 
+```
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-simple -DarchetypeVersion=1.5
+```
+
+<img src="executingTheGenerateCommand.JPG"  alt="alt text" width="600"/>
+
+- Generated **POM** from the `archetype:generate`:
+
+````
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>guru.springframework</groupId>
+  <artifactId>example-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>example-project</name>
+  <description>A simple example-project.</description>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.12.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.6.1</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.4.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>
+````
+
+- Different **Artifacts** has different **Templates**.
+    - This is useful for example **Apache Camel**.
 
 # Conclusion.
+
+- Check. ✅
