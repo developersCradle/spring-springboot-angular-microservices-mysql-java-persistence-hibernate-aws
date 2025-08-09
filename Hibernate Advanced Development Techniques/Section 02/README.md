@@ -563,7 +563,6 @@ public class CreateStudentImagesSetDemo {
 
 <img src="databaseForTheImagesInList.PNG"  alt="hibernate course" width="500"/>
 
-1. Furthermore, we will have `images_ORDER` for saving the **order** in the images.
 
 <img src="theProcess.PNG"  alt="hibernate course" width="500"/>
 
@@ -643,7 +642,7 @@ public class CreateStudentImagesSetDemo {
 
 #  Mappings Lists - Write Some Code.
 
-- The **entity** for the **Student**.
+- The **Entity** for the **Student**.
 
 ```
 package com.love2code.hibernate.entity;

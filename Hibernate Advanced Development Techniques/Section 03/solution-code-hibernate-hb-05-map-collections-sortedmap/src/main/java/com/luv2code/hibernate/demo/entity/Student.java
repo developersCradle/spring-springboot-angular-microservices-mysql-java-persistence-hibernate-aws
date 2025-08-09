@@ -12,9 +12,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MapKeyColumn;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.SortComparator;
 
 @Entity
 @Table(name="student")
@@ -37,8 +37,8 @@ public class Student {
 	@CollectionTable(name="image")
 	@MapKeyColumn(name="file_name") //Maps Key
 	@Column(name="image_name") //Maps Value
-//	@OrderBy
-	@SortComparator(ReverseStringComparator.class)
+	@OrderBy
+//	@SortComparator(ReverseStringComparator.class)
 	private SortedMap<String, String> images = new TreeMap<String, String>();
 	
 	

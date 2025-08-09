@@ -83,12 +83,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration.
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration.
 
-# Master the Basics of Spring Integration and it's Components.
-
-<!-- 
 <p align="center">
-    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 90px; width: 900px;">
-</p> -->
+    <img id="Master the Basics of Spring Integration and its Components caption" src="Master the Basics of Spring Integration and it&apos;s Components caption.png" style="height: 120px; width: 900px;">
+</p> 
 
 ![Master the Basics of Spring Integration and it's Components](Master%20the%20Basics%20of%20Spring%20Integration%20and%20it's%20Components%20desc.JPG)
 
@@ -185,54 +182,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 <p align="center">
-    <img id="microservice architecture" src="Microservices Architecture - The Complete Guide Caption.png" style="height: 90px; width: 900px;">
-</p>
-
-![Microservices Architecture - The Complete Guide](microserviceArchitecture.PNG)
-
-All course material from Microservices Architecture - The Complete Guide by **Memi Lavi** ©.
-
-Contains my own notes with some course material to enforce learning experience.
-
-[The course at Udemy](https://www.udemy.com/course/microservices-architecture-the-complete-guide/).
-
-[Content maker](https://memilavi.com/).
-
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
-
-<!-- 
-Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
-?trk=public_profile_see-credential 
--->
-
-<div align="center">
-    Insert certificate here when completed
-</div>
-
-
-**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
-
-#### Progress/Curriculum.
-
-- [ ] [Section 01](#) - Welcome.
-- [ ] [Section 02](#) - History of Microservices.
-- [ ] [Section 03](#) - Problems with Monolith & SOA.
-- [ ] [Section 04](#) - Microservices Architecture.
-- [ ] [Section 05](#) - Problems Solved by Microservices.
-- [ ] [Section 06](#) - Designing Microservices Architecture.
-- [ ] [Section 07](#) - Deploying Microservices.
-- [ ] [Section 08](#) - Testing Microservices.
-- [ ] [Section 09](#) - Service Mesh.
-- [ ] [Section 10](#) - Logging and Monitoring.
-- [ ] [Section 11](#) - When Not to Use Microservices.
-- [ ] [Section 12](#) - Microservices and the Organization.
-- [ ] [Section 13](#) - Anti-Patterns and Common Mistakes.
-- [ ] [Section 14](#) - Breaking Monolith to Microservices.
-- [ ] [Section 15](#) - Case study.
-- [ ] [Section 16](#) - Conclusion.
-
-
-<p align="center">
     <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" style="height: 90px; width: 900px;" >
 </p>
 
@@ -319,6 +268,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [x] The repository for the code is [here](https://github.com/darbyluv2code/hibernate-advanced-development-techniques?tab=readme-ov-file#hibernate-advanced-development-techniques).
+
+- [ ] Paste every exercise code after examples.
+
+- [ ] Do the last piece of `OrderBy` from the chapter 
+ `Sorted Maps - Write Some Code`. Just another way to OrderBy.
+
 
 <p align="center">
     <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" style="height: 80px; width: 900px;">

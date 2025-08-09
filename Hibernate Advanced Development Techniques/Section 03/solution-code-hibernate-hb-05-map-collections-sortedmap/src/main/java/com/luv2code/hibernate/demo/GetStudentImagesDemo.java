@@ -9,7 +9,10 @@ import com.luv2code.hibernate.demo.entity.Student;
 public class GetStudentImagesDemo {
 
 	public static void main(String[] args) {
+		
 
+		System.setProperty("com.sun.xml.bind.v2.bytecode.ClassTailor.noOptimize", "true"); // This is temporary fix.
+		
 		//create session factory
 		SessionFactory factory = new Configuration()
 									.configure("hibernate.cfg.xml")
