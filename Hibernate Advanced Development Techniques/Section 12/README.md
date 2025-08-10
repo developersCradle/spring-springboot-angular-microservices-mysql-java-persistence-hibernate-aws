@@ -1,6 +1,6 @@
-# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 12: Bonus.
 
-Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+ Bonus.
 
 # What I Learned.
 

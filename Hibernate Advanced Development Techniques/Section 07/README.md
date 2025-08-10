@@ -1,6 +1,6 @@
-# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 07: Inheritance Mapping - Table per Class Strategy.
 
-Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+Inheritance Mapping - Table per Class Strategy.
 
 # What I Learned.
 

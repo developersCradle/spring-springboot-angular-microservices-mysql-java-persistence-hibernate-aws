@@ -1,6 +1,6 @@
-# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 11: Course Summary - Thank You.
 
-Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+Course Summary - Thank You.
 
 # What I Learned.
 

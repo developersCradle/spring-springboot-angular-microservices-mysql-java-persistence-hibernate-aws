@@ -185,7 +185,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" style="height: 90px; width: 900px;" >
 </p>
 
-![Jpa Course here](JpaCourse.jpg)
+![Jpa Course here](Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals%20desc.jpg)
 
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
 
@@ -255,7 +255,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2001#section-01-introduction) - Introduction. ✅
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2002#section-02-mapping-collections---sets-and-lists) - Mapping Collections - Sets and Lists. ✅ 
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2003#section-03-mapping-collections---maps-sorted-maps-and-sorted-sets) - Mapping Collections - Maps, Sorted Maps and Sorted Sets. ✅
-- [ ] [Section 04](#) - Mapping Components - Embeddable.
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2004#section-04-mapping-components---embeddable) - Mapping Components - Embeddable. ✅
 - [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Hibernate%20Advanced%20Development%20Techniques/Section%2005#section-05-mapping-enums) - Mapping Enums. ✅
 - [ ] [Section 06](#) - Inheritance Mapping - Single Table Strategy.
 - [ ] [Section 07](#) - Inheritance Mapping - Table per Class Strategy.

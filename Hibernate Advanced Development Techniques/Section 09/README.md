@@ -1,6 +1,6 @@
-# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 09: Inheritance Mapping - Mapped Superclass.
 
-Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+Inheritance Mapping - Mapped Superclass
 
 # What I Learned.
 

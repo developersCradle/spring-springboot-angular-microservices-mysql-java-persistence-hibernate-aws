@@ -11,8 +11,20 @@ Mapping Enums.
 
 <img src="examplesOfJavaEnums.PNG"  alt="hibernate course" width="500"/>
 
-1. Examples. todo.
-2. Extract todo.
+1. One example would be, **define the logging levels**
+```
+public enum Level {
+	SEVERE, WARNING, INFO
+}
+```
+Second example would be, **define the payment types**
+```
+public enum Payment {
+	DEBIT, CREDIT, PAYPAL, BITCOIN
+}
+```
+
+2. Check to enum for refresher [tutorial](www.luv2code.com/java-enums-tutorial).
 
 <img src="useCaseForEnum.PNG"  alt="hibernate course" width="500"/>
 
@@ -36,7 +48,25 @@ Mapping Enums.
 
 1. Pass the enum status. `Status.ACTIVE`.
 
-- Todo get the code.
+- The code example below:
+
+```
+// create the objects
+Student tempStudent1 = new Student("John", "Doe", "john@luv2code.com", Status.ACTIVE);
+Student tempStudent2 = new Student("Mary", "Public", "mary@luv2code.com", Status.INACTIVE);
+
+// start a transaction
+session.beginTransaction();
+
+// save the objects
+System.out.println("Saving the student...");
+session.save(tempStudent1);
+session.save(tempStudent2);
+
+// commit the transaction
+session.getTransaction().commit();
+
+```
 
 <img src="runTheAPp.PNG"  alt="hibernate course" width="500"/>
 
@@ -156,7 +186,7 @@ public enum Status {
 }
 ```
 
-- The **client**:
+- The **Client** code:
 
 ```
 package com.luv2code.hibernate.demo;

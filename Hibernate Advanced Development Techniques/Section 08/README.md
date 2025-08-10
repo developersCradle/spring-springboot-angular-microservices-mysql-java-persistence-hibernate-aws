@@ -1,6 +1,6 @@
-# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 08: Inheritance Mapping - Joined Table Strategy.
 
-Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+ Inheritance Mapping - Joined Table Strategy.
 
 # What I Learned.
 

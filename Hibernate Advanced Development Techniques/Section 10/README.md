@@ -1,6 +1,6 @@
-# Section 3: Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+# Section 10: Inheritance Mapping - Recap and Comparison.
 
-Mapping Collections - Maps, Sorted Maps and Sorted Sets.
+Inheritance Mapping - Recap and Comparison.
 
 # What I Learned.
 
