@@ -12,4 +12,10 @@ Introduction.
 
 - Some example of the concept.
 
-<img src="someJPAMapping.PNG"  alt="alt text" width="500"/>
+
+<div align="center">
+    <img src="someJPAMapping.PNG"  alt="alt text" width="500"/>
+</div>
+
+
+

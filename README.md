@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img id="studying" src="StudyingJavaRepoHallCaption.png" style="height: 200px; width: 900px;">
+    <img id="studying" src="javaRelatedFrameworksCaption.png" style="height: 200px; width: 900px;">
   <text>Attempt to study <b>Java</b> related topics!</text>
 </p>
 
@@ -16,7 +16,7 @@
     <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 90px; width: 900px;">
 </p>
 
-![Spring Boot beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners%20desc.jpg)
+![Spring Boot Beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners%20desc.jpg)
 
 All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby** ©. 
 
@@ -219,7 +219,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] Read again the mismatches.
+- [ ] Center the picture from chapter 04 onwards. 
 - [ ] Redo 18. Lab Exercise - Manipulating Objects.
 - [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 - [ ] Do including POM file `<classpathentry kind="lib" path="C:/Users/ScoopiDoo/Desktop/git projektit/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/Java Persistence Hibernate and JPA Fundamentals/Files for course/connector/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"/>`
