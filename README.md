@@ -219,7 +219,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] Center the picture from chapter 04 onwards. 
 - [ ] Redo 18. Lab Exercise - Manipulating Objects.
 - [ ] Check again, "Entity cannot reference Entity", but there is connections?.
 - [ ] Do including POM file `<classpathentry kind="lib" path="C:/Users/ScoopiDoo/Desktop/git projektit/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/Java Persistence Hibernate and JPA Fundamentals/Files for course/connector/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"/>`
