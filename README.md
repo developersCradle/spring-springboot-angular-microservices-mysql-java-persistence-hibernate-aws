@@ -122,7 +122,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - Add here additional.
 
 <p align="center">
-    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 110px; width: 900px;">
+    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 120px; width: 900px;">
 </p>
 
 ![Master Microservices](Master%20Microservices%20with%20Spring%20Boot%20and%20Spring%20Cloud%20desc.JPG)
@@ -182,7 +182,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 <p align="center">
-    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" style="height: 90px; width: 900px;" >
+    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" style="height: 100px; width: 900px;" >
 </p>
 
 ![Jpa Course here](Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals%20desc.jpg)
@@ -227,7 +227,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] When course finished, remove the projects from the IDE!
 
 <p align="center">
-    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" style="height: 90px; width: 900px;">
+    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" style="height: 100px; width: 900px;">
 </p>
 
 ![Advanced hibernate here](Hibernate%20Advanced%20Development%20Techniques%20caption%20desc.PNG)
@@ -275,7 +275,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 
 <p align="center">
-    <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" style="height: 80px; width: 900px;">
+    <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" style="height: 90px; width: 900px;">
 </p>
 
 ![The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert course](The%20Ultimate%20MySQL%20Bootcamp%20Go%20from%20SQL%20Beginner%20to%20Expert%20caption%20desc.PNG)
@@ -328,7 +328,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <br>
 
 <p align="center">
-    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers caption.png" style="height: 90px; width: 900px;">
+    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers caption.png" style="height: 100px; width: 900px;">
 </p>
 
 ![Docker Masterclass For Java Spring Boot Developers](Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers%20desc.PNG)
@@ -377,7 +377,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <br>
 
 <p align="center">
-    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" style="height: 90px; width: 900px;">
+    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" style="height: 100px; width: 900px;">
 </p>
 
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
@@ -429,7 +429,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Some.
 
 <p align="center">
-    <img id="maven" src="Apache Maven Beginner to Guru caption.gif" style="height: 100px; width: 900px;">
+    <img id="maven" src="Apache Maven Beginner to Guru caption.gif" style="height: 110px; width: 900px;">
 </p>
 
 ![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru%20desc.PNG)
@@ -486,7 +486,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] For now do till basic level.
 
 <p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  style="height: 50px; width: 900px;">
+    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  style="height: 70px; width: 900px;">
 </p>
 
 ![Cryptography and Hashing Fundamentals in Python and Java](Cryptography.PNG)

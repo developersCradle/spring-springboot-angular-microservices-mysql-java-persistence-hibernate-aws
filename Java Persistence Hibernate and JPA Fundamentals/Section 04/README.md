@@ -1084,6 +1084,15 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 
 # Derived Identifiers with @MapsId.
 
+> [!NOTE]  
+> **Delivered identity** means when **Entity** primary key is **derived from another Entities primary key**, this can come as:
+>   - **Partly Delivered Identity**.
+>   - **Fully Delivered Identity**
+
+<div align="center">
+    <img src="twoWayUsingTheMapsId.jpeg"  alt="hibernate course" width="600"/>
+</div>
+
 <div align="center">
     <img src="derivedIntegers.PNG"  alt="hibernate course" width="600"/>
 </div>
@@ -1617,7 +1626,7 @@ private ParentPrimaryKey parentPrimaryKey;
 1. Class **B** will be having Composite Key from Class **A** from the fields `name` and `age`.
 
 1. **Question 1:**
-	- **Answer:** 
+	- **Answer:** Answer is more down.
 
 ```
 Question 1: How to define a composite primary-key for the @Entity B using the name and age data-attributes of class A, without modifying the A?
@@ -1627,16 +1636,29 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
     <img src="compositeKeysLabExercise.PNG" alt="hibernate course" width="600"/>
 </div>
 
-1. We cannot use the `@EmbeddedId` and `@Embeddable` tags here. **Add here the reason**.
+1. We cannot use the `@EmbeddedId` and `@Embeddable` tags here. Since it modifies the **A**.
+
+<div align="center">
+    <img src="compositeKeyWithTheId.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. We can achieve this using the `@IdCalss(A.class)` and the `@Id` for the fields.
+    - This is **less** wanted approach, since there is more **duplication** for the code!
 
 <div align="center">
     <img src="compositeKeysLabExerciseSaving.PNG" alt="hibernate course" width="600"/>
 </div>
 
+1. Example when `.persisting()` the **composite-key**.
+2. We can see the **composite-key** persisted in the database as following.
+
 <div align="center">
     <img src="compositeKeysLabExerciseLoading.PNG" alt="hibernate course" width="600"/>
 </div>
 
+1. **Notice**, when we are getting the **Entity**, we are retrieving its **composite-key**, when retrieving.
+2. The retrieving and printing the object.
+3. The `Serializable` is not needed since **Hibernate 6**!
 
 # Foreign-Key in Composite Primary-Key using MapsId.
 
