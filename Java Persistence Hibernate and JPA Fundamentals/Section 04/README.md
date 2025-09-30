@@ -1084,14 +1084,14 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 
 # Derived Identifiers with @MapsId.
 
+<div align="center">
+    <img src="twoWayUsingTheMapsId.jpeg"  alt="hibernate course" width="500"/>
+</div>
+
 > [!NOTE]  
 > **Delivered identity** means when **Entity** primary key is **derived from another Entities primary key**, this can come as:
 >   - **Partly Delivered Identity**.
 >   - **Fully Delivered Identity**
-
-<div align="center">
-    <img src="twoWayUsingTheMapsId.jpeg"  alt="hibernate course" width="600"/>
-</div>
 
 <div align="center">
     <img src="derivedIntegers.PNG"  alt="hibernate course" width="600"/>
@@ -1662,6 +1662,39 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 
 # Foreign-Key in Composite Primary-Key using MapsId.
 
+<div align="center">
+    <img src="usingMapsIdForTheForeignKey.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. We are here **exploring** the other way to use the `@MapsId` in different way. Here **Users** **composite-key** will be borrowing the **Department** `id` field as part its **composite-key**.
+2. `User`'s tables part of **composite-key** will be acting **foreign key** of the `department`'s table.
+
+<div align="center">
+    <img src="previouslyWeUsedTheMapsIdInOneToOneRelationship.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. In previous case, we used `passport` tables `id` as **primary key** in the `customer` table!
+
+<div align="center">
+    <img src="legacySystemsCanHaveThisSituvation.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. This situation in the **legacy systems**!
+
+- We will be checking the **Entities** for this case:
+
+<div align="center">
+    <img src="ForeignKeyInCompositePrimaryKeyEntities.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. The **User** class will be having the **Composite Key** as part of the **Department**.
+2. The **Department** class will be another **Entity**, where to the **Foreign Key** will be pointing.
+
+<div align="center">
+    <img src="weWillBeHavingThePrimaryKeyAsTheCompositeKey.PNG" width="600"/>
+</div>
+
+1. We will be having **composite key** as `UserId`
 
 # Book Store with Hibernate and JPA Annotations.
 
