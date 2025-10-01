@@ -1279,7 +1279,7 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 </div>
 
 
-1. If we are not specifying, the type. `@Enumerated(EnumType.ORDINAL)` will be the default.
+1. If we are not specifying the type for the field. The `@Enumerated(EnumType.ORDINAL)` will be the default.
 
 <div align="center">
     <img src="enumConfig.PNG" alt="hibernate course" width="600"/>
@@ -1695,8 +1695,53 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 </div>
 
 1. We will be having **composite key** as `UserId`
+2. Which will be **combination** of the `username` and the `departmentId`.
+3. **Notice** the names for tho **composite** primary key. 
+    - For `username` it is `username_cpk_col1`.
+    - For `departmentId` it is `deparment_cpk_col2`.
+    - The **cpk** **C**omposite **P**rimary **K**ey.
+    
+<div align="center">
+    <img src="referenceForTheDepartmentTable.PNG" width="600"/>
+</div>
+
+1. We will be establishing `@ManyToOne` relationship to the `Department` table.
+    - Name will be `deparment_id_fk`, where `_fk` for the **foreign key**.
+
+<div align="center">
+    <img src="theCompoundFkMappedTheDb.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. Currently, the mapping looks as following at the **database**!
+    - You can see the **duplication**, and we don't want to have **duplication** of the data!
+        - The `deparment_id_cpk_col2` and `deparment_id_fk` they both are pointing to the `Deparment`'s `id` column!
+            - They share **same** value!
+
+<div align="center">
+    <img src="weAreGetttingDublicateDataIds.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. `department_id_cpk_col2` is getting **id** from the `department.getId()`. 
+2. `department_id_fk` is being populated from the **Department** object! 
+
+- Todo 09:40 ja mietit case uudelleen.
 
 # Book Store with Hibernate and JPA Annotations.
+
+- We will be using the **BookStore** example:
+
+<div align="center">
+    <img src="BookStoreBookMapping.PNG" alt="hibernate course" width="600"/>
+</div>
+
+- This time we will be using **Hibernate** methods rather than the **JDBC API**!  
+
+<div align="center">
+    <img src="BookStoreExampleFunctions.PNG" alt="hibernate course" width="600"/>
+</div>
+
+- We previously **retrieved** and **persisted** the **Book** object from the database using **JDBC API**!
+
 
 
 # Mapping JSON.
