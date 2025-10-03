@@ -1742,6 +1742,40 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 
 - We previously **retrieved** and **persisted** the **Book** object from the database using **JDBC API**!
 
+<div align="center">
+    <img src="bookStoreEntitiesMappedPart1.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. We will be having the following **Entities**:
+    - `Chapter`.
+    - `Book`.
+    - `Publisher`.
+
+<div align="center">
+    <img src="composePrimaryKEy.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. We are making **composite primary key**.
+
+<div align="center">
+    <img src="noMapsId.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. When we are leaving out `@MapsId("isbn")`
+    - We would naturally have fields in database, `ISBN`, `CHAPTER_NUM` and `BOOK_ISBN`.
+2. There would be **duplicate** data in `ISBN` and `BOOK_ISBN`.
+3. `ISBN` and `CHAPTER_NUM` as **Compound primary key**.
+
+<div align="center">
+    <img src="whenUsingISBN.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. When using the `@MapsId("isbn")` 
+> “Don’t create two separate columns.
+> The `isbn` field inside the composite key should be mapped from the book. `isbn` relationship.
+> Use the same column (`BOOK_ISBN`) for both the primary key and the foreign key.”
+
+-  jatka 8:00 
 
 
 # Mapping JSON.

@@ -219,6 +219,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+
+- [ ] Go thought `@mapsID` and then again the `Book Store with Hibernate and JPA Annotations.`.
 - [ ] Take Cofee and Sunday. Finish the chapter `Book Store with Hibernate and JPA Annotations`.
 - [ ] Take Cofee and Sunday. Finish the chapter `Foreign-Key in Composite Primary-Key using MapsId`. 
 - [ ] Redo 18. Lab Exercise - Manipulating Objects.
