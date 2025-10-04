@@ -115,11 +115,16 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- add here.
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Create Project.
+- [ ] [Section 03](#) - Spring Integration Components.
 
 #### Additional stuff.
 
-- Add here additional.
+- [ ] Check the cert.
+- [ ] Make the projects from the chapter.
+- [ ] Check the picture and see where they belong.
+- [ ] Go thought the course and fix the typo errors.
 
 <p align="center">
     <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 120px; width: 900px;">
@@ -219,7 +224,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-
+- [ ] Make the Book Store project working from chapter 04.
 - [ ] Go thought `@mapsID` and then again the `Book Store with Hibernate and JPA Annotations.`.
 - [ ] Take Cofee and Sunday. Finish the chapter `Book Store with Hibernate and JPA Annotations`.
 - [ ] Take Cofee and Sunday. Finish the chapter `Foreign-Key in Composite Primary-Key using MapsId`. 

@@ -1764,7 +1764,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 1. When we are leaving out `@MapsId("isbn")`
     - We would naturally have fields in database, `ISBN`, `CHAPTER_NUM` and `BOOK_ISBN`.
 2. There would be **duplicate** data in `ISBN` and `BOOK_ISBN`.
-3. `ISBN` and `CHAPTER_NUM` as **Compound primary key**.
+3. `ISBN` and `CHAPTER_NUM` as **Compound Primary Key**.
 
 <div align="center">
     <img src="whenUsingISBN.PNG" alt="hibernate course" width="600"/>
@@ -1775,8 +1775,48 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 > The `isbn` field inside the composite key should be mapped from the book. `isbn` relationship.
 > Use the same column (`BOOK_ISBN`) for both the primary key and the foreign key.”
 
--  jatka 8:00 
+<div align="center">
+    <img src="bookToChapterRelationshipInDb.PNG" alt="hibernate course" width="300"/>
+</div>
 
+1. Next, we will be mapping `Chapter` to `Book`. Since there can be many **Chapters** in a **Book** 
+
+<div align="center">
+    <img src="bookHasChapters.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. The **Book** will be **owner** of the relationship, since its `@OneToMany` and **Many** should be **always** the owner! We are mapping with following:
+
+````
+    @OneToMany(mappedBy = "book", cascade = CascadeType.PERSIST)
+    private Set<Chapter> chapters = new HashSet<Chapter>();
+````
+
+- The **Set** cannot have **duplicate**, so this is to reflect the mapping done for the **Book** to **Chapter** relationship!
+
+<div align="center">
+    <img src="helperMethodsInBookToChapters.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. There should be **ALWAYS** helper methods, when dealing with **Bidirectional** relationship!
+
+<div align="center">
+    <img src="addFollowingEntitiesToTheConfiguration.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. As normal, we add the **Entities** to the configuration file.
+
+<div align="center">
+    <img src="bookStoreClient.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. We need to create the `Chapter` using `ChapterID`, since its **Compound Primary Key**.
+
+<div align="center">
+    <img src="readingObjectInBookStoreClient.PNG" alt="hibernate course" width="600"/>
+</div>
+
+1. We can read using following.
 
 # Mapping JSON.
 
@@ -1814,6 +1854,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 </div>
 
 4. We need following **format mapper**. For to **Hibernate**.
+
 
 ```
 			<!-- FormatMapper for JSON format (required for mapping JSON types) -->
