@@ -63,9 +63,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [ ] Read/skim thought Spring documentation when finished this course.
-- [ ] Make Unix clock in Thymeleaf or in Angular.
-- [ ] Make crypt program in Angular.
-- [ ] Refactor paths and projects inside eclipse.
+- [ ] Make Unix clock in **Thymeleaf** or in **Angular**.
+- [ ] Make crypt program in **Angular**.
+- [ ] Refactor paths and projects inside Eclipse.
 - [ ] Check typos.
 - [ ] Make folder 00 based.
 - [ ] Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
@@ -96,7 +96,7 @@ Contains my own notes with some course material to enforce learning experience.
 This came helpful when updating our ancient repositories, which had **Spring integration** modules.
 
 > I wasn’t sure if I had just broken everything—yikes!
-But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way!
+But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way! ~ *DevelopersCradle*
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
@@ -125,11 +125,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- [x] [Source code repo](https://github.com/misstechack/spring-integration). ✅
 - [x] Additional [content](https://www.baeldung.com/spring-integration) to check. ✅
 - [ ] Check the cert.
-- [ ] Make the projects from the chapter.
 - [ ] Go thought the course and fix the typo errors.
-
+    - Chapter 3.
+    
 <p align="center">
     <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 120px; width: 900px;">
 </p>

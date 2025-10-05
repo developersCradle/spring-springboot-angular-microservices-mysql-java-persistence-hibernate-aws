@@ -21,7 +21,7 @@
 - **Spring Integrations**, supports **external systems** and other spring beans applications.
 
 <div align="center">
-    <img src="basicSpringIntegration.png" alt="ticket" width="600">
+    <img src="basicSpringIntegration.png" alt="ticket" width="700">
 </div>
 
 1. **Producer** (Sender) sends message thought the **Channel/Pipe**.
@@ -35,7 +35,7 @@
 2. **Filter** decides does the message continue to the output channel!
 
 <div align="center">
-    <img src="transformersAndFilterDiagram.png" alt="ticket" width="600">
+    <img src="transformersAndFilterDiagram.png" alt="ticket" width="700">
 </div>
 
 1. **Input channel** inputting into the **Component**.
@@ -48,7 +48,7 @@
 1. The **Router** decides, to which **channel** to sends the message. 
 
 <div align="center">
-    <img src="routerDiagram.png" alt="ticket" width="600">
+    <img src="routerDiagram.png" alt="ticket" width="700">
 </div>
 
 1. The **Router** in the **component** gets the message. It will **decide**, to which **channel** it sends it. This is based on the criteria. 
@@ -94,11 +94,11 @@
 1. **Channel adapter** connects the application to **external system**. Flow here is to both ways (**unidirectional)**. 
 
 <div align="center">
-    <img src="oneWayIntegation.jpeg" alt="ticket" width="400">
+    <img src="oneWayIntegation.jpeg" alt="ticket" width="600">
 </div>
 
 <div align="center">
-    <img src="ChannelAdapterDiagram.png" alt="ticket" width="600">
+    <img src="ChannelAdapterDiagram.png" alt="ticket" width="700">
 </div>
 
 1. Flow goes from **outside** to **inside**.
