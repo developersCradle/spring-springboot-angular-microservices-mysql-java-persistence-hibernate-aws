@@ -5,9 +5,10 @@
 
 # Create Project.
 
-- We can make the project in the **Eclipse** or like in my case this will be in the **Spring Intializer**.
-    - Remember to add **spring integration** package.
-
+- We can make the project in the **Eclipse** or like in my case this will be in the **Spring Intializer** remember to add:
+    - **Spring Integration** package.
+    - **Spring Web** package.
+    - **Spring Boot DevTools** package.
 
 <div align="center">
     <img src="makingSpringIntegrationProjectInTheEclipse.png" alt="ticket" width="600">

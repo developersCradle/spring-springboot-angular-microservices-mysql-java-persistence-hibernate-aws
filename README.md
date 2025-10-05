@@ -93,6 +93,11 @@ All course material from Master the Basics of Spring Integration and it's Compon
 
 Contains my own notes with some course material to enforce learning experience.
 
+This came helpful when updating our ancient repositories, which had **Spring integration** modules.
+
+> I wasn’t sure if I had just broken everything—yikes!
+But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way!
+
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
 [The course at Udemy](https://www.udemy.com/course/master-the-basics-of-spring-integration-and-its-components/). 
@@ -110,20 +115,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="Master the Basics of Spring Integration and it&apos;s Components?trk=public_profile_see-credential" src="Master the Basics of Spring Integration and it&apos;s Components certificate.jpg" alt="Master the Basics of Spring Integration and it&apos;s Components cert" width="600"/>
 </div>
 
-
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Introduction.
-- [ ] [Section 02](#) - Create Project.
-- [ ] [Section 03](#) - Spring Integration Components.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Master%20the%20Basics%20of%20Spring%20Integration%20and%20its%20Components/Section%2001#section-01-introduction) - Introduction. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Master%20the%20Basics%20of%20Spring%20Integration%20and%20its%20Components/Section%2002#section-02-create-project) - Create Project. ✅
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Master%20the%20Basics%20of%20Spring%20Integration%20and%20its%20Components/Section%2003#section-03-spring-integration-components) - Spring Integration Components. ✅
 
 #### Additional stuff.
 
+- [x] Additional [content](https://www.baeldung.com/spring-integration) to check. ✅
 - [ ] Check the cert.
 - [ ] Make the projects from the chapter.
-- [ ] Check the picture and see where they belong.
 - [ ] Go thought the course and fix the typo errors.
 
 <p align="center">
@@ -281,7 +285,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Do the last piece of `OrderBy` from the chapter 
  `Sorted Maps - Write Some Code`. Just another way to OrderBy.
-
 
 <p align="center">
     <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" style="height: 90px; width: 900px;">
@@ -495,10 +498,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] For now do till basic level.
 
 <p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java.png"  style="height: 70px; width: 900px;">
+    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java caption.png"  style="height: 70px; width: 900px;">
 </p>
 
-![Cryptography and Hashing Fundamentals in Python and Java](Cryptography.PNG)
+![Cryptography and Hashing Fundamentals in Python and Java](Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java%20desc.PNG)
 
 All course material from Cryptography and Hashing Fundamentals in Python and Java **Holczer Balazs** ©.
 

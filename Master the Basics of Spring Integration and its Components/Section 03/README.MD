@@ -9,9 +9,9 @@
     <img src="serviceActivatorGet.png" alt="ticket" width="500">
 </div>
 
-- We using the **Gateway interface**, with this we need to call just **one method call**!
+- We're using the **Gateway interface**, with this we need to call just **one method call**!
     - Spring Integration **turn that method call into a message**, sends it to
-     the **right channel** and **optionally waits for a reply**. Service Activator or other enpoint consumes it. 
+     the **right channel** and **optionally waits for a reply**. Service Activator or other endpoint consumes it. 
 
 ```
 @MessagingGateway

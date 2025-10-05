@@ -1,122 +1,163 @@
-# Section 1: NEW - Spring Boot 3 Quick Start
-All thing which needs get started with Spring Boot
+# Section 1: NEW - Spring Boot 3 Quick Start.
 
-# What I Learned
+All thing which needs get started with Spring Boot.
 
-- Need to install JDK 17 or **higher**, **Spring Boot 3**
+# What I Learned.
 
-<img src="problem.JPG" alt="alt text" width="500"/>
+- Need to install JDK 17 or **higher**, **Spring Boot 3**.
 
-1. Normally setting up **Spring** is difficult, need to think many things first
+<div align="center">
+    <img src="problem.JPG" alt="alt text" width="500"/>
+</div>
+
+1. Normally setting up **Spring** is difficult, need to think many things first.
     - Here, **Spring Boot** comes in to play, it makes thing pre-configured all ready. 
 
-<img src="solution.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="solution.JPG" alt="alt text" width="500"/>
+</div>
 
-- **Spring boot** solves these things for you for providing these things
+- **Spring boot** solves these things for you for providing these things.
 
-
-- **Spring Boot** uses **Spring** behind scenes
+- **Spring Boot** uses **Spring** behind scenes.
     - **Spring** and **Spring boot** are two different things! 
 
 - Spring boot gives **Spring Initializr** for easy configuration
     - [SpringInitalizr](https://start.spring.io/)
 
-<img src="SpringInit.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="SpringInit.JPG" alt="alt text" width="500"/>
+</div>
 
-1. Will be using Eclipse
+1. Will be using **Eclipse**.
 
-<img src="EmbeddedServer.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="EmbeddedServer.JPG" alt="alt text" width="500"/>
+</div>
 
 1. Not like with **JSP** application where your **.jar** needs to be run with separate server application, like **tomcat**
 2. Server is provided whit in **.jar** file with your code
 
 - This make it easy to just run in command line `java -jar mycoolapp.jar` **MAGIC!**
-    - What about deploying app like in normal way? No worries, **Spring boot** can deploy **.war** also
-        - Deployed as **.war** file, which can be ran with external server like **Tomcat**
+    - What about deploying app like in normal way? No worries, **Spring boot** can deploy **.war** also.
+        - Deployed as **.war** file, which can be ran with external server like **Tomcat**.
 
-<img src="war.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="war.JPG" alt="alt text" width="500"/>
+</div>
 
-1. One server installed in company
-2. This one server runs many applications like in the past
+1. One server installed in company.
+2. This one server runs many applications like in the past.
 
-<img src="springConfiguration.JPG" alt="alt text" width="400"/>
+<div align="center">
+    <img src="springConfiguration.JPG" alt="alt text" width="400"/>
+</div>
 
-1. **Spring Boot** uses and configures these components **under it**, for easy to use
+1. **Spring Boot** uses and configures these components **under it**, for easy to use.
 
 - You can use **any** IDE for Spring Boot apps!
 
-- When building Java applications, you need JAR files
-    - You can do this by hand, but in **recommended** let build tool take care of this. Like maven
+- When building Java applications, you need JAR files.
+    - You can do this by hand, but in **recommended** let build tool take care of this. Like maven.
     - [Additional info](https://softwareengineering.stackexchange.com/questions/340223/should-you-include-libraries-and-code-unrelated-files-in-your-git-project-and-up)
 
-<img src="MavenSummary.JPG" alt="alt text" width="400"/>
+<div align="center">
+    <img src="MavenSummary.JPG" alt="alt text" width="400"/>
+</div>
 
-- Maven takes care of `.jar` files, summary here. External **.JAR** files like Spring, Hibernate which Spring boot uses
+- Maven takes care of `.jar` files, summary here. External **.JAR** files like Spring, Hibernate which Spring boot uses.
 
-<img src="caution.JPG" alt="alt text" width="400"/>
+<div align="center">
+    <img src="caution.JPG" alt="alt text" width="400"/>
+</div>
 
 <br>
 
-<img src="springBootDencies.JPG" alt="alt text" width="400"/>
+<div align="center">
+    <img src="springBootDencies.JPG" alt="alt text" width="400"/>
+</div>
  
 1. We want to add decencies to our **Spring Boot** project.
-2. **Spring Web** is for full stack web project
+2. **Spring Web** is for full stack web project.
 
-- After importing into your favorite **IDE** as Maven project. You can run as **Java application!** Not with server since, it's included in bundles
+- After importing into your favorite **IDE** as Maven project. You can run as **Java application!** Not with server since, it's included in bundles.
 
-<img src="embeddedServerInSpringBoot.JPG" alt="alt text" width="600"/>
+<div align="center">
+    <img src="embeddedServerInSpringBoot.JPG" alt="alt text" width="600"/>
+</div>
  
-1. As you can see Embedded server is included and running
+1. As you can see Embedded server is included and running.
 
-- Default starting place `http://localhost:8080/`
+- Default starting place `http://localhost:8080/`.
 
-- We can make basic app, by telling with such annotations
+- We can make basic app, by telling with such annotations.
 
-<img src="RESTcontrollerMapping.JPG" alt="alt text" width="600"/>
+<div align="center">
+    <img src="RESTcontrollerMapping.JPG" alt="alt text" width="600"/>
+</div>
 
-<img src="GoalsOfSpring.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="GoalsOfSpring.JPG" alt="alt text" width="500"/>
+</div>
 
 1. Much simple work with POJO:s than [EJB](https://www.javatpoint.com/what-is-ejb). EJB is like **COM** object
-     - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object)
-     - [POJO2](https://www.baeldung.com/java-pojo-class)
-2. Loose coupling with dependency injection
-3. In old days Java EE needed to write a lot of code
+     - [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object).
+     - [POJO2](https://www.baeldung.com/java-pojo-class).
+2. Loose coupling with dependency injection.
+3. In old days Java EE needed to write a lot of code.
 
-- Core components of Spring Boot
+- Core components of Spring Boot.
 
-<img src="coreComponentsStringBoot.JPG" alt="alt text" width="400" height="400"/>
+<div align="center">
+    <img src="coreComponentsStringBoot.JPG" alt="alt text" width="400" height="400"/>
+</div>
 
-- **SpEL** spring configuration language
+- **SpEL** spring configuration language.
 
- <img src="coreComponentsStringBoot2.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="coreComponentsStringBoot2.JPG" alt="alt text" width="500"/>
+</div>
 
 <br>
 
-<img src="coreComponentsStringBoot3.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="coreComponentsStringBoot3.JPG" alt="alt text" width="500"/>
+</div>
 
 1. ORM **Object Relation Mapping**. Popular one and important!
 
-<img src="coreComponentsStringBoot4.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="coreComponentsStringBoot4.JPG" alt="alt text" width="500"/>
+</div>
 
-- Integration test supported
+- Integration test supported.
 
-- Spring projects
-    - are just Spring **modules**
+- Spring projects.
+    - are just Spring **modules**.
 
-<img src="springProjects.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="springProjects.JPG" alt="alt text" width="500"/>
+</div>
 
 - List of different projects [Spring Projects](https://spring.io/projects)
 
-<img src="mavenSolve.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="mavenSolve.JPG" alt="alt text" width="500"/>
+</div>
 
 - This can be also beneficial, if you don't want to push external library to your repository. You can let **Maven** do the work!
 
-<img src="mavenInAction.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="mavenInAction.JPG" alt="alt text" width="500"/>
+</div>
 
-- Maven downloads our JAR files from internet
-    1. Remote repository is in internet
+- Maven downloads our JAR files from internet.
+    1. Remote repository is in internet.
 
-<img src="howMavenWorks.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="howMavenWorks.JPG" alt="alt text" width="500"/>
+</div>
+
 
 How Maven works:
 
@@ -131,7 +172,9 @@ How Maven works:
 
 - Maven project structure, standard 
 
-<img src="standardDirectoryStructure.JPG" alt="alt text" width="500"/>
+<div align="center">
+    <img src="standardDirectoryStructure.JPG" alt="alt text" width="500"/>
+</div>
 
 0. POM project configuration file
 1. Java source code
