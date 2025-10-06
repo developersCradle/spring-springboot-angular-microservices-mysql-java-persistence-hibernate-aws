@@ -1,8 +1,8 @@
-# Section 2: NEW - Spring Boot 3 - Inversion of Control and Dependency Injection
+# Section 02: NEW - Spring Boot 3 - Inversion of Control and Dependency Injection.
 
-Spring Boot 3 - Inversion of Control and Dependency Injection
+Spring Boot 3 - Inversion of Control and Dependency Injection.
 
-# What I Learned
+# What I Learned.
 
 - **IoC** Inversion of Control (IoC)
 
@@ -10,19 +10,25 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 
 - Why we would need this?
 
-<img src="whyWouldnNeedInversionOfControll.JPG" alt="alt text" width="500"/>
+<div align="center">
+	<img src="whyWouldnNeedInversionOfControll.JPG" alt="alt text" width="500"/>
+</div>
 
 1. We could easily change sport to our implementation with **IoC**
 
 - In ideal solution:
 
-<img src="idealSolution.JPG" alt="alt text" width="500"/>
+<div align="center">
+	<img src="idealSolution.JPG" alt="alt text" width="500"/>
+</div>
 
 1. Object Factory would return specific object based on configuration **2.**
 
 - Spring Container work like "object factory" 
 
-<img src="SpringContainers2Responsibilities.JPG" alt="alt text" width="500"/>
+<div align="center">
+	<img src="SpringContainers2Responsibilities.JPG" alt="alt text" width="500"/>
+</div>
 
 - There are two main responsibilities for **Spring Container**
 
@@ -38,16 +44,20 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 > the responsibility of providing its 
 > dependencies.
 
-<img src="carFactory.jpg" alt="alt text" width="500"/>
+<div align="center">
+	<img src="carFactory.jpg" alt="alt text" width="500"/>
+</div>
+d
 
 1. Car Object is wanted
 2. In background **Car Factory** needs to build and return Car Object
     - Decency injection idea is to give us **full/complete** object. Do what you need to do, use helper classes/services/components
 
-<img src="demoOfInjection.jpg" alt="alt text" width="500"/>
+<div align="center">
+	<img src="demoOfInjection.jpg" alt="alt text" width="500"/>
+</div>
 
 1. We want to **inject** the coach into **DemoController**
-
 
 ### Injection Types
 
@@ -56,51 +66,75 @@ Spring Boot 3 - Inversion of Control and Dependency Injection
 1. **Constructor Injection**
 2. **Setter Injection**
 
-<img src="injectionTypes.jpg" alt="alt text" width="500"/>
+<div align="center">
+	<img src="injectionTypes.jpg" alt="alt text" width="500"/>
+</div>
 
 - While **Constructor Injection** is preferred one
 
 1. If decencies are not provided this is OK to use
 
-<img src="autoWired.jpg" alt="alt text" width="500"/>
+<div align="center">
+	<img src="autoWired.jpg" alt="alt text" width="500"/>
+</div>
 
 <br>
 
-<img src="autoWiredExample.jpg" alt="alt text" width="500"/>
+<div align="center">
+	<img src="autoWiredExample.jpg" alt="alt text" width="500"/>
+</div>
 
 1. Spring scans classes with `@Components`
 
 - To demonstrate this we are going to do this
 
-<img src="exampleApplication.jpg" alt="alt text" width="500"/>
+<div align="center">
+	<img src="exampleApplication.jpg" alt="alt text" width="500"/>
+</div>
 
 1. When we visit `/dailyworkout` in our browser
 2. `DemoController` calls `getDailyWorkout()`
 
 <br>
 
-<img src="step1DefineDepency.jpg" alt="alt text" width="600"/>
+<div align="center">
+	<img src="step1DefineDepency.jpg" alt="alt text" width="600"/>
+</div>
 
 - `@Compenent` marks class as a Spring Bean
 
-#### Step 1: @Component annotation
+#### Step 1: @Component annotation.
 
->**@Component** marks the class as a Spring Bean
-> A Spring Bean is just a regular Java class that is managed by Spring
-> @Component also makes the bean available for dependency injection
+>**@Component** marks the class as a **Spring Bean**
+> A **Spring Bean** is just a regular **Java class** that is **managed by Spring**
+> `@Component` also makes the bean available for dependency injection
 
-<br>
-
-<img src="step2CreateDemo.jpg" alt="alt text" width="600"/>
-
-<br>
-
-<img src="step3CreateConstructor.jpg" alt="alt text" width="600"/>
+<div align="center">
+	<img src="springBeanWorking.jpeg" alt="alt text" width="300"/>
+</div>
 
 <br>
 
-<img src="step4GetMapping.jpg" alt="alt text" width="600"/>
+<div align="center">
+	<img src="step2CreateDemo.jpg" alt="alt text" width="600"/>
+</div>
 
+<br>
+
+<div align="center">
+	<img src="step3CreateConstructor.jpg" alt="alt text" width="600"/>
+
+</div>
+
+<br>
+
+
+<div align="center">
+	<img src="step4GetMapping.jpg" alt="alt text" width="600"/>
+</div>
+
+
+- Todo palaa tähnä
 <hr>
 
 <img src="springCoreExample.jpg" alt="alt text" width="600"/>

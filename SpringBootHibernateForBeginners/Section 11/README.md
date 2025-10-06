@@ -1,5 +1,5 @@
-# Section 11: Summary
+# Section 11: Summary.
 
- Summary
+ Summary.
 
-# What I Learned
+# What I Learned.

@@ -28,10 +28,8 @@ public interface EmployeeGateway {
 
 - A `Message` in **Spring Integrations** is like **Envelope**.
     - It has **Payload**, data goes here! Like `JSON`, `String`, `Bussiness objects` ... etc.
-    - It has **Headers**, meatadata about the message. Like `ID`, `timestamp` ... etc.
+    - It has **Headers**, metadata about the message. Like `ID`, `timestamp` ... etc.
 
-
-- todo check this one.
 
 <div align="center">
     <img src="serviceActivator.png" alt="ticket" width="500">
@@ -353,9 +351,9 @@ old message:
 new message: $$
 ```
 
-- My answer:
+- My answers below:
 
-- Controller:
+- The Controller:
 
 ```
     // Assignment 01: Create a demo Transformer application.
@@ -535,7 +533,7 @@ Received message from output channel: Ville
 # Filter.
 
 
-- Controller:
+- The Controller:
 
 ```
 

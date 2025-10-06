@@ -1,5 +1,5 @@
-# Section 12: Appendix
+# Section 12: Appendix.
 
-Appendix
+Appendix.
 
-# What I Learned
+# What I Learned.

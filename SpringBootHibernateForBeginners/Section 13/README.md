@@ -1,5 +1,5 @@
-# Section 13: Bonus
+# Section 13: Bonus.
 
-Bonus
+Bonus.
 
-# What I Learned
+# What I Learned.

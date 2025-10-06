@@ -124,7 +124,7 @@ Understanding object/relational persistence.
 4. The navigation in data is totally different in **Object Model** and in **Relational Model**.  
 
 <div align="center">
-    <img src="summaryForTheMismatches.jpeg" alt="hibernate course" width="600"/>
+    <img src="summaryForTheMismatches.jpeg" alt="hibernate course" width="400"/>
 </div>
 
 # Object Relational Mapping.

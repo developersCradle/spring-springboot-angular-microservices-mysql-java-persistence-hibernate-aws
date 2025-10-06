@@ -46,22 +46,23 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201#section-1-new---spring-boot-3-quick-start) - Section 1: NEW - Spring Boot 3 Quick Start.
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202#section-2-new---spring-boot-3---inversion-of-control-and-dependency-injection) - Section 2: NEW - Spring Core.
-- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%203#section-3-new---hibernatejpa-crud) - Section 3: NEW - Hibernate/JPA CRUD.
-- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%204#section-4-new---rest-crud-apis) - Section 4: NEW - REST CRUD APIs.
-- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%205#section-5-new---rest-api-security) - Section 5: NEW - REST API Security.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201#section-1-new---spring-boot-3-quick-start) - NEW - Spring Boot 3 Quick Start. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202#section-2-new---spring-boot-3---inversion-of-control-and-dependency-injection) - NEW - Spring Core. ✅
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%203#section-3-new---hibernatejpa-crud) - NEW - Hibernate/JPA CRUD. ✅
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%204#section-4-new---rest-crud-apis) - NEW - REST CRUD APIs. ✅
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%205#section-5-new---rest-api-security) - NEW - REST API Security. ✅
 - [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%206#section-6-new---spring-mvc) - Section 6: NEW - Spring MVC.
-- [ ] [Section 07](#) - Section 7: NEW - Spring MVC CRUD.
-- [ ] [Section 08](#) - Section 8: NEW - Spring MVC Security.
-- [ ] [Section 09](#) - Section 9: NEW - JPA / Hibernate Advanced Mappings.
-- [ ] [Section 10](#) - Section 10: NEW - AOP: Aspect-Oriented Programming.
-- [ ] [Section 11](#) - Section 11: Summary.
-- [ ] [Section 12](#) - Section 12: Appendix.
-- [ ] [Section 13](#) - Section 13: Bonus.
+- [ ] [Section 07](#) - NEW - Spring MVC CRUD.
+- [ ] [Section 08](#) - NEW - Spring MVC Security.
+- [ ] [Section 09](#) - NEW - JPA / Hibernate Advanced Mappings.
+- [ ] [Section 10](#) - NEW - AOP: Aspect-Oriented Programming.
+- [ ] [Section 11](#) - Summary.
+- [ ] [Section 12](#) - Appendix.
+- [ ] [Section 13](#) - Bonus.
 
 #### Additional stuff.
 
+- [x] The source repository can be found [here](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners). ✅
 - [ ] Read/skim thought Spring documentation when finished this course.
 - [ ] Make Unix clock in **Thymeleaf** or in **Angular**.
 - [ ] Make crypt program in **Angular**.
@@ -72,6 +73,30 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Make Chapters/headings when reviewing.
 - [ ] Remove numbers from packages.
 
+<details>
+
+<summary id="refactoring the progress" open="true"> <b> Refactoring the progress! </b> </summary>
+<br>
+
+- Refactoring in progress, this will be chapter by chapter:
+    - [ ] Chapter 01. 🚧 In progress 🚧
+    - [ ] Chapter 02.
+    - [ ] Chapter 03.
+    - [ ] Chapter 04.
+    - [ ] Chapter 05.
+    - [ ] Chapter 06.
+    - [ ] Chapter 07.
+    - [ ] Chapter 08.
+    - [ ] Chapter 09.
+    - [ ] Chapter 10.
+    - [ ] Chapter 11.
+    - [ ] Chapter 12.
+</details>
+
+<details>
+
+<summary id="old legacy course" open="false"> <b> Old(legacy) course Curriculum. Do this, if this si still usefull! </b> </summary>
+<br>
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
 
@@ -82,6 +107,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 03](#) - Setting Up Your Development Environment.
 - [ ] [Section 04](#) - Spring Inversion of Control - XML Configuration.
 - [ ] [Section 05](#) - Spring Dependency Injection - XML Configuration.
+
+</details>
 
 <p align="center">
     <img id="Master the Basics of Spring Integration and its Components caption" src="Master the Basics of Spring Integration and it&apos;s Components caption.png" style="height: 120px; width: 900px;">
@@ -171,7 +198,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%202#section-2-introduction-to-web-services) - Introduction To Web Services ✅.
 - [ ] [Section 03](#) - Restful Web Services with Spring Boot - V2.
 - [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%204#section-4--quick-introduction-to-microservices) - Quick Introduction to Microservices ✅.
-- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%205#section-5-microservices-with-spring-cloud---v1) - Microservices with Spring Cloud - V1. **Master Microservices - V1 is now deprecated!**.
+- [ ] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%205#section-5-microservices-with-spring-cloud---v1) - Microservices with Spring Cloud - V1. **Master Microservices - V1 is now deprecated!**
 - [x] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%206#section-6-microservices-with-spring-cloud---v2) - Microservices with Spring Cloud - V2 ✅.
 - [ ] [Section 07](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/MasterMicroservicesWithSpringBootandSpringCloud/Section%2007#section-07-docker-with-microservices-using-spring-boot-and-spring-cloud---v2) - Docker with Microservices using Spring Boot and Spring Cloud - V2.
 - [ ] [Section 08](#) - Kubernetes with Microservices using Docker, Spring Boot and Spring Cloud - V2.
@@ -311,7 +338,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <div align="center">
     <img id="UltimateMySqlBootcampCertificate?trk=public_profile_see-credential" src="UltimateMySqlBootcampCertificate.jpg" alt="UltimateMySqlBootcampCertificate" width="600"/>
 </div>
-
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
