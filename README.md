@@ -46,19 +46,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%201#section-1-new---spring-boot-3-quick-start) - NEW - Spring Boot 3 Quick Start. ✅
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%202#section-2-new---spring-boot-3---inversion-of-control-and-dependency-injection) - NEW - Spring Core. ✅
-- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%203#section-3-new---hibernatejpa-crud) - NEW - Hibernate/JPA CRUD. ✅
-- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%204#section-4-new---rest-crud-apis) - NEW - REST CRUD APIs. ✅
-- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%205#section-5-new---rest-api-security) - NEW - REST API Security. ✅
-- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate/tree/main/SpringBootHibernateForBeginners/Section%206#section-6-new---spring-mvc) - Section 6: NEW - Spring MVC.
-- [ ] [Section 07](#) - NEW - Spring MVC CRUD.
-- [ ] [Section 08](#) - NEW - Spring MVC Security.
-- [ ] [Section 09](#) - NEW - JPA / Hibernate Advanced Mappings.
-- [ ] [Section 10](#) - NEW - AOP: Aspect-Oriented Programming.
-- [ ] [Section 11](#) - Summary.
-- [ ] [Section 12](#) - Appendix.
-- [ ] [Section 13](#) - Bonus.
+- [x] [Section 01](#) - NEW - Spring Boot 3 Quick Start. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2002#section-02-new---spring-boot-3---inversion-of-control-and-dependency-injection) - NEW - Spring Core. ✅
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2003#section-03-new---hibernatejpa-crud) - NEW - Hibernate/JPA CRUD. ✅
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2004/README.md#section-04-new---rest-crud-apis) - NEW - REST CRUD APIs. ✅
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2005#section-05-new---rest-api-security) - NEW - REST API Security. ✅
+- [ ] [Section 06](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2006/README.md#section-06-new---spring-mvc) - Section 6: NEW - Spring MVC.
+- [ ] [Section 07](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2007/README.md#section-07-new---spring-mvc-crud) - NEW - Spring MVC CRUD.
+- [ ] [Section 08](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2008/README.md#section-08-new---spring-mvc-security) - NEW - Spring MVC Security.
+- [ ] [Section 09](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2009/README.md#section-09-new---jpa--hibernate-advanced-mappings) - NEW - JPA / Hibernate Advanced Mappings.
+- [ ] [Section 10](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2010/README.md#section-10-new---aop-aspect-oriented-programming) - NEW - AOP: Aspect-Oriented Programming.
+- [ ] [Section 11](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2011/README.md#section-11-summary) - Summary.
+- [ ] [Section 12](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2012/README.md#section-12-appendix) - Appendix.
+- [ ] [Section 13](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Spring%20Boot%203%2C%20Spring%206%20%26%20Hibernate%20for%20Beginners/Section%2013/README.md#section-13-bonus) - Bonus.
 
 #### Additional stuff.
 
@@ -68,7 +68,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Make crypt program in **Angular**.
 - [ ] Refactor paths and projects inside Eclipse.
 - [ ] Check typos.
-- [ ] Make folder 00 based.
 - [ ] Section 05 - Spring Boot REST Security with JPA/Hibernate Tutorial.
 - [ ] Make Chapters/headings when reviewing.
 - [ ] Remove numbers from packages.
@@ -554,8 +553,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - Introduction.
-- [ ] [Section 02](#) - Cryptography Fundamentals.
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2001#section-01-introduction) - Introduction. ✅
+- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2002#section-02-cryptography-fundamentals) - Cryptography Fundamentals. 
 - [ ] [Section 03](#) - Symmetric (Private Key) Cryptography.
 - [ ] [Section 04](#) - Caesar Cipher.
 - [ ] [Section 05](#) - Cracking Caesar Cipher & Detecting Languages.
@@ -584,7 +583,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] Stuff.
-
+- Add here the source code, thing.
 
 
