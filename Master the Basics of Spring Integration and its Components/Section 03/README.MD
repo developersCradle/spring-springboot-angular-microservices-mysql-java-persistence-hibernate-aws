@@ -1,4 +1,3 @@
-
 # Section 03: Spring Integration Components.
 
 # What I learned.
@@ -30,16 +29,14 @@ public interface EmployeeGateway {
     - It has **Payload**, data goes here! Like `JSON`, `String`, `Bussiness objects` ... etc.
     - It has **Headers**, metadata about the message. Like `ID`, `timestamp` ... etc.
 
-
 <div align="center">
     <img src="serviceActivator.png" alt="ticket" width="500">
 </div>
 
 - We will write the **Service Activator**.
-    - The **request** goes from **Gateway(request channel)** to **Service Activator**.
+    - The **request** goes from **Gateway (request channel)** to **Service Activator**.
 
 ```
-
 package com.sbi.service;
 
 import org.springframework.integration.annotation.ServiceActivator;
@@ -130,13 +127,11 @@ public class EmployeeController {
         Employee empResponse = reply.getPayload();
         return empResponse;
     }
-
-
 }
 ```
 
 - The **Gateway** looks like such:
-    - We wil call the method `hireEmployee(Employee employee)`, which in regards call the **channel** `request-hire-emp-channel`. 
+    - We will call the method `hireEmployee(Employee employee)`, which in regards call the **channel** `request-hire-emp-channel`. 
 
 ```
 package com.sbi.gateway;
@@ -203,10 +198,9 @@ public class EmployeeService{
 }
 ```
 
-- The **channel** flow goes like such `hireEmployee` -> `processEmployee` -> `getEmployeeStatus`.
+- The **channel** flow goes like such `hireEmployee` → `processEmployee` → `getEmployeeStatus`.
 
 - The answer from the **POST**.
-
 
 <div align="center">
     <img src="answersFromThePost.png" alt="ticket" width="500">
@@ -218,9 +212,7 @@ public class EmployeeService{
 
 > **Transformer** takes message from channel and creates new message containing converted payload.
 
-
-- The controller for **Transformer** logic.
-
+- The controller for **Transformer** logic:
 
 ```
 package com.sbi.controller;
@@ -314,13 +306,10 @@ public class EmployeeService{
         replyChannel.send(message);
     }
 
-
-
-
 }
 ```
 
-- You can see that, the `replyChannel.send(message);` reply channel is set by the **gateway**. Thats how it knows who the **caller** is.
+- You can see that, the `replyChannel.send(message);` reply channel is set by the **gateway**. That's how it knows who the **caller** is.
 
 - My humble answer from the **GET**.
 
@@ -331,7 +320,6 @@ public class EmployeeService{
 1. The **Transformer** transforms the message and returns it!
 
 # Assignment 1: Create a demo Transformer application.
-
 
 ```
 Create a Spring Integration application that transforms message as follows by appending a prefix and suffix as dollor sign.
@@ -364,7 +352,7 @@ new message: $$
     }
 ```
 
-- Service:
+- The Service:
 
 ```
 //    Assignment 01: Create a demo Transformer application
@@ -383,7 +371,7 @@ new message: $$
 
 ```
 
-- Gateway Interface:
+- The Gateway Interface:
 
 ```
     // Assignment 01: Create a demo Transformer application.
@@ -427,14 +415,11 @@ public class EmployeeController {
     }
 
 }
-
 ```
 
-- Service:
+- The Service:
 
 ```
-
-
 package com.sbi.service;
 
 import com.sbi.model.Employee;
@@ -612,7 +597,7 @@ public interface EmployeeGateway {
     }
 ```
 
-- We can see the logs are working when the **filter** is **true**.
+- We can see the logs are working when the **Filter** is **true**.
 
 
 <div align="center">
@@ -660,9 +645,10 @@ Received message from output channel: Ville
         return employeeGateway.getManagerList(managers);
     }
 ```
+
 - We are using **StringJoiner**, explanation:
     - **StringJoiner**:
-        - This is **specialices** for **strings** where there is `prefixes`, `suffixes` and `delimiters` **etc...**.
+        - This is **specializes** for **strings** where there is `prefixes`, `suffixes` and `delimiters` **etc...**.
     - **StringBuilder**:
         - This is more **general-purpose** version for combining for **strings**.
 
@@ -712,12 +698,12 @@ Received message from output channel: [ Pekka & Simo & Ville ]
     <img src="weAreAgrigatingWhatSpliterSplitted.jpg" alt="ticket" width="500">
 </div>
 
-1. We can see that, The **Splitter** splits and **Aggrigator** aggrigates.
+1. We can see that, The **Splitter** splits and **Aggregator** aggregates.
 
 # Router.
 
 - Gateway Interface:
-    - We use **splitter** gateway point.
+    - We use **Splitter** gateway point.
 
 ```
     // ROUTER.
@@ -864,4 +850,4 @@ public void getTwitterMsg(Message<Employee> employee){
     <img src="assigment2Working.jpg" alt="ticket" width="500">
 </div>
 
-1. You can see that the **assigment 2** is working.
+1. You can see that the **assignment 2** is working.

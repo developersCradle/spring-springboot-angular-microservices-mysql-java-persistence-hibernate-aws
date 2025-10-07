@@ -68,10 +68,6 @@
 2. **Aggregator** combines several messages into **singe one**.
 
 <div align="center">
-    <img src="ServiceActivator.png" alt="ticket" width="600">
-</div>
-
-<div align="center">
     <img src="ServiceActivator_1.png" alt="ticket" width="600">
 </div>
 
@@ -102,6 +98,9 @@
 </div>
 
 1. Flow goes from **outside** to **inside**.
+> **Inbound channel adapters**, are used for one way integration, to bring data into the messaging application. So, in inbound flow, the source of the message is an external system, which goes to the output channel, through the channel adapter.
 2. Flow goes from **inside** to **outside**.
+> **Outbound channel adapters**, are used for one way integration, to send data out of the messaging application. So, in outbound flow, the message goes from input channel to the target i.e. the external system, through the channel adapter.
+
 
 

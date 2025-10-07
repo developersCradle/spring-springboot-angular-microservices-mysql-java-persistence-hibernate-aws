@@ -153,9 +153,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] [Source code repo](https://github.com/misstechack/spring-integration). ✅
 - [x] Additional [content](https://www.baeldung.com/spring-integration) to check. ✅
-- [ ] Check the cert.
-- [ ] Go thought the course and fix the typo errors.
-    - Chapter 3.
     
 <p align="center">
     <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 120px; width: 900px;">
