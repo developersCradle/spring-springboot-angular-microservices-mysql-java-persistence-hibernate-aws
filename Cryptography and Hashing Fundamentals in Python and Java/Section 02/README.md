@@ -111,3 +111,17 @@ Cryptography Fundamentals.
     <img src="symmmetricEncryptionPropertiesSecond.PNG" alt="cryptography course" width="500"/>
 </div>
 
+1. **Private key** can be retrieved from the **Public key**, but it takes time.
+2. **Private key**s never need to be exchanged.
+
+<div align="center">
+    <img src="symmmetricEncryptionPropertiesSecond.PNG" alt="cryptography course" width="500"/>
+</div>
+
+<div align="center">
+    <img src="AsymmmetricCryptosystems.PNG" alt="cryptography course" width="500"/>
+</div>
+
+1. **Private key** must be private!  
+    - The **public key** is known for anyone in the network  
+    - If **Alice** wants to send a message to **Bob**, then **Alice** encrypts the message with **Bob’s public key**, and **Bob** can decrypt the message with his own **private key**.

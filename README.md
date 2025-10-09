@@ -41,7 +41,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     Insert certificate here when completed
 </div>
 
-
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -551,8 +550,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Progress/Curriculum.
 
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2001#section-01-introduction) - Introduction. ✅
-- [ ] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2002#section-02-cryptography-fundamentals) - Cryptography Fundamentals. 
-- [ ] [Section 03](#) - Symmetric (Private Key) Cryptography.
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2002#section-02-cryptography-fundamentals) - Cryptography Fundamentals. ✅
+- [x] [Section 03](#) - Symmetric (Private Key) Cryptography. ✅
 - [ ] [Section 04](#) - Caesar Cipher.
 - [ ] [Section 05](#) - Cracking Caesar Cipher & Detecting Languages.
 - [ ] [Section 06](#) - Vigenere Cipher.
@@ -580,6 +579,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- Add here the source code, thing.
+- [ ] Do the basic Caesar cipher.
+- [ ] Same with C++.
 
 
