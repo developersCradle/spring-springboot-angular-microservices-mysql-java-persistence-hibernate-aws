@@ -13,12 +13,19 @@
     - `git config --global core.longpaths true`.
 
 <p align="center">
-    <img id="spring" src="Spring Boot 3 Spring 6 Hibernate for Beginners caption.png" style="height: 90px; width: 900px;">
+    <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
 </p>
 
-![Spring Boot Beginners](Spring%20Boot%203%20Spring%206%20and%20Hibernate%20for%20Beginners%20desc.jpg)
+
+<p align="center">
+    <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" style="height: 300px; width: 900px;">
+</p>
+
 
 All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby** ©. 
+
+> Add here story.<br><br>
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -61,6 +68,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
 - [x] The source repository can be found [here](https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners). ✅
 - [ ] Read/skim thought Spring documentation when finished this course.
 - [ ] Make Unix clock in **Thymeleaf** or in **Angular**.
@@ -93,7 +101,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <details>
 
-<summary id="old legacy course" open="false"> <b> Old(legacy) course Curriculum. Do this, if this si still usefull! </b> </summary>
+<summary id="old legacy course" open="false"> <b> Old(legacy) course Curriculum. Do this, if this this is still usefull! </b> </summary>
 <br>
 
 ## Old(legacy) course Curriculum, old course still accessible, if useful do. 
@@ -116,12 +124,14 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Master the Basics of Spring Integration and it's Components by **Rajshree Umarekar** ©. 
 
+> I wasn’t sure if I had just broken everything—yikes!
+But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way!<br><br>
+ ~ *DevelopersCradle*
+
 Contains my own notes with some course material to enforce learning experience.
 
 This came helpful when updating our ancient repositories, which had **Spring integration** modules.
 
-> I wasn’t sure if I had just broken everything—yikes!
-But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way! ~ *DevelopersCradle*
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
@@ -161,10 +171,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Master Microservices with Spring Boot and Spring Cloud by **in28Minutes** ©.
 
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
+
 Contains my own notes with some course material to enforce learning experience.
 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
-
 
 [The course at Udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/).
 
@@ -208,7 +220,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- [ ] Read [Pro GIT book](https://git-scm.com/book/en/v2).
+- Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
 - [ ] Move Spring V1 into appendix folder, since it depreciated.
     - Also numbering got changed.
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
@@ -220,6 +232,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ![Jpa Course here](Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals%20desc.jpg)
 
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
+
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
@@ -251,6 +266,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
 - [ ] Make the Book Store project working from chapter 04.
 - [ ] Go thought `@mapsID` and then again the `Book Store with Hibernate and JPA Annotations.`.
 - [ ] Take Cofee and Sunday. Finish the chapter `Book Store with Hibernate and JPA Annotations`.
@@ -261,7 +277,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     - In `.classpath`.
 - [ ] Remove numbers from packages `.md` if there is.
 - [ ] When course finished, remove the projects from the IDE!
-
+- [ ] Exercises should be in following order:
+    - First question as plain text.
+    - Then comes the answer under it.
+        - Fix these for this repository!
+    
 <p align="center">
     <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" style="height: 100px; width: 900px;">
 </p>
@@ -269,6 +289,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ![Advanced hibernate here](Hibernate%20Advanced%20Development%20Techniques%20caption%20desc.PNG)
 
 All course material from **Hibernate: Advanced Development Techniques** by **Harinath Kuntamukkala** and **Chad Darby** ©.
+
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
 
@@ -302,6 +325,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
+- Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
 - [x] The repository for the code is [here](https://github.com/darbyluv2code/hibernate-advanced-development-techniques?tab=readme-ov-file#hibernate-advanced-development-techniques).
 
 - [ ] Paste every exercise code after examples.
@@ -317,10 +341,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
 
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
+
 Contains my own notes with some course material to enforce learning experience.
 
 [The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/).   
-
 [Home page of maker](https://www.youtube.com/c/ColtSteeleCode).
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
@@ -345,10 +371,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Course got updated, transfer your answers here with updated content!
 - [ ] Do little game as refresher. [Fun game](https://mystery.knightlab.com/).
 
-# Cloud Native course series.
+<details>
 
-- This course series will have the following courses. 
+<summary id="cloud native progress" open="true"> <b>  Cloud native course series by Vinoth Selvaraj! </b> </summary>
 
+<br>
 
 <div align="center">
     <img src="cloudSeries.PNG"  alt="cloud series" width="600"/>
@@ -359,6 +386,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 3. About **Helm**.
 4. About **Service Mesh**. 
 
+</details>
+
 <br>
 
 <p align="center">
@@ -366,6 +395,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </p>
 
 ![Docker Masterclass For Java Spring Boot Developers](Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers%20desc.PNG)
+
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
 
 All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj** ©.
 
@@ -417,6 +449,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ![Kubernetes Masterclass For Beginners](kubernetes.PNG)
 
 All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj** ©.
+
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -470,6 +505,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
+
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys. This is why it will include configuration files which are related to this IDE this approach, and it will be favored for now, also the compiled classed for explanatory experiments. ⚙️
 
 [The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
@@ -518,68 +556,4 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [x] For now do till basic level.
-
-<p align="center">
-    <img id="crypt" src="Cryptography and Hashing Fundamentals in Python and Java caption.png"  style="height: 70px; width: 900px;">
-</p>
-
-![Cryptography and Hashing Fundamentals in Python and Java](Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java%20desc.PNG)
-
-All course material from Cryptography and Hashing Fundamentals in Python and Java **Holczer Balazs** ©.
-
-Contains my own notes with some course material to enforce learning experience.
-
-This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
-
-[The course at Udemy](https://www.udemy.com/course/learn-cryptography-basics-in-python/).
-
-If the content sparked :fire: your interest, please consider buying the course and start learning :book:
-
-
-<!-- 
-Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
-?trk=public_profile_see-credential 
--->
-
-<div align="center">
-    Insert certificate here when completed
-</div>
-
-**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
-
-#### Progress/Curriculum.
-
-- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2001#section-01-introduction) - Introduction. ✅
-- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Cryptography%20and%20Hashing%20Fundamentals%20in%20Python%20and%20Java/Section%2002#section-02-cryptography-fundamentals) - Cryptography Fundamentals. ✅
-- [x] [Section 03](#) - Symmetric (Private Key) Cryptography. ✅
-- [ ] [Section 04](#) - Caesar Cipher.
-- [ ] [Section 05](#) - Cracking Caesar Cipher & Detecting Languages.
-- [ ] [Section 06](#) - Vigenere Cipher.
-- [ ] [Section 07](#) - Cracking the Vigenere Cipher (Kasiski Algorithm).
-- [ ] [Section 08](#) - One Time Pad (Vernam Cipher).
-- [ ] [Section 09](#) - Randomness in Cryptography.
-- [ ] [Section 10](#) - Data Encryption Standard (DES).
-- [ ] [Section 11](#) - Cracking Data Encryption Standard (DES).
-- [ ] [Section 12](#) - Advanced Encryption Standard (AES).
-- [ ] [Section 13](#) - Cracking Advanced Encryption Standard (AES).
-- [ ] [Section 14](#) - Asymmetric (Public Key) Cryptography.
-- [ ] [Section 15](#) - Asymmetric Cryptosystems.
-- [ ] [Section 16](#) - Modular Arithmetic.
-- [ ] [Section 17](#) - Diffie-Hellman Key Exchange.
-- [ ] [Section 18](#) - Cracking Diffie-Hellman Cryptosystem.
-- [ ] [Section 19](#) - RSA Cryptosystem.
-- [ ] [Section 20](#) - Cracking RSA.
-- [ ] [Section 21](#) - Elliptic Curve. Cryptography (ECC).
-- [ ] [Section 22](#) - Elliptic Curve Digital Signature Algorithm (ECDSA).
-- [ ] [Section 23](#) - Hashing.
-- [ ] [Section 24](#) - Hashing Algorithms Implementation (Python).
-- [ ] [Section 25](#) - Hashing Algorithms Implementation (Java).
-- [ ] [Section 26](#) - Applications of Cryptography.
-- [ ] [Section 27](#) - Course Materials (Downloads).
-
-#### Additional stuff.
-
-- [ ] Do the basic Caesar cipher.
-- [ ] Same with C++.
-
 
