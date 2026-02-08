@@ -48,6 +48,20 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     Insert certificate here when completed
 </div>
 
+<details>
+
+<summary id="Spring boot roadmap" open="true"> <b> Spring boot roadmap! </b> </summary>
+
+<br>
+
+<p align="center">
+    <img src="Spring_Boot_Roadmap.PNG" alt="Spring Boot Roadmap!" width="800"/>
+</p>
+
+</details>
+
+<br>
+
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -388,6 +402,51 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 </details>
 
+
+<p align="center">
+    <img id="MySQL SQL And Stored Procedures From Beginner To Advanced"
+    alt="MySQL SQL And Stored Procedures From Beginner To Advanced" src="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Caption.PNG" style="height: 90px; width: 1000px;">
+</p>
+
+add theese one when time! Get this done after finish the other SQL Course!
+
+![The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert course](MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description.PNG)
+
+<!-- 
+All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
+
+> Add some story!<br><br>
+ ~ *DevelopersCradle*
+
+Contains my own notes with some course material to enforce learning experience. -->
+
+[The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/).   
+[Home page of maker](https://www.youtube.com/c/ColtSteeleCode).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    add cert here
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [x] [All Done](#) - atodo
+
+#### Additional stuff.
+
+- [ ] todo!
+
+
+
+
 <br>
 
 <p align="center">
@@ -505,10 +564,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> 
+>By excluding the transitive dependencies causing the conflicts and explicitly including the correct versions in the POM, order was restored. No more cryptic clashes, no more mystery libraries braking the pipeline ! <br><br>
+> ~ *DevelopersCradle*
 
-This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with **Eclipse** hotkeys. This is why it will include configuration files which are related to this IDE this approach, and it will be favored for now, also the compiled classed for explanatory experiments. ⚙️
+
+
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#). This is why it will include configuration files which are related to this IDE this approach, also the compiled classed for explanatory experiments. ⚙️
 
 [The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
 
