@@ -12,10 +12,66 @@
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
 
+
+
+# Spring Boot 4 REST APIs: Building Modern REST APIs.
+<!-- 
+<p align="center">
+    <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
+</p> -->
+
+<p align="center">
+    <img id="spring" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" style="height: 200px; width: 900px;">
+</p>
+
+All course material from *Spring Boot 4 REST APIs: Building Modern REST APIs* by **Chad Darby** and **Eric Roby** ©. 
+
+> Add here story.<br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+[The course at Udemy](https://www.udemy.com/course/spring-boot-rest-apis/). 
+
+[Content maker](https://luv2code.com/).
+
+[Content maker second](https://www.codingwithroby.com/).
+
+If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert certificate here when completed
+</div>
+
+<br>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Section 01](#) - Introduction.
+- [ ] [Section 02](#) - Spring Boot REST - Project 01.
+- [ ] [Section 03](#) - Spring Boot REST - Project 02.
+- [ ] [Section 04](#) - Spring Boot REST - Project 03 (Part 1).
+- [ ] [Section 05](#) - Spring Boot REST - Project 03 (Part 2).
+- [ ] [Section 06](#) - Spring Boot REST - Project 04.
+- [ ] [Section 07](#) - Summary.
+- [ ] [Section 08](#) - Bonus.
+
+#### Additional stuff.
+
+- Add here.
+
 <p align="center">
     <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
 </p>
-
 
 <p align="center">
     <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" style="height: 300px; width: 900px;">
