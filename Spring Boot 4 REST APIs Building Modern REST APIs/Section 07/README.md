@@ -1,5 +1,5 @@
-# Section 07: NEW - Spring MVC CRUD.
+# Section 07: Summary.
 
-NEW - Spring MVC CRUD.
+ Summary.
 
 # What I Learned.

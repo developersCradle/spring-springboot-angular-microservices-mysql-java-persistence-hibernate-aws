@@ -12,16 +12,15 @@
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
 
-
-
 # Spring Boot 4 REST APIs: Building Modern REST APIs.
+
 <!-- 
 <p align="center">
     <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
 </p> -->
 
 <p align="center">
-    <img id="spring" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" style="height: 200px; width: 900px;">
+    <img id="spring" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" style="height: 300px; width: 900px;">
 </p>
 
 All course material from *Spring Boot 4 REST APIs: Building Modern REST APIs* by **Chad Darby** and **Eric Roby** ©. 
@@ -67,7 +66,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Additional stuff.
 
-- Add here.
+- [Original repository](https://github.com/darbyluv2code/spring-boot-rest-apis)!
 
 <p align="center">
     <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
@@ -458,26 +457,30 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 </details>
 
-
 <p align="center">
-    <img id="MySQL SQL And Stored Procedures From Beginner To Advanced"
-    alt="MySQL SQL And Stored Procedures From Beginner To Advanced" src="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Caption.PNG" style="height: 90px; width: 1000px;">
+    <img
+     src="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Caption.PNG"
+    alt="MySQL SQL And Stored Procedures From Beginner To Advanced Caption"
+    style="width:1600px;height:110px;"/>
 </p>
 
-add theese one when time! Get this done after finish the other SQL Course!
+<p align="center">
+    <img
+    id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description.PNG"
+    alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
+    style="width:690px" />
+</p>
 
-![The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert course](MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description.PNG)
+All course material from *MySQL, SQL and Stored Procedures from Beginner to Advanced* by **John Purcell** ©.
 
-<!-- 
-All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
+> . 🐟 <br><br>
+~ *DevelopersCradle*
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
-Contains my own notes with some course material to enforce learning experience. -->
+[The course at Udemy](https://www.udemy.com/course/mysql-and-sql-from-beginner-to-advanced/).   
 
-[The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/).   
-[Home page of maker](https://www.youtube.com/c/ColtSteeleCode).
+[Home page of maker](https://www.caveofprogramming.com/).
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
@@ -494,13 +497,17 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [x] [All Done](#) - atodo
+- [ ] [Section 01](#) - When to use CSRF Protection (Spring Security Recommendations).
+- [ ] [Section 02](#) - Configuring HTTP Basic Authentication.
+- [ ] [Section 03](#) - Implementing Role-Based Access Control (EMPLOYEE, MANAGER, ADMIN).
+- [ ] [Section 04](#) - Integrating Spring Security with REST APIs.
+- [ ] [Section 05](#) - MySQL Fundamentals: Data Types and Operators.
+- [ ] [Section 06](#) - MySQL Advanced: Joins, Functions, and Stored Procedures.
+- [ ] [Section 07](#) - Database Security: Users, Privileges, and Transactions.
 
 #### Additional stuff.
 
 - [ ] todo!
-
-
 
 
 <br>

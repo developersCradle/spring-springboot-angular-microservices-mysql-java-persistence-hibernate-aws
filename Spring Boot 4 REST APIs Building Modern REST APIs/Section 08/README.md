@@ -1,5 +1,5 @@
-# Section 07: NEW - Spring MVC CRUD.
+# Section 08: Bonus.
 
-NEW - Spring MVC CRUD.
+Bonus.
 
 # What I Learned.

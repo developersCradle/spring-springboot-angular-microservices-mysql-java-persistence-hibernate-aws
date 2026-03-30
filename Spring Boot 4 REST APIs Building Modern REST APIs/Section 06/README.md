@@ -1,5 +1,5 @@
-# Section 06: NEW - Spring MVC CRUD.
+# Section 06: Spring Boot REST - Project 04.
 
-NEW - Spring MVC CRUD.
+Spring Boot REST - Project 04.
 
 # What I Learned.
