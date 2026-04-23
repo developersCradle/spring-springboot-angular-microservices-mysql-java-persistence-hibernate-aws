@@ -12,12 +12,10 @@
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
 
-# Spring Boot 4 REST APIs: Building Modern REST APIs.
 
-<!-- 
 <p align="center">
-    <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
-</p> -->
+    <img id="spring" src="Spring_Boot_4_REST_APIs_Building_Modern_REST_APIs_Caption.png" style="height: 90px; width: 1200px;">
+</p>
 
 <p align="center">
     <img id="spring" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" style="height: 300px; width: 900px;">
@@ -25,8 +23,12 @@
 
 All course material from *Spring Boot 4 REST APIs: Building Modern REST APIs* by **Chad Darby** and **Eric Roby** ©. 
 
-> Add here story.<br><br>
+> Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
+
+<!-- Add here link to java 22 description! -->
+
+We are using [![Java 22](https://img.shields.io/badge/Java%2022-%23ED8B00.svg?logo=openjdk&logoColor=white)](#). Instead, the which are recommended!
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
@@ -77,9 +79,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </p>
 
 
-All course material from Spring Boot 3, Spring 6 & Hibernate for Beginners by **Chad Darby** ©. 
+All course material from *Spring Boot 3, Spring 6 & Hibernate for Beginners* by **Chad Darby** ©. 
 
-> Add here story.<br><br>
+> Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
@@ -191,11 +193,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Master the Basics of Spring Integration and it's Components](Master%20the%20Basics%20of%20Spring%20Integration%20and%20it's%20Components%20desc.JPG)
 
-All course material from Master the Basics of Spring Integration and it's Components by **Rajshree Umarekar** ©. 
+All course material from *Master the Basics of Spring Integration and it's Components* by **Rajshree Umarekar** ©. 
 
 > I wasn’t sure if I had just broken everything—yikes!
-But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way!<br><br>
- ~ *DevelopersCradle*
+But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way! 🐟🐟🐟 <br> <br>
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -240,8 +242,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Master Microservices with Spring Boot and Spring Cloud by **in28Minutes** ©.
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> Add story here! 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -302,8 +304,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> Add story here! 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
@@ -359,8 +361,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from **Hibernate: Advanced Development Techniques** by **Harinath Kuntamukkala** and **Chad Darby** ©.
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> Add story here! 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 [The Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
 
@@ -410,8 +412,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> Add story here! 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -473,7 +475,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from *MySQL, SQL and Stored Procedures from Beginner to Advanced* by **John Purcell** ©.
 
-> . 🐟 <br><br>
+> Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
@@ -518,8 +520,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 ![Docker Masterclass For Java Spring Boot Developers](Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers%20desc.PNG)
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> Add story here! 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj** ©.
 
@@ -572,8 +574,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj** ©.
 
-> Add some story!<br><br>
- ~ *DevelopersCradle*
+> Add story here! 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 Contains my own notes with some course material to enforce learning experience.
 
@@ -628,9 +630,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
 > 
->By excluding the transitive dependencies causing the conflicts and explicitly including the correct versions in the POM, order was restored. No more cryptic clashes, no more mystery libraries braking the pipeline ! <br><br>
-> ~ *DevelopersCradle*
-
+> By excluding the transitive dependencies causing the conflicts and explicitly including the correct versions in the POM, order was restored. No more cryptic clashes, no more mystery libraries braking the pipeline ! 
+> . 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
 
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#). This is why it will include configuration files which are related to this IDE this approach, also the compiled classed for explanatory experiments. ⚙️
