@@ -84,7 +84,7 @@ All course material from *Spring Boot 3, Spring 6 & Hibernate for Beginners* by 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
-Contains my own notes with some course material to enforce learning experience.
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
@@ -199,7 +199,7 @@ All course material from *Master the Basics of Spring Integration and it's Compo
 But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way! 🐟🐟🐟 <br> <br>
 ~ *DevelopersCradle*
 
-Contains my own notes with some course material to enforce learning experience.
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 This came helpful when updating our ancient repositories, which had **Spring integration** modules.
 
@@ -245,7 +245,7 @@ All course material from Master Microservices with Spring Boot and Spring Cloud 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
-Contains my own notes with some course material to enforce learning experience.
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
@@ -307,6 +307,8 @@ All course material from **Java Persistence: Hibernate and JPA Fundamentals** by
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
 [The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
 [Homepage of Course](https://mavenedge.com/).   
@@ -364,6 +366,8 @@ All course material from **Hibernate: Advanced Development Techniques** by **Har
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
 [The Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
@@ -415,7 +419,7 @@ All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
-Contains my own notes with some course material to enforce learning experience.
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 [The course at Udemy](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/).   
 [Home page of maker](https://www.youtube.com/c/ColtSteeleCode).
@@ -525,7 +529,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj** ©.
 
-Contains my own notes with some course material to enforce learning experience.
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 [The course at Udemy](https://www.udemy.com/course/docker-java/).
 
@@ -577,8 +581,7 @@ All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vi
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
-Contains my own notes with some course material to enforce learning experience.
-
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
 [The course at Udemy](https://www.udemy.com/course/kubernetes-cloud-native/).
 
@@ -683,4 +686,54 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [x] For now do till basic level.
+
+<p align="center">
+    <img
+     src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Caption.png"
+    alt="MySQL SQL And Stored Procedures From Beginner To Advanced Caption"
+    style="width:1600px;height:110px;"/>
+</p>
+
+<p align="center">
+    <img
+    id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
+    alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
+    style="width:490px" />
+</p>
+
+All course material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch**.
+
+> During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the `JSON` structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization.
+>
+>That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between `JSON` structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟🐟🐟 <br><br>
+~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+[Website of maker](https://adam-bien.com/).
+
+[Course playlist](https://www.youtube.com/watch?v=Hv_a3ZBSO_g&list=PLe8LZCtW06l8LGAUQJlvlRZ0DJ-0q8sdn).
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    Insert here own certificate!
+</div>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [ ] [Snippet 01](#) - Parsing Json in Java Tutorial - Part 1: Jackson and Simple Objects.
+- [ ] [Snippet 02](#) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings.
+- [ ] [Snippet 03](#) - Parsing Json in Java Tutorial - Part 3: More complex Mappings.
+
+#### Additional stuff.
+
+- [x] [Add here some](#).
 

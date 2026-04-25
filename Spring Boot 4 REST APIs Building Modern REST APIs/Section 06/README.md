@@ -158,6 +158,39 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
     <img src="JJWT_Configuration.JPG"  alt="Spring Boot 4 REST APIs: Building Modern REST APIs" width="600"/>
 </div>
 
+1. This `secret` will be used for:
+    - **Verifying**, when its **created**!
+    - **Signing** its **received**!
+2. After **15 minutes**, the **JWT** becomes invalid and must be refreshed or reissued.
+
+<div align="center">
+    <img src="We_Need_To_Create_JWT_Service.JPG"  alt="Spring Boot 4 REST APIs: Building Modern REST APIs" width="600"/>
+</div>
+
+1. Token Generation:
+    - We create the **JWT** for authenticated user and sign it with **HS256** algorithm!
+2. Token Validation:
+    - Verifies if the **token** is `valid` or `expired`!
+    - Checks if **token** belongs to right user!
+3. We need to extract the `claims`.
+    - `claim` = **one field** of data **inside** the **JWT**!
+
+<div align="center">
+    <img src="JWT_Interface.JPG"  alt="Spring Boot 4 REST APIs: Building Modern REST APIs" width="600"/>
+</div>
+
+1. In our **service** we will have:
+    - Token Parsing.
+    - Token Validation.
+    - Token Generations.
+
+<div align="center">
+    <img src="JWT_Service_Impl.JPG"  alt="Spring Boot 4 REST APIs: Building Modern REST APIs" width="600"/>
+</div>
+
+1. `SECRET_KEY` and `JWT_EXPIRATION`, will be getting from the **secret** and the **expiration** timeout!
+
+- Todo do this!
 
 # Spring Boot REST P4: Install JWTs & Application Properties.
 
