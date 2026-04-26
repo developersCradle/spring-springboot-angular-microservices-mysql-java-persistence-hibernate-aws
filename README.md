@@ -698,7 +698,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img
     id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
-    style="width:490px" />
+    style="width:410px" />
 </p>
 
 All course material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch**.
@@ -729,11 +729,12 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Snippet 01](#) - Parsing Json in Java Tutorial - Part 1: Jackson and Simple Objects.
-- [ ] [Snippet 02](#) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings.
-- [ ] [Snippet 03](#) - Parsing Json in Java Tutorial - Part 3: More complex Mappings.
+- [x] [Part 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2001#section-01-parsing-json-in-java-tutorial---part-1-jackson-and-simple-objects) - Parsing Json in Java Tutorial - Part 1: Jackson and Simple Objects. ✅
+- [ ] [Part 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2002#section-02-parsing-json-in-java-tutorial---part-2-objectmapper-and-generate-json-strings) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings.
+- [ ] [Part 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Parsing Json in Java Tutorial - Part 3: More complex Mappings.
 
 #### Additional stuff.
 
-- [x] [Add here some](#).
+- [ ] [Intro to JSON and Jackson's ObjectMapper](https://www.youtube.com/watch?v=bV85_gIrHTc).
 
+- Todo check the imports after the these are finsihed!
