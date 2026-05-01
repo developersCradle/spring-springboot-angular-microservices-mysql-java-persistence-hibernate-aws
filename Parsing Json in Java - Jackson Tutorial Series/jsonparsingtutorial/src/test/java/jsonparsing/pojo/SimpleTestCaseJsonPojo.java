@@ -1,11 +1,11 @@
-package jsonparsing;
+package jsonparsing.pojo;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-class SimpleTestCaseJsonPojo {
+public class SimpleTestCaseJsonPojo {
     private String name;
     private String age;
 }

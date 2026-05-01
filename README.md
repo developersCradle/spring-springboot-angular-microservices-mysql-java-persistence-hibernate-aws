@@ -503,13 +503,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 #### Progress/Curriculum.
 
-- [ ] [Section 01](#) - When to use CSRF Protection (Spring Security Recommendations).
-- [ ] [Section 02](#) - Configuring HTTP Basic Authentication.
-- [ ] [Section 03](#) - Implementing Role-Based Access Control (EMPLOYEE, MANAGER, ADMIN).
-- [ ] [Section 04](#) - Integrating Spring Security with REST APIs.
-- [ ] [Section 05](#) - MySQL Fundamentals: Data Types and Operators.
-- [ ] [Section 06](#) - MySQL Advanced: Joins, Functions, and Stored Procedures.
-- [ ] [Section 07](#) - Database Security: Users, Privileges, and Transactions.
+- [ ] [Section 01](#) - .
 
 #### Additional stuff.
 
@@ -712,8 +706,6 @@ Contains my own with my own visual notes ✍️ with some course material to enf
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
-[Website of maker](https://adam-bien.com/).
-
 [Course playlist](https://www.youtube.com/watch?v=Hv_a3ZBSO_g&list=PLe8LZCtW06l8LGAUQJlvlRZ0DJ-0q8sdn).
 
 <!-- 
@@ -737,4 +729,4 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] [Intro to JSON and Jackson's ObjectMapper](https://www.youtube.com/watch?v=bV85_gIrHTc).
 
-- Todo check the imports after the these are finsihed!
+- Todo check the imports after the these are finished!

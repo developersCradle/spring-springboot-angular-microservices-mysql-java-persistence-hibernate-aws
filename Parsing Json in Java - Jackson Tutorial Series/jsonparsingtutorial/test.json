@@ -1,0 +1,15 @@
+{
+  "authorName": "Rui",
+  "books" : [
+    {
+      "title": "Title1",
+      "inPrint": true,
+      "publishDate": "2019-12-25"
+    },
+    {
+      "title": "Title2",
+      "inPrint": true,
+      "publishDate": "2019-01-02"
+    }
+  ]
+}
