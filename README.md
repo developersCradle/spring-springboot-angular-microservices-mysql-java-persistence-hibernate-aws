@@ -637,7 +637,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <p align="center">
     <img src="Apache_Maven_Beginner_To_Guru_Description.PNG"
     alt="Apache Maven Beginner To Guru Description"
-    style="width:690px; width:600px;" />
+    style="width:690px; width:750px;" />
 </p>
 
 
