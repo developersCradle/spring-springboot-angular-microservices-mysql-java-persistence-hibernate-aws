@@ -188,10 +188,17 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </details>
 
 <p align="center">
-    <img id="Master the Basics of Spring Integration and its Components caption" src="Master the Basics of Spring Integration and it&apos;s Components caption.png" style="height: 120px; width: 900px;">
-</p> 
+    <img
+     src="Master_The_Basics_Of_Spring_Integration_And_It's_Components_Caption.JPG"
+    alt="Master The Basics Of Spring Integration And It's Components Caption!"
+    style="width:1600px;height:120px;"/>
+</p>
 
-![Master the Basics of Spring Integration and it's Components](Master%20the%20Basics%20of%20Spring%20Integration%20and%20it's%20Components%20desc.JPG)
+<p align="center">
+    <img src="Master_The_Basics_Of_Spring_Integration_And_It's_Components_Description.JPG"
+    alt=" Microservices With Spring Boot And Spring Cloud Description!"
+    style="width:690px; height:220px;" />
+</p>
 
 All course material from *Master the Basics of Spring Integration and it's Components* by **Rajshree Umarekar** ©. 
 
@@ -233,14 +240,21 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] [Source code repo](https://github.com/misstechack/spring-integration). ✅
 - [x] Additional [content](https://www.baeldung.com/spring-integration) to check. ✅
-    
+
 <p align="center">
-    <img id="microservice" src="Master Microservices with Spring Boot and Spring Cloud Caption.png" style="height: 120px; width: 900px;">
+    <img
+     src="Master_Microservices_With_Spring_Boot_And_Spring_Cloud_Caption.png"
+    alt="Microservices With Spring Boot And Spring Cloud Caption.JPG!"
+    style="width:1600px;height:120px;"/>
 </p>
 
-![Master Microservices](Master%20Microservices%20with%20Spring%20Boot%20and%20Spring%20Cloud%20desc.JPG)
+<p align="center">
+    <img src="Master_Microservices_With_Spring_Boot_And_Spring_Cloud_Description.JPG"
+    alt=" Microservices With Spring Boot And Spring Cloud Description!"
+    style="width:690px; height:220px;" />
+</p>
 
-All course material from Master Microservices with Spring Boot and Spring Cloud by **in28Minutes** ©.
+All course material from *Master Microservices with Spring Boot and Spring Cloud* by **in28Minutes** ©.
 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
@@ -297,12 +311,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
 <p align="center">
-    <img id="persistence hibernate" src="Java Persistence Hibernate and JPA Fundamentals caption.png" style="height: 100px; width: 900px;" >
+    <img
+     src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Caption.png"
+    alt="Java Persistence Hibernate And JPA Fundamentals Caption"
+    style="width:1600px;height:120px;"/>
 </p>
 
-![Jpa Course here](Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals%20desc.jpg)
+<p align="center">
+    <img src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Description.jpg"
+    alt="Java Persistence Hibernate And JPA Fundamentals Description"
+    style="width:690px; height:220px;" />
+</p>
 
-All course material from **Java Persistence: Hibernate and JPA Fundamentals** by **Deshraj Singh Kiran** ©.
+All course material from *Java Persistence: Hibernate and JPA Fundamentals* by **Deshraj Singh Kiran** ©.
 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
@@ -321,7 +342,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 -->
 
 <div align="center">
-    <img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java Persistence Hibernate and JPA Fundamentals Cert.jpg" alt="Java Persistence Hibernate and JPA Fundamentals" width="600"/>
+    <img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" alt="Java Persistence Hibernate and JPA Fundamentals Certificate!" width="600"/>
 </div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
@@ -354,14 +375,21 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     - First question as plain text.
     - Then comes the answer under it.
         - Fix these for this repository!
-    
+
 <p align="center">
-    <img id="Advanced hibernate" src="Hibernate Advanced Development Techniques caption.png" style="height: 100px; width: 900px;">
+    <img
+     src="Hibernate_Advanced_Development_Techniques_Caption.png"
+    alt="Hibernate Advanced Development Techniques Caption!"
+    style="width:1600px;height:120px;"/>
 </p>
 
-![Advanced hibernate here](Hibernate%20Advanced%20Development%20Techniques%20caption%20desc.PNG)
+<p align="center">
+    <img src="Hibernate_Advanced_Development_Techniques_Description.PNG"
+    alt="Hibernate Advanced Development Techniques Description!"
+    style="width:690px; height:220px;" />
+</p>
 
-All course material from **Hibernate: Advanced Development Techniques** by **Harinath Kuntamukkala** and **Chad Darby** ©.
+All course material from *Hibernate: Advanced Development Techniques* by **Harinath Kuntamukkala** and **Chad Darby** ©.
 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
@@ -402,19 +430,24 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - Use the `.gif` tool for making illustrations! Check the chapters and make GIFs out of it.
 - [x] The repository for the code is [here](https://github.com/darbyluv2code/hibernate-advanced-development-techniques?tab=readme-ov-file#hibernate-advanced-development-techniques).
-
 - [ ] Paste every exercise code after examples.
-
 - [ ] Do the last piece of `OrderBy` from the chapter 
  `Sorted Maps - Write Some Code`. Just another way to OrderBy.
 
 <p align="center">
-    <img id="Ultimate MySQL" src="The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert caption.png" style="height: 90px; width: 900px;">
+    <img
+     src="The_Ultimate_MySQL_Bootcamp_Go_From_SQL_Beginner_To_Expert_Caption.png"
+    alt="The Ultimate MySQL Bootcamp Go From SQL Beginner To Expert Caption"
+    style="width:1600px;height:120px;"/>
 </p>
 
-![The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert course](The%20Ultimate%20MySQL%20Bootcamp%20Go%20from%20SQL%20Beginner%20to%20Expert%20caption%20desc.PNG)
+<p align="center">
+    <img src="The_Ultimate_MySQL_Bootcamp_Go_From_SQL_Beginner_To_Expert_Description.PNG"
+    alt="The Ultimate MySQL Bootcamp Go From SQL Beginner To Expert Description"
+    style="width:690px; height:220px;" />
+</p>
 
-All course material from **The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert** by **Colt Steele** ©.
+All course material from *The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert* by **Colt Steele** ©.
 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
@@ -463,6 +496,22 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 </details>
 
+
+<!-- todo this
+
+<p align="center">
+    <img
+     src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Caption.png"
+    alt="Docker Masterclass For Java Spring Boot Developers Caption"
+    style="width:1600px;height:120px;"/>
+</p>
+
+<p align="center">
+    <img src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Description.PNG"
+    alt="Docker Masterclass For Java Spring Boot Developers Description"
+    style="width:690px; height:220px;" />
+</p> -->
+
 <p align="center">
     <img
      src="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Caption.PNG"
@@ -509,19 +558,25 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] todo!
 
-
 <br>
 
 <p align="center">
-    <img id="docker" src="Docker Masterclass For Java Spring Boot Developers caption.png" style="height: 100px; width: 900px;">
+    <img
+     src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Caption.png"
+    alt="Docker Masterclass For Java Spring Boot Developers Caption"
+    style="width:1600px;height:120px;"/>
 </p>
 
-![Docker Masterclass For Java Spring Boot Developers](Docker%20Masterclass%20For%20Java%20Spring%20Boot%20Developers%20desc.PNG)
+<p align="center">
+    <img src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Description.PNG"
+    alt="Docker Masterclass For Java Spring Boot Developers Description"
+    style="width:690px; height:220px;" />
+</p>
 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
-All course material from Docker Masterclass For Java Spring Boot Developers by **Vinoth Selvaraj** ©.
+All course material from *Docker Masterclass For Java Spring Boot Developers* by **Vinoth Selvaraj** ©.
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
@@ -564,22 +619,35 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <br>
 
+<!-- todo -->
+<!-- <p align="center">
+    <img
+     src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif"
+    alt="Apache Maven Beginner To Guru Caption"
+    style="width:1600px;height:120px;"/>
+</p>
+
+<p align="center">
+    <img src="Apache_Maven_Beginner_To_Guru_Description.PNG"
+    alt="Apache Maven Beginner To Guru Description"
+    style="width:690px; height:220px;" />
+</p> -->
 
 
 <p align="center">
     <img
      src="Kubernetes Masterclass For Beginners caption.png"
     alt="Apache Maven Beginner To Guru Caption"
-    style="width:1600px;height:110px;"/>
+    style="width:1600px;height:120px;"/>
 </p>
 
 <p align="center">
     <img src="kubernetes.PNG"
     alt="Apache Maven Beginner To Guru Description"
-    style="width:690px" />
+    style="width:690px; height:220px;" />
 </p>
 
-All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj** ©.
+All course material from *Kubernetes Masterclass For Beginners [Hands-On]* by **Vinoth Selvaraj** ©.
 
 > Add story here! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
@@ -640,12 +708,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     style="width:690px; height:220px;" />
 </p>
 
-
-All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
+All course material from *Apache Maven: Beginner to Guru* by **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
 > 
-> By excluding the transitive dependencies causing the conflicts and explicitly including the correct versions in the POM, order was restored. No more cryptic clashes, no more mystery libraries braking the pipeline ! 
-> . 🐟🐟🐟 <br><br>
+> By excluding the transitive dependencies causing the conflicts and explicitly including the correct versions in the POM, order was restored. No more cryptic clashes, no more mystery libraries braking the pipeline! 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
 
@@ -698,7 +764,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] For now do till basic level.
 
-
 <p align="center">
     <img
      src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Caption.png"
@@ -713,18 +778,20 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     style="width:590px; height:320px;" />
 </p>
 
-All course material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch**.
+All learning material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch** and from **Geekific**.
 
 > During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the JSON structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization.
 >
 >That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between JSON structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
-Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
+Contains my own with my own visual notes ✍️ with some video material to enforce learning experience. There is also project, which enhances the learning process!
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
 [Course playlist](https://www.youtube.com/watch?v=Hv_a3ZBSO_g&list=PLe8LZCtW06l8LGAUQJlvlRZ0DJ-0q8sdn).
+
+If the content sparked 🔥 your interest, please consider buying the course and start learning 📖.
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
@@ -742,7 +809,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Part 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2001#section-01-parsing-json-in-java-tutorial---part-1-jackson-and-simple-objects) - Parsing Json in Java Tutorial - Part 1: Jackson and Simple Objects. ✅
 - [x] [Part 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2002#section-02-parsing-json-in-java-tutorial---part-2-objectmapper-and-generate-json-strings) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings. ✅
 - [x] [Part 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Parsing Json in Java Tutorial - Part 3: More complex Mappings. ✅
-
 - [x] [Additional](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Intro to JSON and Jackson's ObjectMapper. ✅
 
 #### Additional stuff.
