@@ -631,13 +631,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img
      src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif"
     alt="Apache Maven Beginner To Guru Caption"
-    style="width:1600px;height:110px;"/>
+    style="width:1600px;height:120px;"/>
 </p>
 
 <p align="center">
     <img src="Apache_Maven_Beginner_To_Guru_Description.PNG"
     alt="Apache Maven Beginner To Guru Description"
-    style="width:690px; width:750px;" />
+    style="width:690px; height:220px;" />
 </p>
 
 
@@ -698,18 +698,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [x] For now do till basic level.
 
+
 <p align="center">
     <img
      src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Caption.png"
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Caption"
-    style="width:1600px;height:110px;"/>
+    style="width:1600px;height:120px;"/>
 </p>
 
 <p align="center">
     <img
     id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
-    style="width:410px" />
+    style="width:690px; width:750px;" />
 </p>
 
 All course material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch**.
