@@ -710,14 +710,14 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img
     id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
-    style="width:690px; height:220px;" />
+    style="width:590px; height:320px;" />
 </p>
 
 All course material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch**.
 
-> During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the `JSON` structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization.
+> During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the JSON structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization.
 >
->That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between `JSON` structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟🐟🐟 <br><br>
+>That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between JSON structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
