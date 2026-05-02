@@ -710,7 +710,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img
     id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
-    style="width:690px; width:750px;" />
+    style="width:690px; height:220px;" />
 </p>
 
 All course material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch**.
