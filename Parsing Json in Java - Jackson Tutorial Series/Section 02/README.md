@@ -98,7 +98,147 @@ Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings.
 <details>
 <summary id="chapter2" open="true"> <b>Code after chapter 2</b>! </summary>
 
-```Java
+#### SimpleTestCaseJsonPojo.java
 
+````Java
+package jsonparsing.pojo;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class SimpleTestCaseJsonPojo {
+    private String name;
+    private String age;
+}
+````
+
+#### Json.java
+
+```Java
+package jsonparsing;
+
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
+// This will be util class!
+public class Json {
+
+    static private ObjectMapper objectMapper = getDefaultObjectMapper();
+
+    /**
+     *  Construction happens here, coz we need configure the mapper!
+     */
+    private static ObjectMapper getDefaultObjectMapper() {
+       ObjectMapper defaultObjectMapper = new ObjectMapper();
+        // Configure the mapper here!
+
+        // We don't want to throw exception when there unknown fields.
+        defaultObjectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        // We want to use Java 8 Dates.
+        defaultObjectMapper.registerModule(new JavaTimeModule());
+
+        return defaultObjectMapper;
+    }
+
+    // Parse from String JSON -> JsonNode.
+    public static JsonNode parse(String source) throws JsonProcessingException {
+        // We are reading tree mapping!
+        return objectMapper.readTree(source);
+    }
+
+    // From JsonNode to POJO Object!
+    public static<A> A fromJson(JsonNode node, Class<A> clazz) throws JsonProcessingException {
+        return objectMapper.treeToValue(node, clazz);
+    }
+
+    // POJO to JsonNode!
+    public static JsonNode toJsonNode(Object object)
+    {
+        return objectMapper.valueToTree(object);
+    }
+
+    // JsonNode to String!
+    public static String toJsonString(JsonNode node) throws JsonProcessingException {
+        ObjectWriter objectWriter = objectMapper.writer();
+        // For the pretty print.
+        objectWriter.with(SerializationFeature.INDENT_OUTPUT);
+        return objectWriter.writeValueAsString(node);
+    }
+}
 ```
+
+#### JsonTest.java
+
+````Java
+package jsonparsing;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import jsonparsing.pojo.AuthorPOJO;
+import jsonparsing.pojo.BookPOJO;
+import jsonparsing.pojo.DayPOJO;
+import jsonparsing.pojo.SimpleTestCaseJsonPojo;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class JsonTest {
+
+    private String jsonSource = "{\n" +
+            "  \"name\":\"Alice\",\n" +
+            "  \"age\":30,\n" +
+            "  \"surename\":\"Richard\"\n" +
+            "}";
+
+    @Test
+    void TestParse_JSON() throws JsonProcessingException {
+        JsonNode node = Json.parse(jsonSource);
+        assertEquals(node.get("name").asText(), "Alice");
+    }
+
+    @Test
+    void TestFrom_JSON() throws JsonProcessingException {
+        JsonNode node = Json.parse(jsonSource);
+        SimpleTestCaseJsonPojo pojo = Json.fromJson(node, SimpleTestCaseJsonPojo.class);
+
+        assertEquals(pojo.getAge(), "30");
+        assertEquals(pojo.getName(), "Alice");
+
+    }
+
+    @Test
+    void Test_POJO_Object_To_JSON() throws JsonProcessingException {
+        SimpleTestCaseJsonPojo pojo = new SimpleTestCaseJsonPojo();
+        pojo.setAge("12");
+        pojo.setName("AS");
+
+        JsonNode json = Json.toJsonNode(pojo);
+        System.out.println(json);
+
+        assertEquals(json.get("age").asText(), "12");
+        assertEquals(json.get("name").asText(), "AS");
+    }
+
+    @Test
+    void Test_JSON_To_String() throws JsonProcessingException {
+        SimpleTestCaseJsonPojo pojo = new SimpleTestCaseJsonPojo();
+        pojo.setAge("12");
+        pojo.setName("AS");
+
+        JsonNode json = Json.toJsonNode(pojo);
+        System.out.println(json);
+
+        System.out.println(Json.toJsonString(json));
+    }
+}
+````
+
 </details>

@@ -618,11 +618,27 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Some.
 
+
 <p align="center">
-    <img id="maven" src="Apache Maven Beginner to Guru caption.gif" style="height: 110px; width: 900px;">
+    <img
+     src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif"
+    alt=" Java Collections From Basics To Advanced Caption"
+    style="width:1600px;height:110px;"/>
 </p>
 
-![Apache Maven: Beginner to Guru](Apache%20Maven%20Beginner%20to%20Guru%20desc.PNG)
+<p align="center">
+    <img src="Apache_Maven_Beginner_To_Guru_Description.PNG"
+    alt="Java Collections From Basics To Advanced Description"
+    style="width:690px" />
+</p>
+
+<p align="center">
+    <img id="spring" src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif" style="height: 90px; width: 1200px;">
+</p>
+
+<p align="center">
+    <img id="spring" src="Apache_Maven_Beginner_To_Guru_Description.PNG" style="height: 250px; width: 800px;">
+</p>
 
 All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
@@ -660,8 +676,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2001#section-01-apache-maven-introduction) - Apache Maven Introduction. ✅
 - [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2002#section-02-getting-started) - Getting Started. ✅
 - [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2003#section-03-compiling-java) - Compiling Java. ✅
-- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2004#section-4-getting-started-with-maven) - Getting Started with Maven. ✅
-- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2005#section-5-maven-basics) - Maven Basics. ✅
+- [x] [Section 04](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2004#section-04-getting-started-with-maven) - Getting Started with Maven. ✅
+- [x] [Section 05](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Apache%20Maven%20Beginner%20to%20Guru/Section%2005#what-i-learned) - Maven Basics. ✅
 - [ ] [Section 06](#) - Common Maven Plugins.  
 - [ ] [Section 07](#) - Generating Source with Maven.  
 - [ ] [Section 08](#) - Alternate JVM Languages.  
@@ -714,7 +730,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 -->
 
 <div align="center">
-    Insert here own certificate!
+    <img id="Jackson_Tutorial_Certficate.png?trk=public_profile_see-credential" src="Jackson_Tutorial_Certficate.png" alt="Jackson Tutorial Certficate" width="500"/>
 </div>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
@@ -722,11 +738,11 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Progress/Curriculum.
 
 - [x] [Part 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2001#section-01-parsing-json-in-java-tutorial---part-1-jackson-and-simple-objects) - Parsing Json in Java Tutorial - Part 1: Jackson and Simple Objects. ✅
-- [ ] [Part 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2002#section-02-parsing-json-in-java-tutorial---part-2-objectmapper-and-generate-json-strings) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings.
-- [ ] [Part 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Parsing Json in Java Tutorial - Part 3: More complex Mappings.
+- [x] [Part 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2002#section-02-parsing-json-in-java-tutorial---part-2-objectmapper-and-generate-json-strings) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings. ✅
+- [x] [Part 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Parsing Json in Java Tutorial - Part 3: More complex Mappings. ✅
+
+- [x] [Additional](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Intro to JSON and Jackson's ObjectMapper. ✅
 
 #### Additional stuff.
 
-- [ ] [Intro to JSON and Jackson's ObjectMapper](https://www.youtube.com/watch?v=bV85_gIrHTc).
-
-- Todo check the imports after the these are finished!
+- [x] [Intro to JSON and Jackson's ObjectMapper](https://www.youtube.com/watch?v=bV85_gIrHTc). ✅
