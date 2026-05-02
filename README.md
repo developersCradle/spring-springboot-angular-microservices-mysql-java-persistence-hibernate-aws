@@ -564,11 +564,20 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <br>
 
+
+
 <p align="center">
-    <img id="kubernetes" src="Kubernetes Masterclass For Beginners caption.png" style="height: 100px; width: 900px;">
+    <img
+     src="Kubernetes Masterclass For Beginners caption.png"
+    alt="Apache Maven Beginner To Guru Caption"
+    style="width:1600px;height:110px;"/>
 </p>
 
-![Kubernetes Masterclass For Beginners](kubernetes.PNG)
+<p align="center">
+    <img src="kubernetes.PNG"
+    alt="Apache Maven Beginner To Guru Description"
+    style="width:690px" />
+</p>
 
 All course material from Kubernetes Masterclass For Beginners [Hands-On] by **Vinoth Selvaraj** ©.
 
@@ -618,27 +627,19 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 - [ ] Some.
 
-
 <p align="center">
     <img
      src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif"
-    alt=" Java Collections From Basics To Advanced Caption"
+    alt="Apache Maven Beginner To Guru Caption"
     style="width:1600px;height:110px;"/>
 </p>
 
 <p align="center">
     <img src="Apache_Maven_Beginner_To_Guru_Description.PNG"
-    alt="Java Collections From Basics To Advanced Description"
-    style="width:690px" />
+    alt="Apache Maven Beginner To Guru Description"
+    style="width:690px; width:550px;" />
 </p>
 
-<p align="center">
-    <img id="spring" src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif" style="height: 90px; width: 1200px;">
-</p>
-
-<p align="center">
-    <img id="spring" src="Apache_Maven_Beginner_To_Guru_Description.PNG" style="height: 250px; width: 800px;">
-</p>
 
 All course material from Apache Maven: Beginner to Guru **John Thompson** and **Spring Ahead Code Academy** ©. With my own notes need this to manage our corporate POM :fire: $${\color{red}HELL}$$ :fire:.
 
