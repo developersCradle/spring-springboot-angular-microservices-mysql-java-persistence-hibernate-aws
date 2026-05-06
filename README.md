@@ -228,6 +228,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="Master the Basics of Spring Integration and it&apos;s Components?trk=public_profile_see-credential" src="Master the Basics of Spring Integration and it&apos;s Components certificate.jpg" alt="Master the Basics of Spring Integration and it&apos;s Components cert" width="600"/>
 </div>
 
+<br>
+
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -279,6 +281,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <div align="center">
     Insert certificate here when completed
 </div>
+
+<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -342,8 +346,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 -->
 
 <div align="center">
-    <img id="Java Persistence Hibernate and JPA Fundamentals?trk=public_profile_see-credential" src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" alt="Java Persistence Hibernate and JPA Fundamentals Certificate!" width="600"/>
+    <img id="Java_Persistence_Hibernate_And_JPA_Fundamentals?trk=public_profile_see-credential" src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" alt="Java Persistence Hibernate And JPA Fundamentals Certificate!" width="600"/>
 </div>
+
+<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -409,6 +415,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     cert here.
 </div>
 
+<br>
+
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -465,8 +473,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 -->
 
 <div align="center">
-    <img id="UltimateMySqlBootcampCertificate?trk=public_profile_see-credential" src="UltimateMySqlBootcampCertificate.jpg" alt="UltimateMySqlBootcampCertificate" width="600"/>
+    <img id="The_Ultimate_MySQL_Bootcamp_Go_From_Beginner_To_Expert_Certificate?trk=public_profile_see-credential" src="The_Ultimate_MySQL_Bootcamp_Go_From_Beginner_To_Expert_Certificate.jpg" alt="UltimateMySqlBootcampCertificate" width="600"/>
 </div>
+
+<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -548,6 +558,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     add cert here
 </div>
 
+<br>
+
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -594,6 +606,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 <div align="center">
     Insert certificate here when completed
 </div>
+
+<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -671,6 +685,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     Insert certificate here when completed
 </div>
 
+<br>
+
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -736,6 +752,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     Insert certificate here when completed
 </div>
 
+<br>
+
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
 #### Progress/Curriculum.
@@ -780,7 +798,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 All learning material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch** and from **Geekific**.
 
-> During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the JSON structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization.
+> During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the JSON structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization. 🐟
 >
 >That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between JSON structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟🐟🐟 <br><br>
 ~ *DevelopersCradle*
@@ -799,8 +817,10 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 -->
 
 <div align="center">
-    <img id="Jackson_Tutorial_Certficate.png?trk=public_profile_see-credential" src="Jackson_Tutorial_Certficate.png" alt="Jackson Tutorial Certficate" width="500"/>
+    <img id="Jackson_Tutorial_Certficate?trk=public_profile_see-credential" src="Jackson_Tutorial_Certficate.png" alt="Jackson Tutorial Certficate" width="500"/>
 </div>
+
+<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -814,3 +834,54 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 #### Additional stuff.
 
 - [x] [Intro to JSON and Jackson's ObjectMapper](https://www.youtube.com/watch?v=bV85_gIrHTc). ✅
+
+
+<p align="center">
+    <img
+     src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
+    alt="MySQL S§QL And Stored Procedures From Beginner To Advanced Caption"
+    style="width:1600px;height:120px;"/>
+</p> 
+<p align="center">
+    <img
+    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
+    alt="Jackson Quick Start JSON Serialization With Java Made Easy Description"
+    style="width:590px; height:160px;" />
+</p>
+
+All learning material from *Jackson Quick Start JSON Serialization With Java Made Easy* from **Craig Hawkins**.
+
+> As an API developer, I’ve learned that knowing Jackson is not optional—it’s essential.
+>
+> Ah, just another LinkedIn hype story to truly drive in Jackson. 🐟🐟🐟 <br><br> ~ *DevelopersCradle*
+
+Contains my own with my own visual notes ✍️ with some video material to enforce learning experience. There is also project, which enhances the learning process!
+
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+[The course at Udemy](https://www.udemy.com/course/jackson-json-serialization-with-java/).
+
+If the content sparked 🔥 your interest, please consider buying the course and start learning 📖.
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<div align="center">
+    <img id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Certificate.PNG" alt="Jackson Quick Start JSON Serialization With Java Made Easy" width="500"/>
+</div>
+
+<br>
+
+**Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
+
+#### Progress/Curriculum.
+
+- [x] [Section 01](#) - Introduction. ✅
+- [x] [Section 02](#) - Jackson Fundamentals. ✅
+- [x] [Section 03](#) - Course Conclusion. ✅
+
+#### Additional stuff.
+
+- [ ] Add here. ✅

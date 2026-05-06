@@ -88,7 +88,7 @@ Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings.
 
 1. As you can see there are **two outputs**! They both look the same, but they are different internally `JsonNode` and `String`!
 
-````Xml
+````Json
 {"name":"AS","age":"12"}
 {"name":"AS","age":"12"}
 ````
