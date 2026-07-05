@@ -17,19 +17,19 @@ Mapping Collections - Sets and Lists.
 
 # Mapping Overview - Section Roadmap.
 
-<img src="sectionRoadMap.PNG"  alt="hibernate course" width="500"/>
+<img src="sectionRoadMap.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="PersistingCollecitons.PNG"  alt="hibernate course" width="500"/>
+<img src="PersistingCollecitons.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. In **Hibernate** we can need to persist **collections**.
 
-<img src="javaCollections.PNG"  alt="hibernate course" width="500"/>
+<img src="javaCollections.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. **List** that can contain **duplicates**.
 2. **Set** that cannot have **duplicates**.
 3. **Map** key-value pairs that cannot have **duplicates**.
 
-<img src="JavaCollectionProperty.PNG"  alt="hibernate course" width="500"/>
+<img src="JavaCollectionProperty.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. **List** preserves the ordering and allows duplicates. 
 2. **Set** does not preserve the ordering and does not allow duplicates.
@@ -37,7 +37,7 @@ Mapping Collections - Sets and Lists.
     - For **keys**, **no**.
     - For **values**, **yes**.
     
-<img src="javaCollectionFramework.PNG"  alt="hibernate course" width="500"/>
+<img src="javaCollectionFramework.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Main point, there are many collection types in **Java**.
     - These needs to be mapped into the **Hibernate**.
@@ -47,7 +47,7 @@ Mapping Collections - Sets and Lists.
 > **Set**
 > Is Collection of items that **cannot contain duplicates**!
 
-<img src="useCaseForTheSet.PNG"  alt="hibernate course" width="500"/>
+<img src="useCaseForTheSet.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Does this **contain** this particular one.
     - `“Is X present?”`
@@ -60,40 +60,40 @@ Mapping Collections - Sets and Lists.
     - Guest list:
         - `"Is my name on the list?"`.
 
-<img src="studentImages.PNG"  alt="hibernate course" width="500"/>
+<img src="studentImages.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Example of usage, **Student** have **Images**.
     - This can be in **Set**.
         - We don't care about the order of these images, as long they are there.
         - There should **not** be any **duplicates**.
         
-<img src="DatabaseDiagramToBeUsed.PNG"  alt="hibernate course" width="500"/>
+<img src="DatabaseDiagramToBeUsed.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Image has `key` for **Student**.
 
-<img src="devSteps.PNG"  alt="hibernate course" width="500"/>
+<img src="devSteps.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="step1.PNG"  alt="hibernate course" width="500"/>
+<img src="step1.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `filename` for given `image`.
 
-<img src="step2.PNG"  alt="hibernate course" width="500"/>
+<img src="step2.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Basic **CRUD** entity setup.
 
-<img src="step3.PNG"  alt="hibernate course" width="500"/>
+<img src="step3.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Mapping in **Java**.
 
-<img src="annotationsToMapCollection.PNG"  alt="hibernate course" width="500"/>
+<img src="annotationsToMapCollection.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. **@Annotations** used for the mapping.
 
-<img src="mappingCollection.PNG"  alt="hibernate course" width="500"/>
+<img src="mappingCollection.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. The mappings for the **set**, which we were discussing in previous slide.
 
-<img src="mappingCollectionCode.PNG"  alt="hibernate course" width="500"/>
+<img src="mappingCollectionCode.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Getting reference for the **Set**.
 2. Adding **photos** to the **Set**.
@@ -123,13 +123,13 @@ session.persist(tempStudent);
 session.getTransaction().commit();
 ```
 
-<img src="runApp.PNG"  alt="hibernate course" width="500"/>
+<img src="runApp.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 - We can see the mapped **Student** to multiple **Images** in the **Collection** (collection are mapped in separate table!).
 
 # Mapping Sets - Going Deep!
 
-<img src="mappingCollectionDeepper.PNG"  alt="hibernate course" width="500"/>
+<img src="mappingCollectionDeepper.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `name=image` What table we are using.
 2. `joinColumns = @JoinColumn(name="student_id")` Where to join on. It hooks up in `student` table for `id`.
@@ -137,7 +137,7 @@ session.getTransaction().commit();
 3. `@ElementCollection` Tells that we are mapping **collection**.
 4. `@Column(name="file_name")` The column where we are mapping on.
 
-<img src="ElementCollectionMore.PNG"  alt="hibernate course" width="500"/>
+<img src="ElementCollectionMore.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `@ElementCollection` can be used for define **relationships**.
     - This can be used for the **One-to-many** to the `@Embeddable` **object**.
@@ -145,11 +145,11 @@ session.getTransaction().commit();
         - These can be **Integer**, **Double** etc...
 2. Example here is using `Set` of `String`:s.
 
-<img src="comparingOneToManyInTheElementsCollection.PNG"  alt="hibernate course" width="500"/>
+<img src="comparingOneToManyInTheElementsCollection.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. This behaves like **One-to-many**, but with the **collection** of the simple/basic objects.
 
-<img src="limitationsOnTheElementCollections.PNG"  alt="hibernate course" width="500"/>
+<img src="limitationsOnTheElementCollections.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 - Since these are included into the parent objects, they have some limitations.
 
@@ -157,14 +157,14 @@ session.getTransaction().commit();
 2. No support for the **cascades**!
     - These are **ALWAYS** persisted, merged or removed when parent object is receiving the operation.
 
-<img src="comparingOneToManyInTheElementsCollection.PNG"  alt="hibernate course" width="500"/>
+<img src="comparingOneToManyInTheElementsCollection.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. For **simple** cases!
 2. For if you want more **fine-grained** control!
 
 # Mapping Sets - Project Set Up.
 
-<img src="simpleMavenArchetype.PNG"  alt="hibernate course" width="500"/>
+<img src="simpleMavenArchetype.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We will use the `maven-archetype-quickstart`.
 
@@ -376,7 +376,7 @@ public class Student {
 
 # Mapping Sets - Apply the @ElementCollection.
 
-<img src="studentImages.PNG"  alt="hibernate course" width="500"/>
+<img src="studentImages.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Here we will map the **images**.
 
@@ -540,7 +540,7 @@ public class CreateStudentImagesSetDemo {
 }
 ```
 
-<img src="pictureInDb.PNG"  alt="hibernate course" width="400"/>
+<img src="pictureInDb.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
 1. As you can see, there are no **duplicates**.
 
@@ -549,31 +549,31 @@ public class CreateStudentImagesSetDemo {
 > **List**
 > Is Collection of items that **can contain duplicates**!
 
-<img src="useCaseForTheList.PNG"  alt="hibernate course" width="500"/>
+<img src="useCaseForTheList.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. When the **order** is important.
 2. We want to access our **email** in order.
 3. Customers are server how they came to restaurant! **Order** is important.
 
-<img src="studentImagesWithList.PNG"  alt="hibernate course" width="500"/>
+<img src="studentImagesWithList.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We will do store the **images** with in the **list**, With these:
 	- We want to **keep** the **order**!
 	- We want to **allow** **duplicates** images!
 
-<img src="databaseForTheImagesInList.PNG"  alt="hibernate course" width="500"/>
+<img src="databaseForTheImagesInList.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 
-<img src="theProcess.PNG"  alt="hibernate course" width="500"/>
+<img src="theProcess.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="step1WithTheList.PNG"  alt="hibernate course" width="500"/>
+<img src="step1WithTheList.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We can also use **hibernate** for the creating the database!
 
 > [!IMPORTANT]  
 > The point **2** is **good** for testing and developing!
 
-<img src="hibernateConfiguration.PNG"  alt="hibernate course" width="500"/>
+<img src="hibernateConfiguration.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We need to add following. `<property name="hibernate.hbm2ddl.auto">create</property>`.
 
@@ -581,12 +581,12 @@ public class CreateStudentImagesSetDemo {
 	- Hibernate will `DROP` all existing tables in the database.
     - Then it will `CREATE` them again based on your JPA annotations.
 
-<img src="creatingTableInTheCode.PNG"  alt="hibernate course" width="500"/>
+<img src="creatingTableInTheCode.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. These will be read and created into the database.
 2. Following **SQL** will be executed!
 
-<img src="hibernateConfigurationDifferentOptions.PNG"  alt="hibernate course" width="500"/>
+<img src="hibernateConfigurationDifferentOptions.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. These can have **different** values! This will take place when there will be **startup action**.
 2. Some of the **options**.
@@ -607,36 +607,36 @@ public class CreateStudentImagesSetDemo {
 1. **NOTICE** the tables are dropped, so all **data will be lost!!**
 	- Good for **developing** and **testing**!
 	
-<img src="warning.PNG"  alt="hibernate course" width="500"/>
+<img src="warning.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. ❌❌❌❌❌❌❌❌❌ **NOT** for the production ❌❌❌❌❌❌❌.
 2. Its ✔️✔️✔️**Recommended** to have **SQL script** for the production ✔️✔️✔️✔️✔️.
 	
-<img src="step2Mapping.PNG"  alt="hibernate course" width="500"/>
+<img src="step2Mapping.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We will have the following list for having **order**.
 
-<img src="annotationToMapList.PNG"  alt="hibernate course" width="500"/>
+<img src="annotationToMapList.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Used to **store** the position for the **order**.
 	- We can name it how we want.
 
-<img src="mappingCollectionAndUsingTheOrderAnnotation.PNG"  alt="hibernate course" width="500"/>
+<img src="mappingCollectionAndUsingTheOrderAnnotation.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We can use following **annotation** for the mapping images.
 	- **Notice** that we don't need to have to **mapping** to the **external ID**, since it's in the **List** and we are using the `@OrderColumn`.
 2. Also, we **don't** need to use `images_` prefix name, we can use custom naming for this.
 
-<img src="columnForTheImageName.PNG"  alt="hibernate course" width="500"/>
+<img src="columnForTheImageName.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. The column for the **image** name.
 
-<img src="savingMultipleImagesIntoTheListWithTheOrderAnnotation.PNG"  alt="hibernate course" width="500"/>
+<img src="savingMultipleImagesIntoTheListWithTheOrderAnnotation.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We are adding the images to the list.
 2. **Notice**, we can add **duplicates**, into the list.
 
-<img src="runningTheAppWithSavingIntoTheList.PNG"  alt="hibernate course" width="500"/>
+<img src="runningTheAppWithSavingIntoTheList.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Notice the **List** can have **duplicates**.
 
@@ -802,6 +802,6 @@ public class CreateStudentImagesSetDemo {
 }
 ```
 
-<img src="savingImagesIntoListAndInDb.PNG"  alt="hibernate course" width="500"/>
+<img src="savingImagesIntoListAndInDb.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. As you can see, the **images** have been saved into to the db and the **order** is saved as well.

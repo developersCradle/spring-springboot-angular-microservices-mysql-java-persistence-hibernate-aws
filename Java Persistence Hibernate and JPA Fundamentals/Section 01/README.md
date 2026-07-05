@@ -13,8 +13,7 @@ Introduction.
 - Some example of the concept.
 
 <div align="center">
-    <img src="someJPAMapping.PNG"  alt="alt text" width="500"/>
+    <img src="someJPAMapping.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
-
 
 

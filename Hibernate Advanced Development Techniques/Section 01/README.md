@@ -6,19 +6,19 @@
 
 # Introduction.
 
-<img src="courseRoadMap.PNG"  alt="hibernate course" width="500"/>
+<img src="courseRoadMap.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="bestTeam.PNG"  alt="hibernate course" width="500"/>
+<img src="bestTeam.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 - Best team!
 
-<img src="preRequisitives.PNG"  alt="hibernate course" width="500"/>
+<img src="preRequisitives.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 - All check.
 
-<img src="devEnv.PNG"  alt="hibernate course" width="500"/>
+<img src="devEnv.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="getAllPdfs.PNG"  alt="hibernate course" width="500"/>
+<img src="getAllPdfs.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 # How To Take This Course and How To Get Help.
 

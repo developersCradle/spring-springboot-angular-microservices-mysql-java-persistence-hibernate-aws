@@ -9,7 +9,7 @@ Mapping Enums.
 > **Enum**
 > Java data type for set of **predefined constants**!
 
-<img src="examplesOfJavaEnums.PNG"  alt="hibernate course" width="500"/>
+<img src="examplesOfJavaEnums.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. One example would be, **define the logging levels**
 ```
@@ -26,25 +26,25 @@ public enum Payment {
 
 2. Check to enum for refresher [tutorial](www.luv2code.com/java-enums-tutorial).
 
-<img src="useCaseForEnum.PNG"  alt="hibernate course" width="500"/>
+<img src="useCaseForEnum.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. **Student** will have `status`
     - These statuses are: `ACTIVE` or `INACTIVE`.
 2. This will be in debase as **enum**.
 
-<img src="databaseDiagram.PNG"  alt="hibernate course" width="500"/>
+<img src="databaseDiagram.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="developementProcess.PNG"  alt="hibernate course" width="500"/>
+<img src="developementProcess.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="annotationForEnum.PNG"  alt="hibernate course" width="500"/>
+<img src="annotationForEnum.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `@Enumerated` use for enums.
 
-<img src="step1.PNG"  alt="hibernate course" width="500"/>
+<img src="step1.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="step2.PNG"  alt="hibernate course" width="500"/>
+<img src="step2.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="step3.PNG"  alt="hibernate course" width="500"/>
+<img src="step3.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Pass the enum status. `Status.ACTIVE`.
 
@@ -68,7 +68,7 @@ session.getTransaction().commit();
 
 ```
 
-<img src="runTheAPp.PNG"  alt="hibernate course" width="500"/>
+<img src="runTheAPp.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Saving into database, will looks like such as **string**.
 
@@ -245,6 +245,6 @@ public class CreateUserDemo {
 }
 ```
 
-<img src="savingTheEnumsInTheDb.PNG"  alt="hibernate course" width="500"/>
+<img src="savingTheEnumsInTheDb.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We can see the entries in the database, with the following **enums** as string.

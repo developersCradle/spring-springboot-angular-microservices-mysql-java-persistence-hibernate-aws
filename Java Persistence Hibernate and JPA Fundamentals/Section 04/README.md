@@ -7,7 +7,7 @@ Mapping Concepts.
 # Aggregation and Composition.
 
 <div align="center">
-    <img src="Aggregation.PNG"  alt="hibernate course" width="600"/>
+    <img src="Aggregation.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - **Aggregation** → **Whole** and **its Parts**.
@@ -16,7 +16,7 @@ Mapping Concepts.
 2. **Aggregation**, when whole is **destroyed** its **children** are **NOT** destroyed.
 
 <div align="center">
-    <img src="composition.PNG"  alt="hibernate course" width="600"/>
+    <img src="composition.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -38,7 +38,7 @@ Mapping Concepts.
 > How does the **Persistent classes** have the identity?
 
 <div align="center">
-    <img src="EntitiesAndValueTypes.PNG"  alt="hibernate course" width="600"/>
+    <img src="EntitiesAndValueTypes.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. If in **Database** the **ID** is at present, how can this in **Java classes**. You could present whole table as full class, but its rather bad OOP design.
@@ -52,7 +52,7 @@ Mapping Concepts.
 
 
 <div align="center">
-    <img src="groupGraph.PNG"  alt="hibernate course" width="600"/>
+    <img src="groupGraph.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -67,13 +67,13 @@ Mapping Concepts.
 3. The Object of the **Entity** can be referenced.
 
 <div align="center">
-    <img src="valueTypeBefore.PNG"  alt="hibernate course" width="600"/>
+    <img src="valueTypeBefore.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Most simple **Values types** from Java are **String** and **Integer**.
 
 <div align="center">
-    <img src="valueTypeAfter.PNG"  alt="hibernate course" width="600"/>
+    <img src="valueTypeAfter.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. If you would need, **UID** `Adress`, you would need add `id`.
@@ -81,14 +81,14 @@ Mapping Concepts.
 2. You could ask yourself about following questin `Does the database identity of an object matters?`
 
 <div align="center">
-    <img src="integer.PNG"  alt="hibernate course" width="400"/>
+    <img src="integer.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 
 1. One example: The **Integer** is being owned by **Object**.
 
 <div align="center">
-    <img src="thinkingOfIdentity.PNG"  alt="hibernate course" width="400"/>
+    <img src="thinkingOfIdentity.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. You could think that `Address` in the **Shopping App**, does not need `ID` it would be **Value Type**, but in **Real Estate Search Engine** this should be identified with `ID`, so it would be **Entity Type**.
@@ -97,7 +97,7 @@ Mapping Concepts.
 # Component Mapping.
 
 <div align="center">
-    <img src="componentMapping.PNG"  alt="hibernate course" width="400"/>
+    <img src="componentMapping.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 
@@ -112,13 +112,13 @@ Mapping Concepts.
 - In **SQL** it's related to the `SQL columns` and in **Hibernate** it's related to the `classes` to make composition.
 
 <div align="center">
-    <img src="componentMappingWhenThereIsManyTables.PNG"  alt="hibernate course" width="400"/>
+    <img src="componentMappingWhenThereIsManyTables.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. We are mapping **two classes** to the **one** database table.
 
 <div align="center">
-    <img src="valueTypeIsIncludedToEntity.PNG"  alt="hibernate course" width="400"/>
+    <img src="valueTypeIsIncludedToEntity.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 
@@ -126,7 +126,7 @@ Mapping Concepts.
 2. We can also notice that, Entity outside cannot refer to the **Type object** inside it.
 
 <div align="center">
-    <img src="componentsInsideJavaEntity.PNG"  alt="hibernate course" width="500"/>
+    <img src="componentsInsideJavaEntity.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 
@@ -135,32 +135,32 @@ Mapping Concepts.
 2. Also, we add this to the parent object who owns it `@Embedded`.
 
 <div align="center">
-    <img src="configOfTheEntity.PNG"  alt="hibernate course" width="500"/>
+    <img src="configOfTheEntity.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. You just need to add the **configuration** for the file.
 
 <div align="center">
-    <img src="helloWoldClient.PNG"  alt="hibernate course" width="500"/>
+    <img src="helloWoldClient.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. **Mapping** can be done just like in `.xml` mapping.
 
 <div align="center">
-    <img src="personTable.PNG"  alt="hibernate course" width="500"/>
+    <img src="personTable.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Who decided about **schema** about this database table?
 
 <div align="center">
-    <img src="mappingOfTheEntity.PNG"  alt="hibernate course" width="500"/>
+    <img src="mappingOfTheEntity.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 
 1. We never instructed the mapping to the **Hibernate**!?
 
 <div align="center">
-    <img src="componentMappingReason1.PNG"  alt="hibernate course" width="500"/>
+    <img src="componentMappingReason1.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. **Hibernate** uses **Reasonable Default Values**, for **XML**-mapping and **annotations**-based mapping.
@@ -169,7 +169,7 @@ Mapping Concepts.
     - If there is no `name`, or `column` information provided, these informations will be used as the name.
 
 <div align="center">
-    <img src="componentMappingReason2.PNG"  alt="hibernate course" width="500"/>
+    <img src="componentMappingReason2.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We are using `<property name="hibernate.hbm2ddl.auto" value="update"/>` or the `update` strategy. It **creates** tables 
@@ -179,7 +179,7 @@ Mapping Concepts.
 
 - Following client added Entity with `@Embedded` and `@Embeddable`, which we are using.
 
-```
+```Java
 package client;
 
 import org.hibernate.Session;
@@ -226,19 +226,19 @@ public class ComponentMappingClient {
 ```
 
 <div align="center">
-    <img src="customMappingForColumns.PNG"  alt="hibernate course" width="500"/>
+    <img src="customMappingForColumns.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. If we want, we could specify the mapping for the columns.
 
 <div align="center">
-    <img src="mappingOfSingleFields.PNG"  alt="hibernate course" width="500"/>
+    <img src="mappingOfSingleFields.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Fields will be mapped with default name.
 
 <div align="center">
-    <img src="attributeOverride.PNG"  alt="hibernate course" width="500"/>
+    <img src="attributeOverride.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 - You can see the **fields** getting mapped into following `COLUMNS` with customer names.
@@ -246,7 +246,7 @@ public class ComponentMappingClient {
 
 1. You could use following code, with the `@AttributeOverrides`.
 
-```
+```Java
 	@Embedded
 	@AttributeOverrides( {
 		@AttributeOverride(name="street", column=@Column(name="home_street")),
@@ -257,14 +257,14 @@ public class ComponentMappingClient {
 ```
 
 <div align="center">
-    <img src="embeddedableObjectTwoAddresses.PNG"  alt="hibernate course" width="500"/>
+    <img src="embeddedableObjectTwoAddresses.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. When there are **TWO Addresses** in `1` and `2`, it becomes requirement for the use of `@AttributeOverrides`, for both `Home Address` and for `Billing Adress`.
     - You need both unique address rows names!
 
 <div align="center">
-    <img src="embeddedableObject.PNG"  alt="hibernate course" width="500"/>
+    <img src="embeddedableObject.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. **Component** is also called, **Embeddable Object**, since it embedded inside `Entity` and **persisted** as **Value Type**.
@@ -274,19 +274,19 @@ public class ComponentMappingClient {
 # Lab Exercise - Component Mapping.
 
 <div align="center">
-    <img src="labExerciseComponentMapping.PNG"  alt="hibernate course" width="600"/>
+    <img src="labExerciseComponentMapping.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Question 1:**
 	- **Answer:** Entity.
 
-```
+```Yml
 Question 1: If it mattered for your application to uniquely identify an Address object,
 by a database identity for e.g., would you create it as an Entity or a Value Type ?
 ```
 
 <div align="center">
-    <img src="labExerciseComponentMapping2.PNG"  alt="hibernate course" width="500"/>
+    <img src="labExerciseComponentMapping2.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. **Question 2:**
@@ -297,37 +297,37 @@ by a database identity for e.g., would you create it as an Entity or a Value Typ
 	- **Answer:** Address object.
 
 
-```
+```Yml
 Question 2: Looking at the Figure 1 given below, could you figure out which of the objects are Value Type?
 ```
 
 <div align="center">
-    <img src="labExerciseComponentMapping3.PNG"  alt="hibernate course" width="500"/>
+    <img src="labExerciseComponentMapping3.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 
 1. **Question 3:**
 	- **Answer:** My answer is **A**. When `Band` is destroyed, the `Artist` are **not** destroyed with it.
 
-```
+```Yml
 Question 3: Which of the relationships shown in the Figure 2 given below indicates the Aggregation relationship? Choose an option between (A) and (B)?
 ```
 
 <div align="center">
-    <img src="labExerciseComponentMapping4.PNG"  alt="hibernate course" width="500"/>
+    <img src="labExerciseComponentMapping4.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We talked about the `update` configuration in last session.
 
 <div align="center">
-    <img src="labExerciseComponentMapping5.PNG"  alt="hibernate course" width="500"/>
+    <img src="labExerciseComponentMapping5.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. This case, we are using the `create` mapping.
 	- When using the `create` mapping, following behavior is expected:
 
 <div align="center">
-    <img src="createMappingUsed.PNG"  alt="hibernate course" width="500"/>
+    <img src="createMappingUsed.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. When we are using `create` config, the `DROP` statement is executed and then the `CREATE` statement is created.
@@ -335,7 +335,7 @@ Question 3: Which of the relationships shown in the Figure 2 given below indicat
 3. The `Person` is being affected, from the config. This **SQL** is being executed once the `.save()` been executed.
 
 <div align="center">
-    <img src="createMappingUsedCommitIsIssued.PNG"  alt="hibernate course" width="500"/>
+    <img src="createMappingUsedCommitIsIssued.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. `.commit()` is issued, the date is **persisted** into to the database.
@@ -343,7 +343,7 @@ Question 3: Which of the relationships shown in the Figure 2 given below indicat
 
 - Example of usage of in code:
 
-```
+```Java
 package client;
 
 import org.hibernate.Session;
@@ -377,14 +377,14 @@ public class Question4Client {
 ```
 
 <div align="center">
-    <img src="labExerciseComponentMapping6.PNG"  alt="hibernate course" width="500"/>
+    <img src="labExerciseComponentMapping6.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. This case is with the `create-drop` mapping.
 	- This will be the same, until the `sessionFacotory.close()` is called. 
 
 <div align="center">
-    <img src="caseDroppedMappingUsed.PNG"  alt="hibernate course" width="500"/>
+    <img src="caseDroppedMappingUsed.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. The table will be dropped, with the `DROP` statement.
@@ -392,7 +392,7 @@ public class Question4Client {
 # Mapping Associations.
 
 <div align="center">
-    <img src="manyToOne.PNG"  alt="hibernate course" width="500"/>
+    <img src="manyToOne.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 - In this example **Student** has **Guide**.
@@ -401,31 +401,31 @@ public class Question4Client {
 2. In **Relational Model** associating is done with the **foreign key**.
 
 <div align="center">
-    <img src="manyToOneSecond.PNG"  alt="hibernate course" width="500"/>
+    <img src="manyToOneSecond.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Guide is the `One side` and Student is the `Many side`.
 
 <div align="center">
-    <img src="mappingObjectReferenceManyToOne.PNG"  alt="hibernate course" width="500"/>
+    <img src="mappingObjectReferenceManyToOne.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We need to add mapping to the for **Object Model**.
 
 <div align="center">
-    <img src="mappingObjectReferenceManyToOneWithTheAnnotation.PNG"  alt="hibernate course" width="500"/>
+    <img src="mappingObjectReferenceManyToOneWithTheAnnotation.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. To achieve this, we are using the `@ManyToOne` and `@JoinColumn(...)`
 
 <div align="center">
-    <img src="addingThenEntityToTheConfiguration.PNG"  alt="hibernate course" width="500"/>
+    <img src="addingThenEntityToTheConfiguration.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We just add the **Entities** to the configurations.
 
 <div align="center">
-    <img src="mappingWIthTheUpdate.PNG"  alt="hibernate course" width="500"/>
+    <img src="mappingWIthTheUpdate.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. To save these to db, we need to call **two times** `session.save()`.
@@ -435,7 +435,7 @@ public class Question4Client {
 - We want to **persist** all object in same time.
 
 <div align="center">
-    <img src="usingTheCascade.PNG"  alt="hibernate course" width="500"/>
+    <img src="usingTheCascade.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We want to call one method `session.persist(student)`.
@@ -443,30 +443,30 @@ public class Question4Client {
 	- We can use the `(cascade=CascadeType.PERSIST))` for mapping.
 
 <div align="center">
-    <img src="persistingTheObjectWithTheCascadingOperationInTheCode.PNG"  alt="hibernate course" width="500"/>
+    <img src="persistingTheObjectWithTheCascadingOperationInTheCode.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 
 1. We are persisting the objects with the one `.persist()` line, and it will be persisted to the db.
 
 <div align="center">
-    <img src="cascadingWithTheDeleteOperation.PNG"  alt="hibernate course" width="400"/>
+    <img src="cascadingWithTheDeleteOperation.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
 </div>
 
 <div align="center">
-    <img src="cascadingWithThePersistAndDeleteOperationInCode.PNG"  alt="hibernate course" width="500"/>
+    <img src="cascadingWithThePersistAndDeleteOperationInCode.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 # Lab Exercise - Cascades.
 
 <div align="center">
-    <img src="labExerciseCasccading.PNG"  alt="hibernate course" width="500"/>
+    <img src="labExerciseCasccading.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. `session.delete()`, what will happen when this line will be executed.
 
-```
+```Yml
 Task 1: What will happen to the Student and Guide tables after executing the delete?
 ```
 
@@ -474,14 +474,14 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 	- **Answer:** There will be exception will be thrown, `ConstraintViolationException`.
 
 <div align="center">
-    <img src="exceptionWillBeThrown.PNG"  alt="hibernate course" width="500"/>
+    <img src="exceptionWillBeThrown.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Once the `.delete()` is called, the following **SQL** will be generated and executed.
 2. The following `ConstraintViolationException` will be thrown.
 
 <div align="center">
-    <img src="exceptionWillBeThrownDeleted.PNG"  alt="hibernate course" width="500"/>
+    <img src="exceptionWillBeThrownDeleted.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. **Student** with `id` **2** will be deleted and its **Guide**, which were referred. There is no guide to refer with `id` **2**. 
@@ -494,7 +494,7 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 > Then, how we can delete **Student**, without **violating** the Foreign-key Constraint?
 
 <div align="center">
-    <img src="byPassingTheCascadingEffectInHibernate.PNG"  alt="hibernate course" width="500"/>
+    <img src="byPassingTheCascadingEffectInHibernate.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We need to setting `Guide` value to `null`.
@@ -505,19 +505,19 @@ Task 1: What will happen to the Student and Guide tables after executing the del
  # One-To-Many Relationship.
 
 <div align="center">
-    <img src="OneToManyRelationship.PNG"  alt="hibernate course" width="600"/>
+    <img src="OneToManyRelationship.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can go from **Student** to the **Guide**, with the `getGuide()`, but there is no relationship, from **Guide** to the **Student**. This arrow tells us, that `Student` and the `Guide` is **uni-directional relationship**.
 
 <div align="center">
-    <img src="OneToManyRelationshipRelationshipsBiDirectional.PNG"  alt="hibernate course" width="600"/>
+    <img src="OneToManyRelationshipRelationshipsBiDirectional.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Now, when there are fields inside `Guide` for the `Student`'s, this relationship turns to be `bi-directional`.
 
 <div align="center">
-    <img src="OneToManyRelationshipRelationshipsBiDirectionalMapping.PNG"  alt="hibernate course" width="600"/>
+    <img src="OneToManyRelationshipRelationshipsBiDirectionalMapping.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. `@OneToMany(mappedBy = "guide")` is telling Hibernate in what to map by.
@@ -541,7 +541,7 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 | `ALL`          | Applies all of the above: `PERSIST`, `MERGE`, `REMOVE`, `REFRESH`, and `DETACH`. |
 
 <div align="center">
-    <img src="exampleOfTheBiDirectionalMapping.PNG "  alt="hibernate course" width="600"/>
+    <img src="exampleOfTheBiDirectionalMapping.PNG "  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are adding the `CascadeType.Persist` in to the `inverse end` or `not the owner of the relationship`, to make sure that, when the `Guide` is **persisted**. All its `Student`'s associated with it, are also **persisted**.
@@ -551,7 +551,7 @@ Task 1: What will happen to the Student and Guide tables after executing the del
 
 - Student Entity.
 
-```
+```Java
 // Student.java
 package entity;
 
@@ -589,7 +589,7 @@ public class Student {
 
 - Guide Entity.
 
-```
+```Java
 // Guide.java
 package entity;
 
@@ -629,11 +629,11 @@ public class Guide {
 - Hibernate config file will look like such. **No changes**.
 
 <div align="center">
-    <img src="cascadeMappingConfiguration.PNG"  alt="hibernate course" width="600"/>
+    <img src="cascadeMappingConfiguration.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 <div align="center">
-    <img src="helloWoldClientWithCascades.PNG"  alt="hibernate course" width="600"/>
+    <img src="helloWoldClientWithCascades.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are **associating** one **Guide** with the both **Students**. 
@@ -642,7 +642,7 @@ public class Guide {
 - We are updating on the **Guide** side.
 
 <div align="center">
-    <img src="updatingInverseSide.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingInverseSide.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are **updating** inverse side.
@@ -650,34 +650,34 @@ public class Guide {
 	- Answer to this, `Guide` was not the **owner** of the relationship!
 
 <div align="center">
-    <img src="updatingInverseSideSecond.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingInverseSideSecond.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. `guide_id` should have been updated to `2` in `Student`. It was due, the **Guide** is not owner of relationship!
 	- In other terms: `Inverse-end does not care about the relationship!`
 
 <div align="center">
-    <img src="updatingInverseSideThirdExample.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingInverseSideThirdExample.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Value updates are **fine**.
 2. The **reference** updates, still would **NOT** work!
 
 <div align="center">
-    <img src="ownerOfTheRelationship.PNG"  alt="hibernate course" width="600"/>
+    <img src="ownerOfTheRelationship.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. If the **update** is happened from the side of **owner** of the relationship. This will update the references as well!
 
 <div align="center">
-    <img src="entityHelperMethod.PNG"  alt="hibernate course" width="600"/>
+    <img src="entityHelperMethod.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. With **helper method**, we make **Guide** also responsible for the **relationship**.
 	- When we add `Student` to the `Guide`'s collection of `Student`'s, it will also update students reference to this `Guide`.
 
 <div align="center">
-    <img src="entityHelperMethodInAction.PNG"  alt="hibernate course" width="600"/>
+    <img src="entityHelperMethodInAction.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Now, the **Guide** comes responsible for the relationship and update the appropriated column, as you can see!
@@ -685,7 +685,7 @@ public class Guide {
 - How to identify the **owner** of the relationship from the database?
 
 <div align="center">
-    <img src="howToIdentifyOwnerOfTheRelationship.PNG"  alt="hibernate course" width="600"/>
+    <img src="howToIdentifyOwnerOfTheRelationship.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. You can look, which entity has the **foreign key** in it, so this one is the owner side of the relationship. In this example `student` table has `guide_id`.
@@ -694,30 +694,30 @@ public class Guide {
 # Lab Exercise - One-To-Many Relationship.
 
 <div align="center">
-    <img src="labExerciseOneToMany.PNG"  alt="hibernate course" width="600"/>
+    <img src="labExerciseOneToMany.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 <div align="center">
-    <img src="biDirectionalOneToMany.PNG"  alt="hibernate course" width="600"/>
+    <img src="biDirectionalOneToMany.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 - **Bidirectional** mapping.
 
 <div align="center">
-    <img src="makingThisUniDirectional.PNG"  alt="hibernate course" width="600"/>
+    <img src="makingThisUniDirectional.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. To make this **unidirectional**, we remove **Guide** references from **Student**.
 
 <div align="center">
-    <img src="uniDirectional.PNG"  alt="hibernate course" width="600"/>
+    <img src="uniDirectional.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. In **uni-directional @OneToMany**. Hibernate generates **Join Table**.
 
 <div align="center">
-    <img src="uniqueJoinTable.PNG"  alt="hibernate course" width="600"/>
+    <img src="uniqueJoinTable.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. How **Hibernate** archives this **uni-directional @OneToMany** mapping, is done using with `unique` constraint.
@@ -725,7 +725,7 @@ public class Guide {
 		- We should **always** prefer **Bidirectional @OneToMany**.
 
 <div align="center">
-    <img src="uniAndBiDirectionalOneToMany.PNG"     alt="hibernate course" width="600"/>
+    <img src="uniAndBiDirectionalOneToMany.PNG"     alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -736,13 +736,13 @@ public class Guide {
 - We will have following **uni-directional**, with the `@OneToMany()` mapping in the entities.
 
 <div align="center">
-    <img src="weWillHaveFollowingEntityMapping.PNG"  alt="hibernate course" width="600"/>
+    <img src="weWillHaveFollowingEntityMapping.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - **Persisting!**
 
 <div align="center">
-    <img src="persistingTheGuideObjectWithTheJoinTable.PNG"  alt="hibernate course" width="600"/>
+    <img src="persistingTheGuideObjectWithTheJoinTable.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are having the following `Client` code executed.
@@ -750,13 +750,13 @@ public class Guide {
 	- For every **persist**.
 
 <div align="center">
-    <img src="perisistingFirstQuery.PNG"  alt="hibernate course" width="600"/>
+    <img src="perisistingFirstQuery.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. First **query** is for inserting the `Guide` into `guide` table.
 
 <div align="center">
-    <img src="perisistingSecondQuery.PNG"  alt="hibernate course" width="600"/>
+    <img src="perisistingSecondQuery.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Second **query** is for inserting the `Stundent` into `student` table.
@@ -769,7 +769,7 @@ public class Guide {
 1.  Third **query** is for inserting **relationships** for the `join` **table**.
 
 <div align="center">
-    <img src="biDirectionalOneToManyExecutingQueries.PNG"  alt="hibernate course" width="600"/>
+    <img src="biDirectionalOneToManyExecutingQueries.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. With the **Bidirectional** `@OneToMany`, we would be executing **three** queries for inserting same `Student`. 
@@ -777,20 +777,20 @@ public class Guide {
 - **Updating!**
 
 <div align="center">
-    <img src="updatingTheUniDirectionalOneToMany.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingTheUniDirectionalOneToMany.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are having the following `Client` code executed, when updating.
 2. For `update`, we will execute **4** different **queries**.
 
 <div align="center">
-    <img src="updatingTheUniDirectionalOneToManyUpdateInExample.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingTheUniDirectionalOneToManyUpdateInExample.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When **updating**, it will create **new** entry in `student` table and also in the `join` table.
 
 <div align="center">
-    <img src="updatingTheBiDirectionalOneToManyUpdateInExample.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingTheBiDirectionalOneToManyUpdateInExample.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -800,14 +800,14 @@ public class Guide {
 
 - **Lab time**: Before executing the **client** code:
 
-```
+```Sql
 DROP DATABASE IF EXISTS unionetomany; 
 CREATE DATABASE unionetomany; 
 ```
 
 - The **Client** code for **Persisting**:
 
-```
+```Java
 package client;
 
 import org.hibernate.Session;
@@ -841,7 +841,7 @@ public class PersistingAGuideUsingUniOneToManyClient {
 
 - You can see that there are **5** queries executed with previous code, with the **Persist** operation. Logs below:
 
-```
+```Bash
 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 13:26:06,905 DEBUG SQL:131 - 
     insert 
@@ -894,14 +894,14 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 - And same as from **instructor**
 
 <div align="center">
-    <img src="persistingWith5DifferentInserts.PNG"  alt="hibernate course" width="400"/>
+    <img src="persistingWith5DifferentInserts.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. Notice the **Five** different **inserts** queries.
 
 - Example of the **Update**. Below is the code for update:
 
-```
+```Java
 package client;
 
 import org.hibernate.Session;
@@ -932,7 +932,7 @@ public class UpdatingAGuideUsingUniOneToManyClient {
 - And logs from **Update**:
 	- You can see the **extra** `insert` and the **extra** `join`.
 
-```
+```Bash
 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 13:34:09,433 DEBUG SQL:131 - 
     select
@@ -981,7 +981,7 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 - And same as from **instructor**.
 
 <div align="center">
-    <img src="extraQueriesWhenUpdating.PNG"  alt="hibernate course" width="500"/>
+    <img src="extraQueriesWhenUpdating.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Extra `JOIN`.
@@ -992,23 +992,23 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 - Before students table.
 
 <div align="center">
-    <img src="beforeUpdate.PNG"  alt="hibernate course" width="400"/>
+    <img src="beforeUpdate.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 - After students table.
 
 <div align="center">
-    <img src="afterUpdate.PNG"  alt="hibernate course" width="400"/>
+    <img src="afterUpdate.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 - The **joined table** updated.
 
 <div align="center">
-    <img src="joinTableUpadted.PNG"  alt="hibernate course" width="400"/>
+    <img src="joinTableUpadted.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 <div align="center">
-    <img src="preference.PNG"  alt="hibernate course" width="600"/>
+    <img src="preference.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Avoid** **uni-directional** `@OneToMany` and prefer **bidirectional**.
@@ -1016,20 +1016,20 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 # orphanRemoval.
 
 <div align="center">
-    <img src="orphanRemovalStartingState.PNG"  alt="hibernate course" width="600"/>
+    <img src="orphanRemovalStartingState.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We will have the following **situation** where `Student`, with `Id` **2**, will be removed.
 
 <div align="center">
-    <img src="foreignKeyConstraintExceptionThrown.PNG"  alt="hibernate course" width="600"/>
+    <img src="foreignKeyConstraintExceptionThrown.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We will be having the following **exception thrown**. 
 	- When the **Foreign key constraint fails**, it will be throwing `ConstraintViolationException`.
 
 <div align="center">
-    <img src="orphanedRecord.PNG"  alt="hibernate course" width="600"/>
+    <img src="orphanedRecord.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Orphaned record**, is the record whose **foreign key** value references a **non-existent** primary key value.
@@ -1038,14 +1038,14 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 	- This is what the `orphanRemoval` does!
 
 <div align="center">
-    <img src="usingOrphanRemoval.PNG"  alt="hibernate course" width="600"/>
+    <img src="usingOrphanRemoval.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. `orphanRemoval=true`, will deal with `ConstraintViolationException` when **cascading** the remove operation, we delete **left behind orphan Student entries** as well!
 	- In this **example**, Student with **Id** `3`, will be deleted.
 
 <div align="center">
-    <img src="orphanRemovalOrder.PNG"  alt="hibernate course" width="600"/>
+    <img src="orphanRemovalOrder.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - Notice the **order** the **SQL** gets executed.
@@ -1059,7 +1059,7 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 # One-To-One Relationship.
 
 <div align="center">
-    <img src="oneToOneRelationapMapping.PNG"  alt="hibernate course" width="600"/>
+    <img src="oneToOneRelationapMapping.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 
 </div>
 
@@ -1073,11 +1073,11 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 > If you omit `unique=true`, the database treats the foreign key like a typical **many-to-one** relationship. That means **multiple rows** in the owning table (e.g., Customer) could point to the same Passport, **violating** the **one-to-one** rule.
 
 <div align="center">
-    <img src="oneToOneMappingInEntity.PNG"  alt="hibernate course" width="600"/>
+    <img src="oneToOneMappingInEntity.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 <div align="center">
-    <img src="OneToOneClient.PNG"  alt="hibernate course" width="600"/>
+    <img src="OneToOneClient.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Pretty **basic** operations, with the `.persist()`.
@@ -1085,7 +1085,7 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 # Derived Identifiers with @MapsId.
 
 <div align="center">
-    <img src="twoWayUsingTheMapsId.jpeg"  alt="hibernate course" width="500"/>
+    <img src="twoWayUsingTheMapsId.jpeg"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 > [!NOTE]  
@@ -1094,7 +1094,7 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 >   - **Fully Delivered Identity**
 
 <div align="center">
-    <img src="derivedIntegers.PNG"  alt="hibernate course" width="600"/>
+    <img src="derivedIntegers.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. These can be used only, with the **Single point associations**.
@@ -1110,21 +1110,21 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 - Using the **same ID** makes the relationship clearer and more consistent.
 
 <div align="center">
-    <img src="notUsingGenerativeStrategy.PNG"  alt="hibernate course" width="600"/>
+    <img src="notUsingGenerativeStrategy.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We need to **enforce** the usage of `@GenerativeValue(strategy=GenerationType=AUTO)` in the `Passport` **Entity**, not in the `Customer` **Entity**.
 	- Since we are getting the **Id** value from the **Passport Entity**.
 
 <div align="center">
-    <img src="mappedId.PNG"  alt="hibernate course" width="600"/>
+    <img src="mappedId.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Then we add the `@MappedId` in the **Passport**.
 
 
 <div align="center">
-    <img src="persistingTheMappedById.PNG"  alt="hibernate course" width="600"/>
+    <img src="persistingTheMappedById.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Now the these two **share** same `primary key` value.
@@ -1133,20 +1133,20 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 	- **Don't** generate a separate **primary key** for this entity — instead, **reuse** the primary key of the associated entity.
 
 <div align="center">
-    <img src="persistingTheMappedById.PNG"  alt="hibernate course" width="600"/>
+    <img src="persistingTheMappedById.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Since we are **sharing** the `id`. We could get it, without getting it, trough getters. We can use same **primary key** of the **passport** entity. 
 
 - So with following **logic**, we would not need to get this, as this would **extra** logic.
 
-```
+```Java
 Passport passport = (Passport).session.get(Passport.class, 1L);
 Customer customer = passport.getCustomer();
 ```
 
 <div align="center">
-    <img src="gettingPassportAndCustomer.PNG"  alt="hibernate course" width="600"/>
+    <img src="gettingPassportAndCustomer.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We could use following logic to get same object, with same **ID**:  
@@ -1162,7 +1162,7 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 
 # Many-To-Many Relationship.
 
-<img src="manyToMany.PNG"  alt="hibernate course" width="600"/>
+<img src="manyToMany.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 
 1. We will have many **Movies** where there can be many **Actors**.
 2. We can navigate form both side, the **Movies** and the **Actor**. This makes these `bi-directional`.
@@ -1171,7 +1171,7 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 	- This makes the **Actor** entity, 
 
 <div align="center">
-    <img src="manyToManySecond.PNG"  alt="hibernate course" width="600"/>
+    <img src="manyToManySecond.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The `mappedBy` does make the `Actor` the **inverse end** of the **relationship** and the `Movie` side the **owner** of the relationship.
@@ -1181,26 +1181,26 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 		- Both side are here!
 
 <div align="center">
-    <img src="manyToManyThird.PNG"  alt="hibernate course" width="600"/>
+    <img src="manyToManyThird.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The mapping is done with the `@JoinTable` in the **owner** of the relationship.
 2. The name of the **Joined table**, will be form `name="SomeTableName"`.
 
 <div align="center">
-    <img src="manyToManyFourth.PNG"  alt="hibernate course" width="600"/>
+    <img src="manyToManyFourth.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Both sides** need to be defined in mapping annotations.
 	- `joinColumns={@JoinColumn(name="movie_id")},`
 	- `inverseJoinComuns=inverseJoinColumns={@JoinColumn(name="actor_id")}`.
 
-<img src="EnetityesForThisDemonstration.PNG"  alt="hibernate course" width="600"/>
+<img src="EnetityesForThisDemonstration.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 
 1. We want the **persisting** to be **cascading** to the `Actor` classes as well!
 
 <div align="center">
-    <img src="ManyToManyClient.PNG"  alt="hibernate course" width="600"/>
+    <img src="ManyToManyClient.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Notice** `Actor1` is acting on the `Movie1` and the `Actor1` and `Actor2` are acting in `Movie2`.
@@ -1208,14 +1208,14 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 	- As mapped!
 
 <div align="center">
-    <img src="updatingTheInverseEnd.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingTheInverseEnd.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are **updating** the inverse end.
 2. Like here we can see that **movies** are not updated from the **inverse end**.
 
 <div align="center">
-    <img src="updatingTheOwnerEnd.PNG"  alt="hibernate course" width="600"/>
+    <img src="updatingTheOwnerEnd.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are **updating** the owner end, and we can see, the **movies** get added!
@@ -1223,7 +1223,7 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 # Lab Exercise - Many-To-Many Relationship.
 
 <div align="center">
-    <img src="manytToManyRelationshipLab.PNG"  alt="hibernate course" width="600"/>
+    <img src="manytToManyRelationshipLab.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Update** did not happen from the inverse end.
@@ -1231,18 +1231,18 @@ Customer customerByPassportId = (Customer)session.get(Customer.class, passport.g
 2. **Question 1:**
 	- **Answer:** Add utility methods, check **two** pics below.
 
-```
+```Yml
 Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsible for the bi-directional relationship?
 ```
 
 <div align="center">
-    <img src="manytToManyRelationshipLab2.PNG"  alt="hibernate course" width="600"/>
+    <img src="manytToManyRelationshipLab2.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can update, **both** sides of the relationship by using the **util function** `.addMovie`.
 
 <div align="center">
-    <img src="manytToManyRelationshipLab3.PNG"  alt="hibernate course" width="600"/>
+    <img src="manytToManyRelationshipLab3.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can update, **both** sides of the relationship by using the **util function**. Remember to add `.remove` also.
@@ -1250,19 +1250,19 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 # Mapping Enums.
 
 <div align="center">
-    <img src="mappingEnums.PNG"  alt="hibernate course" width="600"/>
+    <img src="mappingEnums.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Since these values are fixed, these can be `Enum`. 
 
 <div align="center">
-    <img src="mappingEnumInCode.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingEnumInCode.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. All you need to map the **enum** column `employee_status` to the database table. 
 
 <div align="center">
-    <img src="mappingEnumInCodeAsInteger.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingEnumInCodeAsInteger.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -1275,30 +1275,30 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 > The **ordinal** is the zero-based position of an enum constant in its declaration.
 
 <div align="center">
-    <img src="mappingEnumInCodeOrdinal.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingEnumInCodeOrdinal.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 1. If we are not specifying the type for the field. The `@Enumerated(EnumType.ORDINAL)` will be the default.
 
 <div align="center">
-    <img src="enumConfig.PNG" alt="hibernate course" width="600"/>
+    <img src="enumConfig.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We add the configuration as standard.
 
 <div align="center">
-    <img src="storingTheEnumsClient.PNG" alt="hibernate course" width="600"/>
+    <img src="storingTheEnumsClient.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 <div align="center">
-    <img src="storingTheEnumsClientGetting.PNG" alt="hibernate course" width="600"/>
+    <img src="storingTheEnumsClientGetting.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 # Lab Exercise - Mapping Enums.
 
 <div align="center">
-    <img src="labMappingEnum.PNG" alt="hibernate course" width="600"/>
+    <img src="labMappingEnum.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. How we map the `enum` for the custom values.
@@ -1311,7 +1311,7 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
     	`CONTRACT` to **300**?
 
 <div align="center">
-    <img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
+    <img src="labMappingEnumUsingConverter.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can achieve this using by using the **Converter** class.
@@ -1320,7 +1320,7 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
 		- **Saving** the data.
 
 <div align="center">
-    <img src="labMappingEnumUsingConverter.PNG" alt="hibernate course" width="600"/>
+    <img src="labMappingEnumUsingConverter.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - This is having **three** main steps:
@@ -1330,27 +1330,27 @@ Question 1: How to make the inverse-end (owned side, i.e., Actor) also responsib
     - **Second** parameter is the database column where we want to store the data.
 
 <div align="center">
-    <img src="secondStepDataConverter.PNG" alt="hibernate course" width="600"/>
+    <img src="secondStepDataConverter.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 1. 2️**Second Step**2️ we specify, when we **persist** to hibernate object, how we would want our data be **converted**.
 
 <div align="center">
-    <img src="thirdStepDataConverter.PNG" alt="hibernate course" width="600"/>
+    <img src="thirdStepDataConverter.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. 3️⃣**Third Step**3️⃣ we specify, the **database data** to the **entity** presentation of data.
 
 <div align="center">
-    <img src="mappingEnumToIntegersIndb.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingEnumToIntegersIndb.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We map **enum** value to custom **value**.
 
 - The **Converter** code, below:
 
-```
+```Java
 package converter;
 
 import enums.EmployeeStatus;
@@ -1395,33 +1395,33 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 - Todo do this one.
 
 <div align="center">
-    <img src="labEnum.PNG" alt="hibernate course" width="600"/>
+    <img src="labEnum.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 # Mapping Collections of Value Types.
 
 <div align="center">
-    <img src="Mapping Collections of Value Types.PNG" alt="hibernate course" width="400"/>
+    <img src="Mapping Collections of Value Types.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. Collection of basic data type **string**. 
 
 <div align="center">
-    <img src="savingMultipleValuesOwnRowNotWorking.PNG" alt="hibernate course" width="400"/>
+    <img src="savingMultipleValuesOwnRowNotWorking.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. We cannot have each row as its own database row, It's going to give same **id** value for every data row.
 
 <div align="center">
-    <img src="savingMultipleValuesInRowNotWorking.PNG" alt="hibernate course" width="400"/>
+    <img src="savingMultipleValuesInRowNotWorking.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 
 1. We **cannot** such, where it's saved as whole row!
 
 <div align="center">
-    <img src="mappingSimpleTypes.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingSimpleTypes.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. To **hold** simple values types, we use `friend_nickname` table, this is called **Collection Table**.
@@ -1429,7 +1429,7 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 2. We need to make the `friend_nickname` table having **composite key**, to make names **unique**.
 
 <div align="center">
-    <img src="mappingTheSimpleType.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingTheSimpleType.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - For **Collection Table**, we need to add **three** mappings to the entity.
@@ -1438,30 +1438,30 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 3. What holds the **Simple value type** → `@Column`.
 
 <div align="center">
-    <img src="configsForPersitingCollectionOfValueTypes.PNG" alt="hibernate course" width="500"/>
+    <img src="configsForPersitingCollectionOfValueTypes.PNG" alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 <div align="center">
-    <img src="helloWoldClientForSimpleCollectionTypes.PNG" alt="hibernate course" width="500"/>
+    <img src="helloWoldClientForSimpleCollectionTypes.PNG" alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Persisted correctly.
 
 <div align="center">
-    <img src="simpleValueTypesWithCompositeKey.PNG" alt="hibernate course" width="500"/>
+    <img src="simpleValueTypesWithCompositeKey.PNG" alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. We need to add **composite key**, to make the **names** unique. 
 2. You can see the **composite key**(`friend_id` and `nickname`).
 
 <div align="center">
-    <img src="printingDifferentNamesWithSimpleTypes.PNG" alt="hibernate course" width=" 500"/>
+    <img src="printingDifferentNamesWithSimpleTypes.PNG" alt="Hibernate Java Persistence!" width=" 500"/>
 </div>
 
 1. We get the **nicknames**, with the **collection of value types** mapping.
 
 <div align="center">
-    <img src="collectionOfOwnMadeType.PNG" alt="hibernate course" width=" 500"/>
+    <img src="collectionOfOwnMadeType.PNG" alt="Hibernate Java Persistence!" width=" 500"/>
 </div>
 
 1. We are **not** limited to map **simple** types, we can map our own **types** with `@Embeddable`.
@@ -1469,14 +1469,14 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 - Reminded that `@Embeddable` value type class whose properties can be embedded into an entity.
 
 <div align="center">
-    <img src="weCanUseTheEmbeddableObjectsInCollection.PNG" alt="hibernate course" width=" 500"/>
+    <img src="weCanUseTheEmbeddableObjectsInCollection.PNG" alt="Hibernate Java Persistence!" width=" 500"/>
 </div>
 
 1. We can **map** embeddable object.
     - This uses the **variable names**, in the database column.
 
 <div align="center">
-    <img src="weCanSpesifyTheColumnNamesForTheEmbeddableCollectionMapping.PNG" alt="hibernate course" width=" 500"/>
+    <img src="weCanSpesifyTheColumnNamesForTheEmbeddableCollectionMapping.PNG" alt="Hibernate Java Persistence!" width=" 500"/>
 </div>
 
 1. We can even specify the names.
@@ -1484,7 +1484,7 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 # Lab Exercise - Mapping Collections of Value Types.
 
 <div align="center">
-    <img src="labExerciseMappingCollectionTypes.PNG" alt="hibernate course" width=" 500"/>
+    <img src="labExerciseMappingCollectionTypes.PNG" alt="Hibernate Java Persistence!" width=" 500"/>
 </div>
 
 1. **Question 1:**
@@ -1492,7 +1492,7 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
 
 Question 1:
 
-```
+```Yml
 Question 1: Considering the code in the Item entity given below in Figure
 1, which option(s) will enable you to store the values in the images collection to a column named filename?
 ```
@@ -1500,7 +1500,7 @@ Question 1: Considering the code in the Item entity given below in Figure
 # Composite Keys.
 
 <div align="center">
-    <img src="compositePrimaryKey.PNG" alt="hibernate course" width=" 600"/>
+    <img src="compositePrimaryKey.PNG" alt="Hibernate Java Persistence!" width=" 600"/>
 </div>
 
 1. `Composite Key` makes the table column to **identified** uniquely.
@@ -1512,7 +1512,7 @@ Question 1: Considering the code in the Item entity given below in Figure
 3. There can be **multiple states**, where they can be identified, **non uniquely**.
 
 <div align="center">
-    <img src="compositePrimaryKeySecond.PNG" alt="hibernate course" width=" 500"/>
+    <img src="compositePrimaryKeySecond.PNG" alt="Hibernate Java Persistence!" width=" 500"/>
 </div>
 
 1. It is not **recommended** to use `first_name` and `second_name` for **uniquely** identify record.
@@ -1522,13 +1522,13 @@ Question 1: Considering the code in the Item entity given below in Figure
 - **Record** in this context this means a **database row** or **inserter record into database**.
 
 <div align="center">
-    <img src="howToMakeCompisiteKeyFromFirstNameAndLastName.PNG" alt="hibernate course" width="300"/>
+    <img src="howToMakeCompisiteKeyFromFirstNameAndLastName.PNG" alt="Hibernate Java Persistence!" width="300"/>
 </div>
 
 1. How we will make **composite key** from `firstName` and `lastName`?
 
 <div align="center">
-    <img src="makingCompositeKeyInTheEntity.PNG" alt="hibernate course" width="400"/>
+    <img src="makingCompositeKeyInTheEntity.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. We need to **encapsulate** the **composite key attributes**.
@@ -1540,12 +1540,12 @@ Question 1: Considering the code in the Item entity given below in Figure
 3. Annotate `@Embeddable`.
 
 <div align="center">
-    <img src="makingCompositePrimaryKeyForTheParentClass.PNG" alt="hibernate course" width="400"/>
+    <img src="makingCompositePrimaryKeyForTheParentClass.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. We need just add following mapping `@EmbeddedId` into to the parent class.
 
-```
+```Java
 @EmbeddedId
 private ParentPrimaryKey parentPrimaryKey;
 ``` 
@@ -1553,14 +1553,14 @@ private ParentPrimaryKey parentPrimaryKey;
 - Now this `ParentPrimaryKey.java` can be used as **composite primary key** for the `Parent.java`.
 
 <div align="center">
-    <img src="configAndUsage.PNG" alt="hibernate course" width="400"/>
+    <img src="configAndUsage.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 1. The following the same configurations.
 2. Straight forward to `.persist()` the **composite key** class.
 
 <div align="center">
-    <img src="bussinessKey.PNG" alt="hibernate course" width="400"/>
+    <img src="bussinessKey.PNG" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 
@@ -1571,7 +1571,7 @@ private ParentPrimaryKey parentPrimaryKey;
     - Has **Business meaning**.
 
 <div align="center">
-    <img src="isbnAndSocialNumber.PNG" alt="hibernate course" width="700"/>
+    <img src="isbnAndSocialNumber.PNG" alt="Hibernate Java Persistence!" width="700"/>
 </div>
 
 - Here is the example of **Business Keys**.
@@ -1582,7 +1582,7 @@ private ParentPrimaryKey parentPrimaryKey;
 - So make sure, when designing **Entity**, that the **primary key** does not have any **business** association. Below the updated version:
 
 <div align="center">
-    <img src="syntheticIndentifier.PNG" alt="hibernate course" width="600"/>
+    <img src="syntheticIndentifier.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -1592,7 +1592,7 @@ private ParentPrimaryKey parentPrimaryKey;
  > Using a synthetic auto-incremented key as the primary key is the default.
 
 <div align="center">
-    <img src="compositeForeignKey.PNG" alt="hibernate course" width="600"/>
+    <img src="compositeForeignKey.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Composite** **Foreign Key** needs to be defined in both sides.
@@ -1600,7 +1600,7 @@ private ParentPrimaryKey parentPrimaryKey;
 > When using a **composite foreign key**, the referencing table must have the **same number of columns as the composite primary** (or candidate) key in the referenced table. 
 
 <div align="center">
-    <img src="mappingCompositeForeignKey.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingCompositeForeignKey.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Difference to the previous, with **synthetic primary keys**. We are using the **composite key**, `@EmbeddedId`. 
@@ -1609,7 +1609,7 @@ private ParentPrimaryKey parentPrimaryKey;
     - We are using here the `@JoinColumns()`.
 
 <div align="center">
-    <img src="weAreMappingMultipleForeignKeysExample.PNG" alt="hibernate course" width="600"/>
+    <img src="weAreMappingMultipleForeignKeysExample.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Basic configurations.
@@ -1620,7 +1620,7 @@ private ParentPrimaryKey parentPrimaryKey;
 # Lab Exercise - Composite Keys.
 
 <div align="center">
-    <img src="compositeKeysLabExerciseWhatShouldBeDone.PNG" alt="hibernate course" width="600"/>
+    <img src="compositeKeysLabExerciseWhatShouldBeDone.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Class **B** will be having Composite Key from Class **A** from the fields `name` and `age`.
@@ -1628,32 +1628,32 @@ private ParentPrimaryKey parentPrimaryKey;
 1. **Question 1:**
 	- **Answer:** Answer is more down.
 
-```
+```Yml
 Question 1: How to define a composite primary-key for the @Entity B using the name and age data-attributes of class A, without modifying the A?
 ```
 
 <div align="center">
-    <img src="compositeKeysLabExercise.PNG" alt="hibernate course" width="600"/>
+    <img src="compositeKeysLabExercise.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We cannot use the `@EmbeddedId` and `@Embeddable` tags here. Since it modifies the **A**.
 
 <div align="center">
-    <img src="compositeKeyWithTheId.PNG" alt="hibernate course" width="600"/>
+    <img src="compositeKeyWithTheId.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can achieve this using the `@IdCalss(A.class)` and the `@Id` for the fields.
     - This is **less** wanted approach, since there is more **duplication** for the code!
 
 <div align="center">
-    <img src="compositeKeysLabExerciseSaving.PNG" alt="hibernate course" width="600"/>
+    <img src="compositeKeysLabExerciseSaving.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Example when `.persisting()` the **composite-key**.
 2. We can see the **composite-key** persisted in the database as following.
 
 <div align="center">
-    <img src="compositeKeysLabExerciseLoading.PNG" alt="hibernate course" width="600"/>
+    <img src="compositeKeysLabExerciseLoading.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Notice**, when we are getting the **Entity**, we are retrieving its **composite-key**, when retrieving.
@@ -1663,20 +1663,20 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 # Foreign-Key in Composite Primary-Key using MapsId.
 
 <div align="center">
-    <img src="usingMapsIdForTheForeignKey.PNG" alt="hibernate course" width="600"/>
+    <img src="usingMapsIdForTheForeignKey.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are here **exploring** the other way to use the `@MapsId` in different way. Here **Users** **composite-key** will be borrowing the **Department** `id` field as part its **composite-key**.
 2. `User`'s tables part of **composite-key** will be acting **foreign key** of the `department`'s table.
 
 <div align="center">
-    <img src="previouslyWeUsedTheMapsIdInOneToOneRelationship.PNG" alt="hibernate course" width="600"/>
+    <img src="previouslyWeUsedTheMapsIdInOneToOneRelationship.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. In previous case, we used `passport` tables `id` as **primary key** in the `customer` table!
 
 <div align="center">
-    <img src="legacySystemsCanHaveThisSituvation.PNG" alt="hibernate course" width="600"/>
+    <img src="legacySystemsCanHaveThisSituvation.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. This situation in the **legacy systems**!
@@ -1684,7 +1684,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 - We will be checking the **Entities** for this case:
 
 <div align="center">
-    <img src="ForeignKeyInCompositePrimaryKeyEntities.PNG" alt="hibernate course" width="600"/>
+    <img src="ForeignKeyInCompositePrimaryKeyEntities.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The **User** class will be having the **Composite Key** as part of the **Department**.
@@ -1709,7 +1709,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
     - Name will be `deparment_id_fk`, where `_fk` for the **foreign key**.
 
 <div align="center">
-    <img src="theCompoundFkMappedTheDb.PNG" alt="hibernate course" width="600"/>
+    <img src="theCompoundFkMappedTheDb.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Currently, the mapping looks as following at the **database**!
@@ -1718,7 +1718,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
             - They share **same** value!
 
 <div align="center">
-    <img src="weAreGetttingDublicateDataIds.PNG" alt="hibernate course" width="600"/>
+    <img src="weAreGetttingDublicateDataIds.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. `department_id_cpk_col2` is getting **id** from the `department.getId()`. 
@@ -1731,19 +1731,19 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 - We will be using the **BookStore** example:
 
 <div align="center">
-    <img src="BookStoreBookMapping.PNG" alt="hibernate course" width="600"/>
+    <img src="BookStoreBookMapping.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - This time we will be using **Hibernate** methods rather than the **JDBC API**!  
 
 <div align="center">
-    <img src="BookStoreExampleFunctions.PNG" alt="hibernate course" width="600"/>
+    <img src="BookStoreExampleFunctions.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - We previously **retrieved** and **persisted** the **Book** object from the database using **JDBC API**!
 
 <div align="center">
-    <img src="bookStoreEntitiesMappedPart1.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreEntitiesMappedPart1.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We will be having the following **Entities**:
@@ -1752,13 +1752,13 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
     - `Publisher`.
 
 <div align="center">
-    <img src="composePrimaryKEy.PNG" alt="hibernate course" width="600"/>
+    <img src="composePrimaryKEy.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are making **composite primary key**.
 
 <div align="center">
-    <img src="noMapsId.PNG" alt="hibernate course" width="600"/>
+    <img src="noMapsId.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When we are leaving out `@MapsId("isbn")`
@@ -1767,7 +1767,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 3. `ISBN` and `CHAPTER_NUM` as **Compound Primary Key**.
 
 <div align="center">
-    <img src="whenUsingISBN.PNG" alt="hibernate course" width="600"/>
+    <img src="whenUsingISBN.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When using the `@MapsId("isbn")` 
@@ -1776,18 +1776,18 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 > Use the same column (`BOOK_ISBN`) for both the primary key and the foreign key.”
 
 <div align="center">
-    <img src="bookToChapterRelationshipInDb.PNG" alt="hibernate course" width="300"/>
+    <img src="bookToChapterRelationshipInDb.PNG" alt="Hibernate Java Persistence!" width="300"/>
 </div>
 
 1. Next, we will be mapping `Chapter` to `Book`. Since there can be many **Chapters** in a **Book** 
 
 <div align="center">
-    <img src="bookHasChapters.PNG" alt="hibernate course" width="600"/>
+    <img src="bookHasChapters.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The **Book** will be **owner** of the relationship, since its `@OneToMany` and **Many** should be **always** the owner! We are mapping with following:
 
-````
+````Java
     @OneToMany(mappedBy = "book", cascade = CascadeType.PERSIST)
     private Set<Chapter> chapters = new HashSet<Chapter>();
 ````
@@ -1795,25 +1795,25 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 - The **Set** cannot have **duplicate**, so this is to reflect the mapping done for the **Book** to **Chapter** relationship!
 
 <div align="center">
-    <img src="helperMethodsInBookToChapters.PNG" alt="hibernate course" width="600"/>
+    <img src="helperMethodsInBookToChapters.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. There should be **ALWAYS** helper methods, when dealing with **Bidirectional** relationship!
 
 <div align="center">
-    <img src="addFollowingEntitiesToTheConfiguration.PNG" alt="hibernate course" width="600"/>
+    <img src="addFollowingEntitiesToTheConfiguration.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. As normal, we add the **Entities** to the configuration file.
 
 <div align="center">
-    <img src="bookStoreClient.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreClient.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We need to create the `Chapter` using `ChapterID`, since its **Compound Primary Key**.
 
 <div align="center">
-    <img src="readingObjectInBookStoreClient.PNG" alt="hibernate course" width="600"/>
+    <img src="readingObjectInBookStoreClient.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can read using following.
@@ -1821,20 +1821,20 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 # Mapping JSON.
 
 <div align="center">
-    <img src="mappingJSON.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingJSON.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We will be mapping **JSON** object into database column.
 2. This is not **Entity**, but **POJO**.
 
 <div align="center">
-    <img src="mappingJSONsecond.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingJSONsecond.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. To map **JSON** into database, we can use the `@JdbcTypeCode(SqlType.JSON)`.
 
 <div align="center">
-    <img src="mappingJSONthird.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingJSONthird.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We **execute** following client code. 
@@ -1842,7 +1842,7 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 3. We can see the **JSON** values are persisted into the database.
 
 <div align="center">
-    <img src="mappingJSONsomeNotes.PNG" alt="hibernate course" width="600"/>
+    <img src="mappingJSONsomeNotes.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. This syntax is after **Hibernate 6**.
@@ -1850,13 +1850,13 @@ Question 1: How to define a composite primary-key for the @Entity B using the na
 3. **Book** object to be persisted. You need the getter and setters.
 
 <div align="center">
-    <img src="step4FormatMapper.PNG" alt="hibernate course" width="600"/>
+    <img src="step4FormatMapper.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 4. We need following **format mapper**. For to **Hibernate**.
 
 
-```
+```Xml
 			<!-- FormatMapper for JSON format (required for mapping JSON types) -->
 			<dependency>
 			    <groupId>com.fasterxml.jackson.module</groupId>

@@ -7,7 +7,7 @@ Getting Started with JPA.
 # What is JPA.
 
 <div align="center">
-	<img src="whatIsJpa.PNG"  alt="hibernate course" width="600"/>
+	<img src="whatIsJpa.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -20,14 +20,14 @@ Getting Started with JPA.
         - **Hibernates JPA implementation API**.
 
 <div align="center">
-	<img src="JPAandHibernate.PNG"  alt="hibernate course" width="600"/>
+	<img src="JPAandHibernate.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. There are multiple **non JPA** things in **Hibernate** that are quite useful!
 2. We can get ultimate usefulness of the **Hibernate** using `unwrap()`.
 
 <div align="center">
-	<img src="whyUseJPA.PNG"  alt="hibernate course" width="600"/>
+	<img src="whyUseJPA.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - You could ask yourself what is the role of **JPA**, if the **Hibernate** provides all the functions already?
@@ -42,7 +42,7 @@ Getting Started with JPA.
 > **Kide** taught me practical usage of the **JPA**(**DataNucleus**).
 
 <div align="center">
-	<img src="datanucleusInKideAriBest.jpg"  alt="hibernate course" width="500"/>
+	<img src="datanucleusInKideAriBest.jpg"  alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 
@@ -54,7 +54,7 @@ Getting Started with JPA.
     - These are **Hibernate** specific things and to make **JPA** complaint, we would use `EntityManager` from **JPA**.
 
 <div align="center">
-	<img src="jpaVsHibernate.PNG"  alt="hibernate course" width="600"/>
+	<img src="jpaVsHibernate.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. These are provided by **Hibernate**.
@@ -62,14 +62,14 @@ Getting Started with JPA.
 3. These are **replaced**, by the things that are provided by **JPA**.
 
 <div align="center">
-	<img src="JPAloadingPersistanceUnit.PNG"  alt="hibernate course" width="600"/>
+	<img src="JPAloadingPersistanceUnit.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 1. We are using **Hibernates** way **Persistence Unit**, which is loaded and called `hello-world` is loaded.
 
 <div align="center">
-	<img src="hibernateConfiguration.PNG"  alt="hibernate course" width="300"/>
+	<img src="hibernateConfiguration.PNG"  alt="Hibernate Java Persistence!" width="300"/>
 </div>
 
 1. With **Hibernate** we need to load `persistance.xml` from `META-INF` folder.
@@ -116,7 +116,7 @@ Getting Started with JPA.
 - How was the **Hibernate** internals before `5.2`.
 
 <div align="center">
-	<img src="beforeHibernate5dot2.PNG"  alt="hibernate course" width="600"/>
+	<img src="beforeHibernate5dot2.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Composition** - `EntityManagerImpl` contains the `Session`. Example in Java:
@@ -131,7 +131,7 @@ public class EntityManagerImpl {
 - How was the **Hibernate** internals after `5.2`.
 
 <div align="center">
-	<img src="afterHibernate5dot2.PNG"  alt="hibernate course" width="600"/>
+	<img src="afterHibernate5dot2.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1.  Example in Java `Session extends EntityManager`.
@@ -143,7 +143,7 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 - This would mean, with example:
 
 <div align="center">
-	<img src="exampleOfTheHibernate.PNG"  alt="hibernate course" width="600"/>
+	<img src="exampleOfTheHibernate.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. You would need to cast Object.
@@ -154,36 +154,36 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 - We will explore the lifestyle of the methods.
 
 <div align="center">
-	<img src="workingWithObjects.PNG"  alt="hibernate course" width="600"/>
+	<img src="workingWithObjects.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - Will be using following object.
 
 <div align="center">
-	<img src="messageObject.PNG"  alt="hibernate course" width="400"/>
+	<img src="messageObject.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 <div align="center">
-	<img src="exploringObjectStates.PNG"  alt="hibernate course" width="700"/>
+	<img src="exploringObjectStates.PNG"  alt="Hibernate Java Persistence!" width="700"/>
 </div>
 
 1. **Transient object**, with `ID` value is `null`.
 
 <div align="center">
-	<img src="persistentObject.PNG"  alt="hibernate course" width="600"/>
+	<img src="persistentObject.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Soon as the `.persist()` is called. The object will be **Persistent Object**, and its will have database identity.
 
 <div align="center">
-	<img src="persistentObjectWithTheQuery.PNG"  alt="hibernate course" width="600"/>
+	<img src="persistentObjectWithTheQuery.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Persistent Object** can be also created thought calling **lookup method**.
 	- Example. `em.find(Message.class, 2L);`
 
 <div align="center">
-	<img src="persistentObjectPersistentContext.PNG"  alt="hibernate course" width="600"/>
+	<img src="persistentObjectPersistentContext.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Soon as the **Entity** is persisted it will turn into the **Persistent Object** and these, will be managed by **Entity Manager**.
@@ -195,27 +195,27 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 	- It is **copy of data**, where its data have been **pulled** from the database, but it's **living outside the database**.
 
 <div align="center">
-	<img src="persistenceContext.PNG"  alt="hibernate course" width="600"/>
+	<img src="persistenceContext.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Every time `EntityManager` or `Session object` has **Persistent Context**.
 2. **Persistent Context** is represented as **First-level Cache**.
 
 <div align="center">
-	<img src="closedDatabaseConnection.PNG"  alt="hibernate course" width="600"/>
+	<img src="closedDatabaseConnection.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Once the `.getTransaction().commit()` is **committed** the database connection is closed.
 	- It's still in **Persistent state** and managed by the **Persistent Context** or in **JPA** world its managed by the **Entity Manager**.
 
 <div align="center">
-	<img src="entityMangerClosingTheConnection.PNG"  alt="hibernate course" width="600"/>
+	<img src="entityMangerClosingTheConnection.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When `.close` is called, the state will become **detached** and no longer handled by the **Entity Manger**.
 
 <div align="center">
-	<img src="detachedObjectAreMangaedInJavaMemory.PNG"  alt="hibernate course" width="600"/>
+	<img src="detachedObjectAreMangaedInJavaMemory.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. After the `EntityManger` is `.closed()` and `Message`field gets
@@ -223,40 +223,40 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 	- We will only modify its state in **Detached mode**.
 
 <div align="center">
-	<img src="reAttachingThePersistentContext.PNG"  alt="hibernate course" width="600"/>
+	<img src="reAttachingThePersistentContext.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can **attach** a detached entity, with the `.merge(message)`.
 	- Pass the **reference** to it.
 
 <div align="center">
-	<img src="mergeChecksThePersistenceContext.PNG"  alt="hibernate course" width="600"/>
+	<img src="mergeChecksThePersistenceContext.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. If **detached object** `id` is `1L`, it will first check from **Persistence Context** if its present there.
 
 <div align="center">
-	<img src="javaPersistanceEngineChecksTheIfItsPresentInDb.PNG"  alt="hibernate course" width="600"/>
+	<img src="javaPersistanceEngineChecksTheIfItsPresentInDb.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. It will **perform** lookup method, for given `id` is `1L`.
 2. **Notice** the **content** of messages, another has `"hi"` and another one `"hello"`. 
 
 <div align="center">
-	<img src="contentOfTheMessageIsCopied.PNG"  alt="hibernate course" width="600"/>
+	<img src="contentOfTheMessageIsCopied.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The **message** is copied to the object inside **Persistence Context**.
 
 <div align="center">
-	<img src="updatingTheDetachedObjectIntoToDatabase.PNG"  alt="hibernate course" width="600"/>
+	<img src="updatingTheDetachedObjectIntoToDatabase.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When the `.commit()` is executed, the state will be **dirty checked**, and it will be noticed that `Message` **Object** has been changed.
 2. The **update** will be executed to for that.
 
 <div align="center">
-	<img src="updatingTheDetachedObjectIntoToDatabaseAfter.PNG"  alt="hibernate course" width="600"/>
+	<img src="updatingTheDetachedObjectIntoToDatabaseAfter.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. New **value** is updated in database.
@@ -264,20 +264,20 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 - We can manually **Detach Objects**, with the `detach()` method. Below example:
 
 <div align="center">
-	<img src="detachMethod.PNG"  alt="hibernate course" width="600"/>
+	<img src="detachMethod.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We get `1L` from **database**.
 
 <div align="center">
-	<img src="CallingDetachMethod.PNG"  alt="hibernate course" width="600"/>
+	<img src="CallingDetachMethod.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Soon as we call the `.detach()`, the `Message` object changes to the **Detached State**.
 	- ❌NEVER❌ **Delete** Detached Object. Example Below:
 
 <div align="center">
-	<img src="removingDetachObject.PNG"  alt="hibernate course" width="600"/>
+	<img src="removingDetachObject.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We call `em.remove(message)`, it will throw `IllegalArgumentException`.
@@ -285,25 +285,25 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 		- To delete object it needs to be in **Persistence State**.
 
 <div align="center">
-	<img src="removingFromPersistenceContext.PNG"  alt="hibernate course" width="600"/>
+	<img src="removingFromPersistenceContext.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When we delete this in the **Persistence Context**.
 
 <div align="center">
-	<img src="removingFromPersistenceContextAfter.PNG"  alt="hibernate course" width="600"/>
+	<img src="removingFromPersistenceContextAfter.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The `Message` object gets removed from the **Persistence Context** and its state turns into **removed state**.
 
 <div align="center">
-	<img src="removingFromPersistenceContextAfterDeleteStatemetn.PNG"  alt="hibernate course" width="600"/>
+	<img src="removingFromPersistenceContextAfterDeleteStatemetn.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Once the `em.getTransaction().commit();` the **delete statement** gets executed and following line will be deleted form the database.
 
 <div align="center">
-	<img src="summaryWorkingWithObject.PNG"  alt="hibernate course" width="600"/>
+	<img src="summaryWorkingWithObject.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - TODO make notes about this state transfer.
@@ -321,7 +321,7 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 	- This is not exposed trough **JPA API**.
 
 <div align="center">
-	<img src="cachingObjects.PNG"  alt="hibernate course" width="600"/>
+	<img src="cachingObjects.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Cache is a **copy of data**, outside the database.
@@ -332,21 +332,21 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 2. When **querying** the `Message` object from the database, following **SQL** will be executed. 
 
 <div align="center">
-	<img src="cachingObjectsSecondQuery.PNG"  alt="hibernate course" width="600"/>
+	<img src="cachingObjectsSecondQuery.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When `.find(Message.class, 7L)` will be executed for the **second time**, the **Object** is not queried from the database. Rather than its retrieved from **Cache**.
 	- **EntityManager** has cache.
 
 <div align="center">
-	<img src="cachingObjectsSecondQueryMultipleEntityManagers.PNG"  alt="hibernate course" width="600"/>
+	<img src="cachingObjectsSecondQueryMultipleEntityManagers.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. There will be **two separate** select statements issued, for each a`EntityManger`.
 	- Notice the same `ID` values `7L`.
 
 <div align="center">
-	<img src="notPersistingHibernateObjectBetweenDifferentManagers.PNG"  alt="hibernate course" width="600"/>
+	<img src="notPersistingHibernateObjectBetweenDifferentManagers.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. **Hibernate** by default does not cache **persistent objects** between `EntityManagers`.
@@ -355,7 +355,7 @@ meaning a Hibernate Session now has **all** EntityManager methods too.
 # Lab Exercise - Caching Objects (covers more on PersistenceContext).
 
 <div align="center">
-	<img src="labExerciseCachingObject.PNG"  alt="hibernate course" width="600"/>
+	<img src="labExerciseCachingObject.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - **Question 1:**
@@ -370,14 +370,14 @@ Question 1: What will be the result of executing the following Question1Client g
 - How to **map** and **call Stored Procedure** from `EntityManger`.
 
 <div align="center">
-	<img src="StoredProcedure.PNG"  alt="hibernate course" width="600"/>
+	<img src="StoredProcedure.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We want to call **Stored Procedure**. 
 2. How can we call the `count_employee_by_department` stored procedure.
 
 <div align="center">
-	<img src="StoredProcedureCallingNumberOne.PNG"  alt="hibernate course" width="600"/>
+	<img src="StoredProcedureCallingNumberOne.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are using the following block of code to define **stored procedure**.
@@ -391,14 +391,14 @@ Question 1: What will be the result of executing the following Question1Client g
 	- `@StoredProcedureParameter` Is defining what parameters are going to be used.
 
 <div align="center">
-	<img src="StoredProcedureCallingNumberMapping.PNG"  alt="hibernate course" width="600"/>
+	<img src="StoredProcedureCallingNumberMapping.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 2. We're mapping **input** parameter, **SQL** `p_dept` into the Java to `dept`.
 1. We're mapping **input** parameter, **SQL** `p_count` into the Java to `count`.
 
 <div align="center">
-	<img src="StoredProcedureCallingNumberTwo.PNG"  alt="hibernate course" width="600"/>
+	<img src="StoredProcedureCallingNumberTwo.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are calling the procedure with the Java signature and we are setting the **input parameter**.
@@ -408,7 +408,7 @@ Question 1: What will be the result of executing the following Question1Client g
 5. If this would be **executed** in SQL client, it would throw exception, for `;` delimiter it would interpret as it would end of the query.
 
 <div align="center">
-	<img src="delimeterStoredProcedures.PNG"  alt="hibernate course" width="600"/>
+	<img src="delimeterStoredProcedures.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. To **MySql**, we are telling this as it would be "one line of code", with the `DELIMETER` keyword.
@@ -559,7 +559,7 @@ END $$
 DELIMITER ;
 ```
 <div align="center">
-	<img src="findEmployeeByDepartmentProcedure.PNG"  alt="hibernate course" width="600"/>
+	<img src="findEmployeeByDepartmentProcedure.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are returning **result set**.
@@ -671,7 +671,7 @@ DELIMITER ;
 - If we want to return `name` and `salary` data, not the whole list. 
 
 <div align="center">
-	<img src="findEmployeeByDepartmentProcedureWithSelectedFieldsToReturn.PNG"  alt="hibernate course" width="600"/>
+	<img src="findEmployeeByDepartmentProcedureWithSelectedFieldsToReturn.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We **Define** the two fields what we are returning.
@@ -695,7 +695,7 @@ Name: Rahul Singh, Salary: 4500
 - There is a better way to deal with the `Object[]` returning.
 
 <div align="center">
-	<img src="findEmployeeByDepartmentProcedureWithSelectedFieldsToReturnWithDTO.PNG"  alt="hibernate course" width="600"/>
+	<img src="findEmployeeByDepartmentProcedureWithSelectedFieldsToReturnWithDTO.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -736,7 +736,7 @@ Name: Rahul Singh, Salary: 4500
 # Database Views.
 
 <div align="center">
-	<img src="databaseView.PNG"  alt="hibernate course" width="600"/>
+	<img src="databaseView.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Current situation in the **Database**
@@ -751,7 +751,7 @@ Name: Rahul Singh, Salary: 4500
 # Batch Processing.
 
 <div align="center">
-	<img src="batchProcessing.PNG"  alt="hibernate course" width="600"/>
+	<img src="batchProcessing.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We want to use **batch processing**, when there is **huge amount** of queries to be processed **within transaction**. This helps with:
@@ -765,7 +765,7 @@ Name: Rahul Singh, Salary: 4500
 2. We process here one by one!
 
 <div align="center">
-	<img src="batchProcessing2.PNG"  alt="hibernate course" width="600"/>
+	<img src="batchProcessing2.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. All the **25** `Book` Objects are **persisted** into the **PersistenceContext**, and we can only hope that:
@@ -776,7 +776,7 @@ Name: Rahul Singh, Salary: 4500
 	- Each will have their own database trip.
 
 <div align="center">
-	<img src="batchProcessing3.PNG"  alt="hibernate course" width="600"/>
+	<img src="batchProcessing3.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. When we are dealing within **Transaction**.
@@ -808,7 +808,7 @@ INSERT INTO book (id, title, isbn) VALUES (3, 'C', 'ISBN-C');
 - **1** trip only, this is done in one trip.
 
 <div align="center">
-	<img src="batchProcessing4.PNG"  alt="hibernate course" width="600"/>
+	<img src="batchProcessing4.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. `em.flush()` when the flush is getting executed the **PersistenceContext** is going to be **cleared** and the **Object** are moved into the **detached state**.
@@ -907,7 +907,7 @@ public class BatchingInsertsUsingIdentityStrategyClient {
 ```
 
 <div align="center">
-	<img src="batchProcessingDoesNotWorkWithIdentityStrategy.PNG"  alt="hibernate course" width="600"/>
+	<img src="batchProcessingDoesNotWorkWithIdentityStrategy.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 

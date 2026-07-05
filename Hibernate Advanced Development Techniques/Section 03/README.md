@@ -11,7 +11,7 @@ Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 >   Cannot contain **duplicates**.
 >   **Key** is used to store values and retrieving values.
 
-<img src="useForTheMaps.PNG"  alt="hibernate course" width="500"/>
+<img src="useForTheMaps.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. Examples of usage:
 	- Map of error codes and error messages.
@@ -20,18 +20,18 @@ Mapping Collections - Maps, Sorted Maps and Sorted Sets.
 2. Example of using **maps**, there will be **keys** mapped to **value**.
 3. When you want access using **key** rather than using **integer** index.
 
-<img src="studentAndImages.PNG"  alt="hibernate course" width="500"/>
+<img src="studentAndImages.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We will have **map** that maps to **images**.
 2. Map **keys cannot** have **duplicates**!
 
-<img src="dbDiagram.PNG"  alt="hibernate course" width="500"/>
+<img src="dbDiagram.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="step1.PNG"  alt="hibernate course" width="500"/>
+<img src="step1.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="step2.PNG"  alt="hibernate course" width="500"/>
+<img src="step2.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="annotationForTheMaps.PNG"  alt="hibernate course" width="500"/>
+<img src="annotationForTheMaps.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `@MapKeyColumn` for mapping
     - For the given **key** in map, mapped into the database.
@@ -65,12 +65,12 @@ public class Department {
 | 1             | Bob            | 95000           |
 | 2             | Charlie        | 70000           |
 
-<img src="MakingMapTable.PNG"  alt="hibernate course" width="500"/>
+<img src="MakingMapTable.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. **Maps** the **key** of the **map** for given column in the database. `@MapKeyColumn(name="file_name")`
 2. The database column where the mapped value will be. In this example `image_name`.
 
-<img src="step3Coding.PNG"  alt="hibernate course" width="500"/>
+<img src="step3Coding.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 <img src="runningTheApp.PNG"  alt="hibe![alt text](image.png)rnate course" width="500"/>
 
@@ -239,7 +239,7 @@ public class CreateStudentImagesMapDemo {
 }
 ```
 
-<img src="mapInDb.PNG"  alt="hibernate course" width="500"/>
+<img src="mapInDb.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `image_name` is used as **key**.
 2. `file_name` **value** is being saved.
@@ -251,27 +251,27 @@ public class CreateStudentImagesMapDemo {
 > **Collection** that does **not** contain **duplicates**.
 > When, get, the order is given.
 
-<img src="useCaseForTheSet.PNG"  alt="hibernate course" width="500"/>
+<img src="useCaseForTheSet.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. When you are interested in `yes`**/**`no` answers from the `.contains()`. Also, when getting the **element** the **order** is important!
 2. Take the examples here.
 
-<img src="usingOrderSetInEntity.PNG"  alt="hibernate course" width="500"/>
+<img src="usingOrderSetInEntity.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We will have the `images` in the **set**. We want **get** image in the **descending** order. This cannot contain **duplicates**!
 
-<img src="databaseDiagram.PNG"  alt="hibernate course" width="500"/>
+<img src="databaseDiagram.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. **Notice** that we will not have the external **Entity**.
 
-<img src="devProcessForTheSet.PNG"  alt="hibernate course" width="500"/>
+<img src="devProcessForTheSet.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 <img src="step1CreatingDb.PNG"  alt="hiqbernate course" width="500"/>
 
 1. We will be using `update`, for the **Hibernate** configuration!
 2. The properties for the update:
 
-<img src="annotationForTheOrdering.PNG"  alt="hibernate course" width="500"/>
+<img src="annotationForTheOrdering.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. `@OrderBy` specifies the **ordering** of the **elements when** a collection is **retrieved**.
 2.  **Syntax**: `@OrderBy (" [field name or property name] [ASC | DESC]")`
@@ -301,11 +301,11 @@ public class CreateStudentImagesMapDemo {
 	
 	```
 
-<img src="mappingCollection.PNG"  alt="hibernate course" width="500"/>
+<img src="mappingCollection.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. We are using the `@OrderBy"file_name DESC")`. This will **order** by `file_name`.
 
-<img src="step3CodingForTheOrdering.PNG"  alt="hibernate course" width="500"/>
+<img src="step3CodingForTheOrdering.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 - Code as following:
 
@@ -328,9 +328,9 @@ System.out.println("Saving the student and images...");
 session.persist(tempStudent);
 ```
 
-<img src="step3ForTheDeveloping.PNG"  alt="hibernate course" width="500"/>
+<img src="step3ForTheDeveloping.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
-<img src="runTheApp.PNG"  alt="hibernate course" width="500"/>
+<img src="runTheApp.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. These will be **saved** into the database as in order like in the database as in **Sorted Set**.
 
@@ -534,7 +534,7 @@ public class CreateStudentImagesSortedSetDemo {
 
 ```
 
-<img src="savingIntoTheOrderedSortedSet.PNG"  alt="hibernate course" width="300"/>
+<img src="savingIntoTheOrderedSortedSet.PNG"  alt="Hibernate Java Persistence!" width="300"/>
 
 1. We can see we have saved into to the database, thought to the **Ordered Set**.
 
@@ -719,30 +719,30 @@ Done!
 > This can be used for mapping **unique** key:s to value:s.
 > We can also, specify **sorting order**.
 
-<img src="useCaseForSortedMaps.PNG"  alt="hibernate course" width="400"/>
+<img src="useCaseForSortedMaps.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
 1. Map can be used, **example of error codes** and **error messages**.
 2. Map can be used, **example image file names** and **images description**.
 
-<img src="studentAndImagesMaps.PNG"  alt="hibernate course" width="400"/>
+<img src="studentAndImagesMaps.PNG"  alt="Hibernate Java Persistence!" width="400"/>
  
  1. We will be sorted by the **filename** or sort based on **key**. 
 
 - High level diagram.
 
-<img src="sortedMapDatabaseDiagram.PNG"  alt="hibernate course" width="400"/>
+<img src="sortedMapDatabaseDiagram.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
-<img src="developementProgress.PNG"  alt="hibernate course" width="400"/>
+<img src="developementProgress.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
-<img src="step1sortedMap.PNG"  alt="hibernate course" width="400"/>
+<img src="step1sortedMap.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
-<img src="step2AnnotationMap.PNG"  alt="hibernate course" width="400"/>
+<img src="step2AnnotationMap.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
-<img src="annotationForOrdering.PNG"  alt="hibernate course" width="400"/>
+<img src="annotationForOrdering.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
 1. The `@OrderBy` is applied when the **collection** is **retrieved**. This is done in database level, not in **Java** level.
 
-<img src="step2AnnotationMapAnnotations.PNG"  alt="hibernate course" width="400"/>
+<img src="step2AnnotationMapAnnotations.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
 1. `@OrderBy` **defaults** by `file_name` as ASCENDING.
 2. Remember, there will be no separate **Entity**. The `@ElementCollection`, will be telling that it is **Embeddable type** and owned the parent Entity. This will be in its **own table**.
@@ -759,9 +759,9 @@ Done!
 	
 ```
 
-<img src="step3ForTheDevelopingMainApplication.PNG"  alt="hibernate course" width="400"/>
+<img src="step3ForTheDevelopingMainApplication.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
-<img src="runTheAppOverView.PNG"  alt="hibernate course" width="400"/>
+<img src="runTheAppOverView.PNG"  alt="Hibernate Java Persistence!" width="400"/>
 
 1. We will be having **Sorting** based on Maps **key columns**.
 
@@ -1169,7 +1169,7 @@ Aug 09, 2025 2:18:04 PM org.hibernate.engine.jdbc.connections.internal.DriverMan
 INFO: HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&serverTimezone=UTC]
 ```
 
-<img src="seeingThatLogsAreOrderedBy.PNG"  alt="hibernate course" width="700"/>
+<img src="seeingThatLogsAreOrderedBy.PNG"  alt="Hibernate Java Persistence!" width="700"/>
 
 1. We can see `@OrderBy` is working with the logs. This is based on the **keys**!
 

@@ -10,7 +10,7 @@ Understanding object/relational persistence.
 > **Object-Oriented** languages represent data in different format that the **Relational Databases**. 
 
 <div align="center">
-    <img src="objMismatchAndRelationalDb.PNG"  alt="hibernate course" width="600"/>
+    <img src="objMismatchAndRelationalDb.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. This will represent **OOP**.
@@ -35,7 +35,7 @@ Understanding object/relational persistence.
 - Below picture is in context is **e-commerce application**.
 
 <div align="center">
-    <img src="granularity.PNG"  alt="hibernate course" width="600"/>
+    <img src="granularity.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. First mismatch is **Granularity** mismatch.
@@ -48,7 +48,7 @@ Understanding object/relational persistence.
 5. The `coarse-grained` **Person**, means it contains a lot of information about the **Person**, details, **Address** etc...
 
 <div align="center">
-    <img src="granularityContd.PNG"  alt="hibernate course" width="600"/>
+    <img src="granularityContd.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. In **Object Model** we can have **various level** **granularity**.
@@ -64,7 +64,7 @@ Understanding object/relational persistence.
 4. By definition the `granular` means **more depth** of info.
 
 <div align="center">
-    <img src="subtypeInheritance.PNG" alt="hibernate course" width="600"/>
+    <img src="subtypeInheritance.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Second **Inheritance mismatch(Subtype Mismatch)**!
@@ -73,7 +73,7 @@ Understanding object/relational persistence.
     - Example Java and its OOP.
 
 <div align="center">
-    <img src="identityMismatch.PNG" alt="hibernate course" width="600"/>
+    <img src="identityMismatch.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. The Third is **Identity Mismatch**.
@@ -85,7 +85,7 @@ Understanding object/relational persistence.
 4. In Java, there is **Object Identity** and **Object equality**.
 
 <div align="center">
-    <img src="assosationMismatch.PNG" alt="hibernate course" width="600"/>
+    <img src="assosationMismatch.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Fourth mismatch is **Association Mismatch**.
@@ -101,21 +101,21 @@ Understanding object/relational persistence.
 
 >  **Order.java**
 
-```
+```Java
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<OrderItemInCart> orderItems = new HashSet<>(); // Initialized to an empty set.
 ```
 
 >  **OrderItemInCart.java**
 
-```
+```Java
     @ManyToOne
     @JoinColumn(name = "order_id", nullable = false) 
     private Order order;
 ```
 
 <div align="center">
-    <img src="dataNavigationMismatch.PNG" alt="hibernate course" width="600"/>
+    <img src="dataNavigationMismatch.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Fifth mismatch is **Data Navigation Mismatch**.
@@ -124,13 +124,13 @@ Understanding object/relational persistence.
 4. The navigation in data is totally different in **Object Model** and in **Relational Model**.  
 
 <div align="center">
-    <img src="summaryForTheMismatches.jpeg" alt="hibernate course" width="400"/>
+    <img src="summaryForTheMismatches.jpeg" alt="Hibernate Java Persistence!" width="400"/>
 </div>
 
 # Object Relational Mapping.
 
 <div align="center">
-    <img src="bookStorePersist.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStorePersist.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -138,13 +138,13 @@ Understanding object/relational persistence.
 2. We will **persist** it into database. 
 
 <div align="center">
-    <img src="bookStoreRetrieve.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreRetrieve.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We will retrieve the Book **object**.
 
 <div align="center">
-    <img src="bookStoreJDBC.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreJDBC.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -153,7 +153,7 @@ Understanding object/relational persistence.
         - How will **ORM** mapping solves these closes :).
 
 <div align="center">
-    <img src="umlAndErd.PNG" alt="hibernate course" width="600"/>
+    <img src="umlAndErd.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -168,24 +168,24 @@ Understanding object/relational persistence.
 - We will have the following Java **POJO** classes.
 
 <div align="center">
-    <img src="objectModelClasses.PNG" alt="hibernate course" width="600"/>
+    <img src="objectModelClasses.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 <div align="center">
-    <img src="relationalModel.PNG" alt="hibernate course" width="600"/>
+    <img src="relationalModel.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. One thing to notice is that, **CHAPTER_NUM** and **BOOK_ISBN** is marked as **PRIMARY KEY**, they make **CHAPTER** unique.
 
 <div align="center">
-    <img src="overAllFlow.PNG" alt="hibernate course" width="600"/>
+    <img src="overAllFlow.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We are using **JDBC** to write into database.
     - We need `.jar` driver.
 
 <div align="center">
-    <img src="bookStoreClientCode.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreClientCode.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Notice we **associate** `Book` object with the `Publisher` Object, before **persisting**.
@@ -194,7 +194,7 @@ Understanding object/relational persistence.
 4. Result of **persisting** will be following in the database.
 
 <div align="center">
-    <img src="bookStoreService.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreService.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -211,13 +211,13 @@ Understanding object/relational persistence.
     - SQL code is dependent to the **MySQL system**. ❌ **Database Dependent** ❌.
 
 <div align="center">
-    <img src="clientGetBOok.PNG" alt="hibernate course" width="500"/>
+    <img src="clientGetBOok.PNG" alt="Hibernate Java Persistence!" width="500"/>
 </div>
 
 1. Printing will be looking, when printing Book object.
 
 <div align="center">
-    <img src="bookStoreServiceSecond.PNG" alt="hibernate course" width="600"/>
+    <img src="bookStoreServiceSecond.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Reads from two different tables.
@@ -233,7 +233,7 @@ Understanding object/relational persistence.
 
 - Example codes before:
 
-```
+```Java
 public class BookStoreService {
     private Connection connection = null;
 
@@ -291,21 +291,21 @@ public class BookStoreService {
 ```
 
 <div align="center">
-    <img src="problemsOfMismatchBetweenObjectModelAndRelationalModel.PNG" alt="hibernate course" width="600"/>
+    <img src="problemsOfMismatchBetweenObjectModelAndRelationalModel.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 1. These problems presented here could be solved by using **ORM**.
 
 <div align="center">
-    <img src="ormMapping.PNG" alt="hibernate course" width="600"/>
+    <img src="ormMapping.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
 - This will be done with following associations.
 
 <div align="center">
-    <img src="ormSave.PNG" alt="hibernate course" width="600"/>
+    <img src="ormSave.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 
@@ -323,12 +323,12 @@ public class BookStoreService {
 # Lab - Object Relational Mapping.
 
 <div align="center">
-    <img src="makeFollowingTables.PNG" alt="hibernate course" width="600"/>
+    <img src="makeFollowingTables.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - We create following tables, `PUBLISHER`, `BOOK` and `CHAPTER`.
 
-```
+```SQL
 DROP DATABASE IF EXISTS bookstore;
 CREATE DATABASE bookstore;
 
@@ -359,7 +359,7 @@ CREATE TABLE CHAPTER (
 
 - Check the **POM** dependency for the `mysql-connector-java`.
     - If using the later **Mysql** server, you need to update the **Connector**.
-```
+```Xml
 <dependency>
 			    <groupId>mysql</groupId>
 			    <artifactId>mysql-connector-java</artifactId>
@@ -375,12 +375,12 @@ CREATE TABLE CHAPTER (
 
 
 <div align="center">
-    <img src="rightTools.jpg" alt="hibernate course" width="600"/>
+    <img src="rightTools.jpg" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 - We are calling following for saving the object!
 
-```
+```Java
 
 		//persisting object graph
 		Publisher publisher = new Publisher("MANN", "Manning Publications Co.");
@@ -401,13 +401,13 @@ CREATE TABLE CHAPTER (
 
 - We call following to get the saved object.
 
-```
+```Java
 	//This is for retrieving object graph
 		Book book = bookStoreService.retrieveObjectGraph("9781617290459");
 		System.out.println(book);
 ```
 <div align="center">
-    <img src="relationshipAndGraphObjectMismatch.PNG" alt="hibernate course" width="600"/>
+    <img src="relationshipAndGraphObjectMismatch.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. We can easily see the problem of **Object relational mismatch**.
@@ -419,7 +419,7 @@ CREATE TABLE CHAPTER (
 # Lab Exercise - Object Relational Mapping.
 
 <div align="center">
-    <img src="labObjectMapping.PNG" alt="hibernate course" width="600"/>
+    <img src="labObjectMapping.PNG" alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
 1. Answer to this the **Identity mismatch**.
@@ -429,7 +429,7 @@ CREATE TABLE CHAPTER (
 - **Lab exercise**.
     - We will get following **exception** `SQLIntegrityConstraintViolationException`.
 
-```
+```Bash
 java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'MANN' for key 'publisher.PRIMARY'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
