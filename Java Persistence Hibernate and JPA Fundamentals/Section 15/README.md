@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 15: Optimistic Locking and Transaction Isolation Rules.
 
-Best Practices.
+Optimistic Locking and Transaction Isolation Rules.
 
 # What I Learned.
 

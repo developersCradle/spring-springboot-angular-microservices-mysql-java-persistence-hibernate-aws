@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 08: Identifier Generation Strategies.
 
-Best Practices.
+Identifier Generation Strategies.
 
 # What I Learned.
 

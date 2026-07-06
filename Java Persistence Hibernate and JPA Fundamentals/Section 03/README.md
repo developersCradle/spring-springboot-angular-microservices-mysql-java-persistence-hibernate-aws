@@ -1,4 +1,4 @@
-# Section 3: Getting Started with Hibernate and JPA Annotations.
+# Section 03: Getting Started with Hibernate and JPA Annotations.
 
 Getting Started with Hibernate and JPA Annotations.
 

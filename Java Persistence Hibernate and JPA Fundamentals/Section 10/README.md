@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 10: Entity Lifecycle Callbacks.
 
-Best Practices.
+Entity Lifecycle Callbacks.
 
 # What I Learned.
 

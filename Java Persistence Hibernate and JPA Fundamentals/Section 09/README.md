@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 09: Inheritance Mapping and Polymorphic Queries.
 
-Best Practices.
+Inheritance Mapping and Polymorphic Queries.
 
 # What I Learned.
 

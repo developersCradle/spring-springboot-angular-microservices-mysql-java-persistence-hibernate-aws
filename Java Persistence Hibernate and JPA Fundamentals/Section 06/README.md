@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 06: Fetching Strategies, Bytecode Enhancement and Equality.
 
-Best Practices.
+Fetching Strategies, Bytecode Enhancement and Equality.
 
 # What I Learned.
 

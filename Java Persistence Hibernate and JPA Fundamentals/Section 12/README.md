@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 12: Batch Processing and Logging Slow Queries.
 
-Best Practices.
+Batch Processing and Logging Slow Queries.
 
 # What I Learned.
 

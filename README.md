@@ -438,7 +438,7 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [ ] [Section 10](#) - Entity Lifecycle Callbacks.
 - [ ] [Section 11](#) - Logic in Database.
 - [ ] [Section 12](#) - Batch Processing and Logging Slow Queries.
-- [ ] [Section 13](#) - N+1 SELECTs Problem, Batch Fetching and Entity Graphs.
+- [ ] [Section 13](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Java%20Persistence%20Hibernate%20and%20JPA%20Fundamentals/Section%2013#learned-what-the-n1-selects-problem-is-and-why-it-causes-unnecessary-database-queries-and-performance-issues) - N+1 SELECTs Problem, Batch Fetching and Entity Graphs.
 - [ ] [Section 14](#) - Merging Detached Objects.
 - [ ] [Section 15](#) - Optimistic Locking and Transaction Isolation Rules.
 - [ ] [Section 16](#) - Second Level Caching and Query Cache.

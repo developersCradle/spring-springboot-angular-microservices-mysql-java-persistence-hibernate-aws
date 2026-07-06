@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 07: Querying.
 
-Best Practices.
+Querying.
 
 # What I Learned.
 

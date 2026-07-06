@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 14: Merging Detached Objects.
 
-Best Practices.
+Merging Detached Objects.
 
 # What I Learned.
 

@@ -1,6 +1,6 @@
-# Section 06: Best Practices.
+# Section 11: Logic in Database.
 
-Best Practices.
+Logic in Database.
 
 # What I Learned.
 
