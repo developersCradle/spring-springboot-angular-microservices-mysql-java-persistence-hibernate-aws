@@ -9,6 +9,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 
+
 public class NPlus1SelectsProblemClient {
 	public static void main(String[] args) {
 
@@ -79,5 +80,32 @@ public class NPlus1SelectsProblemClient {
 		em.close();
 
 
+	}
+}
+
+
+
+
+public class HelloWorldClient {
+
+	public static void main(String[] args) {
+
+		EntityManagerFactory emf =
+				Persistence.createEntityManagerFactory("hello-world");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+
+		Query query = em.createQuery("select student from Student student");
+
+		List<Student> students = query.getResultList();
+
+		for (Student student : students) {
+			System.out.println(
+					student.getName() + " : " + student.getEnrollmentId()
+			);
+		}
+
+		em.getTransaction().commit();
+		em.close();
 	}
 }
