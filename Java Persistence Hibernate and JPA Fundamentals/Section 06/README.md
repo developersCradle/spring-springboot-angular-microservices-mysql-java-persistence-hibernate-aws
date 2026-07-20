@@ -26,6 +26,13 @@ Fetching Strategies, Bytecode Enhancement and Equality.
 1. The Left Join container data from left table and matching data form the right table! 
 
 <div align="center">
+	<img src="Lazy_Fetching.PNG"  alt="Hibernate Java Persistence!" width="600"/>
+</div>
+
+1. We are using `.find(...)` for **EntityManager**!
+	- For the `.get(...)` for **Sessions**!
+
+<div align="center">
 	<img src="Our_Current_Entity_Setup.PNG"  alt="Hibernate Java Persistence!" width="600"/>
 </div>
 
@@ -33,6 +40,20 @@ Fetching Strategies, Bytecode Enhancement and Equality.
 
 
 # Lazy Fetching.
+
+<div align="center">
+	<img src="Default_Lazy.PNG"  alt="Hibernate Java Persistence!" width="600"/>
+</div>
+
+
+<div align="center">
+	<img src="Quiz_When_Loading.PNG"  alt="Hibernate Java Persistence!" width="600"/>
+</div>
+
+1. **Question:**
+	- Wh it load **Guide** object only, or will it load its associated **Student** objects as well?
+
+
 
 # Lab Exercise - Lazy Fetching.
 
