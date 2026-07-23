@@ -877,9 +877,9 @@ https://github.com/shubho0908/Certificate-Generator
 
 #### Progress/Curriculum.
 
-- [x] [Section 01](#) - Introduction. ✅
-- [x] [Section 02](#) - Jackson Fundamentals. ✅
-- [x] [Section 03](#) - Course Conclusion. ✅
+- [x] [Section 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Jackson%20Quick%20Start%20JSON%20Serialization%20With%20Java%20Made%20Easy/Section%2001#section-01-introduction) - Introduction. ✅
+- [x] [Section 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Jackson%20Quick%20Start%20JSON%20Serialization%20With%20Java%20Made%20Easy/Section%2002#section-02-jackson-fundamentals) - Jackson Fundamentals. ✅
+- [x] [Section 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/blob/main/Jackson%20Quick%20Start%20JSON%20Serialization%20With%20Java%20Made%20Easy/Section%2003/README.md#section-03-course-conclusion) - Course Conclusion. ✅
 
 #### Additional stuff.
 
