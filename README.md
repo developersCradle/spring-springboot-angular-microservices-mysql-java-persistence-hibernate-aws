@@ -72,7 +72,10 @@ Template for the task/exercies:
 </p>
 
 <p align="center">
-    <img id="spring" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" style="height: 300px; width: 900px;">
+    <img 
+    id="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description?trk=public_profile_see-credential" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" 
+    alt="Spring boot 04 REST APIs building modern REST APIs description!"
+    style="width: 680px;">
 </p>
 
 All course material from *Spring Boot 4 REST APIs: Building Modern REST APIs* by **Chad Darby** and **Eric Roby** ©. 
@@ -128,8 +131,14 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
 </p>
 
+
+
+
 <p align="center">
-    <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" style="height: 300px; width: 900px;">
+    <img 
+    id="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description?trk=public_profile_see-credential" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" 
+    alt="Spring boot 4 spring 7 and hibernate for beginners d escription!"
+    style="width: 680px;">
 </p>
 
 
@@ -401,9 +410,23 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    <img id="Java_Persistence_Hibernate_And_JPA_Fundamentals?trk=public_profile_see-credential" src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" alt="Java Persistence Hibernate And JPA Fundamentals Certificate!" width="600"/>
-</div>
+
+
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
+
+<p id="Logo_Combination" align="center">
+    <img 
+    src="Hibernate_Book_For_The_Course.jpeg"
+    alt="Hibernate book for the course!" 
+    style="width:490px;height:510px;"/>
+    <img src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" 
+    alt="Java persistence hibernate and JPA fundamentals certificate!" 
+    style="width:490px;height:310px;"/>
+</p>
+
 
 <br>
 
@@ -650,8 +673,8 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </p>
 
 <p align="center">
-    <img src="kubernetes.PNG"
-    alt="Apache Maven Beginner To Guru Description"
+    <img src="Mastering_Kubernetes_From_Scratch_Hands_On_Description.JPG"
+    alt="Mastering kubernetes from scratch hands on description!"
     style="width:690px; height:220px;" />
 </p>
 
