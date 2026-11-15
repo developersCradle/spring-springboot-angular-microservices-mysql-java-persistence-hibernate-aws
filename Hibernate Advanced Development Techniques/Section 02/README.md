@@ -610,7 +610,7 @@ public class CreateStudentImagesSetDemo {
 <img src="warning.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 
 1. ❌❌❌❌❌❌❌❌❌ **NOT** for the production ❌❌❌❌❌❌❌.
-2. Its ✔️✔️✔️**Recommended** to have **SQL script** for the production ✔️✔️✔️✔️✔️.
+2. Its ✅✅✅**Recommended** to have **SQL script** for the production ✅✅✅✅✅.
 	
 <img src="step2Mapping.PNG"  alt="Hibernate Java Persistence!" width="500"/>
 

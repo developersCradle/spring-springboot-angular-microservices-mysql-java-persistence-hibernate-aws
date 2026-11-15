@@ -53,29 +53,42 @@ Template for the task/exercies:
 	- **Answer:** **D**. here can be the examplaniton!
  -->
 
-<p align="center">
-    <img id="studying" src="javaRelatedFrameworksCaption.png" style="height: 200px; width: 900px;">
-  <text>Attempt to study <b>Java</b> related topics!</text>
+<p 
+align="center">
+    <img 
+    id="studying" 
+    src="javaRelatedFrameworksCaption.png" 
+    style="height: 200px; width: 900px;"
+    />
+  <text>Java rabbit deep into the rabbit hole of <b>Java</b> and Java ecosystem!</text>
 </p>
 
-<p align="center">
-   <img src="https://media0.giphy.com/media/WUBvquKnbnXhbQUd8f/giphy.gif?cid=ecf05e47d67685c5a3576e7b7d500e1297fa39551ced9b59&rid=giphy.gif" alt="alt text" width="400" height="300"/>
+<p 
+align="center">
+   <img src="Java_Rabbit.gif"
+    alt="Java rabbit!" 
+    width="400" height="300"
+    />
 </p>
 
 - For these courses one should configure **GIT** for handle projects.
     - `git config --global http.postBuffer 524288000`.
     - `git config --global core.longpaths true`.
 
-
-<p align="center">
-    <img id="spring" src="Spring_Boot_4_REST_APIs_Building_Modern_REST_APIs_Caption.png" style="height: 90px; width: 1200px;">
+<p 
+align="center">
+    <img 
+    id="spring" src="Spring_Boot_4_REST_APIs_Building_Modern_REST_APIs_Caption.png" style="height: 90px; width: 1200px;"
+    />
 </p>
 
-<p align="center">
+<p 
+align="center">
     <img 
     id="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description?trk=public_profile_see-credential" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" 
     alt="Spring boot 04 REST APIs building modern REST APIs description!"
-    style="width: 680px;">
+    style="width: 680px;"
+    />
 </p>
 
 All course material from *Spring Boot 4 REST APIs: Building Modern REST APIs* by **Chad Darby** and **Eric Roby** ©. 
@@ -91,7 +104,7 @@ Contains my own with my own visual notes ✍️ with some course material to enf
 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
-[The course at Udemy](https://www.udemy.com/course/spring-boot-rest-apis/). 
+[Course at Udemy](https://www.udemy.com/course/spring-boot-rest-apis/). 
 
 [Content maker](https://luv2code.com/).
 
@@ -104,9 +117,20 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    Insert certificate here when completed
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img id="#?trk=public_profile_see-credential"
+    src="Dummy_Cert.png" 
+    alt="Master the basics of spring integration and its components certificate!" 
+    width="600"
+    />
+</p>
 
 <br>
 
@@ -131,9 +155,6 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
 </p>
 
-
-
-
 <p align="center">
     <img 
     id="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description?trk=public_profile_see-credential" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" 
@@ -151,7 +172,7 @@ Contains my own with my own visual notes ✍️ with some course material to enf
 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
-[The course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/). 
+[Course at Udemy](https://www.udemy.com/course/spring-hibernate-tutorial/). 
 
 [Content maker](https://luv2code.com/).
 
@@ -164,9 +185,20 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    Insert certificate here when completed
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img id="#?trk=public_profile_see-credential"
+    src="Dummy_Cert.png" 
+    alt="Master the basics of spring integration and its components certificate!" 
+    width="600"
+    />
+</p>
 
 <details>
 
@@ -276,7 +308,7 @@ This came helpful when updating our ancient repositories, which had **Spring int
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
-[The course at Udemy](https://www.udemy.com/course/master-the-basics-of-spring-integration-and-its-components/). 
+[Course at Udemy](https://www.udemy.com/course/master-the-basics-of-spring-integration-and-its-components/). 
 
 [Content maker](https://www.letsunderstandjava.com/).
 
@@ -287,11 +319,16 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
     <img id="="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Certificate?trk=public_profile_see-credential" src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Certificate.jpg" alt="Master the basics of spring integration and its components certificate!" width="600"/>
-</div>
-
-<br>
+</p>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -328,7 +365,7 @@ Contains my own with my own visual notes ✍️ with some course material to enf
 
 This repository is made with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#), therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
-[The course at Udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/).
+[Course at Udemy](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/).
 
 [Content maker](https://www.in28minutes.com/).
 
@@ -341,9 +378,21 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    Insert certificate here when completed
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img 
+    src="Dummy_Cert.png" 
+    alt="dummy!" 
+    id="dumm?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
 <br>
 
@@ -377,6 +426,13 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     - Also numbering got changed.
 - [ ] Remove numbers from packages and from lecture notes `.md` if there is.
 
+
+
+
+
+
+
+
 <p align="center">
     <img
      src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Caption.png"
@@ -399,7 +455,7 @@ All course material from *Java Persistence: Hibernate and JPA Fundamentals* by *
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
-[The Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
+[Course at Udemy](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).   
 
 [Homepage of Course](https://mavenedge.com/).   
 
@@ -531,7 +587,9 @@ All course material from *Hibernate: Advanced Development Techniques* by **Harin
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
-[The Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+[Course at Udemy](https://www.udemy.com/course/hibernate-tutorial-advanced/). 
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
@@ -540,9 +598,21 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    cert here.
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img 
+    src="Dummy_Cert.png" 
+    alt="dummy!" 
+    id="dumm?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
 <br>
 
@@ -609,7 +679,9 @@ All course material from *Docker Masterclass For Java Spring Boot Developers* by
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
-[The course at Udemy](https://www.udemy.com/course/docker-java/).
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
+
+[Course at Udemy](https://www.udemy.com/course/docker-java/).
 
 [Content maker](https://www.vinsguru.com/).
 
@@ -620,9 +692,21 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    Insert certificate here when completed
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img 
+    src="Dummy_Cert.png" 
+    alt="dummy!" 
+    id="dumm?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
 <br>
 
@@ -665,31 +749,48 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 </p> -->
 
 
-<p align="center">
+<p 
+align="center">
     <img
-     src="Kubernetes Masterclass For Beginners caption.png"
+    src="Kubernetes Masterclass For Beginners caption.png"
     alt="Apache Maven Beginner To Guru Caption"
-    style="width:1600px;height:120px;"/>
+    style="width:1600px;height:120px;"
+    />
 </p>
 
-<p align="center">
-    <img src="Mastering_Kubernetes_From_Scratch_Hands_On_Description.JPG"
+<p 
+align="center">
+    <img 
+    src="Mastering_Kubernetes_From_Scratch_Hands_On_Description.JPG"
     alt="Mastering kubernetes from scratch hands on description!"
-    style="width:690px; height:220px;" />
+    style="width:690px; height:220px;" 
+    />
 </p>
 
 All course material from *Kubernetes Masterclass For Beginners [Hands-On]* by **Vinoth Selvaraj** ©.
 
-> Add story here! 🐟 <br><br>
+> During my time at 🏦**Nordea**🏦, I gained a deeper appreciation of how critical infrastructure is to enterprise applications. One example was the **KYC** (**K**now **Y**our **C**ustomer) service, which needed to run with multiple replicas to support availability, reliability, and the demands of an interconnected service environment. Understanding how these replicas were managed, how workloads were distributed, and how services remained accessible made it crucial for me to understand how Kubernetes clusters actually work. 🐟
+>
+> Multiple services communicate with each other, exchange data, depend on shared resources, and form complex interconnected ecosystems. But have you ever wondered what keeps all these services running, available, and communicating reliably? 🐟
+>
+> 🐟 Kubernetes cluster architecture — understanding control planes and worker nodes.
+> 🐟 Pods, Deployments, and ReplicaSets — managing application workloads.
+> 🐟 Services and Service Discovery — enabling communication between microservices.
+> 🐟 Scaling and Load Balancing — distributing workloads and handling increased demand.
+> 🐟 Health Checks and Probes — keeping applications healthy and traffic routed to ready instances.
+> 🐟 ConfigMaps, Secrets, and Namespaces — managing configuration, sensitive data, and resource isolation.
+> 🐟 Rolling Updates and Rollbacks — deploying changes while maintaining application availability. <br><br>
 ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
-[The course at Udemy](https://www.udemy.com/course/kubernetes-cloud-native/).
+[Course at Udemy](https://www.udemy.com/course/kubernetes-cloud-native/).
 
 [Content maker](https://www.vinsguru.com/).
 
 [Latest GIT repo from owner](https://github.com/vinsguru/kubernetes-course).
+
+This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:.
 
@@ -698,11 +799,21 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    Insert certificate here when completed
-</div>
-
-<br>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img 
+    src="Dummy_Cert.png" 
+    alt="dummy!" 
+    id="dumm?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -747,10 +858,11 @@ All course material from *Apache Maven: Beginner to Guru* by **John Thompson** a
 > By excluding the transitive dependencies causing the conflicts and explicitly including the correct versions in the POM, order was restored. No more cryptic clashes, no more mystery libraries braking the pipeline! 🐟 <br><br>
 ~ *DevelopersCradle*
 
+Contains my own with my own visual notes ✍️ with some video material to enforce learning experience. There is also project, which enhances the learning process!
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#). This is why it will include configuration files which are related to this IDE this approach, also the compiled classed for explanatory experiments. ⚙️
 
-[The course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
+[Course at Udemy](https://www.udemy.com/course/apache-maven-beginner-to-guru/).
 
 [Spring Ahead Code Academy](https://springaheadcode.academy/).
 
@@ -762,14 +874,24 @@ If the content sparked :fire: your interest, please consider buying the course a
 
 <!-- 
 Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
-?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    Insert certificate here when completed
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="#" 
+    alt="dummy!" 
+    style="width:650px;height:490px;"
+    />
+    <img 
+    src="Dummy_Cert.png" 
+    alt="dummy!" 
+    id="dumm?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
-<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -833,11 +955,22 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 ?trk=public_profile_see-credential 
 -->
 
-<div align="center">
-    <img id="Jackson_Tutorial_Certficate?trk=public_profile_see-credential" src="Jackson_Tutorial_Certficate.png" alt="Jackson Tutorial Certficate!" width="600"/>
-</div>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="Me_Targetting_Right_Layer_Is_Important.jpeg" 
+    alt="Me targetting right layer is important!" 
+    style="width:500px;height:550px;"
+    />
+    <img 
+    src="Jackson_Tutorial_Certficate.png" 
+    alt="Jackson tutorial certficate!" 
+    id="Jackson_Tutorial_Certficate?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
-<br>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -846,6 +979,9 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 - [x] [Part 01](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2001#section-01-parsing-json-in-java-tutorial---part-1-jackson-and-simple-objects) - Parsing Json in Java Tutorial - Part 1: Jackson and Simple Objects. ✅
 - [x] [Part 02](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2002#section-02-parsing-json-in-java-tutorial---part-2-objectmapper-and-generate-json-strings) - Parsing Json in Java Tutorial - Part 2: ObjectMapper and Generate Json Strings. ✅
 - [x] [Part 03](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Parsing Json in Java Tutorial - Part 3: More complex Mappings. ✅
+
+<br>
+
 - [x] [Additional](https://github.com/developersCradle/spring-springboot-angular-microservices-mysql-java-persistence-hibernate-aws/tree/main/Parsing%20Json%20in%20Java%20-%20Jackson%20Tutorial%20Series/Section%2003#section-03-parsing-json-in-java-tutorial---part-3-more-complex-mappings) - Intro to JSON and Jackson's ObjectMapper. ✅
 
 #### Additional stuff.
@@ -856,13 +992,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img
      src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
     alt="MySQL S§QL And Stored Procedures From Beginner To Advanced Caption"
-    style="width:1600px;height:120px;"/>
+    style="width:1600px;height:120px;"
+    />
 </p> 
 <p align="center">
     <img
     id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
-    alt="Jackson Quick Start JSON Serialization With Java Made Easy Description"
-    style="width:590px; height:160px;" />
+    alt="Jackson Quick Start JSON Serialization With Java Made Easy Description!"
+    style="width:590px; height:160px;"
+    />
 </p>
 
 All learning material from *Jackson Quick Start JSON Serialization With Java Made Easy* from **Craig Hawkins**.
@@ -875,7 +1013,9 @@ Contains my own with my own visual notes ✍️ with some video material to enfo
 
 This repository is made with [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#) with [![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)](#) hotkeys, therefore it will include configuration files which are related to this IDE this approach will be favored for now. ⚙️
 
-[The course at Udemy](https://www.udemy.com/course/jackson-json-serialization-with-java/).
+[Course at Udemy](https://www.udemy.com/course/jackson-json-serialization-with-java/).
+
+
 
 If the content sparked 🔥 your interest, please consider buying the course and start learning 📖.
 
@@ -889,12 +1029,21 @@ The source for the program!
 https://github.com/shubho0908/Certificate-Generator 
 -->
 
-
-<div align="center">
-    <img id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Certificate.PNG" alt="Jackson Quick Start JSON Serialization With Java Made Easy" width="600"/>
-</div>
-
-<br>
+<p 
+id="Logo_Combination" 
+align="center">
+    <img
+    src="Trust_The_Mouse_Process_The_JSON_One_At_The_Time.jpeg" 
+    alt="Trust the mouse process the JSON one at the time!" 
+    style="width:610px;height:490px;"
+    />
+    <img 
+    src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Certificate.PNG" 
+    alt="Jackson quick start JSON serialization with java made easy certificate!" 
+    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Certificate?trk=public_profile_see-credential"
+    style="width:590px;height:440px;"
+    />
+</p>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 

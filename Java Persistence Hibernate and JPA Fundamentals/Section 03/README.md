@@ -85,7 +85,7 @@ Getting Started with Hibernate and JPA Annotations.
 4. **NOTICE** the `string` data type is ❌not❌:
     - ❌ SQL data type ❌.
     - ❌ Java data type ❌.
-    - ✔️ Its **Hibernate Mapping Type** ✔️.
+    - ✅ Its **Hibernate Mapping Type** ✅.
         - Takes care of **mapping** from **Java data type** to **MySQL data type**.
             - In practical sense, takes care of `String` to `VARCHAR`.
 5. Also, **Hibernate** is smart to map without configuration `long` to the `BIGINT` type.

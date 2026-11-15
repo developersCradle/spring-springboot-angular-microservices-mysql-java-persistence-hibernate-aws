@@ -34,8 +34,8 @@ Spring Boot 3 - Inversion of Control and Dependency Injection.
 
 - There are **three** main ways to configure Spring Container
 1. XML configuration file **(LEGACY)!** ❌
-2. Java Annotations **(Modern)** ✔️
-3. Java Source Code **(Modern)** ✔️
+2. Java Annotations **(Modern)** ✅
+3. Java Source Code **(Modern)** ✅
 
 > **Dependency Injection**
 > The dependency inversion principle.
@@ -262,9 +262,9 @@ d
 
 ```
 
-- ✔️ Spring Injection recommended by **Spring.io**
-	- Constructor Injection: Required Dependencies ✔️
-	- Setter Injection: Optional Dependencies ✔️
+- ✅ Spring Injection recommended by **Spring.io**
+	- Constructor Injection: Required Dependencies ✅
+	- Setter Injection: Optional Dependencies ✅
 - ❌ **NOT** recommended by Spring Injection by **Spring.io**
 	- Field Injection ❌
 
@@ -399,10 +399,10 @@ In contructor: TrackCoach
 <img src="lazyInitializationInOurExample.JPG" alt="alt text" width="600"/>
 
 1. Such global configuration will be used to make all **Beans** lazy → `spring.main.lazy-initialization=true`
-## Advantage of lazy initialization ✔️
+## Advantage of lazy initialization ✅
 
-1. ✔️ Only creating objects when needed
-2. ✔️ May help with faster **start up time** if you have **large number** of **Beans**
+1. ✅ Only creating objects when needed
+2. ✅ May help with faster **start up time** if you have **large number** of **Beans**
 
 ## Disadvantages ❌
 
