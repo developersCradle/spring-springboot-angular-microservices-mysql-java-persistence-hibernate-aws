@@ -2,17 +2,22 @@
 
 We are using following structure:
 
-<p align="center">
+<p 
+align="center">
     <img
-     src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
+    src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
     alt="Jackson quick start json serialization with java made easy caption!"
-    style="width:1600px;height:120px;"/>
+    style="width:1600px;height:120px;"
+    />
 </p> 
-<p align="center">
+<p 
+align="center">
     <img
-    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
+    src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
+    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" 
     alt="Jackson quick start json serialization with java made easy description!"
-    style="width:590px; height:160px;" />
+    style="width:590px; height:160px;" 
+    />
 </p>
 
 -->
@@ -45,8 +50,13 @@ Template for the task/exercies:
  
 # Lab Exercise - Mapping Collections of Value Types.
 
-<div align="center">
-    <img src="add here the exercise!" alt="Hibernate Java Persistence!" width=" 500"/>
+<div 
+align="center">
+    <img 
+    src="add here the exercise!" 
+    alt="Hibernate Java Persistence!" 
+    width="500"
+    />
 </div>
 
 1. **Question 1:** add here the question from the test!
@@ -56,11 +66,11 @@ Template for the task/exercies:
 <p 
 align="center">
     <img 
-    id="studying" 
-    src="javaRelatedFrameworksCaption.png" 
+    src="Java_Related_Frameworks_Caption.png" 
+    id="studying"
     style="height: 200px; width: 900px;"
     />
-  <text>Java rabbit deep into the rabbit hole of <b>Java</b> and Java ecosystem!</text>
+  <text>Java rabbit that goes deep into to the rabbit hole of <b>Java</b> and Java ecosystem!</text>
 </p>
 
 <p 
@@ -78,14 +88,17 @@ align="center">
 <p 
 align="center">
     <img 
-    id="spring" src="Spring_Boot_4_REST_APIs_Building_Modern_REST_APIs_Caption.png" style="height: 90px; width: 1200px;"
+    src="Spring_Boot_4_REST_APIs_Building_Modern_REST_APIs_Caption.png" 
+    id="spring" 
+    style="height: 90px; width: 1200px;"
     />
 </p>
 
 <p 
 align="center">
     <img 
-    id="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description?trk=public_profile_see-credential" src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" 
+    src="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description.JPG" 
+    id="Spring_Boot_04_REST_APIs_Building_Modern_REST_APIs_Description?trk=public_profile_see-credential" 
     alt="Spring boot 04 REST APIs building modern REST APIs description!"
     style="width: 680px;"
     />
@@ -93,8 +106,7 @@ align="center">
 
 All course material from *Spring Boot 4 REST APIs: Building Modern REST APIs* by **Chad Darby** and **Eric Roby** ©. 
 
-> Add story here! 🐟 <br><br>
-~ *DevelopersCradle*
+> Add story here! 🐟 <br><br> ~ *DevelopersCradle*
 
 <!-- Add here link to java 22 description! -->
 
@@ -125,8 +137,9 @@ align="center">
     alt="dummy!" 
     style="width:650px;height:490px;"
     />
-    <img id="#?trk=public_profile_see-credential"
-    src="Dummy_Cert.png" 
+    <img 
+    src="Dummy_Cert.png"
+    id="#?trk=public_profile_see-credential" 
     alt="Master the basics of spring integration and its components certificate!" 
     width="600"
     />
@@ -151,22 +164,28 @@ align="center">
 
 - [Original repository](https://github.com/darbyluv2code/spring-boot-rest-apis)!
 
-<p align="center">
-    <img id="spring" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" style="height: 90px; width: 1200px;">
-</p>
-
-<p align="center">
+<p 
+align="center">
     <img 
-    id="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description?trk=public_profile_see-credential" src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" 
-    alt="Spring boot 4 spring 7 and hibernate for beginners d escription!"
-    style="width: 680px;">
+    src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Caption.png" 
+    id="spring"
+    style="height: 90px; width: 1200px;"
+    />
 </p>
 
+<p 
+align="center">
+    <img
+    src="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description.png" 
+    id="Spring_Boot_4,_Spring_7_And_Hibernate_For_Beginners_Description?trk=public_profile_see-credential" 
+    alt="Spring boot 4 spring 7 and hibernate for beginners description!"
+    style="width: 680px;"
+    />
+</p>
 
 All course material from *Spring Boot 3, Spring 6 & Hibernate for Beginners* by **Chad Darby** ©. 
 
-> Add story here! 🐟<br><br>
-~ *DevelopersCradle*
+> Add story here! 🐟 <br><br> ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
@@ -193,8 +212,9 @@ align="center">
     alt="dummy!" 
     style="width:650px;height:490px;"
     />
-    <img id="#?trk=public_profile_see-credential"
+    <img 
     src="Dummy_Cert.png" 
+    id="#?trk=public_profile_see-credential"
     alt="Master the basics of spring integration and its components certificate!" 
     width="600"
     />
@@ -207,7 +227,11 @@ align="center">
 <br>
 
 <p align="center">
-    <img src="Spring_Boot_Roadmap.PNG" alt="Spring Boot Roadmap!" width="800"/>
+    <img 
+    src="Spring_Boot_Roadmap.PNG"
+    alt="Spring boot roadmap!" 
+    width="800"
+    />
 </p>
 
 </details>
@@ -284,22 +308,24 @@ align="center">
 
 <p align="center">
     <img
-     src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Caption.JPG"
-    alt="Master The Basics Of Spring Integration And Its Components Caption!"
-    style="width:1600px;height:120px;"/>
+    src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Caption.JPG"
+    alt="Master the basics of spring integration and its components caption!"
+    style="width:1600px;height:120px;"
+    />
 </p>
 
 <p align="center">
-    <img src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Description.JPG"
+    <img 
+    src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Description.JPG"
     alt="Master the basics of spring integration and its components description!"
-    style="width:690px; height:220px;" />
+    style="width:690px; height:220px;" 
+    />
 </p>
 
 All course material from *Master the Basics of Spring Integration and it's Components* by **Rajshree Umarekar** ©. 
 
 > I wasn’t sure if I had just broken everything—yikes!
-But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way! 🐟 <br> <br>
-~ *DevelopersCradle*
+> But now, I finally understand the expected behavior. Fear not the dreaded POM hell 🔥 with its cryptic dependencies—your update is on the way! 🐟 <br><br> ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
@@ -327,7 +353,12 @@ align="center">
     alt="dummy!" 
     style="width:650px;height:490px;"
     />
-    <img id="="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Certificate?trk=public_profile_see-credential" src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Certificate.jpg" alt="Master the basics of spring integration and its components certificate!" width="600"/>
+    <img 
+    src="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Certificate.jpg"
+    id="Master_The_Basics_Of_Spring_Integration_And_Its_Components_Certificate?trk=public_profile_see-credential" 
+    alt="Master the basics of spring integration and its components certificate!"
+    width="600"
+    />
 </p>
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
@@ -345,21 +376,23 @@ align="center">
 
 <p align="center">
     <img
-     src="Master_Microservices_With_Spring_Boot_And_Spring_Cloud_Caption.png"
-    alt="Microservices With Spring Boot And Spring Cloud Caption.JPG!"
-    style="width:1600px;height:120px;"/>
+    src="Master_Microservices_With_Spring_Boot_And_Spring_Cloud_Caption.png"
+    alt="Microservices with spring boot and spring cloud caption!"
+    style="width:1600px;height:120px;"
+    />
 </p>
 
 <p align="center">
-    <img src="Master_Microservices_With_Spring_Boot_And_Spring_Cloud_Description.JPG"
-    alt=" Microservices With Spring Boot And Spring Cloud Description!"
-    style="width:690px; height:220px;" />
+    <img 
+    src="Master_Microservices_With_Spring_Boot_And_Spring_Cloud_Description.JPG"
+    alt="Microservices with spring boot and spring cloud description!"
+    style="width:690px; height:220px;" 
+    />
 </p>
 
 All course material from *Master Microservices with Spring Boot and Spring Cloud* by **in28Minutes** ©.
 
-> Add story here! 🐟 <br><br>
-~ *DevelopersCradle*
+> Add story here! 🐟 <br><br> ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
@@ -428,26 +461,22 @@ align="center">
 
 
 
-
-
-
-
-
 <p align="center">
     <img
-     src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Caption.png"
-    alt="Java Persistence Hibernate And JPA Fundamentals Caption!"
-    style="width:1600px;height:120px;"/>
+    src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Caption.png"
+    alt="Java persistence hibernate and JPA fundamentals caption!"
+    style="width:1600px;height:120px;"
+    />
 </p>
 
 <p align="center">
     <img src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Description.jpg"
-    alt="Java Persistence Hibernate And JPA Fundamentals Description!"
-    style="width:690px; height:220px;" />
+    alt="Java persistence hibernate and JPA fundamentals description!"
+    style="width:690px; height:220px;" 
+    />
 </p>
 
 All course material from *Java Persistence: Hibernate and JPA Fundamentals* by **Deshraj Singh Kiran** ©.
-
 
 > I thought Hibernate was doing magic behind the scenes... until it broke my app. 😵
 >
@@ -477,12 +506,15 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
     <img 
     src="Hibernate_Book_For_The_Course.jpeg"
     alt="Hibernate book for the course!" 
-    style="width:490px;height:510px;"/>
-    <img src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" 
-    alt="Java persistence hibernate and JPA fundamentals certificate!" 
-    style="width:490px;height:310px;"/>
+    style="width:490px;height:510px;"
+    />
+    <img 
+    src="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate.jpg" 
+    id="Java_Persistence_Hibernate_And_JPA_Fundamentals_Certificate?trk=public_profile_see-credential"
+    alt=Java persistence hibernate and JPA fundamentals certificate!" 
+    style="width:600px"
+    />
 </p>
-
 
 <br>
 
@@ -569,15 +601,18 @@ Linkedin puts this shit front, when clicking from private mode x(. Need to put t
 
 <p align="center">
     <img
-     src="Hibernate_Advanced_Development_Techniques_Caption.png"
-    alt="Hibernate Advanced Development Techniques Caption!"
-    style="width:1600px;height:120px;"/>
+    src="Hibernate_Advanced_Development_Techniques_Caption.png"
+    alt="Hibernate advanced development techniques caption!"
+    style="width:1600px;height:120px;"
+    />
 </p>
 
 <p align="center">
-    <img src="Hibernate_Advanced_Development_Techniques_Description.PNG"
-    alt="Hibernate Advanced Development Techniques Description!"
-    style="width:690px; height:220px;" />
+    <img 
+    src="Hibernate_Advanced_Development_Techniques_Description.PNG"
+    alt="Hibernate advanced development techniques description!"
+    style="width:690px; height:220px;" 
+    />
 </p>
 
 All course material from *Hibernate: Advanced Development Techniques* by **Harinath Kuntamukkala** and **Chad Darby** ©.
@@ -608,8 +643,8 @@ align="center">
     />
     <img 
     src="Dummy_Cert.png" 
-    alt="dummy!" 
     id="dumm?trk=public_profile_see-credential"
+    alt="dummy!" 
     style="width:590px;height:440px;"
     />
 </p>
@@ -661,15 +696,18 @@ align="center">
 
 <p align="center">
     <img
-     src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Caption.png"
-    alt="Docker Masterclass For Java Spring Boot Developers Caption"
-    style="width:1600px;height:120px;"/>
+    src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Caption.png"
+    alt="Docker masterclass for java spring boot developers caption!"
+    style="width:1600px;height:120px;"
+    />
 </p>
 
 <p align="center">
-    <img src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Description.PNG"
-    alt="Docker Masterclass For Java Spring Boot Developers Description"
-    style="width:690px; height:220px;" />
+    <img 
+    src="Docker_Masterclass_For_Java_Spring_Boot_Developers_Description.PNG"
+    alt="Docker masterclass for java spring boot developers description!"
+    style="width:690px; height:220px;" 
+    />
 </p>
 
 All course material from *Docker Masterclass For Java Spring Boot Developers* by **Vinoth Selvaraj** ©.
@@ -702,8 +740,8 @@ align="center">
     />
     <img 
     src="Dummy_Cert.png" 
-    alt="dummy!" 
     id="dumm?trk=public_profile_see-credential"
+    alt="dummy!" 
     style="width:590px;height:440px;"
     />
 </p>
@@ -753,7 +791,7 @@ align="center">
 align="center">
     <img
     src="Kubernetes Masterclass For Beginners caption.png"
-    alt="Apache Maven Beginner To Guru Caption"
+    alt="Apache maven beginner to guru caption!"
     style="width:1600px;height:120px;"
     />
 </p>
@@ -773,14 +811,19 @@ All course material from *Kubernetes Masterclass For Beginners [Hands-On]* by **
 >
 > Multiple services communicate with each other, exchange data, depend on shared resources, and form complex interconnected ecosystems. But have you ever wondered what keeps all these services running, available, and communicating reliably? 🐟
 >
-> 🐟 Kubernetes cluster architecture — understanding control planes and worker nodes.
-> 🐟 Pods, Deployments, and ReplicaSets — managing application workloads.
-> 🐟 Services and Service Discovery — enabling communication between microservices.
-> 🐟 Scaling and Load Balancing — distributing workloads and handling increased demand.
-> 🐟 Health Checks and Probes — keeping applications healthy and traffic routed to ready instances.
-> 🐟 ConfigMaps, Secrets, and Namespaces — managing configuration, sensitive data, and resource isolation.
-> 🐟 Rolling Updates and Rollbacks — deploying changes while maintaining application availability. <br><br>
-~ *DevelopersCradle*
+> 🔷 Kubernetes cluster architecture — understanding control planes and worker nodes.
+>
+> 🔷 Pods, Deployments, and ReplicaSets — managing application workloads.
+>
+> 🔷 Services and Service Discovery — enabling communication between microservices.
+>
+> 🔷 Scaling and Load Balancing — distributing workloads and handling increased demand.
+>
+> 🔷 Health Checks and Probes — keeping applications healthy and traffic routed to ready instances.
+>
+> 🔷 ConfigMaps, Secrets, and Namespaces — managing configuration, sensitive data, and resource isolation.
+>
+> 🔷 Rolling Updates and Rollbacks — deploying changes while maintaining application availability. 🐟 <br><br> ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some course material to enforce learning experience.
 
@@ -841,13 +884,14 @@ align="center">
 
 <p align="center">
     <img
-     src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif"
+    src="Apache_Maven_Beginner_To_Guru_Fire_Caption.gif"
     alt="Apache Maven Beginner To Guru Caption"
     style="width:1600px;height:120px;"/>
 </p>
 
 <p align="center">
-    <img src="Apache_Maven_Beginner_To_Guru_Description.PNG"
+    <img 
+    src="Apache_Maven_Beginner_To_Guru_Description.PNG"
     alt="Apache Maven Beginner To Guru Description"
     style="width:690px; height:220px;" />
 </p>
@@ -886,8 +930,8 @@ align="center">
     />
     <img 
     src="Dummy_Cert.png" 
-    alt="dummy!" 
     id="dumm?trk=public_profile_see-credential"
+    alt="dummy!" 
     style="width:590px;height:440px;"
     />
 </p>
@@ -921,26 +965,30 @@ align="center">
 
 - [x] For now do till basic level.
 
-<p align="center">
+<p 
+align="center">
     <img
-     src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Caption.png"
+    src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Caption.png"
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Caption"
-    style="width:1600px;height:120px;"/>
+    style="width:1600px;height:120px;"
+    />
 </p>
 
-<p align="center">
+<p 
+align="center">
     <img
-    id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
+    src="Parsing_JSON_In_Java_Jackson_Tutorial_Series_Description.JPG"
+    id="MySQL_SQL_And_Stored_Procedures_From_Beginner_To_Advanced_Description" 
     alt="MySQL SQL And Stored Procedures From Beginner To Advanced Description"
-    style="width:590px; height:320px;" />
+    style="width:590px; height:320px;"
+    />
 </p>
 
 All learning material from *JSON in Java - Jackson Tutorial Series* from **CoderFromScratch** and from **Geekific**.
 
 > During an integration call involving two systems that both followed the **SCIM 2** standard at 🏦**Nordea**🏦, I was involved in debugging a challenging issue between the services. What initially appeared to be a straightforward Jackson deserialization problem turned out to be more subtle: the JSON structure was not malformed, but was being parsed into the wrong layer of the data model, which caused fields to map incorrectly during deserialization. 🐟
 >
->That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between JSON structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟 <br><br>
-~ *DevelopersCradle*
+> That moment became a turning point. It strengthened my understanding of how easily layered data models can introduce silent structural bugs in distributed systems. I became more deliberate in validating object hierarchies and ensuring strict alignment between JSON structure and domain models in Java-based integrations. The experience reinforced a more careful, architecture-aware approach to debugging beyond just surface-level parsing issues. 🐟 <br><br> ~ *DevelopersCradle*
 
 Contains my own with my own visual notes ✍️ with some video material to enforce learning experience. There is also project, which enhances the learning process!
 
@@ -965,12 +1013,11 @@ align="center">
     />
     <img 
     src="Jackson_Tutorial_Certficate.png" 
-    alt="Jackson tutorial certficate!" 
     id="Jackson_Tutorial_Certficate?trk=public_profile_see-credential"
+    alt="Jackson tutorial certficate!" 
     style="width:590px;height:440px;"
     />
 </p>
-
 
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
@@ -990,14 +1037,15 @@ align="center">
 
 <p align="center">
     <img
-     src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
+    src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Caption.png"
     alt="MySQL S§QL And Stored Procedures From Beginner To Advanced Caption"
     style="width:1600px;height:120px;"
     />
 </p> 
 <p align="center">
     <img
-    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
+    src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description.png"
+    id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Description?trk=public_profile_see-credential" 
     alt="Jackson Quick Start JSON Serialization With Java Made Easy Description!"
     style="width:590px; height:160px;"
     />
@@ -1039,8 +1087,8 @@ align="center">
     />
     <img 
     src="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Certificate.PNG" 
-    alt="Jackson quick start JSON serialization with java made easy certificate!" 
     id="Jackson_Quick_Start_JSON_Serialization_With_Java_Made_Easy_Certificate?trk=public_profile_see-credential"
+    alt="Jackson quick start JSON serialization with java made easy certificate!" 
     style="width:590px;height:440px;"
     />
 </p>
